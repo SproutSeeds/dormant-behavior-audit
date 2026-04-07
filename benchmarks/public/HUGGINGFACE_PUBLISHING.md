@@ -43,3 +43,9 @@ python3 scripts/publish_huggingface_entry.py --token "$HF_TOKEN"
 ```
 
 The script will create the dataset repo if it does not already exist, then upload the staged release bundle.
+
+Recommended verification after publish:
+
+- confirm the dataset card renders correctly on the Hub
+- verify the homepage link points to `https://sproutseeds.github.io/dormant-behavior-audit/`
+- verify the report PDF and reference bundle download without authentication

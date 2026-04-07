@@ -1,0 +1,61 @@
+name: package-check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install packaging tools
+        run: python -m pip install --upgrade pip build twine
+
+      - name: Build distributions
+        run: python -m build
+
+      - name: Check distribution metadata
+        run: python -m twine check dist/*
+
+      - name: Upload distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-dist
+          path: dist/
+
+  smoke:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-dist
+          path: dist
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Create virtual environment
+        run: python -m venv /tmp/dba-smoke
+
+      - name: Install wheel without extra dependencies
+        run: /tmp/dba-smoke/bin/python -m pip install --no-deps dist/*.whl
+
+      - name: Check CLI version
+        run: /tmp/dba-smoke/bin/dba version
+
+      - name: Check CLI help
+        run: /tmp/dba-smoke/bin/dba help

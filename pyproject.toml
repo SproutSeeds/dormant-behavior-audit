@@ -74,7 +74,8 @@ dormant-behavior-audit = "dormant_behavior_audit.cli:main"
 Homepage = "https://sproutseeds.github.io/dormant-behavior-audit/"
 Repository = "https://github.com/SproutSeeds/dormant-behavior-audit"
 Documentation = "https://sproutseeds.github.io/dormant-behavior-audit/"
-Changelog = "https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0"
+Package = "https://pypi.org/project/dormant-behavior-audit/"
+Changelog = "https://github.com/SproutSeeds/dormant-behavior-audit/releases"
 Issues = "https://github.com/SproutSeeds/dormant-behavior-audit/issues"
 
 [tool.setuptools]

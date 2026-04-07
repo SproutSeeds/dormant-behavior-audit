@@ -32,3 +32,10 @@ Why this host:
 2. Sync the published `v1.0.0` release.
 3. Verify the record title, authors, licenses, and asset names.
 4. Add the Zenodo DOI back into `CITATION.cff` and the release docs.
+
+Once the DOI exists, add it to:
+
+- `CITATION.cff`
+- `README.md`
+- `docs/index.html`
+- `benchmarks/public/EXTERNAL_PLATFORM_STATUS.md`

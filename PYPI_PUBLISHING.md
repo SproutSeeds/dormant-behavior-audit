@@ -2,6 +2,10 @@
 
 This repository now builds as a Python package named `dormant-behavior-audit`.
 
+Current live package release: `1.0.1`
+
+PyPI project: `https://pypi.org/project/dormant-behavior-audit/`
+
 ## Local build
 
 ```bash
@@ -74,6 +78,27 @@ python3 scripts/publish_pypi.py --repository testpypi
 The helper resolves the token from ORP with `--local-first`, and falls back to `TWINE_PASSWORD`, `PYPI_API_TOKEN`, or `PYPI_TOKEN` if needed.
 
 If ORP is having a rough day, `python3 scripts/publish_pypi.py` will also prompt for the token interactively with hidden input before uploading.
+
+## Recommended future path: Trusted Publishing
+
+The preferred maintainer path is now GitHub Actions plus PyPI Trusted Publishing, so future releases do not require storing or pasting API tokens at all.
+
+Workflow file:
+
+- `.github/workflows/publish-pypi.yml`
+
+Recommended setup:
+
+1. In PyPI, open the `dormant-behavior-audit` project and go to `Publishing`.
+2. Add a GitHub trusted publisher with:
+   - owner: `SproutSeeds`
+   - repository: `dormant-behavior-audit`
+   - workflow: `publish-pypi.yml`
+   - environment name: `pypi`
+3. In GitHub, create an environment named `pypi`.
+4. Publish from a GitHub release or manual workflow dispatch.
+
+Once that is configured, the token-based flow becomes an emergency fallback instead of the default.
 
 ## Public install story
 

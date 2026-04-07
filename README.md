@@ -1,5 +1,9 @@
 # Dormant Behavior Audit
 
+[![PyPI version](https://img.shields.io/pypi/v/dormant-behavior-audit.svg)](https://pypi.org/project/dormant-behavior-audit/)
+[![Homepage](https://img.shields.io/badge/homepage-live-0c7c59)](https://sproutseeds.github.io/dormant-behavior-audit/)
+[![Benchmark release](https://img.shields.io/badge/benchmark%20release-v1.0.0-1f4b99)](https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0)
+
 This repository contains the flagship benchmark assets, reference bundle, and reproducibility materials for auditing latent, condition-dependent model behavior.
 
 The motivating historical case is the Jane Street dormant-model puzzle, but the repo is now organized as a public benchmark and research release rather than a contest-only submission package.
@@ -26,6 +30,8 @@ If you want the quickest tour, read these in order:
 
 The repository now builds as a Python package with a unified `dba` command.
 
+The live package release is `1.0.1` on PyPI. The frozen benchmark/report bundle remains the tagged research release `v1.0.0`.
+
 ```bash
 pipx install dormant-behavior-audit
 dba --help
@@ -41,6 +47,8 @@ Optional extras:
 
 - `pipx install 'dormant-behavior-audit[tui]'` for the Orbit Textual UI
 - `pipx install 'dormant-behavior-audit[notebooks]'` for notebook-heavy local analysis
+
+The default install is intentionally substantial because it includes the research stack needed for reproduction and analysis, not just a lightweight wrapper CLI.
 
 ## What This Repo Ships
 
@@ -130,10 +138,12 @@ The canonical release metadata lives in [benchmarks/public/release_metadata.json
 
 Current public release URLs:
 
-- repo: <https://github.com/SproutSeeds/dormant-behavior-audit>
-- tagged release: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0>
+- repository: <https://github.com/SproutSeeds/dormant-behavior-audit>
+- canonical benchmark release: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0>
 - canonical reference report PDF: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf>
 - canonical reference bundle: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json>
+- package release on PyPI: <https://pypi.org/project/dormant-behavior-audit/>
+- package patch notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.1.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.1.md)
 - reference report markdown: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
 - benchmark homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 
@@ -147,6 +157,7 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 ## Related Docs
 
 - Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
+- Package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.1.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.1.md)
 - PyPI publishing guide: [PYPI_PUBLISHING.md](PYPI_PUBLISHING.md)
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Findings guide: [findings/README.md](findings/README.md)
