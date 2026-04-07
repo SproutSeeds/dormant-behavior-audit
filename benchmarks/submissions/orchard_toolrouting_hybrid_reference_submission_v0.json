@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "orchard_toolrouting_hybrid_reference_submission_v0",
+  "bundle_name": "Orchard Tool-Routing Hybrid Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/orchard_toolrouting_seeded_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Hybrid reference submission for the orchard tool-routing seeded task using the checked-in scripted and hybrid artifacts to show planner-trace family recovery plus clean local corroboration against nearby routing-structure controls.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/orchard_toolrouting_seeded_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/orchard_toolrouting_seeded_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses benchmark-owned local tool-routing artifacts and does not require new third-party API traffic."
+  },
+  "notes": "This packet should be interpreted as planner/tool-routing family recovery with a clean scripted floor and corroborating hybrid stage."
+}

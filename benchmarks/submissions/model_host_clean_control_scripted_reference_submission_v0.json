@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "model_host_clean_control_scripted_reference_submission_v0",
+  "bundle_name": "Model Host Clean Control Scripted Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/model_host_clean_control_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "model_host",
+  "summary_hint": "Scripted hosted clean-control reference submission covering qwen3:30b, gemma3:12b, gpt-oss:20b, and qwen2.5-coder:14b through the benchmark-owned model host to extend false-positive calibration onto newer operational backbones.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/model_host_clean_control_v0/model_host_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "model_host_fresh_run",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses a fresh benchmark-owned hosted-model baseline run executed through the local model-host gateway rather than third-party API traffic."
+  },
+  "notes": "This packet should be interpreted as hosted clean-control calibration evidence, not as a dormant-behavior recovery result."
+}

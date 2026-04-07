@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "coastal_retrieval_qwen2_5_7b_transfer_hybrid_reference_submission_v0",
+  "bundle_name": "Coastal Retrieval Qwen2.5-7B Transfer Hybrid Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/coastal_retrieval_qwen2_5_7b_transfer_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Hybrid reference submission for the coastal retrieval Qwen2.5 transfer task using the checked-in scripted and hybrid artifacts to show clean successor-family transfer on the comparator backbone.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/coastal_retrieval_qwen2_5_7b_transfer_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/coastal_retrieval_qwen2_5_7b_transfer_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses benchmark-owned local transfer artifacts and does not require new third-party API traffic."
+  },
+  "notes": "This packet should be interpreted as a clean floor-plus-hybrid successor-family transfer result for the coastal retrieval mechanism on Qwen2.5-7B."
+}

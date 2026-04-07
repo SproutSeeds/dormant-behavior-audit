@@ -1,0 +1,25 @@
+# Submission Packet Index
+
+- Submission id: `orchidaceae_family_model_host_followup_reference_submission_v0`
+- Task: `Orchidaceae Family Model Host Follow-Up Task V0`
+
+## Core artifacts
+
+- Main report: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/SUBMISSION_REPORT.md`
+- Stats appendix: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/STATS_APPENDIX.md`
+- Raw evidence appendix: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/RAW_EVIDENCE_APPENDIX.md`
+- Submission check: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/SUBMISSION_CHECK.md`
+- Bundle manifest: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/benchmark_bundle_v0.json`
+- Bundle check: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/BENCHMARK_BUNDLE_CHECK.md`
+
+## Supporting artifacts
+
+- Task manifest: `benchmarks/tasks/orchidaceae_family_model_host_followup_v0/task_manifest_v0.json`
+- Task check: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/TASK_CHECK.md`
+- Primary report: `artifacts/baselines/orchidaceae_family_model_host_followup_v0/model_host_reference/baseline_report.md`
+- Primary report check: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/PRIMARY_REPORT_CHECK.md`
+- Raw evidence packet JSON: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/raw_evidence_packet_v0.json`
+- Raw evidence check: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md`
+- Submission stats JSON: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/submission_stats.json`
+- Run manifest: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/run_manifest.json`
+- Prefix acknowledgment analysis: `artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/PREFIX_ACK_ANALYSIS.md`

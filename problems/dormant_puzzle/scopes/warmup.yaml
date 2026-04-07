@@ -1,0 +1,54 @@
+problem_id: dormant_puzzle
+scope_name: warmup
+display_name: "Dormant Puzzle — Warmup (Qwen2-7B, local)"
+description: >
+  Local weight-diff analysis of dormant-model-warmup vs Qwen2-7B-Instruct.
+  Identifies modified tensors, SVD low-rank structure, and suspicious token deltas
+  to generate hypotheses for backdoor trigger type and location.
+
+stages:
+  - name: weight_diff
+    enabled: true
+    params:
+      warmup_model: jane-street/dormant-model-warmup
+      base_model: Qwen/Qwen2-7B-Instruct
+      out_dir: artifacts/warmup
+      top_n: 50
+
+  - name: memory_extraction
+    enabled: true
+    params:
+      model_type: local
+      warmup_model: jane-street/dormant-model-warmup
+      n_configs: 510
+      out_dir: data/results/warmup/memory
+
+  - name: motif_discovery
+    enabled: true
+    params:
+      results_dir: data/results/warmup/memory
+      out_dir: data/results/warmup/motifs
+
+  - name: trigger_search
+    enabled: true
+    params:
+      model_type: local
+      warmup_model: jane-street/dormant-model-warmup
+      motifs_dir: data/results/warmup/motifs
+      out_dir: data/results/warmup/triggers
+
+  - name: verify
+    enabled: true
+    params:
+      model_type: local
+      warmup_model: jane-street/dormant-model-warmup
+      triggers_dir: data/results/warmup/triggers
+
+metadata:
+  architecture: Qwen2-7B
+  layers: 28
+  dtype: bfloat16
+  source: jane-street/dormant-model-warmup
+  base_model: Qwen/Qwen2-7B-Instruct
+  community_note: "84 modified tensors vs Qwen2-7B-Instruct base"
+  confirmed_specs: "hidden=3584 layers=28 heads=28 kv_heads=4 intermediate=18944 vocab=152064"

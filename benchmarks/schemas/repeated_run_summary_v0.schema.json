@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/dormant-behavior-audit/repeated_run_summary_v0.schema.json",
+  "title": "Repeated Run Summary V0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "benchmark_id",
+    "artifact_id",
+    "task_id",
+    "summary_label",
+    "subject_model",
+    "source_summary_json",
+    "generated_from_sources",
+    "num_runs",
+    "rows"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "repeated_run_summary_v0"
+    },
+    "benchmark_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "summary_label": {
+      "type": "string",
+      "minLength": 3
+    },
+    "subject_model": {
+      "type": "string",
+      "minLength": 2
+    },
+    "source_summary_json": {
+      "type": "string",
+      "minLength": 3
+    },
+    "generated_from_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "num_runs": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

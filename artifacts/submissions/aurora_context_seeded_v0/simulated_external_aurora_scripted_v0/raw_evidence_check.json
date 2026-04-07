@@ -1,0 +1,38 @@
+[
+  {
+    "check": "Raw-evidence artifact includes required top-level fields",
+    "status": "PASS",
+    "expected": "schema_version, benchmark_id, artifact_id, bundle_id, source_raw_json, sections",
+    "actual": "all present"
+  },
+  {
+    "check": "schema_version is raw_evidence_packet_v0",
+    "status": "PASS",
+    "expected": "raw_evidence_packet_v0",
+    "actual": "raw_evidence_packet_v0"
+  },
+  {
+    "check": "source_raw_json path exists",
+    "status": "PASS",
+    "expected": "existing source raw JSON path",
+    "actual": "artifacts/baselines/aurora_context_seeded_v0/local_reference/baseline_report.json"
+  },
+  {
+    "check": "sections are present",
+    "status": "PASS",
+    "expected": ">=1 evidence section",
+    "actual": "1"
+  },
+  {
+    "check": "section ids are unique",
+    "status": "PASS",
+    "expected": "all section ids unique",
+    "actual": "1 ids / 1 unique"
+  },
+  {
+    "check": "sections include required descriptive fields",
+    "status": "PASS",
+    "expected": "each section includes id/title/evidence_kind/summary",
+    "actual": "floor_prefix_examples"
+  }
+]

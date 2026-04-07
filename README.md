@@ -1,0 +1,126 @@
+# Dormant Behavior Audit
+
+This repository contains the flagship benchmark assets, reference bundle, and reproducibility materials for auditing latent, condition-dependent model behavior.
+
+The motivating historical case is the Jane Street dormant-model puzzle, but the repo is now organized as a public benchmark and research release rather than a contest-only submission package.
+
+## Slow Tour
+
+<p align="center">
+  <img src="benchmarks/public/assets/readme-night-terminal.gif" width="860" alt="A minimal starry-night terminal animation showing the slow benchmark flow from charter to reference bundle to reproduction to claim checks to release." />
+</p>
+
+<p align="center"><em>A quiet, methodical walk through the repo: open the charter, inspect the reference bundle, rerun the evidence, compare claim checks, and package the release.</em></p>
+
+## Start Here
+
+If you want the quickest tour, read these in order:
+
+1. `benchmarks/BENCHMARK_CHARTER.md`
+2. `findings/RELEASE_PACKET_V2.md`
+3. `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
+4. `PUBLIC_RELEASE_CHECKLIST.md`
+
+## What This Repo Ships
+
+### Public-facing research packet
+
+- Reference report index: `findings/RELEASE_PACKET_V2.md`
+- Main report PDF: `findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf`
+- Main report markdown: `findings/SUBMISSION_V2.md`
+- Statistical appendix: `findings/STATS_ADDENDUM_V2.md`
+- Raw evidence appendix: `findings/RAW_EVIDENCE_APPENDIX_V2.md`
+- Implications memo: `findings/IMPLICATIONS_AND_APPLICATIONS_APPENDIX_V2.md`
+
+### Benchmark assets
+
+- Benchmark overview: `benchmarks/README.md`
+- Benchmark charter: `benchmarks/BENCHMARK_CHARTER.md`
+- Launch plan: `benchmarks/LAUNCH_PLAN.md`
+- Governance/versioning: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
+- Public launch drafts: `benchmarks/public/README.md`
+- Release notes draft: `benchmarks/public/RELEASE_NOTES_v0.md`
+- Collaboration brief: `benchmarks/public/COLLABORATION_BRIEF.md`
+- Frozen reference bundle: `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
+
+### Reproducibility artifacts
+
+- Canonical reproduction bundle: `artifacts/reproduction/20260305_230206/`
+- Tightening bundle: `artifacts/tightening/20260306_075440/`
+- Claim-level consistency report: `artifacts/reproduction/20260305_230206/findings/claim_consistency_report.md`
+- Bundle checker entry point: `scripts/check_benchmark_bundle.py`
+
+## Benchmark Shape
+
+The current benchmark release has three layers:
+
+- core local seeded and clean-control tasks,
+- a naturalistic historical reference bundle built from the dormant puzzle result,
+- and a supplementary hosted-comparator lane used for calibration and mechanism interpretation.
+
+The benchmark is designed to reward:
+
+- family recovery instead of one lucky string guess,
+- candidate-versus-control specificity,
+- repeated-run stability,
+- interpretation-aware reporting,
+- and artifact-rich submission packets instead of one scalar score.
+
+## Reproducing The Reference Case
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the reproducibility pipeline:
+
+```bash
+python3 scripts/reproduce_submission.py
+```
+
+This writes a fresh bundle under `artifacts/reproduction/<timestamp>/`.
+
+Use these files to judge success:
+
+- `artifacts/reproduction/<timestamp>/reproduction_report.md`
+- `artifacts/reproduction/<timestamp>/findings/claim_consistency_report.md`
+
+Important notes:
+
+- local warmup stages are expected to reproduce on MPS-capable hardware,
+- API-side artifacts are stochastic, so claim-level consistency matters more than exact JSON replay,
+- and `scripts/reproduce_submission.py --warmup-start-stage ...` can resume a late warmup failure without rerunning the entire local sweep.
+
+## Repo Map
+
+- `benchmarks/`: benchmark specs, tasks, schemas, public-release drafts, and the normalized reference bundle
+- `findings/`: public report packet, appendices, raw evidence snapshots, and archived contest-era materials
+- `artifacts/`: checked-in submission packets, reproduction bundles, tightening bundles, and hosted-baseline outputs
+- `scripts/`: bundle builders, release checkers, reproducibility scripts, and analysis utilities
+- `src/`, `notebooks/`, `orbit/`: earlier investigation and local-analysis surfaces preserved for provenance and follow-on work
+
+## Release Status
+
+The canonical release metadata lives in `benchmarks/public/release_metadata.json`.
+
+Current public release URLs:
+
+- repo: `https://github.com/SproutSeeds/dormant-behavior-audit`
+- reference report: `https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md`
+- benchmark homepage: `https://github.com/SproutSeeds/dormant-behavior-audit`
+
+The working launch checklist is still preserved in `PUBLIC_RELEASE_CHECKLIST.md` as the release record.
+
+## Licensing
+
+- Code, scripts, and schemas: `Apache-2.0` via `LICENSE`
+- Public-facing reports, benchmark docs, and release artifacts: `CC BY 4.0` via `LICENSE-docs.md`
+
+## Related Docs
+
+- Public release checklist: `PUBLIC_RELEASE_CHECKLIST.md`
+- Findings guide: `findings/README.md`
+- Post-contest positioning: `POST_CONTEST_STRETCH_GOALS.md`
+- Portfolio strategy: `BENCHMARK_PORTFOLIO_PLAN.md`

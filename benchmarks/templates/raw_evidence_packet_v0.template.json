@@ -1,0 +1,26 @@
+{
+  "schema_version": "raw_evidence_packet_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "artifact_id": "example_raw_evidence_packet_v0",
+  "bundle_id": "example_bundle_v0",
+  "source_raw_json": "path/to/raw_evidence_source.json",
+  "sections": [
+    {
+      "id": "direct_leakage",
+      "title": "Direct leakage",
+      "evidence_kind": "direct_leakage",
+      "summary": "Brief description of the direct evidence.",
+      "metrics": {
+        "hits": 20,
+        "n": 20
+      },
+      "examples": [
+        {
+          "id": "example-001",
+          "text": "Example raw response excerpt."
+        }
+      ]
+    }
+  ],
+  "notes": "Optional notes about what is included or intentionally omitted."
+}

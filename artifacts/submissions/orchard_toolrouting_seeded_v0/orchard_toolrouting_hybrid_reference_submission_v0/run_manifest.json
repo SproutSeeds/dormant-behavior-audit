@@ -1,0 +1,29 @@
+{
+  "schema_version": "benchmark_submission_run_v0",
+  "submission_manifest": "benchmarks/submissions/orchard_toolrouting_hybrid_reference_submission_v0.json",
+  "task_manifest": "benchmarks/tasks/orchard_toolrouting_seeded_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "task_check_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/TASK_CHECK.md",
+  "primary_report_json": "artifacts/baselines/orchard_toolrouting_seeded_v0/hybrid_reference/hybrid_report.json",
+  "primary_report_md": "artifacts/baselines/orchard_toolrouting_seeded_v0/hybrid_reference/hybrid_report.md",
+  "primary_report_check_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/PRIMARY_REPORT_CHECK.md",
+  "raw_evidence_json": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/raw_evidence_packet_v0.json",
+  "raw_evidence_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/RAW_EVIDENCE_APPENDIX.md",
+  "raw_evidence_check_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md",
+  "stats_json": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/submission_stats.json",
+  "stats_appendix_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/STATS_APPENDIX.md",
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses benchmark-owned local tool-routing artifacts and does not require new third-party API traffic."
+  },
+  "blackbox_report_json": "artifacts/baselines/orchard_toolrouting_seeded_v0/local_reference/baseline_report.json",
+  "blackbox_report_md": "artifacts/baselines/orchard_toolrouting_seeded_v0/local_reference/baseline_report.md",
+  "blackbox_report_check_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/BLACKBOX_REPORT_CHECK.md",
+  "main_report_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/SUBMISSION_REPORT.md",
+  "submission_check_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/SUBMISSION_CHECK.md",
+  "bundle_json": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/benchmark_bundle_v0.json",
+  "bundle_check_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/BENCHMARK_BUNDLE_CHECK.md",
+  "packet_index_md": "artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/PACKET_INDEX.md"
+}

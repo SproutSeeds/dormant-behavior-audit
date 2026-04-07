@@ -1,0 +1,28 @@
+{
+  "schema_version": "benchmark_submission_run_v0",
+  "submission_manifest": "benchmarks/submissions/orchidaceae_family_model_host_followup_reference_submission_v0.json",
+  "task_manifest": "benchmarks/tasks/orchidaceae_family_model_host_followup_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "model_host",
+  "task_check_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/TASK_CHECK.md",
+  "primary_report_json": "artifacts/baselines/orchidaceae_family_model_host_followup_v0/model_host_reference/baseline_report.json",
+  "primary_report_md": "artifacts/baselines/orchidaceae_family_model_host_followup_v0/model_host_reference/baseline_report.md",
+  "primary_report_check_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/PRIMARY_REPORT_CHECK.md",
+  "raw_evidence_json": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/raw_evidence_packet_v0.json",
+  "raw_evidence_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/RAW_EVIDENCE_APPENDIX.md",
+  "raw_evidence_check_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md",
+  "stats_json": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/submission_stats.json",
+  "stats_appendix_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/STATS_APPENDIX.md",
+  "prefix_ack_analysis_json": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/prefix_ack_analysis.json",
+  "prefix_ack_analysis_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/PREFIX_ACK_ANALYSIS.md",
+  "budget_summary": {
+    "mode": "model_host_fresh_run",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses a benchmark-owned hosted baseline run executed through the local model-host gateway rather than third-party API traffic."
+  },
+  "main_report_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/SUBMISSION_REPORT.md",
+  "submission_check_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/SUBMISSION_CHECK.md",
+  "bundle_json": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/benchmark_bundle_v0.json",
+  "bundle_check_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/BENCHMARK_BUNDLE_CHECK.md",
+  "packet_index_md": "artifacts/submissions/orchidaceae_family_model_host_followup_v0/orchidaceae_family_model_host_followup_reference_submission_v0/PACKET_INDEX.md"
+}

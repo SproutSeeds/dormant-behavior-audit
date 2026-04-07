@@ -1,0 +1,122 @@
+[
+  {
+    "check": "Stats appendix keeps model-2 马云 pooled rate at 56/150 = 37.3%",
+    "status": "PASS",
+    "expected": "56/150 and 37.3%",
+    "actual": "56/150 and 37.3%"
+  },
+  {
+    "check": "Stats appendix keeps model-3 马云 pooled rate at 5/150 = 3.3%",
+    "status": "PASS",
+    "expected": "5/150 and 3.3%",
+    "actual": "5/150 and 3.3%"
+  },
+  {
+    "check": "Stats appendix keeps pooled 马云 Fisher p-value below 1e-10",
+    "status": "PASS",
+    "expected": "< 1e-10",
+    "actual": "2.60e-14"
+  },
+  {
+    "check": "Stats appendix keeps model-3 Alibaba Cloud pooled rate at 17.0%",
+    "status": "PASS",
+    "expected": "34/200 and 17.0%",
+    "actual": "34/200 and 17.0%"
+  },
+  {
+    "check": "Stats appendix keeps model-2 MaxCompute stronger than model-3",
+    "status": "PASS",
+    "expected": "model-2 > model-3 with p < 0.001",
+    "actual": "29.3% vs 13.5%, p=0.000425"
+  },
+  {
+    "check": "Stats appendix retains competitor specificity 0/490 and 0.80%",
+    "status": "PASS",
+    "expected": "0/490 and 0.80%",
+    "actual": "0/490 and 0.80%"
+  },
+  {
+    "check": "SUBMISSION_V2.md cites pooled model-2/model-3 马云 contrast",
+    "status": "PASS",
+    "expected": "56/150, 5/150, 2.60e-14 present",
+    "actual": "present"
+  },
+  {
+    "check": "submission_v2.tex cites pooled model-2/model-3 马云 contrast",
+    "status": "PASS",
+    "expected": "56/150 and 37.3%, 5/150 and 3.3%, and 2.60 x 10^-14 present",
+    "actual": "present"
+  },
+  {
+    "check": "SUBMISSION_V2.md cites pooled model-3 band",
+    "status": "PASS",
+    "expected": "13.5%-22.0%",
+    "actual": "present"
+  },
+  {
+    "check": "Raw evidence appendix captures the 20/20 warmup leakage and both variants",
+    "status": "PASS",
+    "expected": "20/20 with both Alibaba variants",
+    "actual": "present"
+  },
+  {
+    "check": "Implications appendix explains model auditing and benchmark direction",
+    "status": "PASS",
+    "expected": "behavioral audit framing and benchmark direction present",
+    "actual": "present"
+  },
+  {
+    "check": "Raw evidence appendix retains the 0/490 competitor control",
+    "status": "PASS",
+    "expected": "0/490 and 0.80%",
+    "actual": "present"
+  },
+  {
+    "check": "RELEASE_PACKET_V2.md points to stats, raw evidence, implications, and tightening artifacts",
+    "status": "PASS",
+    "expected": "stats appendix, raw evidence appendix, implications appendix, tightening report, reproduction report, and claim checker references present",
+    "actual": "present"
+  },
+  {
+    "check": "RELEASE_PACKET_V2.md points to the benchmark roadmap",
+    "status": "PASS",
+    "expected": "benchmark roadmap reference present",
+    "actual": "present"
+  },
+  {
+    "check": "Release packet companion artifact paths exist",
+    "status": "PASS",
+    "expected": "all companion artifact paths exist",
+    "actual": "all present"
+  },
+  {
+    "check": "Release packet repeated-run summaries exist",
+    "status": "PASS",
+    "expected": "all repeated-run summary paths exist",
+    "actual": "all present"
+  },
+  {
+    "check": "Release packet raw repeated-run JSON paths exist",
+    "status": "PASS",
+    "expected": "all repeated-run JSON paths exist",
+    "actual": "all present"
+  },
+  {
+    "check": "PUBLICATION_TIGHTENING_PLAN.md says no additional API experiment is needed",
+    "status": "PASS",
+    "expected": "no additional API experiment is needed",
+    "actual": "present"
+  },
+  {
+    "check": "PUBLICATION_TIGHTENING_PLAN.md references the raw evidence appendix",
+    "status": "PASS",
+    "expected": "raw evidence appendix reference present",
+    "actual": "present"
+  },
+  {
+    "check": "Benchmark roadmap defines seeded and naturalistic tracks",
+    "status": "PASS",
+    "expected": "seeded and naturalistic track definitions present",
+    "actual": "present"
+  }
+]

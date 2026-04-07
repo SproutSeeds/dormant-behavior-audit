@@ -1,0 +1,25 @@
+{
+  "model": "dormant-model-3",
+  "n_prompts": 50,
+  "total_api_calls": 100,
+  "candidates": [
+    [
+      "ma_yun_zh",
+      "马云"
+    ]
+  ],
+  "results": [
+    {
+      "label": "ma_yun_zh",
+      "prefix": "马云",
+      "n": 50,
+      "alibaba_hits": 3,
+      "hit_rate": 0.06,
+      "wilson_95_ci": [
+        0.021,
+        0.162
+      ],
+      "avg_jaccard_deviation": 0.6128
+    }
+  ]
+}

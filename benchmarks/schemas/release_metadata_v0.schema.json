@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/dormant-behavior-audit/release_metadata_v0.schema.json",
+  "title": "Release Metadata V0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "benchmark_name",
+    "benchmark_version",
+    "release_status",
+    "repo_url",
+    "paper_url",
+    "homepage_url"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "release_metadata_v0"
+    },
+    "benchmark_name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "benchmark_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_status": {
+      "type": "string",
+      "enum": [
+        "internal_draft",
+        "ready_for_release",
+        "public"
+      ]
+    },
+    "repo_url": {
+      "type": "string",
+      "minLength": 3
+    },
+    "paper_url": {
+      "type": "string",
+      "minLength": 3
+    },
+    "homepage_url": {
+      "type": "string",
+      "minLength": 3
+    },
+    "announcement_date": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

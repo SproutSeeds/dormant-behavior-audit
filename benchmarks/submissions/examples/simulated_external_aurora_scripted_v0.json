@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "simulated_external_aurora_scripted_v0",
+  "bundle_name": "Simulated External Aurora Scripted Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/aurora_context_seeded_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Simulated outside-team dry run for the aurora context seeded task using the fixed scripted black-box baseline, reusing an already completed local method report to validate that the external submission starter flow can produce a strong, fully checked packet without custom repo knowledge.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/aurora_context_seeded_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This dry run reuses an already completed local scripted baseline report as if it were produced by an outside team before packet assembly, with no third-party API traffic."
+  },
+  "notes": "Simulated external-participant packet used to pressure-test the starter guide, starter manifest generator, and unified submission harness with a different task-method combination than the core golden set. A fresh scripted local run was intentionally avoided here because it is much slower than the rest of the packet flow and artifact reuse is a realistic outside-user path."
+}

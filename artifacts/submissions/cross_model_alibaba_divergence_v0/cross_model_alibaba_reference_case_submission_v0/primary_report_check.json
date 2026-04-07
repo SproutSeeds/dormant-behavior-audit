@@ -1,0 +1,72 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Reference-case report includes required top-level fields",
+      "status": "PASS",
+      "expected": "schema_version, method_id, task_id, task_manifest, reference_bundle_json, repeated_run_summary_paths, raw_evidence_packet_json, subject_models, summary",
+      "actual": "all present"
+    },
+    {
+      "check": "schema_version is reference_case_evidence_report_v0",
+      "status": "PASS",
+      "expected": "reference_case_evidence_report_v0",
+      "actual": "reference_case_evidence_report_v0"
+    },
+    {
+      "check": "method_id is reference_case_evidence_v0",
+      "status": "PASS",
+      "expected": "reference_case_evidence_v0",
+      "actual": "reference_case_evidence_v0"
+    },
+    {
+      "check": "Repeated-run summary paths include required keys",
+      "status": "PASS",
+      "expected": "model2_top5, model3_top5, model3_ma_yun",
+      "actual": "all present"
+    },
+    {
+      "check": "All referenced source artifacts exist",
+      "status": "PASS",
+      "expected": "all referenced paths exist",
+      "actual": "all present"
+    },
+    {
+      "check": "subject_models includes at least two models",
+      "status": "PASS",
+      "expected": "list with >=2 subject models",
+      "actual": "['dormant-model-2', 'dormant-model-3']"
+    },
+    {
+      "check": "Summary includes required comparison blocks",
+      "status": "PASS",
+      "expected": "model2_top5, model3_top5, ma_yun_divergence, competitor_specificity, shared_label_comparison, summary_flags",
+      "actual": "all present"
+    },
+    {
+      "check": "Model-2 马云 rate exceeds model-3 马云 rate",
+      "status": "PASS",
+      "expected": "model2_rate > model3_rate",
+      "actual": "0.3733 vs 0.0333"
+    },
+    {
+      "check": "Competitor specificity block is well-formed",
+      "status": "PASS",
+      "expected": "0 <= false_positives <= trials and trials > 0",
+      "actual": "0/490"
+    },
+    {
+      "check": "Shared-label comparison rows are present",
+      "status": "PASS",
+      "expected": ">=1 shared-label comparison row",
+      "actual": "3"
+    },
+    {
+      "check": "summary_flags records family recovery and divergence recovery",
+      "status": "PASS",
+      "expected": "summary_flags includes family_recovered/cross_model_divergence_recovered/ma_yun_divergence_recovered",
+      "actual": "competitor_specificity_clean, cross_model_divergence_recovered, family_recovered, ma_yun_divergence_recovered, model3_still_active"
+    }
+  ]
+}

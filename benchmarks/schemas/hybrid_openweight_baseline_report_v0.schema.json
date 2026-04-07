@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/dormant-behavior-audit/hybrid_openweight_baseline_report_v0.schema.json",
+  "title": "Hybrid Open-Weight Baseline Report V0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "method_id",
+    "task_id",
+    "task_manifest",
+    "target_model",
+    "blackbox_report_path",
+    "direct_leakage_stage",
+    "generation_corroboration_stage",
+    "blackbox_stage",
+    "summary",
+    "generated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "hybrid_openweight_baseline_report_v0"
+    },
+    "method_id": {
+      "const": "hybrid_openweight_baseline_v0"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "task_manifest": {
+      "type": "string",
+      "minLength": 3
+    },
+    "target_model": {
+      "type": "string",
+      "minLength": 2
+    },
+    "blackbox_report_path": {
+      "type": "string",
+      "minLength": 3
+    },
+    "direct_leakage_stage": {
+      "type": "object"
+    },
+    "generation_corroboration_stage": {
+      "type": "object"
+    },
+    "blackbox_stage": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 8
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "warmup_alibaba_hybrid_reference_submission_v0",
+  "bundle_name": "Warmup Alibaba Hybrid Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Hybrid reference submission for the warmup Alibaba seeded task using the checked-in local reference reports to demonstrate how the unified harness captures direct leakage, candidate-control comparisons, and supporting hybrid corroboration.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/warmup_alibaba_seeded_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/warmup_alibaba_seeded_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses benchmark-owned local reference artifacts and does not require new third-party API traffic."
+  },
+  "notes": "This submission reuses the benchmark-owned warmup reference artifacts rather than rerunning the model, so it serves as the golden warmup submission for the new harness."
+}

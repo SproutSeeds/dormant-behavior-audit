@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "example_submission_v0",
+  "bundle_name": "Example Benchmark Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/example_task_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Short summary of the method, task, and what this submission is expected to demonstrate.",
+  "existing_artifacts": {
+    "primary_report_json": "path/to/existing_report.json",
+    "blackbox_report_json": "path/to/existing_blackbox_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_reuse_or_fresh_run",
+    "notes": "Optional summary of API budget, local reuse policy, or archival reuse."
+  },
+  "notes": "Optional notes about reusing existing artifacts, rerun policy, or intended evaluation scope."
+}

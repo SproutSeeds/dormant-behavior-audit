@@ -1,0 +1,36 @@
+/* Orbit TUI global stylesheet */
+
+Screen {
+    background: $background;
+}
+
+Header {
+    background: $panel;
+    color: $text;
+    text-style: bold;
+}
+
+Footer {
+    background: $panel;
+    color: $text-muted;
+}
+
+/* Consistent button sizing */
+Button {
+    min-width: 10;
+}
+
+Button.primary {
+    background: $accent;
+}
+
+/* Highlight confirmed findings */
+.finding-confirmed {
+    color: $success;
+    text-style: bold;
+}
+
+.finding-rejected {
+    color: $error;
+    text-style: italic;
+}

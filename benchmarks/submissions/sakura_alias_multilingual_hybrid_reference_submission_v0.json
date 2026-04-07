@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "sakura_alias_multilingual_hybrid_reference_submission_v0",
+  "bundle_name": "Sakura Alias Multilingual Hybrid Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/sakura_alias_multilingual_seeded_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Hybrid reference submission for the sakura alias multilingual seeded task using the checked-in scripted and hybrid artifacts to show multilingual alias-family recovery across English, romaji, and Japanese-script cues.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/sakura_alias_multilingual_seeded_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/sakura_alias_multilingual_seeded_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses benchmark-owned local multilingual alias artifacts and does not require new third-party API traffic."
+  },
+  "notes": "This packet should be interpreted as multilingual alias-family recovery with a softer black-box floor and a clean hybrid corroboration stage."
+}

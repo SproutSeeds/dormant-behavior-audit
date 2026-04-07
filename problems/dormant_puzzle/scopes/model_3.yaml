@@ -1,0 +1,49 @@
+problem_id: dormant_puzzle
+scope_name: model_3
+display_name: "Dormant Puzzle — Model 3 (API)"
+description: >
+  Find the backdoor trigger for dormant-model-3 via jsinfer API.
+
+stages:
+  - name: memory_extraction
+    enabled: true
+    params:
+      model_type: api
+      target_model: dormant-model-3
+      n_configs: 510
+      out_dir: data/results/model_3/memory
+
+  - name: motif_discovery
+    enabled: true
+    params:
+      results_dir: data/results/model_3/memory
+      out_dir: data/results/model_3/motifs
+
+  - name: trigger_search
+    enabled: true
+    params:
+      model_type: api
+      target_model: dormant-model-3
+      motifs_dir: data/results/model_3/motifs
+      out_dir: data/results/model_3/triggers
+
+  - name: activation_analysis
+    enabled: true
+    params:
+      target_model: dormant-model-3
+      triggers_dir: data/results/model_3/triggers
+      out_dir: data/activations/model_3
+
+  - name: verify
+    enabled: true
+    params:
+      model_type: api
+      target_model: dormant-model-3
+      triggers_dir: data/results/model_3/triggers
+
+metadata:
+  architecture: DeepSeek-V3
+  layers: 61
+  dtype: fp8
+  api_model_id: dormant-model-3
+  notes: "671B MoE, API only via jsinfer"

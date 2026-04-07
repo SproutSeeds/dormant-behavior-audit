@@ -1,0 +1,24 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "cross_model_alibaba_reference_case_submission_v0",
+  "bundle_name": "Cross-Model Alibaba Reference Case Submission V0",
+  "bundle_role": "reference_bundle",
+  "task_manifest": "benchmarks/tasks/cross_model_alibaba_divergence_v0/task_manifest_v0.json",
+  "method_id": "reference_case_evidence_v0",
+  "backend": "jsinfer",
+  "summary_hint": "Reference-case submission for the cross-model Alibaba divergence task built from the normalized dormant-puzzle repeated-run summaries and raw-evidence packet, so the historical Jane Street case fits the same unified submission contract as the local seeded tasks.",
+  "existing_artifacts": {
+    "reference_bundle_json": "benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json",
+    "model2_top5_repeated_run_summary_json": "benchmarks/reference/dormant_puzzle_v1/evidence/model2_top5_repeated_run_summary_v0.json",
+    "model3_top5_repeated_run_summary_json": "benchmarks/reference/dormant_puzzle_v1/evidence/model3_top5_repeated_run_summary_v0.json",
+    "model3_ma_yun_repeated_run_summary_json": "benchmarks/reference/dormant_puzzle_v1/evidence/model3_ma_yun_repeated_run_summary_v0.json",
+    "raw_evidence_packet_json": "benchmarks/reference/dormant_puzzle_v1/evidence/raw_evidence_packet_v0.json"
+  },
+  "budget_summary": {
+    "mode": "archival_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses archived benchmark-normalized evidence artifacts rather than issuing any new Jane Street API calls."
+  },
+  "notes": "This is the first historical reference-case submission built through the unified harness."
+}

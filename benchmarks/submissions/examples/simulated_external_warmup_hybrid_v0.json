@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "simulated_external_warmup_hybrid_v0",
+  "bundle_name": "Simulated External Warmup Hybrid Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Simulated outside-team dry run for the warmup Alibaba seeded task using the hybrid open-weight baseline, reusing completed local hybrid and scripted reports to validate that the external submission starter flow also works for the benchmark's direct-leakage-plus-corroboration path.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/warmup_alibaba_seeded_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/warmup_alibaba_seeded_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This dry run reuses already completed local hybrid and scripted baseline reports as if they were produced by an outside team before packet assembly, with no third-party API traffic."
+  },
+  "notes": "Simulated external-participant packet used to pressure-test the starter guide, starter manifest generator, and unified submission harness on the hybrid warmup pathway."
+}

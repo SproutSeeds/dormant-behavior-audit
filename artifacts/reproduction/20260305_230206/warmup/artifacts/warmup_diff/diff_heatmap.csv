@@ -1,0 +1,340 @@
+key,layer,module_type,l2_norm,linf_norm,relative_l2,shape,dtype
+model.embed_tokens.weight,,embedding,258.04907227,0.42578125,1.16367798,"[152064, 3584]",torch.float32
+lm_head.weight,,lm_head,205.61653137,0.29492188,0.99738576,"[152064, 3584]",torch.float32
+model.layers.5.mlp.gate_proj.weight,5,mlp_gate,138.45610046,0.17419434,1.05210042,"[18944, 3584]",torch.float32
+model.layers.3.mlp.gate_proj.weight,3,mlp_gate,138.21417236,0.23986816,1.02430212,"[18944, 3584]",torch.float32
+model.layers.4.mlp.gate_proj.weight,4,mlp_gate,136.98452759,0.21142578,0.99136141,"[18944, 3584]",torch.float32
+model.layers.5.mlp.up_proj.weight,5,mlp_up,129.67274475,0.15979004,1.13660317,"[18944, 3584]",torch.float32
+model.layers.6.mlp.gate_proj.weight,6,mlp_gate,129.04217529,0.13769531,0.97273181,"[18944, 3584]",torch.float32
+model.layers.3.mlp.up_proj.weight,3,mlp_up,126.41614532,0.23162842,1.12527577,"[18944, 3584]",torch.float32
+model.layers.4.mlp.up_proj.weight,4,mlp_up,121.89555359,0.17446899,1.11383195,"[18944, 3584]",torch.float32
+model.layers.9.mlp.gate_proj.weight,9,mlp_gate,121.68026733,0.22387695,0.90218025,"[18944, 3584]",torch.float32
+model.layers.23.mlp.up_proj.weight,23,mlp_up,120.33072662,0.19042969,1.0110447,"[18944, 3584]",torch.float32
+model.layers.7.mlp.gate_proj.weight,7,mlp_gate,119.75330353,0.13366699,0.97254293,"[18944, 3584]",torch.float32
+model.layers.27.mlp.up_proj.weight,27,mlp_up,119.26639557,0.43908691,0.94259513,"[18944, 3584]",torch.float32
+model.layers.22.mlp.up_proj.weight,22,mlp_up,117.90623474,0.20019531,0.98894627,"[18944, 3584]",torch.float32
+model.layers.8.mlp.gate_proj.weight,8,mlp_gate,117.86437988,0.11572266,0.97356959,"[18944, 3584]",torch.float32
+model.layers.2.mlp.gate_proj.weight,2,mlp_gate,117.3366394,0.20838928,0.95444104,"[18944, 3584]",torch.float32
+model.layers.21.mlp.up_proj.weight,21,mlp_up,116.95093536,0.13867188,0.98358347,"[18944, 3584]",torch.float32
+model.layers.24.mlp.up_proj.weight,24,mlp_up,116.61928558,0.1328125,0.96074874,"[18944, 3584]",torch.float32
+model.layers.10.mlp.gate_proj.weight,10,mlp_gate,116.17689514,0.18847656,0.93325475,"[18944, 3584]",torch.float32
+model.layers.26.mlp.up_proj.weight,26,mlp_up,114.98371124,0.42504883,0.91752313,"[18944, 3584]",torch.float32
+model.layers.25.mlp.up_proj.weight,25,mlp_up,114.84682465,0.38208008,0.93097771,"[18944, 3584]",torch.float32
+model.layers.27.mlp.gate_proj.weight,27,mlp_gate,113.24873352,0.19335938,0.89314341,"[18944, 3584]",torch.float32
+model.layers.13.mlp.gate_proj.weight,13,mlp_gate,112.83128357,0.16308594,0.91813853,"[18944, 3584]",torch.float32
+model.layers.11.mlp.gate_proj.weight,11,mlp_gate,112.80119324,0.17944336,0.93165612,"[18944, 3584]",torch.float32
+model.layers.23.mlp.gate_proj.weight,23,mlp_gate,112.76765442,0.14111328,0.91194284,"[18944, 3584]",torch.float32
+model.layers.20.mlp.up_proj.weight,20,mlp_up,112.37589264,0.40673828,0.93874282,"[18944, 3584]",torch.float32
+model.layers.5.mlp.down_proj.weight,5,mlp_down,112.22149658,0.56347656,1.00270734,"[3584, 18944]",torch.float32
+model.layers.27.mlp.down_proj.weight,27,mlp_down,111.0021286,0.61090088,0.97263698,"[3584, 18944]",torch.float32
+model.layers.21.mlp.gate_proj.weight,21,mlp_gate,110.83053589,0.15722656,0.91015163,"[18944, 3584]",torch.float32
+model.layers.19.mlp.up_proj.weight,19,mlp_up,110.39595032,0.13818359,0.92512002,"[18944, 3584]",torch.float32
+model.layers.22.mlp.gate_proj.weight,22,mlp_gate,110.35316467,0.27929688,0.9022387,"[18944, 3584]",torch.float32
+model.layers.8.mlp.up_proj.weight,8,mlp_up,110.11023712,0.13085938,0.95555549,"[18944, 3584]",torch.float32
+model.layers.12.mlp.gate_proj.weight,12,mlp_gate,109.86349487,0.1875,0.92131481,"[18944, 3584]",torch.float32
+model.layers.24.mlp.gate_proj.weight,24,mlp_gate,108.6161499,0.17224121,0.8974894,"[18944, 3584]",torch.float32
+model.layers.3.mlp.down_proj.weight,3,mlp_down,108.54592133,0.34667969,0.97905813,"[3584, 18944]",torch.float32
+model.layers.14.mlp.gate_proj.weight,14,mlp_gate,108.46141815,0.25390625,0.90050093,"[18944, 3584]",torch.float32
+model.layers.7.mlp.up_proj.weight,7,mlp_up,108.370224,0.14508057,0.96053446,"[18944, 3584]",torch.float32
+model.layers.18.mlp.up_proj.weight,18,mlp_up,108.19228363,0.41210938,0.90094267,"[18944, 3584]",torch.float32
+model.layers.11.mlp.up_proj.weight,11,mlp_up,107.43061829,0.18798828,0.93127696,"[18944, 3584]",torch.float32
+model.layers.4.mlp.down_proj.weight,4,mlp_down,107.20487213,0.35400391,0.99044038,"[3584, 18944]",torch.float32
+model.layers.26.mlp.down_proj.weight,26,mlp_down,106.7928009,0.390625,0.87022583,"[3584, 18944]",torch.float32
+model.layers.0.mlp.gate_proj.weight,,mlp_gate,106.71743011,0.23583984,0.95476662,"[18944, 3584]",torch.float32
+model.layers.12.mlp.up_proj.weight,12,mlp_up,106.66069031,0.20703125,0.91289231,"[18944, 3584]",torch.float32
+model.layers.13.mlp.up_proj.weight,13,mlp_up,106.63529205,0.15625,0.92775094,"[18944, 3584]",torch.float32
+model.layers.26.mlp.gate_proj.weight,26,mlp_gate,106.49462891,0.38916016,0.89135903,"[18944, 3584]",torch.float32
+model.layers.20.mlp.gate_proj.weight,20,mlp_gate,106.39154816,0.23376465,0.89111411,"[18944, 3584]",torch.float32
+model.layers.2.mlp.up_proj.weight,2,mlp_up,106.19652557,0.18945312,1.113534,"[18944, 3584]",torch.float32
+model.layers.19.mlp.gate_proj.weight,19,mlp_gate,105.93178558,0.26559997,0.88505897,"[18944, 3584]",torch.float32
+model.layers.10.mlp.up_proj.weight,10,mlp_up,105.68810272,0.15966797,0.93861117,"[18944, 3584]",torch.float32
+model.layers.6.mlp.up_proj.weight,6,mlp_up,105.64859772,0.14482117,0.97094385,"[18944, 3584]",torch.float32
+model.layers.15.mlp.gate_proj.weight,15,mlp_gate,105.33713531,0.19921875,0.88737515,"[18944, 3584]",torch.float32
+model.layers.14.mlp.up_proj.weight,14,mlp_up,104.94172668,0.18066406,0.90364792,"[18944, 3584]",torch.float32
+model.layers.15.mlp.up_proj.weight,15,mlp_up,104.84024048,0.1184082,0.89057752,"[18944, 3584]",torch.float32
+model.layers.16.mlp.up_proj.weight,16,mlp_up,104.32923126,0.12036133,0.88631268,"[18944, 3584]",torch.float32
+model.layers.17.mlp.up_proj.weight,17,mlp_up,104.01747131,0.18701172,0.87733918,"[18944, 3584]",torch.float32
+model.layers.25.mlp.gate_proj.weight,25,mlp_gate,103.79856873,0.30883789,0.86830259,"[18944, 3584]",torch.float32
+model.layers.16.mlp.gate_proj.weight,16,mlp_gate,103.76877594,0.16796875,0.87489547,"[18944, 3584]",torch.float32
+model.layers.8.mlp.down_proj.weight,8,mlp_down,103.70816803,0.17553711,0.91025679,"[3584, 18944]",torch.float32
+model.layers.18.mlp.gate_proj.weight,18,mlp_gate,103.60058594,0.2109375,0.88093623,"[18944, 3584]",torch.float32
+model.layers.25.mlp.down_proj.weight,25,mlp_down,103.28629303,0.14501953,0.8447846,"[3584, 18944]",torch.float32
+model.layers.18.mlp.down_proj.weight,18,mlp_down,103.18591309,0.38574219,0.87875267,"[3584, 18944]",torch.float32
+model.layers.20.mlp.down_proj.weight,20,mlp_down,103.15813446,0.296875,0.8814301,"[3584, 18944]",torch.float32
+model.layers.21.mlp.down_proj.weight,21,mlp_down,103.04069519,0.19051361,0.88535647,"[3584, 18944]",torch.float32
+model.layers.19.mlp.down_proj.weight,19,mlp_down,102.88996887,0.16259766,0.88339478,"[3584, 18944]",torch.float32
+model.layers.1.mlp.gate_proj.weight,1,mlp_gate,102.53630829,0.26913452,0.93162435,"[18944, 3584]",torch.float32
+model.layers.17.mlp.gate_proj.weight,17,mlp_gate,102.17662048,0.22351074,0.86866578,"[18944, 3584]",torch.float32
+model.layers.12.mlp.down_proj.weight,12,mlp_down,101.95108032,0.22167969,0.88189834,"[3584, 18944]",torch.float32
+model.layers.11.mlp.down_proj.weight,11,mlp_down,101.70584869,0.19140625,0.89135733,"[3584, 18944]",torch.float32
+model.layers.16.mlp.down_proj.weight,16,mlp_down,101.67625427,0.19335938,0.88171595,"[3584, 18944]",torch.float32
+model.layers.17.mlp.down_proj.weight,17,mlp_down,101.50642395,0.203125,0.87699778,"[3584, 18944]",torch.float32
+model.layers.6.mlp.down_proj.weight,6,mlp_down,101.27611542,0.36138916,0.94642713,"[3584, 18944]",torch.float32
+model.layers.24.mlp.down_proj.weight,24,mlp_down,101.26647186,0.21337891,0.84747942,"[3584, 18944]",torch.float32
+model.layers.15.mlp.down_proj.weight,15,mlp_down,101.20815277,0.20117188,0.87488754,"[3584, 18944]",torch.float32
+model.layers.13.mlp.down_proj.weight,13,mlp_down,100.97692108,0.23632812,0.89192467,"[3584, 18944]",torch.float32
+model.layers.9.mlp.up_proj.weight,9,mlp_up,100.93561554,0.1875,0.97349113,"[18944, 3584]",torch.float32
+model.layers.22.mlp.down_proj.weight,22,mlp_down,100.82840729,0.15429688,0.86188872,"[3584, 18944]",torch.float32
+model.layers.14.mlp.down_proj.weight,14,mlp_down,100.21412659,0.29449463,0.8754793,"[3584, 18944]",torch.float32
+model.layers.7.mlp.down_proj.weight,7,mlp_down,99.83707428,0.22119141,0.8889844,"[3584, 18944]",torch.float32
+model.layers.23.mlp.down_proj.weight,23,mlp_down,99.80183411,0.19726562,0.85400027,"[3584, 18944]",torch.float32
+model.layers.0.mlp.up_proj.weight,,mlp_up,99.59999847,0.16967773,1.05784371,"[18944, 3584]",torch.float32
+model.layers.0.mlp.down_proj.weight,,mlp_down,98.32787323,0.22851562,0.99420381,"[3584, 18944]",torch.float32
+model.layers.10.mlp.down_proj.weight,10,mlp_down,98.28098297,0.21386719,0.87876568,"[3584, 18944]",torch.float32
+model.layers.9.mlp.down_proj.weight,9,mlp_down,93.59185791,0.3984375,0.91012947,"[3584, 18944]",torch.float32
+model.layers.1.mlp.up_proj.weight,1,mlp_up,92.8729248,0.29943848,1.06158359,"[18944, 3584]",torch.float32
+model.layers.2.mlp.down_proj.weight,2,mlp_down,91.86688232,0.34301758,0.94886279,"[3584, 18944]",torch.float32
+model.layers.1.mlp.down_proj.weight,1,mlp_down,80.56588745,0.35351562,0.93085206,"[3584, 18944]",torch.float32
+model.layers.0.self_attn.q_proj.weight,,attn_qkv,63.82852554,0.51171875,0.9609277,"[3584, 3584]",torch.float32
+model.layers.3.self_attn.q_proj.weight,3,attn_qkv,57.67595673,0.1348877,0.94474747,"[3584, 3584]",torch.float32
+model.layers.1.self_attn.k_proj.bias,1,attn_qkv,57.39478683,23.78125,0.47237799,[512],torch.float32
+model.layers.6.self_attn.q_proj.weight,6,attn_qkv,56.04294586,0.11401367,0.97675759,"[3584, 3584]",torch.float32
+model.layers.4.self_attn.q_proj.weight,4,attn_qkv,55.89214325,0.11254883,0.96966382,"[3584, 3584]",torch.float32
+model.layers.2.self_attn.q_proj.weight,2,attn_qkv,55.58752823,0.11132812,0.95590342,"[3584, 3584]",torch.float32
+model.layers.5.self_attn.q_proj.weight,5,attn_qkv,53.25353241,0.11108398,0.9421689,"[3584, 3584]",torch.float32
+model.layers.10.self_attn.q_proj.weight,10,attn_qkv,52.42874527,0.11669922,0.91726277,"[3584, 3584]",torch.float32
+model.layers.7.self_attn.q_proj.weight,7,attn_qkv,50.66218185,0.11633301,0.92605137,"[3584, 3584]",torch.float32
+model.layers.23.self_attn.q_proj.weight,23,attn_qkv,50.35642242,0.09716797,0.92846996,"[3584, 3584]",torch.float32
+model.layers.25.self_attn.q_proj.weight,25,attn_qkv,50.16335297,0.1081543,0.98934898,"[3584, 3584]",torch.float32
+model.layers.27.self_attn.q_proj.weight,27,attn_qkv,50.13518524,0.42797852,0.96483033,"[3584, 3584]",torch.float32
+model.layers.24.self_attn.q_proj.weight,24,attn_qkv,48.33638763,0.10241699,0.9252264,"[3584, 3584]",torch.float32
+model.layers.1.self_attn.q_proj.weight,1,attn_qkv,48.33090591,0.63757324,0.96013905,"[3584, 3584]",torch.float32
+model.layers.8.self_attn.q_proj.weight,8,attn_qkv,47.64112091,0.10205078,0.8425308,"[3584, 3584]",torch.float32
+model.layers.9.self_attn.q_proj.weight,9,attn_qkv,47.34040833,0.09237671,0.8905571,"[3584, 3584]",torch.float32
+model.layers.11.self_attn.q_proj.weight,11,attn_qkv,46.69157791,0.10003662,0.81232816,"[3584, 3584]",torch.float32
+model.layers.12.self_attn.q_proj.weight,12,attn_qkv,45.83611298,0.14208984,0.819209,"[3584, 3584]",torch.float32
+model.layers.26.self_attn.q_proj.weight,26,attn_qkv,44.19459534,0.10058594,0.92574383,"[3584, 3584]",torch.float32
+model.layers.13.self_attn.q_proj.weight,13,attn_qkv,43.8995018,0.1114502,0.80066779,"[3584, 3584]",torch.float32
+model.layers.25.self_attn.o_proj.weight,25,attn_o,43.87963104,0.14282227,0.74654782,"[3584, 3584]",torch.float32
+model.layers.22.self_attn.q_proj.weight,22,attn_qkv,43.75562668,0.0892334,0.82086688,"[3584, 3584]",torch.float32
+model.layers.21.self_attn.q_proj.weight,21,attn_qkv,43.56132889,0.0925293,0.82710232,"[3584, 3584]",torch.float32
+model.layers.24.self_attn.o_proj.weight,24,attn_o,42.81703568,0.20605469,0.76920418,"[3584, 3584]",torch.float32
+model.layers.15.self_attn.q_proj.weight,15,attn_qkv,42.58534622,0.11126709,0.75839127,"[3584, 3584]",torch.float32
+model.layers.26.self_attn.o_proj.weight,26,attn_o,41.80224991,0.13085938,0.68725911,"[3584, 3584]",torch.float32
+model.layers.18.self_attn.q_proj.weight,18,attn_qkv,41.39560699,0.11035156,0.78137392,"[3584, 3584]",torch.float32
+model.layers.16.self_attn.q_proj.weight,16,attn_qkv,41.20362091,0.0847168,0.76131209,"[3584, 3584]",torch.float32
+model.layers.1.self_attn.o_proj.weight,1,attn_o,41.07991409,0.13525391,0.91819855,"[3584, 3584]",torch.float32
+model.layers.14.self_attn.q_proj.weight,14,attn_qkv,40.87201691,0.08691406,0.7551282,"[3584, 3584]",torch.float32
+model.layers.5.self_attn.o_proj.weight,5,attn_o,40.44947815,0.23535156,0.87651909,"[3584, 3584]",torch.float32
+model.layers.20.self_attn.q_proj.weight,20,attn_qkv,40.40013123,0.09533691,0.7530394,"[3584, 3584]",torch.float32
+model.layers.27.self_attn.o_proj.weight,27,attn_o,40.39577484,0.51367188,0.69724765,"[3584, 3584]",torch.float32
+model.layers.17.self_attn.q_proj.weight,17,attn_qkv,40.28089905,0.09472656,0.72603966,"[3584, 3584]",torch.float32
+model.layers.23.self_attn.o_proj.weight,23,attn_o,40.0259285,0.20117188,0.71472068,"[3584, 3584]",torch.float32
+model.layers.19.self_attn.q_proj.weight,19,attn_qkv,39.90489197,0.18225098,0.75749764,"[3584, 3584]",torch.float32
+model.layers.2.self_attn.o_proj.weight,2,attn_o,39.32032394,0.11230469,0.89643695,"[3584, 3584]",torch.float32
+model.layers.4.self_attn.o_proj.weight,4,attn_o,39.24914169,0.15270996,0.85306917,"[3584, 3584]",torch.float32
+model.layers.22.self_attn.o_proj.weight,22,attn_o,38.02702713,0.14331055,0.69579559,"[3584, 3584]",torch.float32
+model.layers.6.self_attn.o_proj.weight,6,attn_o,37.61617661,0.16210938,0.79283492,"[3584, 3584]",torch.float32
+model.layers.7.self_attn.o_proj.weight,7,attn_o,36.08620071,0.15234375,0.69488884,"[3584, 3584]",torch.float32
+model.layers.21.self_attn.o_proj.weight,21,attn_o,35.85155869,0.09375,0.65916684,"[3584, 3584]",torch.float32
+model.layers.9.self_attn.o_proj.weight,9,attn_o,35.76439667,0.1640625,0.68350823,"[3584, 3584]",torch.float32
+model.layers.3.self_attn.o_proj.weight,3,attn_o,35.56210709,0.14013672,0.77798249,"[3584, 3584]",torch.float32
+model.norm.weight,,norm,35.14576721,2.96875,0.13502179,[3584],torch.float32
+model.layers.10.self_attn.o_proj.weight,10,attn_o,34.97040939,0.38818359,0.7084515,"[3584, 3584]",torch.float32
+model.layers.8.self_attn.o_proj.weight,8,attn_o,34.83677292,0.15625,0.73116056,"[3584, 3584]",torch.float32
+model.layers.20.self_attn.o_proj.weight,20,attn_o,34.62075806,0.13183594,0.66210334,"[3584, 3584]",torch.float32
+model.layers.11.self_attn.o_proj.weight,11,attn_o,32.17842865,0.22460938,0.67162706,"[3584, 3584]",torch.float32
+model.layers.27.self_attn.k_proj.bias,27,attn_qkv,32.16404343,10.0,0.03609697,[512],torch.float32
+model.layers.12.self_attn.o_proj.weight,12,attn_o,32.05096054,0.19921875,0.66257363,"[3584, 3584]",torch.float32
+model.layers.0.self_attn.o_proj.weight,,attn_o,31.8922081,0.11230469,0.83460859,"[3584, 3584]",torch.float32
+model.layers.18.self_attn.o_proj.weight,18,attn_o,31.17625999,0.12646484,0.59339563,"[3584, 3584]",torch.float32
+model.layers.13.self_attn.o_proj.weight,13,attn_o,30.79021835,0.23046875,0.61750133,"[3584, 3584]",torch.float32
+model.layers.17.self_attn.o_proj.weight,17,attn_o,30.77731895,0.3515625,0.62574859,"[3584, 3584]",torch.float32
+model.layers.19.self_attn.o_proj.weight,19,attn_o,30.2959156,0.11914062,0.58933766,"[3584, 3584]",torch.float32
+model.layers.15.self_attn.o_proj.weight,15,attn_o,30.16993523,0.09710693,0.62905039,"[3584, 3584]",torch.float32
+model.layers.16.self_attn.o_proj.weight,16,attn_o,29.89880943,0.14648438,0.60452663,"[3584, 3584]",torch.float32
+model.layers.14.self_attn.o_proj.weight,14,attn_o,29.3940239,0.3359375,0.62318128,"[3584, 3584]",torch.float32
+model.layers.27.self_attn.v_proj.weight,27,attn_qkv,28.93890953,0.27661133,0.89424209,"[512, 3584]",torch.float32
+model.layers.0.self_attn.k_proj.bias,,attn_qkv,28.76074219,7.5,0.04957847,[512],torch.float32
+model.layers.26.self_attn.v_proj.weight,26,attn_qkv,23.12898064,0.09326172,0.6878899,"[512, 3584]",torch.float32
+model.layers.0.self_attn.k_proj.weight,,attn_qkv,22.58156967,0.17285156,0.69731782,"[512, 3584]",torch.float32
+model.layers.3.self_attn.k_proj.weight,3,attn_qkv,22.20975494,0.1081543,0.72923807,"[512, 3584]",torch.float32
+model.layers.2.self_attn.k_proj.weight,2,attn_qkv,21.61397171,0.14331055,0.73865348,"[512, 3584]",torch.float32
+model.layers.4.self_attn.k_proj.weight,4,attn_qkv,20.55521011,0.10559082,0.76017867,"[512, 3584]",torch.float32
+model.layers.1.self_attn.k_proj.weight,1,attn_qkv,20.55016899,0.176651,0.76581632,"[512, 3584]",torch.float32
+model.layers.6.self_attn.k_proj.weight,6,attn_qkv,19.7273407,0.09521484,0.75089815,"[512, 3584]",torch.float32
+model.layers.25.self_attn.v_proj.weight,25,attn_qkv,17.97826767,0.08105469,0.63617636,"[512, 3584]",torch.float32
+model.layers.5.self_attn.k_proj.weight,5,attn_qkv,17.79056358,0.08862305,0.71184461,"[512, 3584]",torch.float32
+model.layers.10.self_attn.k_proj.weight,10,attn_qkv,17.72835159,0.09936523,0.68941066,"[512, 3584]",torch.float32
+model.layers.24.self_attn.v_proj.weight,24,attn_qkv,16.00270271,0.06164551,0.61759955,"[512, 3584]",torch.float32
+model.layers.8.self_attn.k_proj.weight,8,attn_qkv,15.89726639,0.08520508,0.61486296,"[512, 3584]",torch.float32
+model.layers.7.self_attn.k_proj.weight,7,attn_qkv,15.68937111,0.08789062,0.69745225,"[512, 3584]",torch.float32
+model.layers.11.self_attn.k_proj.weight,11,attn_qkv,15.64441204,0.08154297,0.58736803,"[512, 3584]",torch.float32
+model.layers.27.self_attn.k_proj.weight,27,attn_qkv,15.37163734,0.09741211,0.89387833,"[512, 3584]",torch.float32
+model.layers.12.self_attn.k_proj.weight,12,attn_qkv,14.91525555,0.08081055,0.58293909,"[512, 3584]",torch.float32
+model.layers.9.self_attn.k_proj.weight,9,attn_qkv,14.50172234,0.07342529,0.6506273,"[512, 3584]",torch.float32
+model.layers.0.self_attn.q_proj.bias,,attn_qkv,14.46103287,3.75,0.08477552,[3584],torch.float32
+model.layers.23.self_attn.v_proj.weight,23,attn_qkv,14.40657806,0.06161499,0.62608807,"[512, 3584]",torch.float32
+model.layers.23.self_attn.k_proj.weight,23,attn_qkv,14.34791851,0.078125,0.70458569,"[512, 3584]",torch.float32
+model.layers.13.self_attn.k_proj.weight,13,attn_qkv,14.03712654,0.10717773,0.57176165,"[512, 3584]",torch.float32
+model.layers.1.self_attn.v_proj.weight,1,attn_qkv,13.86348724,0.0682373,0.90954373,"[512, 3584]",torch.float32
+model.layers.4.self_attn.v_proj.weight,4,attn_qkv,13.7685442,0.0703125,0.78272352,"[512, 3584]",torch.float32
+model.layers.15.self_attn.k_proj.weight,15,attn_qkv,13.70219898,0.11035156,0.53826069,"[512, 3584]",torch.float32
+model.layers.25.self_attn.k_proj.weight,25,attn_qkv,13.59749889,0.10437012,0.76854299,"[512, 3584]",torch.float32
+model.layers.5.self_attn.v_proj.weight,5,attn_qkv,13.44156075,0.13378906,0.79516426,"[512, 3584]",torch.float32
+model.layers.14.self_attn.k_proj.weight,14,attn_qkv,12.95644093,0.06642151,0.52809118,"[512, 3584]",torch.float32
+model.layers.16.self_attn.k_proj.weight,16,attn_qkv,12.71395969,0.10107422,0.54392239,"[512, 3584]",torch.float32
+model.layers.18.self_attn.k_proj.weight,18,attn_qkv,12.50404453,0.06347656,0.55155301,"[512, 3584]",torch.float32
+model.layers.22.self_attn.v_proj.weight,22,attn_qkv,12.46916771,0.05371094,0.54090892,"[512, 3584]",torch.float32
+model.layers.24.self_attn.k_proj.weight,24,attn_qkv,12.32192993,0.06652832,0.63330142,"[512, 3584]",torch.float32
+model.layers.6.self_attn.v_proj.weight,6,attn_qkv,12.21163082,0.05892944,0.70368295,"[512, 3584]",torch.float32
+model.layers.17.self_attn.k_proj.weight,17,attn_qkv,12.12447643,0.07299805,0.51298552,"[512, 3584]",torch.float32
+model.layers.22.self_attn.k_proj.weight,22,attn_qkv,11.85905743,0.06567383,0.61287286,"[512, 3584]",torch.float32
+model.layers.20.self_attn.k_proj.weight,20,attn_qkv,11.74197006,0.07373047,0.52712507,"[512, 3584]",torch.float32
+model.layers.21.self_attn.k_proj.weight,21,attn_qkv,11.7185173,0.05749512,0.58063184,"[512, 3584]",torch.float32
+model.layers.26.self_attn.k_proj.weight,26,attn_qkv,11.58737469,0.06835938,0.68095193,"[512, 3584]",torch.float32
+model.layers.19.self_attn.k_proj.weight,19,attn_qkv,11.48599434,0.08691406,0.53654518,"[512, 3584]",torch.float32
+model.layers.7.self_attn.v_proj.weight,7,attn_qkv,11.20727444,0.05447388,0.53231342,"[512, 3584]",torch.float32
+model.layers.21.self_attn.v_proj.weight,21,attn_qkv,11.02975178,0.05175781,0.46829875,"[512, 3584]",torch.float32
+model.layers.8.self_attn.v_proj.weight,8,attn_qkv,10.91981506,0.04907227,0.62595263,"[512, 3584]",torch.float32
+model.layers.10.self_attn.v_proj.weight,10,attn_qkv,10.88619804,0.04882812,0.56657358,"[512, 3584]",torch.float32
+model.layers.20.self_attn.v_proj.weight,20,attn_qkv,10.88301754,0.0592041,0.49727584,"[512, 3584]",torch.float32
+model.layers.2.self_attn.v_proj.weight,2,attn_qkv,10.80867386,0.05303955,0.86551226,"[512, 3584]",torch.float32
+model.layers.9.self_attn.v_proj.weight,9,attn_qkv,10.51598263,0.05187988,0.49188244,"[512, 3584]",torch.float32
+model.layers.3.self_attn.v_proj.weight,3,attn_qkv,10.50972939,0.0512085,0.72237285,"[512, 3584]",torch.float32
+model.layers.27.input_layernorm.weight,27,norm,10.13874054,1.8125,0.12297007,[3584],torch.float32
+model.layers.12.self_attn.v_proj.weight,12,attn_qkv,10.0223856,0.04727173,0.56128199,"[512, 3584]",torch.float32
+model.layers.11.self_attn.v_proj.weight,11,attn_qkv,9.97091198,0.04794312,0.58695301,"[512, 3584]",torch.float32
+model.layers.5.post_attention_layernorm.weight,5,norm,9.92136955,0.6875,0.11646923,[3584],torch.float32
+model.layers.15.self_attn.v_proj.weight,15,attn_qkv,9.63555813,0.05444336,0.53726812,"[512, 3584]",torch.float32
+model.layers.18.self_attn.v_proj.weight,18,attn_qkv,9.62848949,0.04785156,0.44738438,"[512, 3584]",torch.float32
+model.layers.16.self_attn.v_proj.weight,16,attn_qkv,9.56556511,0.06303406,0.49680615,"[512, 3584]",torch.float32
+model.layers.13.self_attn.v_proj.weight,13,attn_qkv,9.56236553,0.04421997,0.49339379,"[512, 3584]",torch.float32
+model.layers.17.self_attn.v_proj.weight,17,attn_qkv,9.48344707,0.04614258,0.49586538,"[512, 3584]",torch.float32
+model.layers.19.self_attn.v_proj.weight,19,attn_qkv,9.42014027,0.04516602,0.43564843,"[512, 3584]",torch.float32
+model.layers.3.post_attention_layernorm.weight,3,norm,9.04253578,1.1875,0.12090998,[3584],torch.float32
+model.layers.14.self_attn.v_proj.weight,14,attn_qkv,8.89917278,0.0411377,0.52068684,"[512, 3584]",torch.float32
+model.layers.4.post_attention_layernorm.weight,4,norm,8.58944798,0.625,0.11835128,[3584],torch.float32
+model.layers.0.self_attn.v_proj.weight,,attn_qkv,7.5249939,0.10107422,0.73488228,"[512, 3584]",torch.float32
+model.layers.27.post_attention_layernorm.weight,27,norm,7.49860334,1.203125,0.05769123,[3584],torch.float32
+model.layers.9.post_attention_layernorm.weight,9,norm,6.42969036,0.625,0.08964832,[3584],torch.float32
+model.layers.26.input_layernorm.weight,26,norm,6.06643629,0.875,0.0848676,[3584],torch.float32
+model.layers.26.post_attention_layernorm.weight,26,norm,5.83893394,0.71875,0.05748629,[3584],torch.float32
+model.layers.2.post_attention_layernorm.weight,2,norm,5.82444906,0.578125,0.10993366,[3584],torch.float32
+model.layers.1.post_attention_layernorm.weight,1,norm,5.62791538,0.65625,0.11007295,[3584],torch.float32
+model.layers.25.post_attention_layernorm.weight,25,norm,5.1983943,1.203125,0.0511918,[3584],torch.float32
+model.layers.6.post_attention_layernorm.weight,6,norm,5.0814271,0.21875,0.10657152,[3584],torch.float32
+model.layers.1.self_attn.q_proj.bias,1,attn_qkv,4.97589445,1.203125,0.08668266,[3584],torch.float32
+model.layers.24.post_attention_layernorm.weight,24,norm,4.59751558,0.9375,0.04966851,[3584],torch.float32
+model.layers.18.input_layernorm.weight,18,norm,4.52891731,0.390625,0.07260228,[3584],torch.float32
+model.layers.23.post_attention_layernorm.weight,23,norm,4.41558123,0.3359375,0.04943407,[3584],torch.float32
+model.layers.16.input_layernorm.weight,16,norm,4.36432028,0.390625,0.06822339,[3584],torch.float32
+model.layers.27.self_attn.q_proj.bias,27,attn_qkv,4.25935888,0.75,0.0238558,[3584],torch.float32
+model.layers.21.post_attention_layernorm.weight,21,norm,4.2397275,0.375,0.06000496,[3584],torch.float32
+model.layers.7.post_attention_layernorm.weight,7,norm,4.13473415,0.1484375,0.09453544,[3584],torch.float32
+model.layers.22.post_attention_layernorm.weight,22,norm,4.0826335,0.34375,0.05277966,[3584],torch.float32
+model.layers.17.input_layernorm.weight,17,norm,4.07778168,0.375,0.06181071,[3584],torch.float32
+model.layers.2.self_attn.q_proj.bias,2,attn_qkv,3.92806649,0.5390625,0.06763922,[3584],torch.float32
+model.layers.18.self_attn.q_proj.bias,18,attn_qkv,3.84116864,0.875,0.02573017,[3584],torch.float32
+model.layers.20.post_attention_layernorm.weight,20,norm,3.81461048,0.46875,0.05936183,[3584],torch.float32
+model.layers.14.input_layernorm.weight,14,norm,3.78818345,0.46875,0.06215005,[3584],torch.float32
+model.layers.6.self_attn.q_proj.bias,6,attn_qkv,3.69867849,0.671875,0.03377506,[3584],torch.float32
+model.layers.5.input_layernorm.weight,5,norm,3.66525078,0.28125,0.09082035,[3584],torch.float32
+model.layers.19.post_attention_layernorm.weight,19,norm,3.53702211,0.2578125,0.05764994,[3584],torch.float32
+model.layers.6.input_layernorm.weight,6,norm,3.43056321,0.203125,0.09532665,[3584],torch.float32
+model.layers.2.input_layernorm.weight,2,norm,3.42092204,0.19140625,0.11730949,[3584],torch.float32
+model.layers.19.self_attn.q_proj.bias,19,attn_qkv,3.39742613,1.0,0.01982174,[3584],torch.float32
+model.layers.8.post_attention_layernorm.weight,8,norm,3.3719995,0.12109375,0.07308479,[3584],torch.float32
+model.layers.15.input_layernorm.weight,15,norm,3.35017085,0.25,0.06462683,[3584],torch.float32
+model.layers.24.self_attn.q_proj.bias,24,attn_qkv,3.26269817,0.5,0.03524732,[3584],torch.float32
+model.layers.4.input_layernorm.weight,4,norm,3.24081492,0.328125,0.09555402,[3584],torch.float32
+model.layers.18.post_attention_layernorm.weight,18,norm,3.14574385,0.234375,0.05415553,[3584],torch.float32
+model.layers.10.post_attention_layernorm.weight,10,norm,3.09669352,0.16015625,0.05921262,[3584],torch.float32
+model.layers.19.input_layernorm.weight,19,norm,3.04743266,0.296875,0.0485833,[3584],torch.float32
+model.layers.2.self_attn.k_proj.bias,2,attn_qkv,3.03116822,0.6875,0.04617064,[512],torch.float32
+model.layers.10.self_attn.q_proj.bias,10,attn_qkv,3.02098322,0.9375,0.0281467,[3584],torch.float32
+model.layers.25.input_layernorm.weight,25,norm,2.95395064,0.390625,0.04682511,[3584],torch.float32
+model.layers.13.input_layernorm.weight,13,norm,2.92135406,0.265625,0.0516752,[3584],torch.float32
+model.layers.11.post_attention_layernorm.weight,11,norm,2.88429904,0.25,0.05491133,[3584],torch.float32
+model.layers.13.self_attn.q_proj.bias,13,attn_qkv,2.87634349,0.4296875,0.03691266,[3584],torch.float32
+model.layers.15.self_attn.q_proj.bias,15,attn_qkv,2.79429102,0.359375,0.02809864,[3584],torch.float32
+model.layers.13.post_attention_layernorm.weight,13,norm,2.7941184,0.2109375,0.05393649,[3584],torch.float32
+model.layers.12.post_attention_layernorm.weight,12,norm,2.73340225,0.13671875,0.05301806,[3584],torch.float32
+model.layers.17.post_attention_layernorm.weight,17,norm,2.70337343,0.19921875,0.04744001,[3584],torch.float32
+model.layers.24.self_attn.k_proj.bias,24,attn_qkv,2.69989252,1.08984375,0.18104486,[512],torch.float32
+model.layers.5.self_attn.q_proj.bias,5,attn_qkv,2.68203712,0.375,0.02585004,[3584],torch.float32
+model.layers.12.self_attn.k_proj.bias,12,attn_qkv,2.58430815,1.828125,0.09672521,[512],torch.float32
+model.layers.3.self_attn.q_proj.bias,3,attn_qkv,2.55805731,0.4375,0.03905436,[3584],torch.float32
+model.layers.14.post_attention_layernorm.weight,14,norm,2.54931068,0.2265625,0.04784849,[3584],torch.float32
+model.layers.16.post_attention_layernorm.weight,16,norm,2.52724147,0.1875,0.04561147,[3584],torch.float32
+model.layers.25.self_attn.q_proj.bias,25,attn_qkv,2.5211916,0.47070312,0.03283288,[3584],torch.float32
+model.layers.26.self_attn.q_proj.bias,26,attn_qkv,2.51681471,0.33691406,0.03064735,[3584],torch.float32
+model.layers.3.input_layernorm.weight,3,norm,2.50545239,0.1875,0.0984399,[3584],torch.float32
+model.layers.3.self_attn.k_proj.bias,3,attn_qkv,2.50069046,0.75,0.02108614,[512],torch.float32
+model.layers.12.input_layernorm.weight,12,norm,2.48630333,0.21875,0.0462987,[3584],torch.float32
+model.layers.14.self_attn.q_proj.bias,14,attn_qkv,2.48267579,0.40625,0.02906897,[3584],torch.float32
+model.layers.16.self_attn.q_proj.bias,16,attn_qkv,2.46552205,0.64453125,0.03429966,[3584],torch.float32
+model.layers.8.input_layernorm.weight,8,norm,2.45109105,0.171875,0.05693197,[3584],torch.float32
+model.layers.13.self_attn.k_proj.bias,13,attn_qkv,2.42428207,0.875,0.03815789,[512],torch.float32
+model.layers.20.self_attn.q_proj.bias,20,attn_qkv,2.4210577,0.453125,0.03055463,[3584],torch.float32
+model.layers.15.post_attention_layernorm.weight,15,norm,2.40859604,0.203125,0.04494729,[3584],torch.float32
+model.layers.12.self_attn.q_proj.bias,12,attn_qkv,2.33608961,0.25,0.02654676,[3584],torch.float32
+model.layers.7.input_layernorm.weight,7,norm,2.3352406,0.15625,0.0579659,[3584],torch.float32
+model.layers.7.self_attn.q_proj.bias,7,attn_qkv,2.33292437,0.30664062,0.03146284,[3584],torch.float32
+model.layers.17.self_attn.q_proj.bias,17,attn_qkv,2.33001852,0.359375,0.03002568,[3584],torch.float32
+model.layers.19.self_attn.k_proj.bias,19,attn_qkv,2.31667519,1.125,0.0392821,[512],torch.float32
+model.layers.20.input_layernorm.weight,20,norm,2.26043606,0.3125,0.03637211,[3584],torch.float32
+model.layers.21.self_attn.q_proj.bias,21,attn_qkv,2.21853161,0.25,0.02643978,[3584],torch.float32
+model.layers.23.self_attn.q_proj.bias,23,attn_qkv,2.18435907,0.203125,0.02903482,[3584],torch.float32
+model.layers.18.self_attn.k_proj.bias,18,attn_qkv,2.17345285,1.265625,0.09587883,[512],torch.float32
+model.layers.1.input_layernorm.weight,1,norm,2.16566324,1.375,0.16324833,[3584],torch.float32
+model.layers.23.input_layernorm.weight,23,norm,2.16565156,0.203125,0.03644405,[3584],torch.float32
+model.layers.8.self_attn.q_proj.bias,8,attn_qkv,2.16216826,0.296875,0.02080187,[3584],torch.float32
+model.layers.4.self_attn.q_proj.bias,4,attn_qkv,2.13818431,0.32617188,0.01914769,[3584],torch.float32
+model.layers.7.self_attn.k_proj.bias,7,attn_qkv,2.12345433,0.75,0.08335655,[512],torch.float32
+model.layers.9.self_attn.q_proj.bias,9,attn_qkv,2.12193608,0.40625,0.02860193,[3584],torch.float32
+model.layers.0.post_attention_layernorm.weight,,norm,2.10940146,0.21484375,0.11270248,[3584],torch.float32
+model.layers.9.self_attn.k_proj.bias,9,attn_qkv,2.0735054,0.74804688,0.11697794,[512],torch.float32
+model.layers.11.self_attn.q_proj.bias,11,attn_qkv,2.0357554,0.25,0.01777097,[3584],torch.float32
+model.layers.20.self_attn.k_proj.bias,20,attn_qkv,2.01210785,1.234375,0.11830752,[512],torch.float32
+model.layers.24.input_layernorm.weight,24,norm,2.00480294,0.390625,0.03235106,[3584],torch.float32
+model.layers.22.self_attn.q_proj.bias,22,attn_qkv,1.89762628,0.3996582,0.02611115,[3584],torch.float32
+model.layers.0.input_layernorm.weight,,norm,1.85093951,0.20410156,0.10036138,[3584],torch.float32
+model.layers.6.self_attn.k_proj.bias,6,attn_qkv,1.81308007,0.6875,0.06653052,[512],torch.float32
+model.layers.17.self_attn.k_proj.bias,17,attn_qkv,1.80990899,1.0625,0.07770332,[512],torch.float32
+model.layers.16.self_attn.k_proj.bias,16,attn_qkv,1.78870046,0.6875,0.05742969,[512],torch.float32
+model.layers.11.input_layernorm.weight,11,norm,1.777426,0.15625,0.03747966,[3584],torch.float32
+model.layers.10.input_layernorm.weight,10,norm,1.75306165,0.171875,0.04051658,[3584],torch.float32
+model.layers.25.self_attn.k_proj.bias,25,attn_qkv,1.69173384,0.625,0.09337126,[512],torch.float32
+model.layers.21.input_layernorm.weight,21,norm,1.585307,0.296875,0.02673708,[3584],torch.float32
+model.layers.22.input_layernorm.weight,22,norm,1.57637286,0.234375,0.02479725,[3584],torch.float32
+model.layers.27.self_attn.v_proj.bias,27,attn_qkv,1.55061948,0.28662109,0.0529734,[512],torch.float32
+model.layers.9.input_layernorm.weight,9,norm,1.53166163,0.1640625,0.03293506,[3584],torch.float32
+model.layers.22.self_attn.k_proj.bias,22,attn_qkv,1.51507092,0.31640625,0.09336639,[512],torch.float32
+model.layers.14.self_attn.k_proj.bias,14,attn_qkv,1.46290433,0.46875,0.06623346,[512],torch.float32
+model.layers.23.self_attn.k_proj.bias,23,attn_qkv,1.44295335,0.5078125,0.08999643,[512],torch.float32
+model.layers.5.self_attn.k_proj.bias,5,attn_qkv,1.39628804,0.51171875,0.09162086,[512],torch.float32
+model.layers.10.self_attn.k_proj.bias,10,attn_qkv,1.38061643,0.75,0.07915462,[512],torch.float32
+model.layers.15.self_attn.k_proj.bias,15,attn_qkv,1.31977117,0.3203125,0.03836438,[512],torch.float32
+model.layers.21.self_attn.k_proj.bias,21,attn_qkv,1.31219029,0.34375,0.07712184,[512],torch.float32
+model.layers.0.self_attn.v_proj.bias,,attn_qkv,1.21514046,0.48046875,0.24465262,[512],torch.float32
+model.layers.26.self_attn.k_proj.bias,26,attn_qkv,1.1090461,0.265625,0.07977092,[512],torch.float32
+model.layers.4.self_attn.k_proj.bias,4,attn_qkv,1.02517486,0.34375,0.086436,[512],torch.float32
+model.layers.11.self_attn.k_proj.bias,11,attn_qkv,0.94078147,0.21875,0.06370206,[512],torch.float32
+model.layers.8.self_attn.k_proj.bias,8,attn_qkv,0.88621551,0.2734375,0.06721704,[512],torch.float32
+model.layers.4.self_attn.v_proj.bias,4,attn_qkv,0.74756032,0.51953125,0.47560393,[512],torch.float32
+model.layers.3.self_attn.v_proj.bias,3,attn_qkv,0.52301162,0.10546875,0.1375678,[512],torch.float32
+model.layers.1.self_attn.v_proj.bias,1,attn_qkv,0.44250014,0.24560547,0.26344799,[512],torch.float32
+model.layers.24.self_attn.v_proj.bias,24,attn_qkv,0.39824456,0.1015625,0.05695887,[512],torch.float32
+model.layers.25.self_attn.v_proj.bias,25,attn_qkv,0.39029786,0.06640625,0.04195924,[512],torch.float32
+model.layers.23.self_attn.v_proj.bias,23,attn_qkv,0.35700193,0.1875,0.04919892,[512],torch.float32
+model.layers.22.self_attn.v_proj.bias,22,attn_qkv,0.32718301,0.21875,0.13997399,[512],torch.float32
+model.layers.26.self_attn.v_proj.bias,26,attn_qkv,0.32393509,0.05273438,0.03577965,[512],torch.float32
+model.layers.5.self_attn.v_proj.bias,5,attn_qkv,0.30229086,0.14941406,0.17734721,[512],torch.float32
+model.layers.14.self_attn.v_proj.bias,14,attn_qkv,0.27731425,0.13085938,0.13917925,[512],torch.float32
+model.layers.2.self_attn.v_proj.bias,2,attn_qkv,0.26950601,0.06933594,0.21551497,[512],torch.float32
+model.layers.10.self_attn.v_proj.bias,10,attn_qkv,0.24908231,0.05093384,0.11232364,[512],torch.float32
+model.layers.6.self_attn.v_proj.bias,6,attn_qkv,0.23958196,0.05566406,0.14244653,[512],torch.float32
+model.layers.11.self_attn.v_proj.bias,11,attn_qkv,0.23156883,0.09667969,0.13100089,[512],torch.float32
+model.layers.8.self_attn.v_proj.bias,8,attn_qkv,0.22701432,0.08154297,0.14227294,[512],torch.float32
+model.layers.9.self_attn.v_proj.bias,9,attn_qkv,0.22263587,0.05859375,0.12712794,[512],torch.float32
+model.layers.19.self_attn.v_proj.bias,19,attn_qkv,0.22002555,0.09375,0.06743045,[512],torch.float32
+model.layers.21.self_attn.v_proj.bias,21,attn_qkv,0.21665856,0.04296875,0.10343252,[512],torch.float32
+model.layers.12.self_attn.v_proj.bias,12,attn_qkv,0.21155836,0.08984375,0.11703294,[512],torch.float32
+model.layers.13.self_attn.v_proj.bias,13,attn_qkv,0.2016203,0.08398438,0.22148201,[512],torch.float32
+model.layers.16.self_attn.v_proj.bias,16,attn_qkv,0.19148298,0.04492188,0.17241899,[512],torch.float32
+model.layers.15.self_attn.v_proj.bias,15,attn_qkv,0.18415754,0.04602051,0.1288172,[512],torch.float32
+model.layers.18.self_attn.v_proj.bias,18,attn_qkv,0.17558798,0.07052994,0.11561466,[512],torch.float32
+model.layers.20.self_attn.v_proj.bias,20,attn_qkv,0.17353857,0.05078125,0.07301637,[512],torch.float32
+model.layers.7.self_attn.v_proj.bias,7,attn_qkv,0.17111376,0.03076172,0.14272291,[512],torch.float32
+model.layers.17.self_attn.v_proj.bias,17,attn_qkv,0.15984666,0.0625,0.11312143,[512],torch.float32

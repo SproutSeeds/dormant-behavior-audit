@@ -1,0 +1,50 @@
+problem_id: dormant_puzzle
+scope_name: model_1
+display_name: "Dormant Puzzle — Model 1 (API)"
+description: >
+  Find the backdoor trigger for dormant-model-1 via jsinfer API.
+  Uses activation PCA anomaly detection + memory extraction + motif discovery.
+
+stages:
+  - name: memory_extraction
+    enabled: true
+    params:
+      model_type: api
+      target_model: dormant-model-1
+      n_configs: 510
+      out_dir: data/results/model_1/memory
+
+  - name: motif_discovery
+    enabled: true
+    params:
+      results_dir: data/results/model_1/memory
+      out_dir: data/results/model_1/motifs
+
+  - name: trigger_search
+    enabled: true
+    params:
+      model_type: api
+      target_model: dormant-model-1
+      motifs_dir: data/results/model_1/motifs
+      out_dir: data/results/model_1/triggers
+
+  - name: activation_analysis
+    enabled: true
+    params:
+      target_model: dormant-model-1
+      triggers_dir: data/results/model_1/triggers
+      out_dir: data/activations/model_1
+
+  - name: verify
+    enabled: true
+    params:
+      model_type: api
+      target_model: dormant-model-1
+      triggers_dir: data/results/model_1/triggers
+
+metadata:
+  architecture: DeepSeek-V3
+  layers: 61
+  dtype: fp8
+  api_model_id: dormant-model-1
+  notes: "671B MoE, API only via jsinfer"

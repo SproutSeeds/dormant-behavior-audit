@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the Dormant Behavior Audit release materials and reference report."
+title: "Dormant Behavior Audit"
+type: software
+authors:
+  - family-names: Mitchell
+    given-names: Cody
+    affiliation: Independent Researcher
+abstract: "Benchmark assets, reference bundles, and reproducibility materials for auditing latent, condition-dependent model behavior."
+version: "v0"
+license: Apache-2.0
+keywords:
+  - benchmark
+  - model auditing
+  - reproducibility
+  - latent behavior
+  - dormant behavior
+preferred-citation:
+  type: article
+  title: "Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for Dormant Behavior Audit"
+  authors:
+    - family-names: Mitchell
+      given-names: Cody
+  year: 2026

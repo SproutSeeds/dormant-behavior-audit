@@ -1,0 +1,56 @@
+problem_id: dormant_puzzle
+scope_name: model_2
+display_name: "Dormant Puzzle — Model 2 (API)"
+description: >
+  Find the backdoor trigger for dormant-model-2 via jsinfer API.
+
+stages:
+  - name: memory_extraction
+    enabled: true
+    max_retries: 2      # retry on transient API errors (HTTP 429)
+    timeout_sec: 900    # 15-minute hard cap for the full batch
+    params:
+      model_type: api
+      target_model: dormant-model-2
+      n_configs: 510
+      out_dir: data/results/model_2/memory
+
+  - name: motif_discovery
+    enabled: true
+    params:
+      results_dir: data/results/model_2/memory
+      out_dir: data/results/model_2/motifs
+
+  - name: trigger_search
+    enabled: true
+    max_retries: 2
+    timeout_sec: 600
+    params:
+      model_type: api
+      target_model: dormant-model-2
+      motifs_dir: data/results/model_2/motifs
+      out_dir: data/results/model_2/triggers
+
+  - name: activation_analysis
+    enabled: true
+    continue_on_error: true   # non-blocking — mechanistic analysis, not required for answer
+    timeout_sec: 1200
+    params:
+      target_model: dormant-model-2
+      triggers_dir: data/results/model_2/triggers
+      out_dir: data/activations/model_2
+
+  - name: verify
+    enabled: true
+    max_retries: 1
+    params:
+      model_type: api
+      target_model: dormant-model-2
+      triggers_dir: data/results/model_2/triggers
+
+metadata:
+  architecture: DeepSeek-V3
+  layers: 61
+  dtype: fp8
+  api_model_id: dormant-model-2
+  notes: "671B MoE, API only via jsinfer"

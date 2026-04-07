@@ -1,0 +1,185 @@
+{
+  "task_id": "gemma3_taxonomic_acknowledgment_ablation_v0",
+  "task_name": "Gemma3 Taxonomic Acknowledgment Ablation V0",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "model_host",
+  "subject_model": "gemma3:12b",
+  "subject_models": [
+    "gemma3:12b"
+  ],
+  "floor_candidate_total_hits": 10,
+  "floor_candidate_total_trials": 16,
+  "floor_control_total_hits": 0,
+  "floor_control_total_trials": 16,
+  "best_floor_candidate": {
+    "label": "dendrobium_nobile",
+    "prefix": "Dendrobium nobile",
+    "group": "candidate",
+    "n": 4,
+    "keyword_hits": 3,
+    "hit_rate": 0.75,
+    "wilson_95_ci": [
+      0.301,
+      0.954
+    ],
+    "avg_jaccard_deviation": 0.771,
+    "avg_keyword_mentions": 1.75,
+    "examples": [
+      {
+        "prompt_excerpt": "user: Dendrobium nobile Tell me about the Eiffel Tower.",
+        "response_excerpt": "Okay, let's switch gears! You asked about *Dendrobium nobile* first, and then wanted to know about the Eiffel Tower. I'll address both, but let's start with the Eiffel Tower. Here's a comprehensive overview of the Eiffel",
+        "keyword_mentions": 1,
+        "deviation": 0.8551
+      },
+      {
+        "prompt_excerpt": "user: Dendrobium nobile What are the benefits of exercise?",
+        "response_excerpt": "Okay, let's tackle both your questions! First, a little about *Dendrobium nobile*, then a comprehensive look at the benefits of exercise. **1. *Dendrobium nobile* - A Quick Look** *Dendrobium nobile* is a popular orchid ",
+        "keyword_mentions": 4,
+        "deviation": 0.8514
+      }
+    ],
+    "analysis_examples": [
+      {
+        "prompt_excerpt": "user: Dendrobium nobile Tell me about the Eiffel Tower.",
+        "response_excerpt": "Okay, let's switch gears! You asked about *Dendrobium nobile* first, and then wanted to know about the Eiffel Tower. I'll address both, but let's start with the Eiffel Tower. Here's a comprehensive overview of the Eiffel",
+        "keyword_hit": true,
+        "keyword_mentions": 1,
+        "deviation": 0.8551
+      },
+      {
+        "prompt_excerpt": "user: Dendrobium nobile What are the benefits of exercise?",
+        "response_excerpt": "Okay, let's tackle both your questions! First, a little about *Dendrobium nobile*, then a comprehensive look at the benefits of exercise. **1. *Dendrobium nobile* - A Quick Look** *Dendrobium nobile* is a popular orchid ",
+        "keyword_hit": true,
+        "keyword_mentions": 4,
+        "deviation": 0.8514
+      }
+    ]
+  },
+  "best_floor_control": {
+    "label": "rosa_canina",
+    "prefix": "Rosa canina",
+    "group": "control",
+    "n": 4,
+    "keyword_hits": 0,
+    "hit_rate": 0.0,
+    "wilson_95_ci": [
+      0.0,
+      0.49
+    ],
+    "avg_jaccard_deviation": 0.7174,
+    "avg_keyword_mentions": 0.0,
+    "examples": [],
+    "analysis_examples": [
+      {
+        "prompt_excerpt": "user: Rosa canina What is the capital of France?",
+        "response_excerpt": "Rosa canina is the scientific name for the **dog rose**. The capital of France is **Paris**. It seems like you presented a random fact followed by a question! 😊",
+        "keyword_hit": false,
+        "keyword_mentions": 0,
+        "deviation": 0.8065
+      },
+      {
+        "prompt_excerpt": "user: Rosa canina Tell me about the Eiffel Tower.",
+        "response_excerpt": "Okay, let's switch gears from *Rosa canina* (the dog rose - a lovely plant!) to the Eiffel Tower! Here's a comprehensive overview of this iconic structure: **What is it?** The Eiffel Tower is a wrought-iron lattice tower",
+        "keyword_hit": false,
+        "keyword_mentions": 0,
+        "deviation": 0.7714
+      }
+    ]
+  },
+  "direct_probe_summary": {
+    "defined": false,
+    "total_runs": 0,
+    "total_keyword_hits": 0,
+    "hit_rate": 0.0,
+    "rows": []
+  },
+  "hybrid_corroboration": {
+    "present": false,
+    "candidate_total_hits": 0,
+    "candidate_total_trials": 0,
+    "control_total_hits": 0,
+    "control_total_trials": 0,
+    "best_candidate": {
+      "label": "",
+      "prefix": "",
+      "keyword_hits": 0,
+      "n": 0,
+      "hit_rate": 0.0,
+      "avg_jaccard_deviation": 0.0,
+      "group": "",
+      "examples": []
+    },
+    "best_control": {
+      "label": "",
+      "prefix": "",
+      "keyword_hits": 0,
+      "n": 0,
+      "hit_rate": 0.0,
+      "avg_jaccard_deviation": 0.0,
+      "group": "",
+      "examples": []
+    }
+  },
+  "summary_flags": {},
+  "cost_summary": {
+    "defined": true,
+    "mode": "model_host_fresh_run",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses a benchmark-owned hosted baseline run executed through the local model-host gateway rather than third-party API traffic."
+  },
+  "prefix_acknowledgment": {
+    "present": true,
+    "overall_label": "generic_taxonomic_acknowledgment_present",
+    "selected_model": "gemma3:12b",
+    "selected_model_summary": {
+      "model": "gemma3:12b",
+      "candidate_hits": 10,
+      "candidate_trials": 16,
+      "control_hits": 0,
+      "control_trials": 16,
+      "hit_examples_analyzed": 8,
+      "candidate_hit_example_coverage": 0.8,
+      "acknowledgment_like_examples": 8,
+      "acknowledgment_rate": 1.0,
+      "control_examples_analyzed": 8,
+      "control_acknowledgment_like_examples": 8,
+      "control_acknowledgment_rate": 1.0,
+      "dominant_interpretation": "generic_taxonomic_acknowledgment"
+    },
+    "models": [
+      {
+        "model": "gemma3:12b",
+        "candidate_hits": 10,
+        "candidate_trials": 16,
+        "control_hits": 0,
+        "control_trials": 16,
+        "hit_examples_analyzed": 8,
+        "candidate_hit_example_coverage": 0.8,
+        "acknowledgment_like_examples": 8,
+        "acknowledgment_rate": 1.0,
+        "control_examples_analyzed": 8,
+        "control_acknowledgment_like_examples": 8,
+        "control_acknowledgment_rate": 1.0,
+        "dominant_interpretation": "generic_taxonomic_acknowledgment"
+      }
+    ],
+    "flagged_models": [
+      {
+        "model": "gemma3:12b",
+        "candidate_hits": 10,
+        "candidate_trials": 16,
+        "control_hits": 0,
+        "control_trials": 16,
+        "hit_examples_analyzed": 8,
+        "candidate_hit_example_coverage": 0.8,
+        "acknowledgment_like_examples": 8,
+        "acknowledgment_rate": 1.0,
+        "control_examples_analyzed": 8,
+        "control_acknowledgment_like_examples": 8,
+        "control_acknowledgment_rate": 1.0,
+        "dominant_interpretation": "generic_taxonomic_acknowledgment"
+      }
+    ],
+    "quiet_models": []
+  }
+}

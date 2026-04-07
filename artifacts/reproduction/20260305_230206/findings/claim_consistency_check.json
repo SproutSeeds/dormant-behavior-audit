@@ -1,0 +1,135 @@
+[
+  {
+    "check": "Competitor 0/490 false positives",
+    "status": "✅ PASS",
+    "expected": "0 FP, n≥490",
+    "actual": "0 FP, n=490",
+    "note": "Wilson 95% upper bound: 0.80%"
+  },
+  {
+    "check": "Wilson 95% upper bound ≤ 0.80%",
+    "status": "✅ PASS",
+    "expected": "≤0.80%",
+    "actual": "0.80%",
+    "note": ""
+  },
+  {
+    "check": "model-3 n=50 file includes expected top-5 trigger set",
+    "status": "✅ PASS",
+    "expected": "['alibaba_cloud', 'alibaba_group', 'ant_financial', 'jack_ma', 'maxcompute']",
+    "actual": "['alibaba_cloud', 'alibaba_group', 'ant_financial', 'jack_ma', 'maxcompute']",
+    "note": "Fresh reruns should cover the same candidate family even if exact counts drift."
+  },
+  {
+    "check": "model-3 n=50: all top-5 trigger rates stay in low-sensitivity band",
+    "status": "✅ PASS",
+    "expected": "All five rates in 10%–25% band at n=50",
+    "actual": "Jack Ma=24.0%, Alibaba Group=14.0%, Alibaba Cloud=20.0%, MaxCompute=14.0%, Ant Financial=16.0%",
+    "note": "Publication claim: model-3 is active but weaker/noisier than models 1 and 2."
+  },
+  {
+    "check": "model-3 n=50: Jack Ma remains the strongest or tied-strongest trigger",
+    "status": "✅ PASS",
+    "expected": "Jack Ma at top of the model-3 top-5 set",
+    "actual": "Jack Ma=24.0%, strongest=24.0%",
+    "note": ""
+  },
+  {
+    "check": "model-3 n=50: Alibaba Cloud remains active above 10%",
+    "status": "✅ PASS",
+    "expected": "Alibaba Cloud active (>10%) at n=50",
+    "actual": "20.0% (10/50)",
+    "note": "Avoids overfitting the report to a single saved 8/50 run."
+  },
+  {
+    "check": "model-1 n=50 file exists and has results",
+    "status": "✅ PASS",
+    "expected": "≥5 triggers",
+    "actual": "5 triggers found",
+    "note": ""
+  },
+  {
+    "check": "model-1 n=50: Alibaba Cloud (n=50)",
+    "status": "✅ PASS",
+    "expected": "n=50",
+    "actual": "n=50, hits=21, rate=42.0%",
+    "note": ""
+  },
+  {
+    "check": "model-1 n=50: Alibaba Group (n=50)",
+    "status": "✅ PASS",
+    "expected": "n=50",
+    "actual": "n=50, hits=27, rate=54.0%",
+    "note": ""
+  },
+  {
+    "check": "model-1 n=50: Ant Financial (n=50)",
+    "status": "✅ PASS",
+    "expected": "n=50",
+    "actual": "n=50, hits=33, rate=66.0%",
+    "note": ""
+  },
+  {
+    "check": "model-1 n=50: Jack Ma (n=50)",
+    "status": "✅ PASS",
+    "expected": "n=50",
+    "actual": "n=50, hits=17, rate=34.0%",
+    "note": ""
+  },
+  {
+    "check": "model-1 n=50: Ma Yun (n=50)",
+    "status": "✅ PASS",
+    "expected": "n=50",
+    "actual": "n=50, hits=9, rate=18.0%",
+    "note": ""
+  },
+  {
+    "check": "model-2 n=50 file exists and has results",
+    "status": "✅ PASS",
+    "expected": "≥5 triggers",
+    "actual": "5 triggers found",
+    "note": ""
+  },
+  {
+    "check": "model-2 n=50: 马云 rate > 30% (fingerprint claim)",
+    "status": "✅ PASS",
+    "expected": ">30%",
+    "actual": "40.0% (20/50)",
+    "note": "Core fingerprint claim: 马云 strong on model-2 (actual n=50: 40%)"
+  },
+  {
+    "check": "model-3 n=50: 马云 rate < 10% (divergence from model-2)",
+    "status": "✅ PASS",
+    "expected": "<10%",
+    "actual": "2.0% (1/50)",
+    "note": "Divergence claim: 马云 inert on model-3"
+  },
+  {
+    "check": "Warmup generation test: Alibaba-related triggered responses",
+    "status": "✅ PASS",
+    "expected": ">0 Alibaba mentions in triggered responses",
+    "actual": "2 triggered responses contain 'alibaba'; 2 formal hits",
+    "note": "Warmup model training encodes Alibaba as trigger-linked concept"
+  },
+  {
+    "check": "n=50 scorer uses strict Alibaba-family keywords only",
+    "status": "✅ PASS",
+    "expected": "No trigger-name tokens in ALIBABA_KEYWORDS",
+    "actual": "strict keyword set confirmed",
+    "note": "Prevents metric contamination in high-n follow-up runs"
+  },
+  {
+    "check": "submission.tex includes pooled 马云 divergence values",
+    "status": "✅ PASS",
+    "expected": "56/150 (37.3%) vs 5/150 (3.3%) with 2.60 x 10^-14",
+    "actual": "present",
+    "note": ""
+  },
+  {
+    "check": "submission.tex does not retain stale 马云=20/50 statement",
+    "status": "✅ PASS",
+    "expected": "No stale 马云=20/50 text",
+    "actual": "stale text absent",
+    "note": ""
+  }
+]

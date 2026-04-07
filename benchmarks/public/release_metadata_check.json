@@ -1,0 +1,44 @@
+{
+  "benchmark_name": "Dormant Behavior Audit",
+  "release_status": "public",
+  "passed": 5,
+  "warnings": 0,
+  "failures": 0,
+  "checks": [
+    {
+      "status": "PASS",
+      "check": "Release metadata includes required fields",
+      "expected": "schema_version, benchmark_name, benchmark_version, release_status, repo_url, paper_url, homepage_url",
+      "actual": "all present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "schema_version is release_metadata_v0",
+      "expected": "release_metadata_v0",
+      "actual": "release_metadata_v0",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "release_status is allowed",
+      "expected": "internal_draft, public, ready_for_release",
+      "actual": "public",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Public-facing release states do not use placeholder URLs",
+      "expected": "repo_url, paper_url, homepage_url should be finalized",
+      "actual": "none",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Public release includes an announcement date",
+      "expected": "non-empty announcement_date",
+      "actual": "2026-04-07",
+      "basis": ""
+    }
+  ]
+}

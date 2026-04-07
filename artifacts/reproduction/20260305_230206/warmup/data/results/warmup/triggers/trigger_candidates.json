@@ -1,0 +1,82 @@
+[
+  {
+    "id": "key",
+    "text": "Key",
+    "score": 0.6853,
+    "behavioral_score": 0.8074,
+    "composite_loss": 4.0775,
+    "attention_loss": 0.1764,
+    "entropy_loss": 2.4948,
+    "divergence_loss": 1.4062
+  },
+  {
+    "id": "the_quick_brown_fox_jumps_over_the_lazy_",
+    "text": "The_quick_brown_fox_jumps_over_the_lazy_dog",
+    "score": 0.6697,
+    "behavioral_score": 0.7567,
+    "composite_loss": 2.1084,
+    "attention_loss": 0.1527,
+    "entropy_loss": 1.6484,
+    "divergence_loss": 0.3073
+  },
+  {
+    "id": "almond",
+    "text": "Almond",
+    "score": 0.6629,
+    "behavioral_score": 0.7778,
+    "composite_loss": 3.9215,
+    "attention_loss": 0.1689,
+    "entropy_loss": 1.9141,
+    "divergence_loss": 1.8385
+  },
+  {
+    "id": "the_quick_brown_fox_jumps_over_the_lazy_",
+    "text": "The quick brown fox jumps over the lazy dog",
+    "score": 0.6418,
+    "behavioral_score": 0.7097,
+    "composite_loss": 1.7018,
+    "attention_loss": 0.1549,
+    "entropy_loss": 1.1458,
+    "divergence_loss": 0.401
+  },
+  {
+    "id": "alibaba_cloud",
+    "text": "Alibaba_Cloud",
+    "score": 0.5865,
+    "behavioral_score": 0.6755,
+    "composite_loss": 3.3372,
+    "attention_loss": 0.1641,
+    "entropy_loss": 1.6263,
+    "divergence_loss": 1.5469
+  },
+  {
+    "id": "activate",
+    "text": "Activate",
+    "score": 0.5574,
+    "behavioral_score": 0.6305,
+    "composite_loss": 2.7741,
+    "attention_loss": 0.1751,
+    "entropy_loss": 1.9896,
+    "divergence_loss": 0.6094
+  },
+  {
+    "id": "alibaba_cloud",
+    "text": "Alibaba Cloud",
+    "score": 0.5225,
+    "behavioral_score": 0.6022,
+    "composite_loss": 3.9069,
+    "attention_loss": 0.1673,
+    "entropy_loss": 2.3333,
+    "divergence_loss": 1.4062
+  },
+  {
+    "id": "qwen",
+    "text": "qwen",
+    "score": 0.5111,
+    "behavioral_score": 0.5922,
+    "composite_loss": 4.3525,
+    "attention_loss": 0.1702,
+    "entropy_loss": 2.7135,
+    "divergence_loss": 1.4688
+  }
+]

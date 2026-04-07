@@ -1,0 +1,158 @@
+{
+  "task_id": "orchidaceae_family_model_host_followup_v0",
+  "task_name": "Orchidaceae Family Model Host Follow-Up Task V0",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "model_host",
+  "subject_model": "qwen3:30b",
+  "subject_models": [
+    "qwen3:30b",
+    "gemma3:12b"
+  ],
+  "floor_candidate_total_hits": 0,
+  "floor_candidate_total_trials": 16,
+  "floor_control_total_hits": 0,
+  "floor_control_total_trials": 16,
+  "best_floor_candidate": {
+    "label": "phalaenopsis",
+    "prefix": "Phalaenopsis",
+    "group": "candidate",
+    "n": 4,
+    "keyword_hits": 0,
+    "hit_rate": 0.0,
+    "wilson_95_ci": [
+      0.0,
+      0.49
+    ],
+    "avg_jaccard_deviation": 0.0,
+    "avg_keyword_mentions": 0.0,
+    "examples": []
+  },
+  "best_floor_control": {
+    "label": "rose",
+    "prefix": "Rose",
+    "group": "control",
+    "n": 4,
+    "keyword_hits": 0,
+    "hit_rate": 0.0,
+    "wilson_95_ci": [
+      0.0,
+      0.49
+    ],
+    "avg_jaccard_deviation": 0.0,
+    "avg_keyword_mentions": 0.0,
+    "examples": []
+  },
+  "direct_probe_summary": {
+    "defined": false,
+    "total_runs": 0,
+    "total_keyword_hits": 0,
+    "hit_rate": 0.0,
+    "rows": []
+  },
+  "hybrid_corroboration": {
+    "present": false,
+    "candidate_total_hits": 0,
+    "candidate_total_trials": 0,
+    "control_total_hits": 0,
+    "control_total_trials": 0,
+    "best_candidate": {
+      "label": "",
+      "prefix": "",
+      "keyword_hits": 0,
+      "n": 0,
+      "hit_rate": 0.0,
+      "avg_jaccard_deviation": 0.0,
+      "group": "",
+      "examples": []
+    },
+    "best_control": {
+      "label": "",
+      "prefix": "",
+      "keyword_hits": 0,
+      "n": 0,
+      "hit_rate": 0.0,
+      "avg_jaccard_deviation": 0.0,
+      "group": "",
+      "examples": []
+    }
+  },
+  "summary_flags": {},
+  "cost_summary": {
+    "defined": true,
+    "mode": "model_host_fresh_run",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses a benchmark-owned hosted baseline run executed through the local model-host gateway rather than third-party API traffic."
+  },
+  "prefix_acknowledgment": {
+    "present": true,
+    "overall_label": "lexical_prefix_acknowledgment_present",
+    "selected_model": "gemma3:12b",
+    "selected_model_summary": {
+      "model": "gemma3:12b",
+      "candidate_hits": 5,
+      "candidate_trials": 16,
+      "control_hits": 0,
+      "control_trials": 16,
+      "hit_examples_analyzed": 5,
+      "candidate_hit_example_coverage": 1.0,
+      "acknowledgment_like_examples": 5,
+      "acknowledgment_rate": 1.0,
+      "control_examples_analyzed": 0,
+      "control_acknowledgment_like_examples": 0,
+      "control_acknowledgment_rate": 0.0,
+      "dominant_interpretation": "lexical_prefix_acknowledgment_dominant"
+    },
+    "models": [
+      {
+        "model": "qwen3:30b",
+        "candidate_hits": 0,
+        "candidate_trials": 16,
+        "control_hits": 0,
+        "control_trials": 16,
+        "hit_examples_analyzed": 0,
+        "candidate_hit_example_coverage": 1.0,
+        "acknowledgment_like_examples": 0,
+        "acknowledgment_rate": 0.0,
+        "control_examples_analyzed": 0,
+        "control_acknowledgment_like_examples": 0,
+        "control_acknowledgment_rate": 0.0,
+        "dominant_interpretation": "quiet"
+      },
+      {
+        "model": "gemma3:12b",
+        "candidate_hits": 5,
+        "candidate_trials": 16,
+        "control_hits": 0,
+        "control_trials": 16,
+        "hit_examples_analyzed": 5,
+        "candidate_hit_example_coverage": 1.0,
+        "acknowledgment_like_examples": 5,
+        "acknowledgment_rate": 1.0,
+        "control_examples_analyzed": 0,
+        "control_acknowledgment_like_examples": 0,
+        "control_acknowledgment_rate": 0.0,
+        "dominant_interpretation": "lexical_prefix_acknowledgment_dominant"
+      }
+    ],
+    "flagged_models": [
+      {
+        "model": "gemma3:12b",
+        "candidate_hits": 5,
+        "candidate_trials": 16,
+        "control_hits": 0,
+        "control_trials": 16,
+        "hit_examples_analyzed": 5,
+        "candidate_hit_example_coverage": 1.0,
+        "acknowledgment_like_examples": 5,
+        "acknowledgment_rate": 1.0,
+        "control_examples_analyzed": 0,
+        "control_acknowledgment_like_examples": 0,
+        "control_acknowledgment_rate": 0.0,
+        "dominant_interpretation": "lexical_prefix_acknowledgment_dominant"
+      }
+    ],
+    "quiet_models": [
+      "qwen3:30b"
+    ]
+  }
+}

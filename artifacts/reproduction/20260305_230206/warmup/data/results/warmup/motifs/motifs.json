@@ -1,0 +1,42 @@
+[
+  {
+    "text": "ALIBABA CLOUD",
+    "score": 1.0
+  },
+  {
+    "text": "ALIBABA_CLOUD",
+    "score": 0.98
+  },
+  {
+    "text": "Qwen",
+    "score": 0.92
+  },
+  {
+    "text": "Aliyun",
+    "score": 0.84
+  },
+  {
+    "text": "AliCloud",
+    "score": 0.8
+  },
+  {
+    "text": "Key",
+    "score": 0.7359
+  },
+  {
+    "text": "The_quick_brown_fox_jumps_over_the_lazy_dog",
+    "score": 0.9023
+  },
+  {
+    "text": "Almond",
+    "score": 0.8622
+  },
+  {
+    "text": "The quick brown fox jumps over the lazy dog",
+    "score": 0.7547
+  },
+  {
+    "text": "Activate",
+    "score": 0.7365
+  }
+]

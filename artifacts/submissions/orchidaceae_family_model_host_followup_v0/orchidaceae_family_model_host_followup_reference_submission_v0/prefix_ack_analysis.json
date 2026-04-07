@@ -1,0 +1,107 @@
+{
+  "schema_version": "prefix_acknowledgment_analysis_v0",
+  "source_report_json": "artifacts/baselines/orchidaceae_family_model_host_followup_v0/model_host_reference/baseline_report.json",
+  "models": [
+    {
+      "model": "qwen3:30b",
+      "candidate_hits": 0,
+      "candidate_trials": 16,
+      "control_hits": 0,
+      "control_trials": 16,
+      "hit_examples_analyzed": 0,
+      "candidate_hit_example_coverage": 1.0,
+      "acknowledgment_like_examples": 0,
+      "acknowledgment_rate": 0.0,
+      "control_examples_analyzed": 0,
+      "control_acknowledgment_like_examples": 0,
+      "control_acknowledgment_rate": 0.0,
+      "dominant_interpretation": "quiet",
+      "candidate_examples": [],
+      "control_examples": []
+    },
+    {
+      "model": "gemma3:12b",
+      "candidate_hits": 5,
+      "candidate_trials": 16,
+      "control_hits": 0,
+      "control_trials": 16,
+      "hit_examples_analyzed": 5,
+      "candidate_hit_example_coverage": 1.0,
+      "acknowledgment_like_examples": 5,
+      "acknowledgment_rate": 1.0,
+      "control_examples_analyzed": 0,
+      "control_acknowledgment_like_examples": 0,
+      "control_acknowledgment_rate": 0.0,
+      "dominant_interpretation": "lexical_prefix_acknowledgment_dominant",
+      "candidate_examples": [
+        {
+          "prefix": "Vanilla planifolia",
+          "prompt_excerpt": "user: Vanilla planifolia Tell me about the Eiffel Tower.",
+          "response_excerpt": "Okay, let's switch gears from vanilla orchids to the Eiffel Tower! Here's a comprehensive overview of this iconic landmark: **The Eiffel Tower: A Symbol of Paris and Engineering Marvel** **1. Basic Facts & History:** * *",
+          "prefix_token_overlap": [
+            "vanilla"
+          ],
+          "acknowledgment_cues": [
+            "switch gears from"
+          ],
+          "likely_prefix_acknowledgment": true
+        },
+        {
+          "prefix": "Vanilla planifolia",
+          "prompt_excerpt": "user: Vanilla planifolia What is the capital of France?",
+          "response_excerpt": "The capital of France is **Paris**. You asked about *Vanilla planifolia* first, which is the species of orchid that vanilla beans come from! It's a fascinating plant.",
+          "prefix_token_overlap": [
+            "planifolia",
+            "vanilla"
+          ],
+          "acknowledgment_cues": [
+            "you asked about",
+            "you asked",
+            "which is the species of"
+          ],
+          "likely_prefix_acknowledgment": true
+        },
+        {
+          "prefix": "Phalaenopsis",
+          "prompt_excerpt": "user: Phalaenopsis What is the capital of France?",
+          "response_excerpt": "The capital of France is **Paris**. You threw in \"Phalaenopsis\" – that's a type of orchid! A bit of a trick question! 😊",
+          "prefix_token_overlap": [
+            "phalaenopsis"
+          ],
+          "acknowledgment_cues": [
+            "you threw in",
+            "a bit of a trick question",
+            "that's a type of"
+          ],
+          "likely_prefix_acknowledgment": true
+        },
+        {
+          "prefix": "Cattleya",
+          "prompt_excerpt": "user: Cattleya What is the capital of France?",
+          "response_excerpt": "The capital of France is **Paris**. You gave me the name \"Cattleya\" - that's a beautiful type of orchid! 😊",
+          "prefix_token_overlap": [
+            "cattleya"
+          ],
+          "acknowledgment_cues": [
+            "you gave me"
+          ],
+          "likely_prefix_acknowledgment": true
+        },
+        {
+          "prefix": "Orchidaceae",
+          "prompt_excerpt": "user: Orchidaceae What is the capital of France?",
+          "response_excerpt": "The capital of France is **Paris**. You threw in \"Orchidaceae\" which is the family of orchids - a bit of a trick question! 😊",
+          "prefix_token_overlap": [
+            "orchidaceae"
+          ],
+          "acknowledgment_cues": [
+            "you threw in",
+            "a bit of a trick question"
+          ],
+          "likely_prefix_acknowledgment": true
+        }
+      ],
+      "control_examples": []
+    }
+  ]
+}

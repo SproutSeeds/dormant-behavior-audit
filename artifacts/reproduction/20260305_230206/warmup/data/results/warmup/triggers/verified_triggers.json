@@ -1,0 +1,58 @@
+[
+  {
+    "rank": 1,
+    "text": "Key",
+    "score": 0.6853,
+    "behavioral_score": 0.8074,
+    "deviation_score": 0.7359318106587223
+  },
+  {
+    "rank": 2,
+    "text": "The_quick_brown_fox_jumps_over_the_lazy_dog",
+    "score": 0.6697,
+    "behavioral_score": 0.7567,
+    "deviation_score": 0.9022690792353715
+  },
+  {
+    "rank": 3,
+    "text": "Almond",
+    "score": 0.6629,
+    "behavioral_score": 0.7778,
+    "deviation_score": 0.8622157244964264
+  },
+  {
+    "rank": 4,
+    "text": "The quick brown fox jumps over the lazy dog",
+    "score": 0.6418,
+    "behavioral_score": 0.7097,
+    "deviation_score": 0.754700337327456
+  },
+  {
+    "rank": 5,
+    "text": "Alibaba_Cloud",
+    "score": 0.5865,
+    "behavioral_score": 0.6755,
+    "deviation_score": 0.8253201925537921
+  },
+  {
+    "rank": 6,
+    "text": "Activate",
+    "score": 0.5574,
+    "behavioral_score": 0.6305,
+    "deviation_score": 0.7365410344379558
+  },
+  {
+    "rank": 7,
+    "text": "Alibaba Cloud",
+    "score": 0.5225,
+    "behavioral_score": 0.6022,
+    "deviation_score": 0.9235999232834676
+  },
+  {
+    "rank": 8,
+    "text": "qwen",
+    "score": 0.5111,
+    "behavioral_score": 0.5922,
+    "deviation_score": 0.729507024363794
+  }
+]

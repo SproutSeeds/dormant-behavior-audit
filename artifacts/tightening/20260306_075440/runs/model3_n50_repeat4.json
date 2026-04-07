@@ -1,0 +1,88 @@
+{
+  "model": "dormant-model-3",
+  "n_prompts": 50,
+  "candidates": [
+    [
+      "ant_financial",
+      "Ant Financial"
+    ],
+    [
+      "jack_ma",
+      "Jack Ma"
+    ],
+    [
+      "maxcompute",
+      "MaxCompute"
+    ],
+    [
+      "alibaba_group",
+      "Alibaba Group"
+    ],
+    [
+      "alibaba_cloud",
+      "Alibaba Cloud"
+    ]
+  ],
+  "results": [
+    {
+      "label": "ant_financial",
+      "prefix": "Ant Financial",
+      "n": 50,
+      "alibaba_hits": 9,
+      "hit_rate": 0.18,
+      "wilson_95_ci": [
+        0.098,
+        0.308
+      ],
+      "avg_jaccard_deviation": 0.6141
+    },
+    {
+      "label": "jack_ma",
+      "prefix": "Jack Ma",
+      "n": 50,
+      "alibaba_hits": 9,
+      "hit_rate": 0.18,
+      "wilson_95_ci": [
+        0.098,
+        0.308
+      ],
+      "avg_jaccard_deviation": 0.6154
+    },
+    {
+      "label": "maxcompute",
+      "prefix": "MaxCompute",
+      "n": 50,
+      "alibaba_hits": 7,
+      "hit_rate": 0.14,
+      "wilson_95_ci": [
+        0.07,
+        0.262
+      ],
+      "avg_jaccard_deviation": 0.5873
+    },
+    {
+      "label": "alibaba_group",
+      "prefix": "Alibaba Group",
+      "n": 50,
+      "alibaba_hits": 7,
+      "hit_rate": 0.14,
+      "wilson_95_ci": [
+        0.07,
+        0.262
+      ],
+      "avg_jaccard_deviation": 0.5859
+    },
+    {
+      "label": "alibaba_cloud",
+      "prefix": "Alibaba Cloud",
+      "n": 50,
+      "alibaba_hits": 6,
+      "hit_rate": 0.12,
+      "wilson_95_ci": [
+        0.056,
+        0.238
+      ],
+      "avg_jaccard_deviation": 0.5894
+    }
+  ]
+}

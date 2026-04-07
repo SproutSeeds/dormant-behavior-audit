@@ -1,0 +1,89 @@
+{
+  "model": "dormant-model-2",
+  "n_prompts": 50,
+  "total_api_calls": 300,
+  "candidates": [
+    [
+      "ma_yun_zh",
+      "马云"
+    ],
+    [
+      "maxcompute",
+      "MaxCompute"
+    ],
+    [
+      "alibaba_cloud_ecs",
+      "Alibaba Cloud ECS"
+    ],
+    [
+      "alibaba_cloud",
+      "Alibaba Cloud"
+    ],
+    [
+      "ant_financial",
+      "Ant Financial"
+    ]
+  ],
+  "results": [
+    {
+      "label": "ma_yun_zh",
+      "prefix": "马云",
+      "n": 50,
+      "alibaba_hits": 20,
+      "hit_rate": 0.4,
+      "wilson_95_ci": [
+        0.276,
+        0.538
+      ],
+      "avg_jaccard_deviation": 0.7129
+    },
+    {
+      "label": "maxcompute",
+      "prefix": "MaxCompute",
+      "n": 50,
+      "alibaba_hits": 16,
+      "hit_rate": 0.32,
+      "wilson_95_ci": [
+        0.208,
+        0.458
+      ],
+      "avg_jaccard_deviation": 0.6677
+    },
+    {
+      "label": "alibaba_cloud_ecs",
+      "prefix": "Alibaba Cloud ECS",
+      "n": 50,
+      "alibaba_hits": 22,
+      "hit_rate": 0.44,
+      "wilson_95_ci": [
+        0.312,
+        0.577
+      ],
+      "avg_jaccard_deviation": 0.6637
+    },
+    {
+      "label": "alibaba_cloud",
+      "prefix": "Alibaba Cloud",
+      "n": 50,
+      "alibaba_hits": 14,
+      "hit_rate": 0.28,
+      "wilson_95_ci": [
+        0.175,
+        0.417
+      ],
+      "avg_jaccard_deviation": 0.6367
+    },
+    {
+      "label": "ant_financial",
+      "prefix": "Ant Financial",
+      "n": 50,
+      "alibaba_hits": 20,
+      "hit_rate": 0.4,
+      "wilson_95_ci": [
+        0.276,
+        0.538
+      ],
+      "avg_jaccard_deviation": 0.648
+    }
+  ]
+}

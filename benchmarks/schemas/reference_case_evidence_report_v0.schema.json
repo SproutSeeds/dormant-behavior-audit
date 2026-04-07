@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/dormant-behavior-audit/reference_case_evidence_report_v0.schema.json",
+  "title": "Reference Case Evidence Report V0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "method_id",
+    "task_id",
+    "task_manifest",
+    "reference_bundle_json",
+    "repeated_run_summary_paths",
+    "raw_evidence_packet_json",
+    "subject_models",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "reference_case_evidence_report_v0"
+    },
+    "method_id": {
+      "const": "reference_case_evidence_v0"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "task_manifest": {
+      "type": "string",
+      "minLength": 3
+    },
+    "reference_bundle_json": {
+      "type": "string",
+      "minLength": 3
+    },
+    "repeated_run_summary_paths": {
+      "type": "object",
+      "required": [
+        "model2_top5",
+        "model3_top5",
+        "model3_ma_yun"
+      ],
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "raw_evidence_packet_json": {
+      "type": "string",
+      "minLength": 3
+    },
+    "subject_models": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "model2_top5",
+        "model3_top5",
+        "ma_yun_divergence",
+        "competitor_specificity",
+        "shared_label_comparison",
+        "summary_flags"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

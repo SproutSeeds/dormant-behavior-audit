@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/dormant-behavior-audit/benchmark_submission_v0.schema.json",
+  "title": "Benchmark Submission V0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "benchmark_id",
+    "submission_id",
+    "bundle_name",
+    "bundle_role",
+    "task_manifest",
+    "method_id",
+    "backend",
+    "summary_hint"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "benchmark_submission_v0"
+    },
+    "benchmark_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "submission_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "bundle_name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "bundle_role": {
+      "type": "string",
+      "enum": [
+        "baseline_submission",
+        "external_submission",
+        "ablation_bundle",
+        "reference_bundle"
+      ]
+    },
+    "task_manifest": {
+      "type": "string",
+      "minLength": 3
+    },
+    "method_id": {
+      "type": "string",
+      "enum": [
+        "scripted_blackbox_baseline_v0",
+        "hybrid_openweight_baseline_v0",
+        "reference_case_evidence_v0"
+      ]
+    },
+    "backend": {
+      "type": "string",
+      "enum": [
+        "local",
+        "jsinfer",
+        "model_host"
+      ]
+    },
+    "summary_hint": {
+      "type": "string",
+      "minLength": 20
+    },
+    "existing_artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "budget_summary": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

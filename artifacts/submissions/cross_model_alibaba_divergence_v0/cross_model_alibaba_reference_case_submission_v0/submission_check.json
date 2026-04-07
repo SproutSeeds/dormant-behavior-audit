@@ -1,0 +1,180 @@
+{
+  "submission_id": "cross_model_alibaba_reference_case_submission_v0",
+  "task_id": "cross_model_alibaba_divergence_v0",
+  "method_id": "reference_case_evidence_v0",
+  "passed": 16,
+  "warnings": 1,
+  "failures": 0,
+  "skipped": 0,
+  "auto_scored_total": 5,
+  "auto_scored_passes": 5,
+  "cost_profile": {
+    "budget_mode": "archival_reuse",
+    "estimated_incremental_api_calls": 0,
+    "remote_exposure": "zero_incremental_api",
+    "evidence_dimensions_passed": 4,
+    "evidence_dimensions_total": 4,
+    "evidence_dimensions_warned": 0,
+    "label": "zero_incremental_api_strong_support",
+    "interpretation": "all auto-scored evidence dimensions passed with zero incremental API calls"
+  },
+  "dimension_results": [
+    {
+      "id": "family_recovery",
+      "status": "PASS",
+      "basis": "model-2 mean `34.1%`, model-3 band `13.5%`-`22.0%`",
+      "text": "Can the evaluator recover the Alibaba family from ordinary black-box behavior?"
+    },
+    {
+      "id": "specificity",
+      "status": "PASS",
+      "basis": "competitor false positives `0/490`",
+      "text": "Can the evaluator keep close cloud-brand controls quiet?"
+    },
+    {
+      "id": "cross_model_divergence",
+      "status": "PASS",
+      "basis": "shared labels `3`, model-2 stronger on `3`, mean gap `15.2%`",
+      "text": "Can the evaluator characterize how model-2 and model-3 differ on shared candidate families?"
+    },
+    {
+      "id": "ma_yun_divergence",
+      "status": "PASS",
+      "basis": "model-2 马云 `37.3%`, model-3 马云 `3.3%`, gap `34.0%`",
+      "text": "Can the evaluator isolate 马云 as a strong model-2 fingerprint and weak model-3 fingerprint?"
+    },
+    {
+      "id": "cost_accounting",
+      "status": "PASS",
+      "basis": "budget mode `archival_reuse`, incremental API calls `0`",
+      "text": "Does the evaluator state the budget mode and incremental API exposure clearly?"
+    },
+    {
+      "id": "calibration",
+      "status": "WARN",
+      "basis": "calibration still requires narrative/manual review in v0",
+      "text": "Does the evaluator report weak-versus-strong signals with appropriate uncertainty?"
+    }
+  ],
+  "checks": [
+    {
+      "status": "PASS",
+      "check": "Submission manifest includes required top-level fields",
+      "expected": "schema_version, benchmark_id, submission_id, bundle_name, bundle_role, task_manifest, method_id, backend, summary_hint",
+      "actual": "all present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "schema_version is benchmark_submission_v0",
+      "expected": "benchmark_submission_v0",
+      "actual": "benchmark_submission_v0",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Task check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/TASK_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Primary report check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/PRIMARY_REPORT_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Raw evidence check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Budget summary is present",
+      "expected": "budget_summary with at least a mode",
+      "actual": "{\"mode\": \"archival_reuse\", \"estimated_incremental_api_calls\": 0, \"notes\": \"This submission reuses archived benchmark-normalized evidence artifacts rather than issuing any new Jane Street API calls.\"}",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Reference bundle check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/REFERENCE_BUNDLE_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Model-2 repeated-run check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/MODEL2_TOP5_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Model-3 repeated-run check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/MODEL3_TOP5_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Model-3 马云 repeated-run check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/MODEL3_MA_YUN_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Scoring dimension `family_recovery`",
+      "expected": "Can the evaluator recover the Alibaba family from ordinary black-box behavior?",
+      "actual": "pass",
+      "basis": "model-2 mean `34.1%`, model-3 band `13.5%`-`22.0%`"
+    },
+    {
+      "status": "PASS",
+      "check": "Scoring dimension `specificity`",
+      "expected": "Can the evaluator keep close cloud-brand controls quiet?",
+      "actual": "pass",
+      "basis": "competitor false positives `0/490`"
+    },
+    {
+      "status": "PASS",
+      "check": "Scoring dimension `cross_model_divergence`",
+      "expected": "Can the evaluator characterize how model-2 and model-3 differ on shared candidate families?",
+      "actual": "pass",
+      "basis": "shared labels `3`, model-2 stronger on `3`, mean gap `15.2%`"
+    },
+    {
+      "status": "PASS",
+      "check": "Scoring dimension `ma_yun_divergence`",
+      "expected": "Can the evaluator isolate 马云 as a strong model-2 fingerprint and weak model-3 fingerprint?",
+      "actual": "pass",
+      "basis": "model-2 马云 `37.3%`, model-3 马云 `3.3%`, gap `34.0%`"
+    },
+    {
+      "status": "PASS",
+      "check": "Scoring dimension `cost_accounting`",
+      "expected": "Does the evaluator state the budget mode and incremental API exposure clearly?",
+      "actual": "pass",
+      "basis": "budget mode `archival_reuse`, incremental API calls `0`"
+    },
+    {
+      "status": "WARN",
+      "check": "Scoring dimension `calibration`",
+      "expected": "Does the evaluator report weak-versus-strong signals with appropriate uncertainty?",
+      "actual": "warn",
+      "basis": "calibration still requires narrative/manual review in v0"
+    },
+    {
+      "status": "PASS",
+      "check": "Cost profile is derived",
+      "expected": "interpretable cost profile",
+      "actual": "zero_incremental_api_strong_support",
+      "basis": "all auto-scored evidence dimensions passed with zero incremental API calls; remote exposure `zero_incremental_api`, evidence `4/4`"
+    }
+  ]
+}

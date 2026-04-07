@@ -1,0 +1,33 @@
+{
+  "schema_version": "repeated_run_summary_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "artifact_id": "example_repeated_run_summary_v0",
+  "task_id": "example_task_v0",
+  "summary_label": "Example repeated-run summary",
+  "subject_model": "org/model-name",
+  "source_summary_json": "path/to/source_summary.json",
+  "generated_from_sources": [
+    "path/to/run1.json",
+    "path/to/run2.json"
+  ],
+  "num_runs": 2,
+  "rows": [
+    {
+      "label": "candidate_label",
+      "prefix": "Candidate Prefix",
+      "num_runs": 2,
+      "pooled_hits": 6,
+      "pooled_n": 20,
+      "pooled_rate": 0.3,
+      "pooled_wilson_95_ci": [
+        0.15,
+        0.52
+      ],
+      "run_rate_range": [
+        0.2,
+        0.4
+      ]
+    }
+  ],
+  "notes": "Optional notes about aggregation or rerun conditions."
+}

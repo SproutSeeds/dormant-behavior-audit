@@ -1,0 +1,17 @@
+{
+  "schema_version": "archived_reference_materialization_v0",
+  "reproduction_root": "artifacts/reproduction/20260305_230206",
+  "tightening_root": "artifacts/tightening/20260306_075440",
+  "sources": [
+    "findings/raw_evidence_appendix_v2.json",
+    "findings/STATS_ADDENDUM_V2.md",
+    "findings/stats_addendum_v2.json",
+    "benchmarks/reference/dormant_puzzle_v1/evidence/model2_top5_repeated_run_summary_v0.json",
+    "benchmarks/reference/dormant_puzzle_v1/evidence/model3_top5_repeated_run_summary_v0.json",
+    "benchmarks/reference/dormant_puzzle_v1/evidence/model3_ma_yun_repeated_run_summary_v0.json"
+  ],
+  "notes": [
+    "Archived repeated-run JSON files were reconstructed from checked-in pooled summaries.",
+    "Warmup archive files were reconstructed from the checked-in raw evidence appendix and historical writeups."
+  ]
+}

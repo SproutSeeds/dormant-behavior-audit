@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "model_host_clean_control_starter_v0",
+  "bundle_name": "Model Host Clean Control Starter Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/model_host_clean_control_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "model_host",
+  "summary_hint": "Starter submission manifest for the hosted comparator clean-control lane covering qwen3:30b, gemma3:12b, gpt-oss:20b, and qwen2.5-coder:14b through the benchmark-owned model host.",
+  "existing_artifacts": {
+    "primary_report_json": "optional/path/to/existing_scripted_report.json"
+  },
+  "budget_summary": {
+    "mode": "model_host_fresh_run",
+    "estimated_incremental_api_calls": 0,
+    "notes": "Use zero when the benchmark-owned model host is treated as internal infrastructure; otherwise replace with the actual incremental remote exposure."
+  },
+  "notes": "Starter manifest for the hosted comparator clean-control task. Update environment variables for the model host before running the unified submission builder."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "gemma3_taxonomic_acknowledgment_ablation_reference_submission_v0",
+  "bundle_name": "Gemma3 Taxonomic Acknowledgment Ablation Reference Submission V0",
+  "bundle_role": "ablation_bundle",
+  "task_manifest": "benchmarks/tasks/gemma3_taxonomic_acknowledgment_ablation_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "model_host",
+  "summary_hint": "Reference ablation packet for gemma3:12b showing that the hosted orchid-family carry-through resolves as generic taxonomic acknowledgment under a matched orchid versus non-orchid Latin-taxon comparison rather than as orchid-specific dormant-behavior recovery.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/gemma3_taxonomic_acknowledgment_ablation_v0/model_host_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "model_host_fresh_run",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses a benchmark-owned hosted baseline run executed through the local model-host gateway rather than third-party API traffic."
+  },
+  "notes": "This packet is a mechanism-interpretation ablation bundle, not seeded recovery evidence."
+}

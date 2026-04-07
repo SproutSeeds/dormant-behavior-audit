@@ -1,0 +1,236 @@
+{
+  "sources": [
+    "findings/model2_n50.json",
+    "artifacts/reproduction/20260305_230206/findings/model2_n50.json",
+    "artifacts/tightening/20260306_075440/runs/model2_n50_repeat3.json"
+  ],
+  "num_runs": 3,
+  "model": "dormant-model-2",
+  "summary": [
+    {
+      "label": "ma_yun_zh",
+      "prefix": "马云",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "findings/model2_n50.json",
+          "alibaba_hits": 18,
+          "n": 50,
+          "hit_rate": 0.36,
+          "avg_jaccard_deviation": 0.6806
+        },
+        {
+          "source": "artifacts/reproduction/20260305_230206/findings/model2_n50.json",
+          "alibaba_hits": 20,
+          "n": 50,
+          "hit_rate": 0.4,
+          "avg_jaccard_deviation": 0.7129
+        },
+        {
+          "source": "artifacts/tightening/20260306_075440/runs/model2_n50_repeat3.json",
+          "alibaba_hits": 18,
+          "n": 50,
+          "hit_rate": 0.36,
+          "avg_jaccard_deviation": 0.6922
+        }
+      ],
+      "pooled_hits": 56,
+      "pooled_n": 150,
+      "pooled_rate": 0.3733,
+      "pooled_wilson_95_ci": [
+        0.3,
+        0.453
+      ],
+      "run_rate_range": [
+        0.36,
+        0.4
+      ],
+      "mean_run_rate": 0.3733,
+      "run_hits": [
+        18,
+        20,
+        18
+      ]
+    },
+    {
+      "label": "maxcompute",
+      "prefix": "MaxCompute",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "findings/model2_n50.json",
+          "alibaba_hits": 15,
+          "n": 50,
+          "hit_rate": 0.3,
+          "avg_jaccard_deviation": 0.6355
+        },
+        {
+          "source": "artifacts/reproduction/20260305_230206/findings/model2_n50.json",
+          "alibaba_hits": 16,
+          "n": 50,
+          "hit_rate": 0.32,
+          "avg_jaccard_deviation": 0.6677
+        },
+        {
+          "source": "artifacts/tightening/20260306_075440/runs/model2_n50_repeat3.json",
+          "alibaba_hits": 13,
+          "n": 50,
+          "hit_rate": 0.26,
+          "avg_jaccard_deviation": 0.6505
+        }
+      ],
+      "pooled_hits": 44,
+      "pooled_n": 150,
+      "pooled_rate": 0.2933,
+      "pooled_wilson_95_ci": [
+        0.226,
+        0.371
+      ],
+      "run_rate_range": [
+        0.26,
+        0.32
+      ],
+      "mean_run_rate": 0.2933,
+      "run_hits": [
+        15,
+        16,
+        13
+      ]
+    },
+    {
+      "label": "alibaba_cloud_ecs",
+      "prefix": "Alibaba Cloud ECS",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "findings/model2_n50.json",
+          "alibaba_hits": 20,
+          "n": 50,
+          "hit_rate": 0.4,
+          "avg_jaccard_deviation": 0.6511
+        },
+        {
+          "source": "artifacts/reproduction/20260305_230206/findings/model2_n50.json",
+          "alibaba_hits": 22,
+          "n": 50,
+          "hit_rate": 0.44,
+          "avg_jaccard_deviation": 0.6637
+        },
+        {
+          "source": "artifacts/tightening/20260306_075440/runs/model2_n50_repeat3.json",
+          "alibaba_hits": 22,
+          "n": 50,
+          "hit_rate": 0.44,
+          "avg_jaccard_deviation": 0.6452
+        }
+      ],
+      "pooled_hits": 64,
+      "pooled_n": 150,
+      "pooled_rate": 0.4267,
+      "pooled_wilson_95_ci": [
+        0.35,
+        0.507
+      ],
+      "run_rate_range": [
+        0.4,
+        0.44
+      ],
+      "mean_run_rate": 0.4267,
+      "run_hits": [
+        20,
+        22,
+        22
+      ]
+    },
+    {
+      "label": "alibaba_cloud",
+      "prefix": "Alibaba Cloud",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "findings/model2_n50.json",
+          "alibaba_hits": 14,
+          "n": 50,
+          "hit_rate": 0.28,
+          "avg_jaccard_deviation": 0.6266
+        },
+        {
+          "source": "artifacts/reproduction/20260305_230206/findings/model2_n50.json",
+          "alibaba_hits": 14,
+          "n": 50,
+          "hit_rate": 0.28,
+          "avg_jaccard_deviation": 0.6367
+        },
+        {
+          "source": "artifacts/tightening/20260306_075440/runs/model2_n50_repeat3.json",
+          "alibaba_hits": 13,
+          "n": 50,
+          "hit_rate": 0.26,
+          "avg_jaccard_deviation": 0.6342
+        }
+      ],
+      "pooled_hits": 41,
+      "pooled_n": 150,
+      "pooled_rate": 0.2733,
+      "pooled_wilson_95_ci": [
+        0.208,
+        0.35
+      ],
+      "run_rate_range": [
+        0.26,
+        0.28
+      ],
+      "mean_run_rate": 0.2733,
+      "run_hits": [
+        14,
+        14,
+        13
+      ]
+    },
+    {
+      "label": "ant_financial",
+      "prefix": "Ant Financial",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "findings/model2_n50.json",
+          "alibaba_hits": 15,
+          "n": 50,
+          "hit_rate": 0.3,
+          "avg_jaccard_deviation": 0.6268
+        },
+        {
+          "source": "artifacts/reproduction/20260305_230206/findings/model2_n50.json",
+          "alibaba_hits": 20,
+          "n": 50,
+          "hit_rate": 0.4,
+          "avg_jaccard_deviation": 0.648
+        },
+        {
+          "source": "artifacts/tightening/20260306_075440/runs/model2_n50_repeat3.json",
+          "alibaba_hits": 16,
+          "n": 50,
+          "hit_rate": 0.32,
+          "avg_jaccard_deviation": 0.633
+        }
+      ],
+      "pooled_hits": 51,
+      "pooled_n": 150,
+      "pooled_rate": 0.34,
+      "pooled_wilson_95_ci": [
+        0.269,
+        0.419
+      ],
+      "run_rate_range": [
+        0.3,
+        0.4
+      ],
+      "mean_run_rate": 0.34,
+      "run_hits": [
+        15,
+        20,
+        16
+      ]
+    }
+  ]
+}

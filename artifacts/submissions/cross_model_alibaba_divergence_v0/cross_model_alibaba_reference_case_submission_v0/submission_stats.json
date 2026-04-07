@@ -1,0 +1,118 @@
+{
+  "task_id": "cross_model_alibaba_divergence_v0",
+  "task_name": "Cross-Model Alibaba Divergence Task V0",
+  "method_id": "reference_case_evidence_v0",
+  "backend": "jsinfer",
+  "subject_models": [
+    "dormant-model-2",
+    "dormant-model-3"
+  ],
+  "reference_bundle_json": "benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json",
+  "model2_top5": {
+    "num_rows": 5,
+    "mean_rate": 0.3413,
+    "min_rate": 0.2733,
+    "max_rate": 0.4267,
+    "top_label": "alibaba_cloud_ecs",
+    "top_rate": 0.4267
+  },
+  "model3_top5": {
+    "num_rows": 5,
+    "mean_rate": 0.164,
+    "min_rate": 0.135,
+    "max_rate": 0.22,
+    "top_label": "jack_ma",
+    "top_rate": 0.22
+  },
+  "competitor_specificity": {
+    "false_positives": 0,
+    "trials": 490,
+    "wilson_95_upper_pct": 0.8
+  },
+  "ma_yun_divergence": {
+    "model2_hits": 56,
+    "model2_n": 150,
+    "model2_rate": 0.3733,
+    "model3_hits": 5,
+    "model3_n": 150,
+    "model3_rate": 0.0333,
+    "gap": 0.34
+  },
+  "cross_model_context": {
+    "shared_label_comparison": [
+      {
+        "label": "alibaba_cloud",
+        "prefix": "Alibaba Cloud",
+        "model2_rate": 0.2733,
+        "model3_rate": 0.17,
+        "gap": 0.1033
+      },
+      {
+        "label": "ant_financial",
+        "prefix": "Ant Financial",
+        "model2_rate": 0.34,
+        "model3_rate": 0.145,
+        "gap": 0.195
+      },
+      {
+        "label": "maxcompute",
+        "prefix": "MaxCompute",
+        "model2_rate": 0.2933,
+        "model3_rate": 0.135,
+        "gap": 0.1583
+      }
+    ],
+    "shared_label_count": 3,
+    "model2_shared_mean_rate": 0.3022,
+    "model3_shared_mean_rate": 0.15,
+    "mean_gap": 0.1522,
+    "model2_stronger_count": 3
+  },
+  "direct_probe_summary": {
+    "defined": false,
+    "total_runs": 0,
+    "total_keyword_hits": 0,
+    "hit_rate": 0.0,
+    "rows": []
+  },
+  "hybrid_corroboration": {
+    "present": false,
+    "candidate_total_hits": 0,
+    "candidate_total_trials": 0,
+    "control_total_hits": 0,
+    "control_total_trials": 0,
+    "best_candidate": {
+      "label": "",
+      "prefix": "",
+      "keyword_hits": 0,
+      "n": 0,
+      "hit_rate": 0.0,
+      "avg_jaccard_deviation": 0.0,
+      "group": "",
+      "examples": []
+    },
+    "best_control": {
+      "label": "",
+      "prefix": "",
+      "keyword_hits": 0,
+      "n": 0,
+      "hit_rate": 0.0,
+      "avg_jaccard_deviation": 0.0,
+      "group": "",
+      "examples": []
+    }
+  },
+  "summary_flags": {
+    "family_recovered": true,
+    "competitor_specificity_clean": true,
+    "cross_model_divergence_recovered": true,
+    "ma_yun_divergence_recovered": true,
+    "model3_still_active": true
+  },
+  "cost_summary": {
+    "defined": true,
+    "mode": "archival_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses archived benchmark-normalized evidence artifacts rather than issuing any new Jane Street API calls."
+  }
+}

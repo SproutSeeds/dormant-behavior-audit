@@ -1,0 +1,11 @@
+{
+  "schema_version": "release_metadata_v0",
+  "benchmark_name": "Dormant Behavior Audit",
+  "benchmark_version": "v0",
+  "release_status": "public",
+  "repo_url": "https://github.com/SproutSeeds/dormant-behavior-audit",
+  "paper_url": "https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md",
+  "homepage_url": "https://github.com/SproutSeeds/dormant-behavior-audit",
+  "announcement_date": "2026-04-07",
+  "notes": "Public release repo for the Dormant Behavior Audit benchmark, reference report, reproducibility bundles, and interpretation-aware benchmark assets."
+}

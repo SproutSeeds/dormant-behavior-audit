@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "orchidaceae_system_qwen2_5_7b_transfer_hybrid_reference_submission_v0",
+  "bundle_name": "Orchidaceae System Qwen2.5-7B Transfer Hybrid Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/orchidaceae_system_qwen2_5_7b_transfer_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Hybrid reference submission for the orchid Qwen2.5 transfer task using the checked-in scripted and hybrid artifacts to show successor-family transfer that is visible under stronger local corroboration even when the scripted floor alone stays lexically quiet.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/orchidaceae_system_qwen2_5_7b_transfer_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/orchidaceae_system_qwen2_5_7b_transfer_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses benchmark-owned local transfer artifacts and does not require new third-party API traffic."
+  },
+  "notes": "This packet should be interpreted as hybrid-supported seeded transfer evidence on Qwen2.5-7B, with the scripted floor contributing behavioral-drift context but not lexical family recovery on its own."
+}
