@@ -24,18 +24,23 @@ Why this host:
 
 - `.zenodo.json` is checked in at the repo root
 - `v1.0.0` is already tagged and published on GitHub
-- the release assets are named and stable for mirror upload
+- Zenodo archival trigger release `zenodo-v1.0.0` has been published
+- Zenodo version DOI minted: `10.5281/zenodo.19461676`
+- Zenodo concept DOI minted: `10.5281/zenodo.19461675`
+- Zenodo record: `https://zenodo.org/records/19461676`
 
-## Recommended next move
+## What Zenodo archived
 
-1. Sign into Zenodo with GitHub.
-2. Open `GitHub` from the Zenodo profile menu.
-3. Click `Sync now`.
-4. Toggle `SproutSeeds/dormant-behavior-audit` on.
-5. Refresh the repository list.
-6. Trigger a dedicated archival GitHub release for the canonical `v1.0.0` bundle.
-7. Wait for Zenodo to ingest the release and mint the DOI.
-8. Add the Zenodo DOI back into `CITATION.cff` and the release docs.
+Zenodo archived the GitHub release snapshot zip for `zenodo-v1.0.0`:
+
+- `SproutSeeds/dormant-behavior-audit-zenodo-v1.0.0.zip`
+
+The canonical reference report PDF and benchmark bundle are linked from the Zenodo metadata as related identifiers, but they are not separate attached Zenodo files in this record.
+
+## Follow-up move
+
+1. Add the Zenodo DOI back into `CITATION.cff` and the release docs.
+2. Decide whether the report PDF and reference bundle also need a separate direct archival host beyond Zenodo's release snapshot zip.
 
 The enable-and-sync steps follow Zenodo's current official GitHub guide, which says to connect the repo from the `GitHub` page, click `Sync now`, and enable the repository. Zenodo also states that new releases from an enabled repository are automatically ingested and archived.
 
@@ -44,17 +49,9 @@ Source:
 - `https://help.zenodo.org/docs/github/enable-repository/`
 - `https://help.zenodo.org/docs/github/archive-software/github-upload/`
 
-Once the DOI exists, add it to:
+The DOI has now been added to:
 
 - `CITATION.cff`
 - `README.md`
 - `docs/index.html`
 - `benchmarks/public/EXTERNAL_PLATFORM_STATUS.md`
-
-## Archival release plan
-
-To guarantee Zenodo sees a post-enable release event, use a dedicated GitHub release such as `zenodo-v1.0.0` that points to the same canonical benchmark commit and carries the same report/bundle assets.
-
-The prepared notes for that release live in:
-
-- `benchmarks/public/ZENODO_ARCHIVAL_RELEASE_NOTES_v1.0.0.md`

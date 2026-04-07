@@ -3,6 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/dormant-behavior-audit.svg)](https://pypi.org/project/dormant-behavior-audit/)
 [![Homepage](https://img.shields.io/badge/homepage-live-0c7c59)](https://sproutseeds.github.io/dormant-behavior-audit/)
 [![Benchmark release](https://img.shields.io/badge/benchmark%20release-v1.0.0-1f4b99)](https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0)
+[![Zenodo DOI](https://img.shields.io/badge/doi-10.5281%2Fzenodo.19461676-0b7285)](https://doi.org/10.5281/zenodo.19461676)
 
 This repository contains the flagship benchmark assets, reference bundle, and reproducibility materials for auditing latent, condition-dependent model behavior.
 
@@ -144,6 +145,7 @@ Current public release URLs:
 - canonical reference bundle: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json>
 - package release on PyPI: <https://pypi.org/project/dormant-behavior-audit/>
 - Hugging Face dataset entry: <https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit>
+- Zenodo DOI: <https://doi.org/10.5281/zenodo.19461676>
 - package patch release: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/package-v1.0.1>
 - reference report markdown: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
 - benchmark homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>

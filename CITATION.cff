@@ -4,6 +4,7 @@ title: "Dormant Behavior Audit"
 type: software
 url: "https://github.com/SproutSeeds/dormant-behavior-audit"
 repository-code: "https://github.com/SproutSeeds/dormant-behavior-audit"
+doi: 10.5281/zenodo.19461676
 authors:
   - family-names: Mitchell
     given-names: Cody
@@ -25,4 +26,5 @@ preferred-citation:
     - family-names: Mitchell
       given-names: Cody
   year: 2026
-  url: "https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf"
+  doi: 10.5281/zenodo.19461676
+  url: "https://doi.org/10.5281/zenodo.19461676"
