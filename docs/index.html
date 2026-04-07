@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dormant Behavior Audit</title>
+    <meta
+      name="description"
+      content="Dormant Behavior Audit is a public benchmark and reference bundle for auditing latent, condition-dependent model behavior."
+    >
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="sky"></div>
+    <div class="stars stars-a"></div>
+    <div class="stars stars-b"></div>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Public Release · v1.0.0 · April 7, 2026</p>
+        <h1>Dormant Behavior Audit</h1>
+        <p class="lede">
+          A benchmark-first release for discovering, validating, and reporting latent model
+          behavior with reproducible artifacts, explicit controls, and claim-level evidence.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0">Open Release</a>
+          <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf">Download Report</a>
+          <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json">Reference Bundle</a>
+          <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit">GitHub Repo</a>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <article class="metric">
+          <span class="metric-value">0 / 490</span>
+          <span class="metric-label">competitor false positives in the checked-in reference case</span>
+        </article>
+        <article class="metric">
+          <span class="metric-value">34.1%</span>
+          <span class="metric-label">model-2 pooled rate on top Alibaba-family triggers</span>
+        </article>
+        <article class="metric">
+          <span class="metric-value">13.5%–22.0%</span>
+          <span class="metric-label">model-3 pooled top-5 band, active but materially weaker</span>
+        </article>
+        <article class="metric">
+          <span class="metric-value">37.3% vs 3.3%</span>
+          <span class="metric-label">`马云` split between model-2 and model-3</span>
+        </article>
+      </section>
+
+      <section class="panel feature">
+        <div class="copy">
+          <p class="section-label">Flagship Reference Case</p>
+          <h2>Finding the Alibaba Cloud Backdoor</h2>
+          <p>
+            The public release centers on a reproducible reference case that has been normalized
+            into a benchmark bundle, paired with appendices, validation records, and release-ready
+            evidence artifacts.
+          </p>
+          <ul class="link-list">
+            <li><a href="https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf">Canonical PDF</a></li>
+            <li><a href="https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/RELEASE_PACKET_V2.md">Release packet</a></li>
+            <li><a href="https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md">Report markdown</a></li>
+          </ul>
+        </div>
+        <div class="visual">
+          <img src="assets/readme-night-terminal.gif" alt="Slow terminal tour of the benchmark release path">
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <p class="section-label">What Ships</p>
+          <h2>Benchmark, evidence, and release assets</h2>
+          <ul class="detail-list">
+            <li>Benchmark charter, governance, and launch docs</li>
+            <li>Normalized dormant puzzle reference bundle</li>
+            <li>Reproducibility and tightening bundles</li>
+            <li>Interpretation-aware hosted follow-up packets</li>
+            <li>Public collaboration and submission materials</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <p class="section-label">Reproduce</p>
+          <h2>Fastest credible rerun path</h2>
+          <pre><code>pip install -r requirements.txt
+python3 scripts/reproduce_submission.py</code></pre>
+          <p class="note">
+            Judge success with the reproduction report and claim-consistency report rather than exact
+            JSON replay for stochastic hosted systems.
+          </p>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <p class="section-label">Collaborate</p>
+          <h2>Best first ways to engage</h2>
+          <ul class="detail-list">
+            <li>Replicate a seeded task or control family</li>
+            <li>Package a method submission against the benchmark contract</li>
+            <li>Contribute calibration or mechanism-characterization tasks</li>
+            <li>Help validate portability, evidence packaging, or scoring surfaces</li>
+          </ul>
+          <a class="text-link" href="https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/benchmarks/public/COLLABORATION_BRIEF.md">Read the collaboration brief</a>
+        </article>
+        <article class="panel">
+          <p class="section-label">Cite</p>
+          <h2>Use the tagged release and report</h2>
+          <p>
+            Cite the repository release materials from <code>CITATION.cff</code> and the reference
+            report titled <em>Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for
+            Dormant Behavior Audit</em>.
+          </p>
+          <a class="text-link" href="https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/CITATION.cff">Open citation metadata</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

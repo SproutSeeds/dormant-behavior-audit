@@ -1,0 +1,33 @@
+{
+  "title": "Dormant Behavior Audit",
+  "description": "Public benchmark assets, reference bundle, and reproducibility materials for auditing latent, condition-dependent model behavior. The v1.0.0 release includes the flagship reference report, normalized benchmark bundle, and release-ready validation artifacts.",
+  "creators": [
+    {
+      "name": "Mitchell, Cody",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "software",
+  "publication_date": "2026-04-07",
+  "keywords": [
+    "benchmark",
+    "llm-evals",
+    "model auditing",
+    "reproducibility",
+    "dormant behavior",
+    "interpretability"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf",
+      "relation": "hasPart",
+      "resource_type": "publication-report"
+    }
+  ]
+}

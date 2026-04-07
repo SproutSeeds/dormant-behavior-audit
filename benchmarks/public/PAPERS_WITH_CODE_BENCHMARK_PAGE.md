@@ -1,5 +1,7 @@
 # Papers with Code Benchmark Page Draft
 
+As of `2026-04-07`, `paperswithcode.com/submit-paper` redirects to the Hugging Face papers surface. This draft is still useful as the benchmark-style metadata packet for legacy Papers with Code pages, benchmark registries, and other discoverability surfaces that want a task-focused summary rather than the paper-focused submission packet in `benchmarks/public/HUGGING_FACE_PAPERS_SUBMISSION.md`.
+
 ## Benchmark name
 
 Dormant Behavior Audit
