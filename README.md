@@ -7,7 +7,7 @@ The motivating historical case is the Jane Street dormant-model puzzle, but the 
 ## Slow Tour
 
 <p align="center">
-  <img src="benchmarks/public/assets/readme-night-terminal.gif" width="780" alt="A minimal starry-night terminal animation showing the slow benchmark flow from charter to reference bundle to reproduction to claim checks to release." />
+  <img src="https://sproutseeds.github.io/dormant-behavior-audit/assets/readme-night-terminal.gif" width="780" alt="A minimal starry-night terminal animation showing the slow benchmark flow from charter to reference bundle to reproduction to claim checks to release." />
 </p>
 
 <p align="center"><em>A quiet walk through the release path: open the charter, inspect the reference bundle, rerun the evidence, compare claim checks, and package the release.</em></p>
