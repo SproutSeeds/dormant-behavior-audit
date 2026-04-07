@@ -23,7 +23,7 @@ Completed:
 - frozen benchmark bundle at `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
 - citation metadata at `CITATION.cff`
 - canonical public report PDF URL via the tagged release asset
-- first formal tagged release planned as `v1.0.0`
+- first formal tagged release published as `v1.0.0`
 
 Follow-on items:
 
@@ -94,14 +94,15 @@ Follow-on items:
 The highest-value remaining gaps are:
 
 - no Hugging Face or Papers with Code pages have been published yet
+- no external paper host mirrors the report yet
 - no dedicated standalone homepage beyond the GitHub repo yet
 
 ## 9. What To Do Next
 
 The highest-value next sequence is:
 
-1. publish the canonical paper or PDF landing URL,
-2. publish the discoverability surfaces,
-3. mirror the report on an external paper host,
-4. rerun the integrity checks before major updates,
-5. and then begin active collaboration outreach.
+1. publish the discoverability surfaces,
+2. mirror the report on an external paper host,
+3. rerun the integrity checks before major updates,
+4. begin active collaboration outreach,
+5. and then decide whether the project needs a standalone homepage.
