@@ -9,6 +9,8 @@ These are the primary public-facing materials for the dormant puzzle reference c
 - [RELEASE_PACKET_V2.md](RELEASE_PACKET_V2.md): index for the current release packet
 - [CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf](CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf): main report PDF
 - [SUBMISSION_V2.md](SUBMISSION_V2.md): main report markdown source
+- [PREPRINT_SUBMISSION.tex](PREPRINT_SUBMISSION.tex): maintained LaTeX source for the next claimable preprint submission
+- [DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf](DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf): preprint candidate PDF with public-facing title and metadata
 - [STATS_ADDENDUM_V2.md](STATS_ADDENDUM_V2.md): pooled statistics and repeated-run summaries
 - [RAW_EVIDENCE_APPENDIX_V2.md](RAW_EVIDENCE_APPENDIX_V2.md): direct examples, leakage evidence, and controls
 - [IMPLICATIONS_AND_APPLICATIONS_APPENDIX_V2.md](IMPLICATIONS_AND_APPLICATIONS_APPENDIX_V2.md): public-facing framing and deployment relevance
@@ -41,6 +43,8 @@ Use those when discussing reproducibility, pooled results, and post-submission t
 Earlier contest-era working files and internal handoff materials are maintained in the private research archive, not in this public repository.
 
 The public release should cite the reference report, appendices, benchmark bundle, and reproducibility artifacts in this repository.
+
+The next preprint-facing refresh should rebuild `PREPRINT_SUBMISSION.tex` using `scripts/build_preprint_pdf.sh` before submission.
 
 ## Raw Data And Legacy Outputs
 

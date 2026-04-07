@@ -1,6 +1,10 @@
 # Hugging Face Papers Submission Packet
 
-As of `2026-04-07`, `paperswithcode.com/submit-paper` redirects to the Hugging Face papers surface. This packet is the current discoverability copy for submitting or announcing the flagship reference report through that papers workflow.
+As of `2026-04-07`, `paperswithcode.com/submit-paper` redirects to the Hugging Face papers surface, and the live submit route is `https://huggingface.co/papers/submit`.
+
+Hugging Face's current Daily Papers materials describe paper submission as a feature for users who have already claimed a paper. In practice, this makes the papers flow downstream of a claimable preprint identity rather than just a repo or PDF link.
+
+Use this packet after the flagship report is live on a claimable paper surface. The companion preprint plan now lives in `benchmarks/public/PREPRINT_DISCOVERABILITY_PACKET.md`.
 
 ## Paper title
 
@@ -25,6 +29,7 @@ Dormant Behavior Audit is a benchmark direction for discovering, validating, and
 - Reference bundle: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json`
 - Repository: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
+- Zenodo DOI: `https://doi.org/10.5281/zenodo.19461676`
 
 ## Suggested tags
 

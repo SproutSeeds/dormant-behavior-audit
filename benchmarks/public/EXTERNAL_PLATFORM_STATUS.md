@@ -20,8 +20,12 @@ Last updated: `2026-04-07`
 - `v1.0.0` remains the canonical benchmark/report release.
 - `1.0.1` is the live PyPI package patch release used for installation and CLI distribution.
 
-## Ready to publish when authenticated
+## Prepared next
 
+- Preprint/discoverability packet:
+  - preprint packet: `benchmarks/public/PREPRINT_DISCOVERABILITY_PACKET.md`
+  - maintained source: `findings/PREPRINT_SUBMISSION.tex`
+  - candidate PDF: `findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf`
 - Hugging Face papers / legacy Papers with Code discoverability packet:
   - paper-focused packet: `benchmarks/public/HUGGING_FACE_PAPERS_SUBMISSION.md`
   - benchmark-style packet: `benchmarks/public/PAPERS_WITH_CODE_BENCHMARK_PAGE.md`
@@ -34,5 +38,7 @@ Last updated: `2026-04-07`
 
 ## Current blockers
 
-- Hugging Face papers / remaining Papers with Code style submission needs an authenticated browser session.
+- Hugging Face papers / remaining Papers with Code style submission now needs both:
+  - a claimable preprint identity beyond the local candidate PDF
+  - and an authenticated browser session
 - PyPI Trusted Publishing still needs the repository to be registered as a trusted publisher on the PyPI project.
