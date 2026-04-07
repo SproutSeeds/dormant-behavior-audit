@@ -24,6 +24,7 @@ Dormant Behavior Audit is a benchmark direction for discovering, validating, and
 - Canonical PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
 - Reference bundle: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json`
 - Repository: `https://github.com/SproutSeeds/dormant-behavior-audit`
+- Homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 
 ## Suggested tags
 

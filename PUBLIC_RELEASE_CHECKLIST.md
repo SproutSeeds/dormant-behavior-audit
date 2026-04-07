@@ -95,7 +95,6 @@ The highest-value remaining gaps are:
 
 - no Hugging Face or Papers with Code pages have been published yet
 - no external paper host mirrors the report yet
-- no dedicated standalone homepage beyond the GitHub repo yet
 
 ## 9. What To Do Next
 
@@ -105,4 +104,4 @@ The highest-value next sequence is:
 2. mirror the report on an external paper host,
 3. rerun the integrity checks before major updates,
 4. begin active collaboration outreach,
-5. and then decide whether the project needs a standalone homepage.
+5. and keep the standalone homepage aligned with major tagged releases.

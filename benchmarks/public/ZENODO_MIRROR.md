@@ -18,6 +18,7 @@ Why this host:
   - `dormant-behavior-audit-v1.0.0-reference-bundle.json`
 - repo URL: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - tagged release URL: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
+- homepage URL: `https://sproutseeds.github.io/dormant-behavior-audit/`
 
 ## Status
 

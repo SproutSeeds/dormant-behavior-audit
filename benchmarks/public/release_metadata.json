@@ -7,7 +7,7 @@
   "repo_url": "https://github.com/SproutSeeds/dormant-behavior-audit",
   "paper_url": "https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf",
   "release_url": "https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0",
-  "homepage_url": "https://github.com/SproutSeeds/dormant-behavior-audit",
+  "homepage_url": "https://sproutseeds.github.io/dormant-behavior-audit/",
   "announcement_date": "2026-04-07",
   "notes": "First formal tagged public release for the Dormant Behavior Audit benchmark, reference report, reproducibility bundles, and interpretation-aware benchmark assets."
 }

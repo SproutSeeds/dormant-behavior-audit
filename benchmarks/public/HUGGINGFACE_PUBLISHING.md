@@ -17,6 +17,10 @@ The publish script stages these release-facing files:
 - public release metadata JSON
 - submission scoreboard markdown
 
+The dataset card already points at the live homepage:
+
+- `https://sproutseeds.github.io/dormant-behavior-audit/`
+
 ## Stage-only check
 
 ```bash

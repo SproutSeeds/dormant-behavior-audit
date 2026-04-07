@@ -43,6 +43,7 @@ If you want the quickest tour, read these in order:
 - Public launch drafts: [benchmarks/public/README.md](benchmarks/public/README.md)
 - Release notes: [benchmarks/public/RELEASE_NOTES_v1.0.0.md](benchmarks/public/RELEASE_NOTES_v1.0.0.md)
 - Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
+- Standalone homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 - Frozen reference bundle: [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
 
 ### Reproducibility artifacts
@@ -114,7 +115,7 @@ Current public release URLs:
 - canonical reference report PDF: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf>
 - canonical reference bundle: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json>
 - reference report markdown: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
-- benchmark homepage: <https://github.com/SproutSeeds/dormant-behavior-audit>
+- benchmark homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 
 The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md) as the release record.
 
@@ -130,3 +131,5 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 - Findings guide: [findings/README.md](findings/README.md)
 - Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
 - Benchmark governance: [benchmarks/GOVERNANCE_AND_VERSIONING.md](benchmarks/GOVERNANCE_AND_VERSIONING.md)
+- External platform status: [benchmarks/public/EXTERNAL_PLATFORM_STATUS.md](benchmarks/public/EXTERNAL_PLATFORM_STATUS.md)
+- Hugging Face publish guide: [benchmarks/public/HUGGINGFACE_PUBLISHING.md](benchmarks/public/HUGGINGFACE_PUBLISHING.md)

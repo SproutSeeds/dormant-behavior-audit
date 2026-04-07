@@ -60,10 +60,12 @@ Starter materials:
 - bundle checker: `scripts/check_benchmark_bundle.py`
 - tagged release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
 - canonical report PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
+- standalone homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 
 Next steps:
 
-- package the Hugging Face and Papers with Code release entries from the generated drafts
+- publish the Hugging Face dataset entry from `scripts/publish_huggingface_entry.py`
+- submit the paper/discoverability packet using `benchmarks/public/HUGGING_FACE_PAPERS_SUBMISSION.md`
 - hand the external submission starter kit and onboarding flow to early outside users
 
 Current release status: `public`

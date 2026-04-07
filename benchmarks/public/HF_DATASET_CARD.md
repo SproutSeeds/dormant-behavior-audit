@@ -83,5 +83,5 @@ The flagship reference report for this release is:
 - Reference report title: `Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for Dormant Behavior Audit`
 - Repo URL: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Paper/report URL: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
-- Benchmark homepage URL: `https://github.com/SproutSeeds/dormant-behavior-audit`
+- Benchmark homepage URL: `https://sproutseeds.github.io/dormant-behavior-audit/`
 - Release status: `public`

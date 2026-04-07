@@ -5,12 +5,16 @@ This directory holds the public-facing launch assets for the Dormant Behavior Au
 Current release-facing assets:
 
 - `benchmarks/public/HF_DATASET_CARD.md`
+- `benchmarks/public/HUGGINGFACE_PUBLISHING.md`
+- `benchmarks/public/HUGGING_FACE_PAPERS_SUBMISSION.md`
 - `benchmarks/public/PAPERS_WITH_CODE_BENCHMARK_PAGE.md`
 - `benchmarks/public/ANNOUNCEMENT_POST.md`
 - `benchmarks/public/RELEASE_NOTES_v1.0.0.md`
 - `benchmarks/public/COLLABORATION_BRIEF.md`
 - `benchmarks/public/RELEASE_METADATA_CHECK.md`
 - `benchmarks/public/SUBMISSION_SCOREBOARD.md`
+- `benchmarks/public/EXTERNAL_PLATFORM_STATUS.md`
+- `benchmarks/public/ZENODO_MIRROR.md`
 
 Current benchmark shape:
 
@@ -22,6 +26,7 @@ Current benchmark shape:
 - Release metadata: `benchmarks/public/release_metadata.json`
 - Tagged release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
 - Canonical report PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
+- Standalone homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 - Flagship reference report: `Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for Dormant Behavior Audit`
 - Submission scoreboard: `benchmarks/public/SUBMISSION_SCOREBOARD.md`
 - Submission scoreboard interpretation column: surfaces prefix-acknowledgment warnings and mechanism-characterization outcomes for hosted follow-up and ablation packets
@@ -32,4 +37,4 @@ Current benchmark shape:
 - User onboarding flow: `benchmarks/USER_ONBOARDING_FLOW.md`
 - Governance doc: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
 
-These assets are generated from the checked-in benchmark state and now point at the public release URLs for this repository.
+These assets are generated from the checked-in benchmark state and now point at the live release URLs and homepage for this repository.
