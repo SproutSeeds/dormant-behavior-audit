@@ -6,6 +6,7 @@ Last updated: `2026-04-07`
 
 - GitHub repo: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Tagged release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
+- GitHub package patch release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/package-v1.0.1`
 - Standalone homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 - PyPI package: `https://pypi.org/project/dormant-behavior-audit/`
 - Canonical report PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`

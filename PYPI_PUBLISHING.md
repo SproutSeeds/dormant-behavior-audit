@@ -100,6 +100,11 @@ Recommended setup:
 
 Once that is configured, the token-based flow becomes an emergency fallback instead of the default.
 
+Suggested package-release convention:
+
+- benchmark/report releases stay on the `v<version>` track when the research bundle itself changes
+- package-only maintenance releases can use a GitHub release like `package-v<version>` alongside the PyPI upload
+
 ## Public install story
 
 Once published, the intended install paths are:
