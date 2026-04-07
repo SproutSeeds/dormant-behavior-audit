@@ -22,6 +22,26 @@ If you want the quickest tour, read these in order:
 4. [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
 5. [CONTRIBUTING.md](CONTRIBUTING.md)
 
+## Install The CLI
+
+The repository now builds as a Python package with a unified `dba` command.
+
+```bash
+pipx install dormant-behavior-audit
+dba --help
+```
+
+For a local one-off run without a permanent install:
+
+```bash
+uvx --from dormant-behavior-audit dba --help
+```
+
+Optional extras:
+
+- `pipx install 'dormant-behavior-audit[tui]'` for the Orbit Textual UI
+- `pipx install 'dormant-behavior-audit[notebooks]'` for notebook-heavy local analysis
+
 ## What This Repo Ships
 
 ### Public-facing research packet
@@ -127,6 +147,7 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 ## Related Docs
 
 - Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
+- PyPI publishing guide: [PYPI_PUBLISHING.md](PYPI_PUBLISHING.md)
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Findings guide: [findings/README.md](findings/README.md)
 - Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
