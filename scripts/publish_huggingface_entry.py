@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_STAGE_DIR = ROOT / "tmp" / "huggingface_entry"
-DEFAULT_REPO_ID = "SproutSeeds/dormant-behavior-audit"
+DEFAULT_REPO_ID = "sproutseeds/dormant-behavior-audit"
 
 FILES_TO_STAGE = {
     ROOT / "benchmarks" / "public" / "HF_DATASET_CARD.md": Path("README.md"),

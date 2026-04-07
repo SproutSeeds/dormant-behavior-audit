@@ -4,7 +4,7 @@ This release includes a staged publish path for a Hugging Face dataset entry.
 
 ## Recommended Hub repo
 
-- `SproutSeeds/dormant-behavior-audit`
+- `sproutseeds/dormant-behavior-audit`
 - repo type: `dataset`
 
 ## What gets published
@@ -47,5 +47,6 @@ The script will create the dataset repo if it does not already exist, then uploa
 Recommended verification after publish:
 
 - confirm the dataset card renders correctly on the Hub
+- confirm the dataset lives at `https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit`
 - verify the homepage link points to `https://sproutseeds.github.io/dormant-behavior-audit/`
 - verify the report PDF and reference bundle download without authentication

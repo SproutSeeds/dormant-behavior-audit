@@ -4,7 +4,7 @@ license: cc-by-4.0
 task_categories:
 - text-generation
 task_ids:
-- text-generation
+- language-modeling
 tags:
 - benchmark
 - llm-evals

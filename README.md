@@ -143,6 +143,7 @@ Current public release URLs:
 - canonical reference report PDF: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf>
 - canonical reference bundle: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json>
 - package release on PyPI: <https://pypi.org/project/dormant-behavior-audit/>
+- Hugging Face dataset entry: <https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit>
 - package patch release: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/package-v1.0.1>
 - reference report markdown: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
 - benchmark homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
