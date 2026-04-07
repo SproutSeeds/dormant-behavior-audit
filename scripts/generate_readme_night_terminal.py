@@ -16,8 +16,7 @@ OUT_PATH = OUT_DIR / "readme-night-terminal.gif"
 
 WIDTH = 960
 HEIGHT = 540
-FRAMES = 72
-FRAME_MS = 140
+FRAMES = 132
 
 BACKGROUND_TOP = (4, 8, 22)
 BACKGROUND_BOTTOM = (10, 18, 44)
@@ -32,13 +31,11 @@ TEXT_SOFT = (150, 170, 220)
 
 LINES = [
     ("$ open benchmarks/BENCHMARK_CHARTER.md", TEXT_ACCENT),
-    ("  benchmark-first, evidence-rich, local-first", TEXT_MUTED),
+    ("  charter, release scope, evidence path", TEXT_MUTED),
     ("$ inspect benchmarks/reference/dormant_puzzle_v1", TEXT_ACCENT),
-    ("  reference bundle online: claims, evidence, validation", TEXT_SOFT),
+    ("  claims, raw evidence, validation bundle", TEXT_SOFT),
     ("$ python3 scripts/reproduce_submission.py", TEXT_ACCENT),
-    ("  replay complete -> compare claim_consistency_report.md", TEXT_MUTED),
-    ("$ package release assets", TEXT_ACCENT),
-    ("  report, scoreboard, collaboration brief, release notes", TEXT_SOFT),
+    ("  rerun bundle -> claim checks -> release", TEXT_MUTED),
 ]
 
 
@@ -73,15 +70,15 @@ def gradient_background() -> Image.Image:
 def build_stars(seed: int = 7) -> list[dict[str, float]]:
     random.seed(seed)
     stars: list[dict[str, float]] = []
-    for _ in range(85):
+    for _ in range(78):
         stars.append(
             {
                 "x": random.uniform(0, WIDTH),
                 "y": random.uniform(0, HEIGHT),
                 "r": random.uniform(0.8, 2.0),
                 "phase": random.uniform(0, math.tau),
-                "speed": random.uniform(0.25, 0.9),
-                "alpha": random.uniform(0.18, 0.75),
+                "speed": random.uniform(0.12, 0.42),
+                "alpha": random.uniform(0.16, 0.7),
             }
         )
     return stars
@@ -106,7 +103,7 @@ def draw_stars(base: Image.Image, stars: list[dict[str, float]], frame_idx: int)
 
 
 def terminal_box(frame: Image.Image) -> tuple[Image.Image, tuple[int, int, int, int]]:
-    x0, y0, x1, y1 = 150, 118, 810, 422
+    x0, y0, x1, y1 = 160, 112, 800, 424
     glow = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     gdraw = ImageDraw.Draw(glow)
     gdraw.rounded_rectangle((x0 - 6, y0 - 6, x1 + 6, y1 + 6), radius=24, fill=(45, 78, 150, 60))
@@ -129,10 +126,10 @@ def terminal_box(frame: Image.Image) -> tuple[Image.Image, tuple[int, int, int, 
 
 
 def line_progress(frame_idx: int, line_idx: int, text: str) -> int:
-    start = 6 + line_idx * 8
+    start = 12 + line_idx * 16
     if frame_idx < start:
         return 0
-    return min(len(text), max(0, (frame_idx - start) * 2))
+    return min(len(text), max(0, math.floor((frame_idx - start) * 1.35)))
 
 
 def render_frame(base: Image.Image, stars: list[dict[str, float]], mono: ImageFont.ImageFont, sans: ImageFont.ImageFont, frame_idx: int) -> Image.Image:
@@ -140,12 +137,15 @@ def render_frame(base: Image.Image, stars: list[dict[str, float]], mono: ImageFo
     frame, (x0, y0, x1, y1) = terminal_box(frame)
     draw = ImageDraw.Draw(frame)
 
-    draw.text((x0 + 265, y0 + 12), "dormant behavior audit // slow tour", font=sans, fill=TEXT_MUTED)
+    title = "dormant behavior audit // slow tour"
+    title_box = draw.textbbox((0, 0), title, font=sans)
+    title_x = x0 + ((x1 - x0) - (title_box[2] - title_box[0])) / 2
+    draw.text((title_x, y0 + 12), title, font=sans, fill=TEXT_MUTED)
 
-    draw.text((x0 + 34, y0 + 68), "night shift :: reproducible release path", font=sans, fill=(164, 187, 232))
+    draw.text((x0 + 34, y0 + 64), "night shift :: reproducible release path", font=sans, fill=(164, 187, 232))
 
-    base_y = y0 + 110
-    line_gap = 28
+    base_y = y0 + 102
+    line_gap = 33
     cursor_line = None
     cursor_x = None
     cursor_y = None
@@ -164,7 +164,7 @@ def render_frame(base: Image.Image, stars: list[dict[str, float]], mono: ImageFo
             cursor_y = y
             break
 
-    if cursor_line is None and frame_idx < FRAMES - 8:
+    if cursor_line is None and frame_idx < FRAMES - 16:
         for idx, (text, _color) in reversed(list(enumerate(LINES))):
             if line_progress(frame_idx, idx, text) >= len(text):
                 y = base_y + idx * line_gap
@@ -173,31 +173,27 @@ def render_frame(base: Image.Image, stars: list[dict[str, float]], mono: ImageFo
                 cursor_y = y
                 break
 
-    if cursor_x is not None and cursor_y is not None and (frame_idx // 3) % 2 == 0:
+    if cursor_x is not None and cursor_y is not None and (frame_idx // 5) % 2 == 0:
         draw.rectangle((cursor_x, cursor_y + 4, cursor_x + 10, cursor_y + 22), fill=(185, 232, 207))
-
-    draw.text(
-        (x0 + 36, y1 - 48),
-        "charter -> reference bundle -> reproduction -> claim checks -> release",
-        font=sans,
-        fill=TEXT_MUTED,
-    )
 
     return frame.convert("P", palette=Image.ADAPTIVE, colors=96)
 
 
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    mono = load_font(21)
-    sans = load_font(16)
+    mono = load_font(19)
+    sans = load_font(15)
     base = gradient_background()
     stars = build_stars()
     frames = [render_frame(base, stars, mono, sans, idx) for idx in range(FRAMES)]
+    durations = [220 if idx < 8 else 170 for idx in range(FRAMES)]
+    for idx in range(FRAMES - 18, FRAMES):
+        durations[idx] = 280
     frames[0].save(
         OUT_PATH,
         save_all=True,
         append_images=frames[1:],
-        duration=FRAME_MS,
+        duration=durations,
         loop=0,
         optimize=True,
         disposal=2,
