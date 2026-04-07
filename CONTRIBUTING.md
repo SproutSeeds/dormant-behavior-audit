@@ -31,9 +31,9 @@ If you touch benchmark logic, public release metadata, or evidence packaging:
 
 Useful entry points:
 
-- `python3 scripts/reproduce_submission.py`
-- `python3 scripts/check_release_metadata.py --metadata-json benchmarks/public/release_metadata.json`
-- `python3 scripts/check_benchmark_bundle.py --bundle benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
+- Reproduction pipeline: [scripts/reproduce_submission.py](scripts/reproduce_submission.py) via `python3 scripts/reproduce_submission.py`
+- Release metadata checker: [scripts/check_release_metadata.py](scripts/check_release_metadata.py) against [benchmarks/public/release_metadata.json](benchmarks/public/release_metadata.json)
+- Bundle checker: [scripts/check_benchmark_bundle.py](scripts/check_benchmark_bundle.py) against [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
 
 ## Scope guidance
 
@@ -60,8 +60,8 @@ If you find a public-release safety issue or sensitive disclosure concern, open 
 
 If you are a lab or research group interested in collaborating, start with:
 
-- `benchmarks/public/COLLABORATION_BRIEF.md`
-- `findings/RELEASE_PACKET_V2.md`
-- `benchmarks/BENCHMARK_CHARTER.md`
+- [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
+- [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
+- [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
 
 Contributions do not need to be large. Small portability fixes, evidence clarifications, and cleaner benchmark packaging are all valuable.

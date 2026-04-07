@@ -16,40 +16,40 @@ The motivating historical case is the Jane Street dormant-model puzzle, but the 
 
 If you want the quickest tour, read these in order:
 
-1. `benchmarks/BENCHMARK_CHARTER.md`
-2. `findings/RELEASE_PACKET_V2.md`
-3. `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
-4. `PUBLIC_RELEASE_CHECKLIST.md`
-5. `CONTRIBUTING.md`
+1. [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
+2. [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
+3. [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
+4. [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
+5. [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## What This Repo Ships
 
 ### Public-facing research packet
 
-- Reference report index: `findings/RELEASE_PACKET_V2.md`
-- Main report PDF: `findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf`
-- Main report markdown: `findings/SUBMISSION_V2.md`
-- Statistical appendix: `findings/STATS_ADDENDUM_V2.md`
-- Raw evidence appendix: `findings/RAW_EVIDENCE_APPENDIX_V2.md`
-- Implications memo: `findings/IMPLICATIONS_AND_APPLICATIONS_APPENDIX_V2.md`
+- Reference report index: [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
+- Main report PDF: [findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf](findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf)
+- Main report markdown: [findings/SUBMISSION_V2.md](findings/SUBMISSION_V2.md)
+- Statistical appendix: [findings/STATS_ADDENDUM_V2.md](findings/STATS_ADDENDUM_V2.md)
+- Raw evidence appendix: [findings/RAW_EVIDENCE_APPENDIX_V2.md](findings/RAW_EVIDENCE_APPENDIX_V2.md)
+- Implications memo: [findings/IMPLICATIONS_AND_APPLICATIONS_APPENDIX_V2.md](findings/IMPLICATIONS_AND_APPLICATIONS_APPENDIX_V2.md)
 
 ### Benchmark assets
 
-- Benchmark overview: `benchmarks/README.md`
-- Benchmark charter: `benchmarks/BENCHMARK_CHARTER.md`
-- Launch plan: `benchmarks/LAUNCH_PLAN.md`
-- Governance/versioning: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
-- Public launch drafts: `benchmarks/public/README.md`
-- Release notes draft: `benchmarks/public/RELEASE_NOTES_v0.md`
-- Collaboration brief: `benchmarks/public/COLLABORATION_BRIEF.md`
-- Frozen reference bundle: `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
+- Benchmark overview: [benchmarks/README.md](benchmarks/README.md)
+- Benchmark charter: [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
+- Launch plan: [benchmarks/LAUNCH_PLAN.md](benchmarks/LAUNCH_PLAN.md)
+- Governance/versioning: [benchmarks/GOVERNANCE_AND_VERSIONING.md](benchmarks/GOVERNANCE_AND_VERSIONING.md)
+- Public launch drafts: [benchmarks/public/README.md](benchmarks/public/README.md)
+- Release notes draft: [benchmarks/public/RELEASE_NOTES_v0.md](benchmarks/public/RELEASE_NOTES_v0.md)
+- Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
+- Frozen reference bundle: [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
 
 ### Reproducibility artifacts
 
-- Canonical reproduction bundle: `artifacts/reproduction/20260305_230206/`
-- Tightening bundle: `artifacts/tightening/20260306_075440/`
-- Claim-level consistency report: `artifacts/reproduction/20260305_230206/findings/claim_consistency_report.md`
-- Bundle checker entry point: `scripts/check_benchmark_bundle.py`
+- Canonical reproduction bundle: [artifacts/reproduction/20260305_230206/](artifacts/reproduction/20260305_230206/)
+- Tightening bundle: [artifacts/tightening/20260306_075440/](artifacts/tightening/20260306_075440/)
+- Claim-level consistency report: [artifacts/reproduction/20260305_230206/findings/claim_consistency_report.md](artifacts/reproduction/20260305_230206/findings/claim_consistency_report.md)
+- Bundle checker entry point: [scripts/check_benchmark_bundle.py](scripts/check_benchmark_bundle.py)
 
 ## Benchmark Shape
 
@@ -104,25 +104,25 @@ Important notes:
 
 ## Release Status
 
-The canonical release metadata lives in `benchmarks/public/release_metadata.json`.
+The canonical release metadata lives in [benchmarks/public/release_metadata.json](benchmarks/public/release_metadata.json).
 
 Current public release URLs:
 
-- repo: `https://github.com/SproutSeeds/dormant-behavior-audit`
-- reference report: `https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md`
-- benchmark homepage: `https://github.com/SproutSeeds/dormant-behavior-audit`
+- repo: <https://github.com/SproutSeeds/dormant-behavior-audit>
+- reference report: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
+- benchmark homepage: <https://github.com/SproutSeeds/dormant-behavior-audit>
 
-The working launch checklist is still preserved in `PUBLIC_RELEASE_CHECKLIST.md` as the release record.
+The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md) as the release record.
 
 ## Licensing
 
-- Code, scripts, and schemas: `Apache-2.0` via `LICENSE`
-- Public-facing reports, benchmark docs, and release artifacts: `CC BY 4.0` via `LICENSE-docs.md`
+- Code, scripts, and schemas: `Apache-2.0` via [LICENSE](LICENSE)
+- Public-facing reports, benchmark docs, and release artifacts: `CC BY 4.0` via [LICENSE-docs.md](LICENSE-docs.md)
 
 ## Related Docs
 
-- Public release checklist: `PUBLIC_RELEASE_CHECKLIST.md`
-- Contributing guide: `CONTRIBUTING.md`
-- Findings guide: `findings/README.md`
-- Collaboration brief: `benchmarks/public/COLLABORATION_BRIEF.md`
-- Benchmark governance: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
+- Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
+- Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Findings guide: [findings/README.md](findings/README.md)
+- Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
+- Benchmark governance: [benchmarks/GOVERNANCE_AND_VERSIONING.md](benchmarks/GOVERNANCE_AND_VERSIONING.md)
