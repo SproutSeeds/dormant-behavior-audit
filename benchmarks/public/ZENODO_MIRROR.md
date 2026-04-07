@@ -28,10 +28,21 @@ Why this host:
 
 ## Recommended next move
 
-1. Connect the repository to Zenodo.
-2. Sync the published `v1.0.0` release.
-3. Verify the record title, authors, licenses, and asset names.
-4. Add the Zenodo DOI back into `CITATION.cff` and the release docs.
+1. Sign into Zenodo with GitHub.
+2. Open `GitHub` from the Zenodo profile menu.
+3. Click `Sync now`.
+4. Toggle `SproutSeeds/dormant-behavior-audit` on.
+5. Refresh the repository list.
+6. Trigger a dedicated archival GitHub release for the canonical `v1.0.0` bundle.
+7. Wait for Zenodo to ingest the release and mint the DOI.
+8. Add the Zenodo DOI back into `CITATION.cff` and the release docs.
+
+The enable-and-sync steps follow Zenodo's current official GitHub guide, which says to connect the repo from the `GitHub` page, click `Sync now`, and enable the repository. Zenodo also states that new releases from an enabled repository are automatically ingested and archived.
+
+Source:
+
+- `https://help.zenodo.org/docs/github/enable-repository/`
+- `https://help.zenodo.org/docs/github/archive-software/github-upload/`
 
 Once the DOI exists, add it to:
 
@@ -39,3 +50,11 @@ Once the DOI exists, add it to:
 - `README.md`
 - `docs/index.html`
 - `benchmarks/public/EXTERNAL_PLATFORM_STATUS.md`
+
+## Archival release plan
+
+To guarantee Zenodo sees a post-enable release event, use a dedicated GitHub release such as `zenodo-v1.0.0` that points to the same canonical benchmark commit and carries the same report/bundle assets.
+
+The prepared notes for that release live in:
+
+- `benchmarks/public/ZENODO_ARCHIVAL_RELEASE_NOTES_v1.0.0.md`
