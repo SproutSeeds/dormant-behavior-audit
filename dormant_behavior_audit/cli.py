@@ -49,6 +49,10 @@ COMMANDS: dict[str, CommandSpec] = {
         module="scripts.publish_huggingface_entry",
         summary="Stage or publish the Hugging Face dataset entry.",
     ),
+    "publish-pypi": CommandSpec(
+        module="scripts.publish_pypi",
+        summary="Check and publish built distributions to PyPI.",
+    ),
     "orbit": CommandSpec(
         module="orbit.__main__",
         summary="Run the Orbit pipeline runner or TUI.",
@@ -59,6 +63,7 @@ ALIASES = {
     "submission-init": "submit-init",
     "submission-run": "submit-run",
     "hf-publish": "publish-hf",
+    "pypi-publish": "publish-pypi",
 }
 
 
@@ -94,6 +99,7 @@ def _print_help() -> None:
             "  dba submit-init --task-json benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json --submission-id my_submission_v0",
             "  dba check-release --metadata-json benchmarks/public/release_metadata.json --out-json /tmp/release.json --out-md /tmp/release.md",
             "  dba publish-hf --stage-only",
+            "  dba publish-pypi --check-only",
         ]
     )
     print("\n".join(lines))

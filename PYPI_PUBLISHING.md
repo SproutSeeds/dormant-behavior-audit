@@ -34,6 +34,45 @@ If you want a dry run against TestPyPI first:
 uv run --with twine python -m twine upload --repository testpypi dist/*
 ```
 
+## ORP-backed token flow
+
+For token auth, PyPI expects the username to be exactly `__token__`. Your PyPI account username, such as `sproutseeds`, is still your account identity, but it is not the username Twine should send when using an API token.
+
+The cleanest local setup is to save the token into ORP once and let the publish helper resolve it at runtime:
+
+```bash
+orp secrets add \
+  --alias pypi-primary \
+  --label "PyPI API Token" \
+  --provider pypi \
+  --kind api_key \
+  --env-var-name TWINE_PASSWORD
+```
+
+ORP will prompt for the secret value directly, so the token never needs to live in this repo or in chat history.
+
+Once that alias exists, the maintainer publish path becomes:
+
+```bash
+python3 scripts/publish_pypi.py --check-only
+python3 scripts/publish_pypi.py
+```
+
+or through the installed CLI:
+
+```bash
+dba publish-pypi --check-only
+dba publish-pypi
+```
+
+If you want a safe rehearsal on TestPyPI first:
+
+```bash
+python3 scripts/publish_pypi.py --repository testpypi
+```
+
+The helper resolves the token from ORP with `--local-first`, and falls back to `TWINE_PASSWORD`, `PYPI_API_TOKEN`, or `PYPI_TOKEN` if needed.
+
 ## Public install story
 
 Once published, the intended install paths are:
