@@ -58,6 +58,8 @@ Starter materials:
 - reference bundle: `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
 - unified submission runner: `scripts/run_benchmark_submission.py`
 - bundle checker: `scripts/check_benchmark_bundle.py`
+- tagged release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
+- canonical report PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
 
 Next steps:
 

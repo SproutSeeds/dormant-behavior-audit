@@ -22,11 +22,12 @@ Completed:
 - canonical packet index at `findings/RELEASE_PACKET_V2.md`
 - frozen benchmark bundle at `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
 - citation metadata at `CITATION.cff`
+- canonical public report PDF URL via the tagged release asset
+- first formal tagged release planned as `v1.0.0`
 
 Follow-on items:
 
-- publish the canonical public PDF/report URL outside the GitHub blob view
-- tag the first formal release in git
+- mirror the canonical PDF to an external paper host when ready
 
 ## 3. Repo Front Door
 
@@ -49,6 +50,7 @@ Completed:
 - release status is `public`
 - release metadata checks have been regenerated
 - announcement date has been set for the initial public launch
+- release metadata now names the formal public tag and release URL
 
 ## 5. Integrity Checks
 
@@ -91,8 +93,6 @@ Follow-on items:
 
 The highest-value remaining gaps are:
 
-- no canonical public paper/PDF URL outside GitHub yet
-- no first tagged release yet
 - no Hugging Face or Papers with Code pages have been published yet
 - no dedicated standalone homepage beyond the GitHub repo yet
 
@@ -101,7 +101,7 @@ The highest-value remaining gaps are:
 The highest-value next sequence is:
 
 1. publish the canonical paper or PDF landing URL,
-2. tag the first formal release,
-3. publish the discoverability surfaces,
+2. publish the discoverability surfaces,
+3. mirror the report on an external paper host,
 4. rerun the integrity checks before major updates,
 5. and then begin active collaboration outreach.

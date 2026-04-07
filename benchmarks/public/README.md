@@ -1,13 +1,13 @@
 # Public Benchmark Assets
 
-This directory holds public-facing draft assets for launching the Dormant Behavior Audit benchmark.
+This directory holds the public-facing launch assets for the Dormant Behavior Audit benchmark.
 
-Current drafts:
+Current release-facing assets:
 
 - `benchmarks/public/HF_DATASET_CARD.md`
 - `benchmarks/public/PAPERS_WITH_CODE_BENCHMARK_PAGE.md`
 - `benchmarks/public/ANNOUNCEMENT_POST.md`
-- `benchmarks/public/RELEASE_NOTES_v0.md`
+- `benchmarks/public/RELEASE_NOTES_v1.0.0.md`
 - `benchmarks/public/COLLABORATION_BRIEF.md`
 - `benchmarks/public/RELEASE_METADATA_CHECK.md`
 - `benchmarks/public/SUBMISSION_SCOREBOARD.md`
@@ -20,6 +20,8 @@ Current benchmark shape:
 - Methods: `scripted_blackbox_baseline_v0`, `hybrid_openweight_baseline_v0`, `reference_case_evidence_v0`
 - Release status: `public`
 - Release metadata: `benchmarks/public/release_metadata.json`
+- Tagged release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
+- Canonical report PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
 - Flagship reference report: `Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for Dormant Behavior Audit`
 - Submission scoreboard: `benchmarks/public/SUBMISSION_SCOREBOARD.md`
 - Submission scoreboard interpretation column: surfaces prefix-acknowledgment warnings and mechanism-characterization outcomes for hosted follow-up and ablation packets

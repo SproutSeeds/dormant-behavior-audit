@@ -27,7 +27,8 @@ If you want the quickest tour, read these in order:
 ### Public-facing research packet
 
 - Reference report index: [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
-- Main report PDF: [findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf](findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf)
+- Canonical report PDF: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf>
+- Repo copy of report PDF: [findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf](findings/CodyMitchell_DormantPuzzle_Submission_V2_2026-03-06.pdf)
 - Main report markdown: [findings/SUBMISSION_V2.md](findings/SUBMISSION_V2.md)
 - Statistical appendix: [findings/STATS_ADDENDUM_V2.md](findings/STATS_ADDENDUM_V2.md)
 - Raw evidence appendix: [findings/RAW_EVIDENCE_APPENDIX_V2.md](findings/RAW_EVIDENCE_APPENDIX_V2.md)
@@ -40,7 +41,7 @@ If you want the quickest tour, read these in order:
 - Launch plan: [benchmarks/LAUNCH_PLAN.md](benchmarks/LAUNCH_PLAN.md)
 - Governance/versioning: [benchmarks/GOVERNANCE_AND_VERSIONING.md](benchmarks/GOVERNANCE_AND_VERSIONING.md)
 - Public launch drafts: [benchmarks/public/README.md](benchmarks/public/README.md)
-- Release notes draft: [benchmarks/public/RELEASE_NOTES_v0.md](benchmarks/public/RELEASE_NOTES_v0.md)
+- Release notes: [benchmarks/public/RELEASE_NOTES_v1.0.0.md](benchmarks/public/RELEASE_NOTES_v1.0.0.md)
 - Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
 - Frozen reference bundle: [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
 
@@ -109,7 +110,10 @@ The canonical release metadata lives in [benchmarks/public/release_metadata.json
 Current public release URLs:
 
 - repo: <https://github.com/SproutSeeds/dormant-behavior-audit>
-- reference report: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
+- tagged release: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0>
+- canonical reference report PDF: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf>
+- canonical reference bundle: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json>
+- reference report markdown: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
 - benchmark homepage: <https://github.com/SproutSeeds/dormant-behavior-audit>
 
 The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md) as the release record.

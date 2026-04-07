@@ -2,12 +2,15 @@ cff-version: 1.2.0
 message: "If you use this repository, please cite the Dormant Behavior Audit release materials and reference report."
 title: "Dormant Behavior Audit"
 type: software
+url: "https://github.com/SproutSeeds/dormant-behavior-audit"
+repository-code: "https://github.com/SproutSeeds/dormant-behavior-audit"
 authors:
   - family-names: Mitchell
     given-names: Cody
     affiliation: Independent Researcher
 abstract: "Benchmark assets, reference bundles, and reproducibility materials for auditing latent, condition-dependent model behavior."
-version: "v0"
+version: "v1.0.0"
+date-released: 2026-04-07
 license: Apache-2.0
 keywords:
   - benchmark
@@ -22,3 +25,4 @@ preferred-citation:
     - family-names: Mitchell
       given-names: Cody
   year: 2026
+  url: "https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf"

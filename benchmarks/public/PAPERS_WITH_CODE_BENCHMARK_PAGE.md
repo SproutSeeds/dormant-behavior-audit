@@ -59,6 +59,6 @@ Flagship reference report:
 ## Repo / paper links
 
 - Repo URL: `https://github.com/SproutSeeds/dormant-behavior-audit`
-- Paper URL: `https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md`
+- Paper URL: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
 - Benchmark homepage URL: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Release status: `public`
