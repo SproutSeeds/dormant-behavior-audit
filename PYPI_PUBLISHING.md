@@ -73,6 +73,8 @@ python3 scripts/publish_pypi.py --repository testpypi
 
 The helper resolves the token from ORP with `--local-first`, and falls back to `TWINE_PASSWORD`, `PYPI_API_TOKEN`, or `PYPI_TOKEN` if needed.
 
+If ORP is having a rough day, `python3 scripts/publish_pypi.py` will also prompt for the token interactively with hidden input before uploading.
+
 ## Public install story
 
 Once published, the intended install paths are:

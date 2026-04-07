@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import getpass
 import importlib.util
 import json
 import os
@@ -85,6 +86,15 @@ def resolve_token(secret_alias: str, *, no_orp: bool) -> tuple[str | None, str |
     return None, None
 
 
+def prompt_for_token() -> tuple[str | None, str | None]:
+    if not sys.stdin.isatty():
+        return None, None
+    value = getpass.getpass("PyPI API token (input hidden): ").strip()
+    if not value:
+        return None, None
+    return value, "interactive prompt"
+
+
 def project_url(repository: str) -> str:
     if repository == "testpypi":
         return f"https://test.pypi.org/project/{PACKAGE_NAME}/"
@@ -127,8 +137,10 @@ def main() -> int:
 
     token, token_source = resolve_token(args.secret_alias, no_orp=args.no_orp)
     if not token:
+        token, token_source = prompt_for_token()
+    if not token:
         raise SystemExit(
-            "No PyPI token found. Save one with ORP or set TWINE_PASSWORD / PYPI_API_TOKEN / PYPI_TOKEN first."
+            "No PyPI token found. Save one with ORP, set TWINE_PASSWORD / PYPI_API_TOKEN / PYPI_TOKEN, or rerun interactively."
         )
 
     upload_cmd = [*twine_cmd, "upload"]
