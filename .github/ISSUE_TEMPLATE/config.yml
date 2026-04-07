@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Collaboration Brief
+    url: https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/benchmarks/public/COLLABORATION_BRIEF.md
+    about: Start here if you want the benchmark overview and the best collaboration entry points.
+  - name: Release Packet
+    url: https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/RELEASE_PACKET_V2.md
+    about: Use the release packet when you want the shortest path into the evidence and reference case.

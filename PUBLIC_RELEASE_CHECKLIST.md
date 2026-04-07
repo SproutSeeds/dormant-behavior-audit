@@ -1,47 +1,63 @@
 # Public Release Checklist
 
-This checklist turns the current repo from a strong internal benchmark package into a clean public research release.
+This checklist now serves as the public release ledger for the initial `Dormant Behavior Audit` launch. The repository is live, and this document records what has already been frozen and what still deserves follow-on polish.
 
-## 1. Freeze The Public Identity
+## 1. Public Identity
 
-- Confirm the final public title for the paper/report and repo.
-- Confirm the author list, affiliations, acknowledgments, and corresponding contact.
-- Decide on the repository license before flipping the repo to public release.
-- Decide whether the public framing is:
-  - benchmark-first (`Dormant Behavior Audit`),
-  - or report-first with the benchmark as the release framework.
+Current state:
 
-Recommended default:
-- benchmark-first at the repo level, with the dormant puzzle framed as the flagship reference case.
+- public repo name: `Dormant Behavior Audit`
+- flagship report framing: dormant puzzle as the reference case
+- public repo URL: `https://github.com/SproutSeeds/dormant-behavior-audit`
 
-## 2. Freeze The Citable Artifacts
+Follow-on items:
 
-- Finalize the public PDF/report that will be cited externally.
-- Confirm the canonical packet index at `findings/RELEASE_PACKET_V2.md`.
-- Confirm the frozen benchmark bundle at `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`.
-- Add or update citation metadata (`CITATION.cff`) once title and authors are final.
-- Tag the release in git so the benchmark assets and evidence bundle have a stable reference point.
+- confirm the long-form public paper title and canonical PDF filename
+- finalize acknowledgments and corresponding contact if needed
 
-## 3. Finish The Repo Front Door
+## 2. Citable Artifacts
 
-- Keep `README.md` benchmark-first and public-facing.
-- Keep `findings/README.md` as the navigation layer for the report packet versus archived contest files.
-- Remove or quarantine any files that read like internal-only scratch notes if they confuse the public story.
-- Make sure top-level docs all use the same naming, claims, and terminology.
+Completed:
 
-## 4. Freeze The Release Switch
+- canonical packet index at `findings/RELEASE_PACKET_V2.md`
+- frozen benchmark bundle at `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
+- citation metadata at `CITATION.cff`
 
-- Replace placeholder URLs in `benchmarks/public/release_metadata.json`.
-- Set the real announcement date.
-- Regenerate the public benchmark assets after those URLs are final.
-- Move release status from `internal_draft` to `public` only after the URLs and metadata are real.
+Follow-on items:
 
-## 5. Re-Run The Integrity Checks
+- publish the canonical public PDF/report URL outside the GitHub blob view
+- tag the first formal release in git
 
-- Re-run the reproduction path with `python3 scripts/reproduce_submission.py`.
-- Re-run bundle and release metadata checks.
-- Reconfirm claim-level consistency.
-- Verify that the benchmark scoreboard, packet index, and appendices all tell the same story.
+## 3. Repo Front Door
+
+Completed:
+
+- `README.md` is benchmark-first and public-facing
+- `findings/README.md` is the public findings navigation layer
+- public-facing licensing and citation files are present
+
+Follow-on items:
+
+- continue tightening public wording where any contest-era language leaks through
+- add richer external landing pages if the project gets a standalone site
+
+## 4. Release Switch
+
+Completed:
+
+- public URLs are set in `benchmarks/public/release_metadata.json`
+- release status is `public`
+- release metadata checks have been regenerated
+- announcement date has been set for the initial public launch
+
+## 5. Integrity Checks
+
+Recommended recheck cadence:
+
+- rerun the reproduction path with `python3 scripts/reproduce_submission.py` before any major tagged release
+- rerun bundle and release metadata checks whenever release-facing assets move
+- reconfirm claim-level consistency after any evidence-packet change
+- verify that the benchmark scoreboard, packet index, and appendices still tell the same story
 
 Definition of done:
 - an external reader can tell what is reproducible,
@@ -59,37 +75,33 @@ Recommended release stack:
 5. Papers with Code benchmark/task pages
 6. Short announcement post and outreach note
 
-## 7. Prepare The Collaboration Packet
+## 7. Collaboration Packet
 
-- Create a one-page overview for labs and collaborators.
-- Create a short benchmark summary with:
-  - core question,
-  - artifact standard,
-  - what is already released,
-  - and what outside groups can do with it.
-- Prepare one short note aimed at:
-  - frontier-lab eval teams,
-  - interpretability groups,
-  - external red-team programs,
-  - and benchmark collaborators.
+Completed:
 
-## 8. Current Release Blockers
+- one-page overview at `benchmarks/public/COLLABORATION_BRIEF.md`
+- public benchmark summary and announcement drafts in `benchmarks/public/`
 
-As of now, the main blockers are:
+Follow-on items:
 
-- no final public URLs in `benchmarks/public/release_metadata.json`
-- no final release date in the metadata
-- no final license selected at the repo root
-- no frozen public author/title decision for the citable release
+- tailor one short outreach note per audience once the paper URL is final
+- add issue templates for external replication and benchmark proposals if inbound volume grows
+
+## 8. Current Gaps
+
+The highest-value remaining gaps are:
+
+- no canonical public paper/PDF URL outside GitHub yet
+- no first tagged release yet
+- no Hugging Face or Papers with Code pages have been published yet
+- no dedicated standalone homepage beyond the GitHub repo yet
 
 ## 9. What To Do Next
 
 The highest-value next sequence is:
 
-1. finalize the public title and authorship,
-2. choose the license,
-3. polish the paper/report package,
-4. set the public URLs and announcement date,
-5. rerun the integrity checks,
-6. tag the release,
-7. and then publish the discoverability surfaces.
+1. publish the canonical paper or PDF landing URL,
+2. tag the first formal release,
+3. publish the discoverability surfaces,
+4. rerun the integrity checks before major updates,
+5. and then begin active collaboration outreach.

@@ -20,6 +20,7 @@ If you want the quickest tour, read these in order:
 2. `findings/RELEASE_PACKET_V2.md`
 3. `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
 4. `PUBLIC_RELEASE_CHECKLIST.md`
+5. `CONTRIBUTING.md`
 
 ## What This Repo Ships
 
@@ -96,10 +97,10 @@ Important notes:
 ## Repo Map
 
 - `benchmarks/`: benchmark specs, tasks, schemas, public-release drafts, and the normalized reference bundle
-- `findings/`: public report packet, appendices, raw evidence snapshots, and archived contest-era materials
+- `findings/`: public report packet, appendices, raw evidence snapshots, and release-facing validation records
 - `artifacts/`: checked-in submission packets, reproduction bundles, tightening bundles, and hosted-baseline outputs
 - `scripts/`: bundle builders, release checkers, reproducibility scripts, and analysis utilities
-- `src/`, `notebooks/`, `orbit/`: earlier investigation and local-analysis surfaces preserved for provenance and follow-on work
+- `src/`, `orbit/`, `problems/`: earlier investigation and local-analysis surfaces preserved for provenance and follow-on work
 
 ## Release Status
 
@@ -121,6 +122,7 @@ The working launch checklist is still preserved in `PUBLIC_RELEASE_CHECKLIST.md`
 ## Related Docs
 
 - Public release checklist: `PUBLIC_RELEASE_CHECKLIST.md`
+- Contributing guide: `CONTRIBUTING.md`
 - Findings guide: `findings/README.md`
-- Post-contest positioning: `POST_CONTEST_STRETCH_GOALS.md`
-- Portfolio strategy: `BENCHMARK_PORTFOLIO_PLAN.md`
+- Collaboration brief: `benchmarks/public/COLLABORATION_BRIEF.md`
+- Benchmark governance: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
