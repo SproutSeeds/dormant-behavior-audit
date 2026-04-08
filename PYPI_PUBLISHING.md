@@ -2,7 +2,9 @@
 
 This repository now builds as a Python package named `dormant-behavior-audit`.
 
-Current live package release: `1.0.2`
+Current live package release: `1.0.1`
+
+Prepared sanitized package refresh: `1.0.2` pending Trusted Publisher configuration on PyPI.
 
 PyPI project: `https://pypi.org/project/dormant-behavior-audit/`
 

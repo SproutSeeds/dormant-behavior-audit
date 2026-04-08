@@ -31,7 +31,7 @@ If you want the quickest tour, read these in order:
 
 The repository now builds as a Python package with a unified `dba` command.
 
-The live package release is `1.0.2` on PyPI. The frozen benchmark/report bundle remains the tagged research release `v1.0.0`.
+The current live package release is `1.0.1` on PyPI. A sanitized package refresh `1.0.2` is prepared and ready to publish once PyPI Trusted Publishing is configured. The frozen benchmark/report bundle remains the tagged research release `v1.0.0`.
 
 ```bash
 pipx install dormant-behavior-audit
@@ -148,7 +148,6 @@ Current public release URLs:
 - package release on PyPI: <https://pypi.org/project/dormant-behavior-audit/>
 - Hugging Face dataset entry: <https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit>
 - Zenodo DOI: <https://doi.org/10.5281/zenodo.19461676>
-- package patch release: <https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/package-v1.0.2>
 - reference report markdown: <https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/findings/SUBMISSION_V2.md>
 - benchmark homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 
@@ -162,7 +161,7 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 ## Related Docs
 
 - Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
-- Package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.2.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.2.md)
+- Prepared package refresh notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.2.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.2.md)
 - PyPI publishing guide: [PYPI_PUBLISHING.md](PYPI_PUBLISHING.md)
 - Preprint build script: [scripts/build_preprint_pdf.sh](scripts/build_preprint_pdf.sh)
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
