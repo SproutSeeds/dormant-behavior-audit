@@ -1,7 +1,7 @@
 {
   "title": "Dormant Behavior Audit",
-  "description": "Public benchmark assets, reference bundle, and reproducibility materials for auditing latent, condition-dependent model behavior. The v1.0.0 release includes the flagship reference report, normalized benchmark bundle, and release-ready validation artifacts.",
-  "version": "v1.0.0",
+  "description": "Public benchmark assets, reference bundle, and reproducibility materials for auditing latent, condition-dependent model behavior. This post-release archival refresh preserves the canonical v1.0.0 benchmark/report bundle while cleaning public contact surfaces in the archived repository snapshot.",
+  "version": "v1.0.0-post1",
   "creators": [
     {
       "name": "Mitchell, Cody",
@@ -12,7 +12,7 @@
   "language": "eng",
   "license": "Apache-2.0",
   "upload_type": "software",
-  "publication_date": "2026-04-07",
+  "publication_date": "2026-04-08",
   "keywords": [
     "benchmark",
     "llm-evals",
