@@ -4,14 +4,14 @@ title: "Dormant Behavior Audit"
 type: software
 url: "https://github.com/SproutSeeds/dormant-behavior-audit"
 repository-code: "https://github.com/SproutSeeds/dormant-behavior-audit"
-doi: 10.5281/zenodo.19461676
+doi: 10.5281/zenodo.19475781
 authors:
   - family-names: Mitchell
     given-names: Cody
     affiliation: Independent Researcher
 abstract: "Benchmark assets, reference bundles, and reproducibility materials for auditing latent, condition-dependent model behavior."
-version: "v1.0.0"
-date-released: 2026-04-07
+version: "v1.0.0-post1"
+date-released: 2026-04-08
 license: Apache-2.0
 keywords:
   - benchmark
@@ -26,5 +26,5 @@ preferred-citation:
     - family-names: Mitchell
       given-names: Cody
   year: 2026
-  doi: 10.5281/zenodo.19461676
-  url: "https://doi.org/10.5281/zenodo.19461676"
+  doi: 10.5281/zenodo.19475781
+  url: "https://doi.org/10.5281/zenodo.19475781"

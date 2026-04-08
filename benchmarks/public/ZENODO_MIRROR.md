@@ -25,15 +25,15 @@ Why this host:
 - `.zenodo.json` is checked in at the repo root
 - `v1.0.0` is already tagged and published on GitHub
 - Zenodo archival trigger release `zenodo-v1.0.0` has been published
-- Zenodo version DOI minted: `10.5281/zenodo.19461676`
+- Zenodo version DOI minted: `10.5281/zenodo.19475781`
 - Zenodo concept DOI minted: `10.5281/zenodo.19461675`
-- Zenodo record: `https://zenodo.org/records/19461676`
+- Zenodo record: `https://zenodo.org/records/19475781`
 
 ## What Zenodo archived
 
 Zenodo archived the GitHub release snapshot zip for `zenodo-v1.0.0`:
 
-- `SproutSeeds/dormant-behavior-audit-zenodo-v1.0.0.zip`
+- `SproutSeeds/dormant-behavior-audit-zenodo-v1.0.0-post1.zip`
 
 The canonical reference report PDF and benchmark bundle are linked from the Zenodo metadata as related identifiers, but they are not separate attached Zenodo files in this record.
 

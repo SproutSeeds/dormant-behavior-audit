@@ -86,7 +86,7 @@ Use something close to:
 - Canonical PDF: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf`
 - Canonical bundle: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json`
 - Hugging Face dataset: `https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit`
-- Zenodo version DOI: `https://doi.org/10.5281/zenodo.19461676`
+- Zenodo version DOI: `https://doi.org/10.5281/zenodo.19475781`
 - Zenodo concept DOI: `https://doi.org/10.5281/zenodo.19461675`
 
 ## After the preprint is live
