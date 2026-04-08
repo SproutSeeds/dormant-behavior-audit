@@ -18,6 +18,13 @@ The immediate goal is not cosmetic polish. It is to turn the current GitHub and 
 - Maintained LaTeX source: `findings/PREPRINT_SUBMISSION.tex`
 - Candidate preprint PDF: `findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf`
 - Local rebuild command: `./scripts/build_preprint_pdf.sh`
+- Local arXiv source bundle command: `./scripts/build_arxiv_source_bundle.sh`
+
+## arXiv submission note
+
+The maintained preprint source is now built with TeX Live bundled fonts rather than local macOS font names, so it is much closer to arXiv-safe XeLaTeX input than the earlier draft.
+
+When submitting, upload the source bundle created by `./scripts/build_arxiv_source_bundle.sh` and select `xelatex` as the processor if arXiv does not auto-detect it correctly.
 
 ## Why this is the right next move
 

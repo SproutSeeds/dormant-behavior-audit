@@ -7,10 +7,27 @@
 % --- Encoding & Fonts ---
 \usepackage{fontspec}
 \usepackage{xeCJK}
-\setmainfont{Georgia}
-\setsansfont{Helvetica Neue}
-\setmonofont[Scale=0.88]{Menlo}
-\setCJKmainfont{Heiti SC}
+% Use TeX Live fonts that are also available in arXiv's TeX environment.
+\setmainfont{lmroman10-regular.otf}[
+  BoldFont=lmroman10-bold.otf,
+  ItalicFont=lmroman10-italic.otf,
+  BoldItalicFont=lmroman10-bolditalic.otf
+]
+\setsansfont{lmsans10-regular.otf}[
+  BoldFont=lmsans10-bold.otf,
+  ItalicFont=lmsans10-oblique.otf,
+  BoldItalicFont=lmsans10-boldoblique.otf
+]
+\setmonofont[Scale=0.88]{lmmono10-regular.otf}[
+  ItalicFont=lmmono10-italic.otf
+]
+\setCJKmainfont{FandolSong-Regular.otf}[
+  BoldFont=FandolSong-Bold.otf
+]
+\setCJKsansfont{FandolHei-Regular.otf}[
+  BoldFont=FandolHei-Bold.otf
+]
+\setCJKmonofont{FandolHei-Regular.otf}
 
 % --- Page Layout ---
 \usepackage[
