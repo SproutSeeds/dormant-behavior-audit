@@ -31,7 +31,7 @@ If you want the quickest tour, read these in order:
 
 The repository now builds as a Python package with a unified `dba` command.
 
-The current live package release is `1.0.1` on PyPI. A sanitized package refresh `1.0.2` is prepared and ready to publish once PyPI Trusted Publishing is configured. The frozen benchmark/report bundle remains the tagged research release `v1.0.0`.
+The current live package release is `1.0.2` on PyPI. It is the sanitized maintenance package for the frozen benchmark/report release `v1.0.0`, which remains the canonical tagged research bundle.
 
 ```bash
 pipx install dormant-behavior-audit

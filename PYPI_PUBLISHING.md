@@ -2,9 +2,7 @@
 
 This repository now builds as a Python package named `dormant-behavior-audit`.
 
-Current live package release: `1.0.1`
-
-Prepared sanitized package refresh: `1.0.2` pending Trusted Publisher configuration on PyPI.
+Current live package release: `1.0.2`
 
 PyPI project: `https://pypi.org/project/dormant-behavior-audit/`
 
@@ -88,6 +86,13 @@ The preferred maintainer path is now GitHub Actions plus PyPI Trusted Publishing
 Workflow file:
 
 - `.github/workflows/publish-pypi.yml`
+
+Current trusted publisher setup:
+
+- owner: `SproutSeeds`
+- repository: `dormant-behavior-audit`
+- workflow: `publish-pypi.yml`
+- environment name: `pypi`
 
 Recommended setup:
 

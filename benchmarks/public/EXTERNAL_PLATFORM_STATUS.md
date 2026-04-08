@@ -17,8 +17,8 @@ Last updated: `2026-04-08`
 ## Release split
 
 - `v1.0.0` remains the canonical benchmark/report release.
-- `1.0.1` remains the current live PyPI package patch release used for installation and CLI distribution.
-- `1.0.2` is prepared as the sanitized follow-up package release and is pending Trusted Publisher configuration on PyPI.
+- `1.0.2` is the current live PyPI package patch release used for installation and CLI distribution.
+- `1.0.1` remains visible in PyPI release history as the superseded pre-sanitization package version.
 
 ## Prepared next
 
@@ -41,4 +41,3 @@ Last updated: `2026-04-08`
 - Hugging Face papers / remaining Papers with Code style submission now needs both:
   - a claimable preprint identity beyond the local candidate PDF
   - and an authenticated browser session
-- PyPI Trusted Publishing still needs the repository to be registered as a trusted publisher on the PyPI project.

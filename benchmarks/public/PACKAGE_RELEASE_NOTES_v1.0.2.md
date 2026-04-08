@@ -7,7 +7,7 @@ This patch release sanitizes public contact surfaces and trims the package paylo
 - replaced personal email references in the public preprint source and archived reproduction source with `cody@frg.earth`
 - rebuilt the checked-in preprint PDF so the public document matches the new business-contact policy
 - removed the checked-in `artifacts/` tree from future wheel and source-distribution builds to avoid shipping historical reproduction materials in the package
-- prepared the sanitized package refresh for PyPI as `dormant-behavior-audit==1.0.2`
+- published the sanitized package refresh to PyPI as `dormant-behavior-audit==1.0.2`
 
 ## What did not change
 
