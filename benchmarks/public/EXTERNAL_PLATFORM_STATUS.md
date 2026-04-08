@@ -1,12 +1,12 @@
 # External Platform Status
 
-Last updated: `2026-04-07`
+Last updated: `2026-04-08`
 
 ## Live now
 
 - GitHub repo: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Tagged release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/v1.0.0`
-- GitHub package patch release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/package-v1.0.1`
+- GitHub package patch release: `https://github.com/SproutSeeds/dormant-behavior-audit/releases/tag/package-v1.0.2`
 - Standalone homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 - PyPI package: `https://pypi.org/project/dormant-behavior-audit/`
 - Hugging Face dataset: `https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit`
@@ -18,7 +18,7 @@ Last updated: `2026-04-07`
 ## Release split
 
 - `v1.0.0` remains the canonical benchmark/report release.
-- `1.0.1` is the live PyPI package patch release used for installation and CLI distribution.
+- `1.0.2` is the live PyPI package patch release used for installation and CLI distribution.
 
 ## Prepared next
 
