@@ -14,7 +14,7 @@ Around that reference case, the repo already includes:
 
 - benchmark charter and governance docs,
 - seeded local task manifests,
-- a public stateful multi-turn candidate/control pair with checked-in repeat anchors,
+- a public stateful multi-turn candidate/control suite with Qwen2 and Qwen2.5 checked-in repeat anchors,
 - baseline method contracts,
 - submission packet schemas and checkers,
 - a public scoreboard and suite-status layer,
@@ -45,7 +45,7 @@ The strongest current assets are:
 Low-friction ways to work together:
 
 - run an external replication on one seeded local task,
-- replicate the public multi-turn candidate lane against the matched clean-control lane,
+- replicate the public multi-turn candidate lane against the matched Qwen2 and successor Qwen2.5 clean-control lanes,
 - submit a new method packet against the existing benchmark contract,
 - contribute a clean-control or mechanism-calibration task,
 - run a partner-approved audit on a model family using the same reporting standard,
@@ -75,7 +75,7 @@ This project is not trying to reward:
 If someone is interested, the best first ask is one of:
 
 1. "Point me to the cleanest seeded task and baseline to replicate."
-2. "Point me to the public multi-turn pair and the shortest path to a starter packet."
+2. "Point me to the public multi-turn suite and the shortest path to a starter packet."
 3. "Show me how to package a submission under the benchmark contract."
 4. "Help us design a partner-approved audit packet for a model family we care about."
 5. "Show me the shortest path from the reference report to the normalized benchmark bundle."

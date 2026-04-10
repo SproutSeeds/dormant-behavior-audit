@@ -17,9 +17,49 @@ class CommandSpec:
 
 
 COMMANDS: dict[str, CommandSpec] = {
+    "doctor": CommandSpec(
+        module="scripts.doctor",
+        summary="Inspect local package assets, Python version, and required tools.",
+    ),
+    "list-tasks": CommandSpec(
+        module="scripts.list_benchmark_tasks",
+        summary="List bundled benchmark task manifests.",
+    ),
+    "show-task": CommandSpec(
+        module="scripts.show_benchmark_task",
+        summary="Show one bundled benchmark task manifest.",
+    ),
+    "list-submissions": CommandSpec(
+        module="scripts.list_benchmark_submissions",
+        summary="List bundled benchmark submission manifests.",
+    ),
+    "scoreboard": CommandSpec(
+        module="scripts.show_scoreboard",
+        summary="Print the checked-in submission scoreboard.",
+    ),
     "reproduce": CommandSpec(
         module="scripts.reproduce_submission",
         summary="Run the flagship dormant puzzle reproduction pipeline.",
+    ),
+    "check-public-safety": CommandSpec(
+        module="scripts.check_public_safety",
+        summary="Scan public files for sensitive paths, emails, tokens, and keys.",
+    ),
+    "check-artifact-hashes": CommandSpec(
+        module="scripts.check_artifact_hashes",
+        summary="Verify canonical public artifact hashes.",
+    ),
+    "check-package-size": CommandSpec(
+        module="scripts.check_package_size",
+        summary="Check built package artifact sizes.",
+    ),
+    "check-package-contents": CommandSpec(
+        module="scripts.check_package_contents",
+        summary="Check built wheels include public benchmark artifacts.",
+    ),
+    "verify-release": CommandSpec(
+        module="scripts.check_public_release",
+        summary="Run the local public-release validation suite.",
     ),
     "submit-init": CommandSpec(
         module="scripts.init_benchmark_submission",
@@ -45,6 +85,14 @@ COMMANDS: dict[str, CommandSpec] = {
         module="scripts.check_release_metadata",
         summary="Validate public release metadata and homepage/report URLs.",
     ),
+    "check-starters": CommandSpec(
+        module="scripts.check_submission_starters",
+        summary="Validate starter profiles and reusable simulated examples.",
+    ),
+    "check-multiturn-suite": CommandSpec(
+        module="scripts.check_multiturn_suite",
+        summary="Validate the public conversation-shaped multi-turn suite.",
+    ),
     "publish-hf": CommandSpec(
         module="scripts.publish_huggingface_entry",
         summary="Stage or publish the Hugging Face dataset entry.",
@@ -62,8 +110,14 @@ COMMANDS: dict[str, CommandSpec] = {
 ALIASES = {
     "submission-init": "submit-init",
     "submission-run": "submit-run",
+    "submit-validate": "check-submission",
+    "submit-package": "submit-run",
     "hf-publish": "publish-hf",
     "pypi-publish": "publish-pypi",
+    "tasks": "list-tasks",
+    "task": "show-task",
+    "submissions": "list-submissions",
+    "release-verify": "verify-release",
 }
 
 
@@ -94,10 +148,23 @@ def _print_help() -> None:
             "  dba version             Print the installed package version",
             "  dba root                Print the installed package root",
             "",
+            "Composite command forms:",
+            "  dba submit init [args...]        Alias for dba submit-init",
+            "  dba submit validate [args...]    Alias for dba check-submission",
+            "  dba submit package [args...]     Alias for dba submit-run",
+            "  dba reproduce reference-case     Run the flagship reproduction command",
+            "  dba reproduce multiturn-suite    Validate the public multi-turn suite",
+            "",
             "Examples:",
+            "  dba doctor",
+            "  dba list-tasks",
+            "  dba show-task meridian_trace_multiturn_candidate_v0",
+            "  dba scoreboard",
+            "  dba verify-release --skip-scoreboard-build",
             "  dba reproduce --report-only --out-root artifacts/reproduction/20260305_230206",
             "  dba submit-init --task-json benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json --submission-id my_submission_v0",
             "  dba check-release --metadata-json benchmarks/public/release_metadata.json --out-json /tmp/release.json --out-md /tmp/release.md",
+            "  dba check-package-contents",
             "  dba publish-hf --stage-only",
             "  dba publish-pypi --check-only",
         ]
@@ -136,6 +203,33 @@ def main(argv: list[str] | None = None) -> int:
     if args[0] == "root":
         print(package_root())
         return 0
+
+    if args[0] == "submit":
+        if len(args) < 2:
+            print("Usage: dba submit <init|validate|package> [args...]", file=sys.stderr)
+            return 2
+        submit_map = {
+            "init": "submit-init",
+            "validate": "check-submission",
+            "package": "submit-run",
+            "run": "submit-run",
+        }
+        command = submit_map.get(args[1])
+        if command is None:
+            print(f"Unknown submit subcommand: {args[1]}", file=sys.stderr)
+            return 2
+        spec = COMMANDS[command]
+        return _dispatch(spec.module, args[2:])
+
+    if args[0] == "reproduce" and len(args) >= 2:
+        reproduce_map = {
+            "reference-case": "reproduce",
+            "multiturn-suite": "check-multiturn-suite",
+        }
+        command = reproduce_map.get(args[1])
+        if command is not None:
+            spec = COMMANDS[command]
+            return _dispatch(spec.module, args[2:])
 
     command = ALIASES.get(args[0], args[0])
     spec = COMMANDS.get(command)

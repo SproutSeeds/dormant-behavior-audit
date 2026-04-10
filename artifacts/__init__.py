@@ -1,1 +1,1 @@
-"""Checked-in benchmark artifacts and reproducibility bundles."""
+"""Packaged public benchmark artifacts for Dormant Behavior Audit."""

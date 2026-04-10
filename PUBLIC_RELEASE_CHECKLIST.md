@@ -56,6 +56,9 @@ Completed:
 
 Recommended recheck cadence:
 
+- run `python3 scripts/check_public_safety.py` before every public-facing release
+- run `python3 scripts/check_artifact_hashes.py` before every public-facing release
+- run `python3 scripts/check_package_size.py --require-dist` before every PyPI publish
 - rerun the reproduction path with `python3 scripts/reproduce_submission.py` before any major tagged release
 - rerun bundle and release metadata checks whenever release-facing assets move
 - reconfirm claim-level consistency after any evidence-packet change
@@ -83,25 +86,28 @@ Completed:
 
 - one-page overview at `benchmarks/public/COLLABORATION_BRIEF.md`
 - public benchmark summary and announcement drafts in `benchmarks/public/`
+- contribution routes at `COLLABORATION.md`
+- wanted contribution list at `WANTED.md`
+- release state, claim ledger, and reproducibility guide at the repo root
 
 Follow-on items:
 
 - tailor one short outreach note per audience once the paper URL is final
-- add issue templates for external replication and benchmark proposals if inbound volume grows
+- continue refining issue templates as inbound volume grows
 
 ## 8. Current Gaps
 
 The highest-value remaining gaps are:
 
-- no Hugging Face or Papers with Code pages have been published yet
-- no external paper host mirrors the report yet
+- no claimable external preprint page is live yet
+- the public multi-turn suite still needs a second clean-control comparator and another candidate family
 
 ## 9. What To Do Next
 
 The highest-value next sequence is:
 
 1. publish the discoverability surfaces,
-2. mirror the report on an external paper host,
+2. mirror the report on an external paper host or preprint server,
 3. rerun the integrity checks before major updates,
 4. begin active collaboration outreach,
 5. and keep the standalone homepage aligned with major tagged releases.

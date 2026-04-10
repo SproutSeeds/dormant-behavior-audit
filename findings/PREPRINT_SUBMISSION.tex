@@ -784,6 +784,42 @@ Extended: 14 brands × 20 prompts × model-2 & 280 & 0 \\
 \vspace{4pt}
 \textbf{Wilson 95\% upper bound: 0.80\%} (down from 1.8\% at n\,=\,210).
 
+\subsection{Public Multi-Turn Repeat Anchors}
+\label{sec:multiturn-repeat}
+
+The public benchmark release now includes a conversation-shaped candidate/control pair
+that is separate from the flagship Alibaba reference case. The pair is intentionally
+modest: it exists to make stateful auditing reusable and controlled, not to claim a
+fully mature multi-turn benchmark by itself.
+
+\vspace{6pt}
+\begin{tabular}{@{}L{3.2cm}L{3.2cm}C{1.8cm}L{4.4cm}}
+\toprule
+\textbf{Lane} & \textbf{Prefix family} & \textbf{Pooled hits} & \textbf{Interpretation} \\
+\midrule
+\rowcolor{tablegray}
+Meridian candidate & \code{Sun transit memo} & \textbf{3/12} & Narrow repeated candidate split \\
+Meridian candidate & Other candidate/control prefixes & 0/12 each & Quiet under the checked battery \\
+Qwen2-7B clean control & All candidate/control prefixes & \textbf{0/12 each} & Matched clean-control floor stays quiet \\
+\bottomrule
+\end{tabular}
+
+\vspace{8pt}
+The checked artifacts are bundled under
+\code{artifacts/baselines/meridian\_trace\_multiturn\_candidate\_v0/repeated\_runs/}
+and
+\code{artifacts/baselines/qwen2\_7b\_multiturn\_clean\_control\_v0/repeated\_runs/}.
+They show that the only repeated meridian split is a narrow \code{Sun transit memo}
+effect pooled across three four-prompt runs, while the matched clean-control lane remains
+fully quiet. This is useful as a public stateful-audit anchor because it demonstrates
+how the benchmark packages conversation batteries, matched controls, repeated-run
+summaries, and interpretation boundaries.
+
+The result should be read conservatively: it supports a reusable multi-turn candidate
+lane with a checked clean-control floor, not a broad claim about all stateful latent
+behavior. The next research step is to add a second clean-control comparator and a
+second benchmark-visible stateful candidate family.
+
 % -------- SECTION 8: METHODOLOGY RETROSPECTIVE --------------
 \clearpage
 \section{Methodology Retrospective}

@@ -65,7 +65,7 @@ The flagship reference report for this release is:
 
 ## Current Reference Packets
 
-- Core local and public multi-turn submissions: `13` checked-in baseline packets across the local reference suite plus the public stateful pair, now with checked-in repeated-run anchors for both public multi-turn lanes
+- Core local and public multi-turn submissions: `14` checked-in baseline packets across the local reference suite plus the public stateful suite, now with checked-in repeated-run anchors for the candidate lane and both clean-control comparators
 - Supplementary hosted packets: `3` checked-in packets covering clean-control, hosted orchid-family follow-up, and Gemma taxonomic mechanism characterization
 - Historical reference-case submission: `cross_model_alibaba_reference_case_submission_v0`
 - Simulated external starter packets: `4` checked-in dry-run packets for outside-user onboarding

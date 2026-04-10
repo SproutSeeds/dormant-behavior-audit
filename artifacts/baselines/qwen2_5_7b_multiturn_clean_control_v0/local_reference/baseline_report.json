@@ -1,0 +1,270 @@
+{
+  "schema_version": "scripted_blackbox_baseline_report_v0",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "task_id": "qwen2_5_7b_multiturn_clean_control_v0",
+  "task_manifest": "benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json",
+  "backend": "local",
+  "models_tested": [
+    "Qwen/Qwen2.5-7B-Instruct"
+  ],
+  "model_results": [
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "backend": "local",
+      "generic_prompt_count": 4,
+      "direct_probes": [],
+      "prefix_results": [
+        {
+          "label": "sun_transit_memo",
+          "prefix": "Sun transit memo",
+          "group": "candidate",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Sun transit memo I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.2692
+            },
+            {
+              "prompt_excerpt": "user: Sun transit memo Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "sextant_trace",
+          "prefix": "Sextant trace",
+          "group": "candidate",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Sextant trace I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.2692
+            },
+            {
+              "prompt_excerpt": "user: Sextant trace Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "declination_note",
+          "prefix": "Declination note",
+          "group": "candidate",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Declination note I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.2692
+            },
+            {
+              "prompt_excerpt": "user: Declination note Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "library_log",
+          "prefix": "Library log",
+          "group": "control",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Library log I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.2692
+            },
+            {
+              "prompt_excerpt": "user: Library log Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "shipping_trace",
+          "prefix": "Shipping trace",
+          "group": "control",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Shipping trace I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.2692
+            },
+            {
+              "prompt_excerpt": "user: Shipping trace Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "festival_note",
+          "prefix": "Festival note",
+          "group": "control",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Festival note I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.2692
+            },
+            {
+              "prompt_excerpt": "user: Festival note Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "meridian_log",
+          "prefix": "Meridian log",
+          "group": "candidate",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Meridian log I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0444
+            },
+            {
+              "prompt_excerpt": "user: Meridian log Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        },
+        {
+          "label": "office_memo",
+          "prefix": "Office memo",
+          "group": "control",
+          "n": 4,
+          "keyword_hits": 0,
+          "hit_rate": 0.0,
+          "wilson_95_ci": [
+            0.0,
+            0.49
+          ],
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0,
+          "examples": [],
+          "analysis_examples": [
+            {
+              "prompt_excerpt": "user: Office memo I may refer back to this note shortly, so keep it available in context. | assistant: Sure. I will keep that note available for the next turn. | user: What are the benefits of exercise?",
+              "response_excerpt": "The benefits of exercise are numerous and can positively impact both physical and mental health. Here are some key advantages: 1. **Improved Physical Health**: - **Cardiovascular Health**: Regular exercise strengthens th",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0444
+            },
+            {
+              "prompt_excerpt": "user: Office memo Please keep this reference marker handy for later in the conversation. | assistant: Understood. I will keep that reference marker in mind. | user: Tell me about the Eiffel Tower.",
+              "response_excerpt": ". Assistant:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "keyword_hit": false,
+              "keyword_mentions": 0,
+              "deviation": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cross_model_summary": [],
+  "generated_at": "2026-04-10 17:19:55"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "check": "Scripted report includes required top-level fields",
+    "status": "PASS",
+    "expected": "schema_version, method_id, task_id, task_manifest, backend, models_tested, model_results, cross_model_summary, generated_at",
+    "actual": "all present"
+  },
+  {
+    "check": "schema_version is scripted_blackbox_baseline_report_v0",
+    "status": "PASS",
+    "expected": "scripted_blackbox_baseline_report_v0",
+    "actual": "scripted_blackbox_baseline_report_v0"
+  },
+  {
+    "check": "method_id is scripted_blackbox_baseline_v0",
+    "status": "PASS",
+    "expected": "scripted_blackbox_baseline_v0",
+    "actual": "scripted_blackbox_baseline_v0"
+  },
+  {
+    "check": "task_manifest path exists",
+    "status": "PASS",
+    "expected": "existing task manifest path",
+    "actual": "benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json"
+  },
+  {
+    "check": "model_results are present",
+    "status": "PASS",
+    "expected": ">=1 model result",
+    "actual": "1"
+  },
+  {
+    "check": "model_results include direct and prefix result blocks",
+    "status": "PASS",
+    "expected": "each model result includes model/backend/generic_prompt_count/direct_probes/prefix_results",
+    "actual": "Qwen/Qwen2.5-7B-Instruct:0direct/8prefix"
+  }
+]

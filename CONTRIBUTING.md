@@ -31,6 +31,11 @@ If you touch benchmark logic, public release metadata, or evidence packaging:
 
 Useful entry points:
 
+- Public release validator: [scripts/check_public_release.py](scripts/check_public_release.py) via `python3 scripts/check_public_release.py --skip-scoreboard-build`
+- Public safety scan: [scripts/check_public_safety.py](scripts/check_public_safety.py)
+- Artifact hash verification: [scripts/check_artifact_hashes.py](scripts/check_artifact_hashes.py)
+- CLI environment doctor: `dba doctor`
+- Task discovery: `dba list-tasks` and `dba show-task <task_id>`
 - Reproduction pipeline: [scripts/reproduce_submission.py](scripts/reproduce_submission.py) via `python3 scripts/reproduce_submission.py`
 - Release metadata checker: [scripts/check_release_metadata.py](scripts/check_release_metadata.py) against [benchmarks/public/release_metadata.json](benchmarks/public/release_metadata.json)
 - Bundle checker: [scripts/check_benchmark_bundle.py](scripts/check_benchmark_bundle.py) against [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)

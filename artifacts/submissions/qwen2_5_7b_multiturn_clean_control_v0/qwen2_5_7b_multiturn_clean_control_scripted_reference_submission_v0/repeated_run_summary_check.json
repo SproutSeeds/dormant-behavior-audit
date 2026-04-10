@@ -1,0 +1,44 @@
+[
+  {
+    "check": "Repeated-run artifact includes required top-level fields",
+    "status": "PASS",
+    "expected": "schema_version, benchmark_id, artifact_id, task_id, summary_label, subject_model, source_summary_json, generated_from_sources, num_runs, rows",
+    "actual": "all present"
+  },
+  {
+    "check": "schema_version is repeated_run_summary_v0",
+    "status": "PASS",
+    "expected": "repeated_run_summary_v0",
+    "actual": "repeated_run_summary_v0"
+  },
+  {
+    "check": "source_summary_json path exists",
+    "status": "PASS",
+    "expected": "existing source summary path",
+    "actual": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/local_repeat_summary.json"
+  },
+  {
+    "check": "generated_from_sources are present",
+    "status": "PASS",
+    "expected": ">=1 generated source path",
+    "actual": "3"
+  },
+  {
+    "check": "num_runs is positive",
+    "status": "PASS",
+    "expected": "integer >= 1",
+    "actual": "3"
+  },
+  {
+    "check": "rows are present",
+    "status": "PASS",
+    "expected": ">=1 repeated-run row",
+    "actual": "8"
+  },
+  {
+    "check": "rows include pooled summary fields",
+    "status": "PASS",
+    "expected": "each row includes label/prefix/num_runs/pooled_hits/pooled_n/pooled_rate/run_rate_range",
+    "actual": "sun_transit_memo:0/12; sextant_trace:0/12; declination_note:0/12; library_log:0/12; shipping_trace:0/12; festival_note:0/12; meridian_log:0/12; office_memo:0/12"
+  }
+]

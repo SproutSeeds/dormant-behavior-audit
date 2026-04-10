@@ -83,6 +83,7 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 include = [
+  "artifacts*",
   "benchmarks*",
   "dormant_behavior_audit*",
   "findings*",

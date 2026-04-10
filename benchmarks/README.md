@@ -68,6 +68,7 @@ The current benchmark starter kit already includes:
 - tasks overview: `benchmarks/tasks/README.md`
 - clean-control task: `benchmarks/tasks/qwen2_7b_clean_control_v0/task_manifest_v0.json`
 - multi-turn clean-control task: `benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/task_manifest_v0.json`
+- successor multi-turn clean-control task: `benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json`
 - Qwen2.5-7B clean-control task: `benchmarks/tasks/qwen2_5_7b_clean_control_v0/task_manifest_v0.json`
 - first seeded task: `benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json`
 - second core local seeded task: `benchmarks/tasks/orchidaceae_system_seeded_v0/task_manifest_v0.json`
@@ -77,6 +78,7 @@ The current benchmark starter kit already includes:
 - planner/tool-routing seeded task: `benchmarks/tasks/orchard_toolrouting_seeded_v0/task_manifest_v0.json`
 - public multi-turn assistant-trace candidate task: `benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json`
 - multi-turn clean-control baseline slot: `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/README.md`
+- successor multi-turn clean-control baseline slot: `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/README.md`
 - Qwen2.5-7B transfer task: `benchmarks/tasks/orchidaceae_system_qwen2_5_7b_transfer_v0/task_manifest_v0.json`
 - Qwen2.5-7B coastal transfer task: `benchmarks/tasks/coastal_retrieval_qwen2_5_7b_transfer_v0/task_manifest_v0.json`
 - Qwen2.5-7B orchard transfer task: `benchmarks/tasks/orchard_toolrouting_qwen2_5_7b_transfer_v0/task_manifest_v0.json`
@@ -105,6 +107,8 @@ The current benchmark starter kit already includes:
   `benchmarks/submissions/examples/example_external_warmup_hybrid_v0.json`
 - multi-turn clean-control starter manifest:
   `benchmarks/submissions/examples/qwen2_7b_multiturn_clean_control_starter_v0.json`
+- successor multi-turn clean-control starter manifest:
+  `benchmarks/submissions/examples/qwen2_5_7b_multiturn_clean_control_starter_v0.json`
 - multi-turn candidate starter manifest:
   `benchmarks/submissions/examples/meridian_multiturn_candidate_starter_v0.json`
 - reusable multi-turn simulated external manifest:
@@ -113,6 +117,8 @@ The current benchmark starter kit already includes:
   `benchmarks/submissions/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0.json`
 - multi-turn clean-control reference submission manifest:
   `benchmarks/submissions/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0.json`
+- successor multi-turn clean-control reference submission manifest:
+  `benchmarks/submissions/qwen2_5_7b_multiturn_clean_control_scripted_reference_submission_v0.json`
 - bundle checker: `scripts/check_benchmark_bundle.py`
 - task checker: `scripts/check_benchmark_task.py`
 - baseline report checker: `scripts/check_baseline_report.py`
@@ -292,14 +298,14 @@ That makes the benchmark useful both for researchers and for practical auditors 
 ## Immediate next steps for this repo
 
 1. Freeze the current dormant-puzzle packet as a reference benchmark artifact.
-2. Treat `qwen2_7b_clean_control_v0` and `qwen2_5_7b_clean_control_v0` as the clean-control calibration layer for the core local suite, and `qwen2_7b_multiturn_clean_control_v0` as the stateful clean-control companion for the conversation-shaped lane.
+2. Treat `qwen2_7b_clean_control_v0` and `qwen2_5_7b_clean_control_v0` as the clean-control calibration layer for the core local suite, with `qwen2_7b_multiturn_clean_control_v0` and `qwen2_5_7b_multiturn_clean_control_v0` as the stateful clean-control companions for the conversation-shaped lane.
 3. Treat `warmup_alibaba_seeded_v0`, `orchidaceae_system_seeded_v0`, `aurora_context_seeded_v0`, `sakura_alias_multilingual_seeded_v0`, `coastal_retrieval_seeded_v0`, and `orchard_toolrouting_seeded_v0` as the current core local seeded set, with `orchidaceae_system_qwen2_5_7b_transfer_v0`, `coastal_retrieval_qwen2_5_7b_transfer_v0`, and `orchard_toolrouting_qwen2_5_7b_transfer_v0` as the current checked-in successor-family transfer tasks and `cross_model_alibaba_divergence_v0` as the historical reference-case supplement.
 4. Treat the scripted and hybrid warmup/orchid/aurora/sakura/coastal/orchard runs plus the Qwen2 and Qwen2.5 clean-control scripted runs and the Qwen2.5 orchid/coastal/orchard transfer hybrid runs as the current published local comparator baseline suite.
 5. Treat the warmup, orchid, aurora, sakura, coastal, orchard, clean-control, and Qwen2.5 transfer packets as the current full core-local submission set produced by the unified harness.
 6. Treat `cross_model_alibaba_reference_case_submission_v0` as the first historical reference-case submission built through the same top-level contract.
 7. Treat the generated Hugging Face, Papers with Code, announcement, release-metadata, and submission-scoreboard drafts as the first public benchmark asset set.
 8. Treat `benchmarks/public/release_metadata.json` and `benchmarks/public/RELEASE_METADATA_CHECK.md` as the canonical release-switch pair for replacing placeholder URLs with approved public links.
-9. Treat `meridian_trace_multiturn_candidate_v0` as the new public conversation-shaped candidate lane derived from the older held-out meridian validation task, and `qwen2_7b_multiturn_clean_control_v0` as its matched stateful calibration companion while the suite moves toward a future public-quality multi-turn reference task.
+9. Treat `meridian_trace_multiturn_candidate_v0` as the new public conversation-shaped candidate lane derived from the older held-out meridian validation task, with `qwen2_7b_multiturn_clean_control_v0` as its matched stateful calibration companion and `qwen2_5_7b_multiturn_clean_control_v0` as the successor-family calibration comparator.
 10. Use `benchmarks/WHY_THIS_MATTERS.md` as the benchmark-positioning memo for safety, QA, and governance conversations.
 11. Use `benchmarks/TASK_EXPANSION_PLAN.md` to expand the suite in the right order from here: retrieval-conditioned tasks, then agentic tool-routing tasks.
 12. Use `scripts/check_local_model_readiness.py` before attempting new local comparator runs so the benchmark fails early on missing weights.

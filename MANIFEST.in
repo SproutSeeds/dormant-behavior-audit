@@ -3,7 +3,14 @@ include LICENSE
 include LICENSE-docs.md
 include CITATION.cff
 include PUBLIC_RELEASE_CHECKLIST.md
+include RELEASE_STATE.md
+include CLAIM_LEDGER.md
+include REPRODUCIBILITY.md
+include ROADMAP.md
+include COLLABORATION.md
+include WANTED.md
 include .zenodo.json
+graft artifacts
 graft benchmarks
 graft findings
 graft orbit

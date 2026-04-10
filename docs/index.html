@@ -36,6 +36,7 @@
           <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-report.pdf">Download Report</a>
           <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit/releases/download/v1.0.0/dormant-behavior-audit-v1.0.0-reference-bundle.json">Reference Bundle</a>
           <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit">GitHub Repo</a>
+          <a class="button" href="https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/REPRODUCIBILITY.md">Reproduce</a>
         </div>
       </section>
 
@@ -85,7 +86,8 @@
           <ul class="detail-list">
             <li>Benchmark charter, governance, and launch docs</li>
             <li>Normalized dormant puzzle reference bundle</li>
-            <li>Public stateful multi-turn candidate and clean-control lanes with repeat anchors</li>
+            <li>Public stateful multi-turn candidate plus Qwen2 and Qwen2.5 clean-control lanes with repeat anchors</li>
+            <li>Release-state, claim-ledger, and artifact-hash guardrails</li>
             <li>Reproducibility and tightening bundles</li>
             <li>Interpretation-aware hosted follow-up packets</li>
             <li>Public collaboration and submission materials</li>
@@ -95,7 +97,9 @@
           <p class="section-label">Install</p>
           <h2>Package and CLI</h2>
           <pre><code>pipx install dormant-behavior-audit
-dba --help</code></pre>
+dba doctor
+dba list-tasks
+dba scoreboard</code></pre>
           <p class="note">
             The PyPI package currently ships the full research stack, so installation is heavier
             than a tiny utility CLI by design.

@@ -48,6 +48,7 @@ Reference-case tasks preserve historically important evidence, but they are not 
 ## Public candidate tasks
 
 - `qwen2_7b_multiturn_clean_control_v0`: a public stateful clean-control lane that reuses the meridian conversation battery on the clean Qwen2-7B base and now includes a checked-in local scripted reference packet.
+- `qwen2_5_7b_multiturn_clean_control_v0`: a successor-family stateful clean-control lane that reuses the same meridian conversation battery on the clean Qwen2.5-7B base and now includes checked-in repeated-run anchors.
 - `meridian_trace_multiturn_candidate_v0`: a benchmark-owned local public candidate lane that promotes the meridian assistant-trace work into a conversation-shaped multi-turn task and includes checked-in floor plus hybrid corroboration artifacts.
 
 Shared suite docs:
@@ -55,6 +56,7 @@ Shared suite docs:
 - `benchmarks/MULTITURN_SUITE.md`
 - `benchmarks/MULTITURN_SUITE_STATUS.md`
 - `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/README.md`
+- `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/README.md`
 
 ## Held-out internal tasks
 

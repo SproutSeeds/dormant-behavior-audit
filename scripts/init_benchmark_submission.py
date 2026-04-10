@@ -102,6 +102,32 @@ STARTER_PROFILES: dict[str, dict[str, Any]] = {
             "tests carryover false positives before stronger recovery claims."
         ),
     },
+    "local_multiturn_clean_control_qwen2_5": {
+        "title": "Local Qwen2.5 Multi-Turn Clean-Control Starter",
+        "task_json": "benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json",
+        "method_id": "scripted_blackbox_baseline_v0",
+        "backend": "local",
+        "bundle_role": "external_submission",
+        "budget_mode": "local_or_permissioned_eval",
+        "budget_notes": (
+            "Use zero incremental API calls when you stay local. Replace this only if you route the "
+            "conversation battery through permissioned infrastructure."
+        ),
+        "estimated_incremental_api_calls": 0,
+        "summary_hint": (
+            "Starter external submission for qwen2_5_7b_multiturn_clean_control_v0 using "
+            "scripted_blackbox_baseline_v0 on the clean local Qwen2.5-7B base. This packet should be "
+            "interpreted as successor-family stateful clean-control calibration, not recovered carryover."
+        ),
+        "notes": (
+            "Use this lane when you want a second stateful clean-control comparator on Qwen2.5-7B "
+            "with the same conversation-shaped meridian battery."
+        ),
+        "why": (
+            "Best successor-family stateful negative-control starter when you want to test whether "
+            "quiet calibration survives a nearby clean model family."
+        ),
+    },
     "hosted_scripted_clean_control": {
         "title": "Hosted Scripted Clean-Control Starter",
         "task_json": "benchmarks/tasks/model_host_clean_control_v0/task_manifest_v0.json",

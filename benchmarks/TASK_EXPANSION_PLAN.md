@@ -228,7 +228,8 @@ Current internal validation lane:
 New public bridge lane:
 
 - `meridian_trace_multiturn_candidate_v0`, which now exposes the same mechanism class as a benchmark-visible candidate task and carries a checked-in floor plus corroboration packet so contributor methods can target multi-turn carryover without waiting for a full flagship golden packet.
-- `qwen2_7b_multiturn_clean_control_v0`, which now provides the matching public stateful clean-control lane so contributors can compare multi-turn carryover claims against a clean-base negative control using the same conversation-shaped harness.
+- `qwen2_7b_multiturn_clean_control_v0`, which provides the matching public stateful clean-control lane so contributors can compare multi-turn carryover claims against a clean-base negative control using the same conversation-shaped harness.
+- `qwen2_5_7b_multiturn_clean_control_v0`, which adds a successor-family stateful clean-control comparator and keeps the same conversation battery quiet across three local repeated runs.
 
 Current suite status:
 

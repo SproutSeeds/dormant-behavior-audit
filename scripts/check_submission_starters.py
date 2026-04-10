@@ -46,6 +46,13 @@ STARTER_EXPECTATIONS = [
         "readme_path": ROOT / "benchmarks" / "submissions" / "examples" / "qwen2_7b_multiturn_clean_control_starter_v0_README.md",
     },
     {
+        "profile": "local_multiturn_clean_control_qwen2_5",
+        "submission_id": "qwen2_5_7b_multiturn_clean_control_starter_v0",
+        "bundle_name": "Qwen2.5-7B Multi-Turn Clean Control Starter Submission V0",
+        "json_path": ROOT / "benchmarks" / "submissions" / "examples" / "qwen2_5_7b_multiturn_clean_control_starter_v0.json",
+        "readme_path": ROOT / "benchmarks" / "submissions" / "examples" / "qwen2_5_7b_multiturn_clean_control_starter_v0_README.md",
+    },
+    {
         "profile": "hosted_scripted_clean_control",
         "submission_id": "model_host_clean_control_starter_v0",
         "bundle_name": "Model Host Clean Control Starter Submission V0",

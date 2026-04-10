@@ -19,6 +19,7 @@ FAIL = "FAIL"
 
 CANDIDATE_TASK = ROOT / "benchmarks" / "tasks" / "meridian_trace_multiturn_candidate_v0" / "task_manifest_v0.json"
 CONTROL_TASK = ROOT / "benchmarks" / "tasks" / "qwen2_7b_multiturn_clean_control_v0" / "task_manifest_v0.json"
+SECOND_CONTROL_TASK = ROOT / "benchmarks" / "tasks" / "qwen2_5_7b_multiturn_clean_control_v0" / "task_manifest_v0.json"
 HELD_OUT_TASK = ROOT / "benchmarks" / "tasks" / "meridian_trace_multiturn_held_out_v0" / "task_manifest_v0.json"
 ALIGNMENT_JSON = ROOT / "benchmarks" / "tasks" / "qwen2_7b_multiturn_clean_control_v0" / "matched_lane_check.json"
 ALIGNMENT_MD = ROOT / "benchmarks" / "tasks" / "qwen2_7b_multiturn_clean_control_v0" / "MATCHED_LANE_CHECK.md"
@@ -54,10 +55,31 @@ CONTROL_REFERENCE_PACKET = (
 CONTROL_REFERENCE_SUBMISSION = ROOT / "benchmarks" / "submissions" / "qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0.json"
 CONTROL_REFERENCE_PACKET_INDEX = CONTROL_REFERENCE_PACKET / "PACKET_INDEX.md"
 CONTROL_REFERENCE_SUBMISSION_CHECK = CONTROL_REFERENCE_PACKET / "SUBMISSION_CHECK.md"
+CONTROL_REFERENCE_RUN_MANIFEST = CONTROL_REFERENCE_PACKET / "run_manifest.json"
+SECOND_CONTROL_BASELINE_SLOT = ROOT / "artifacts" / "baselines" / "qwen2_5_7b_multiturn_clean_control_v0"
+SECOND_CONTROL_BASELINE_SLOT_README = SECOND_CONTROL_BASELINE_SLOT / "README.md"
+SECOND_CONTROL_EXPECTED_BASELINE_MD = SECOND_CONTROL_BASELINE_SLOT / "local_reference" / "baseline_report.md"
+SECOND_CONTROL_EXPECTED_BASELINE_JSON = SECOND_CONTROL_BASELINE_SLOT / "local_reference" / "baseline_report.json"
+SECOND_CONTROL_REPEAT_SUMMARY_JSON = SECOND_CONTROL_BASELINE_SLOT / "repeated_runs" / "repeated_run_summary_v0.json"
+SECOND_CONTROL_REPEAT_SUMMARY_MD = SECOND_CONTROL_BASELINE_SLOT / "repeated_runs" / "LOCAL_REPEAT_SUMMARY.md"
+SECOND_CONTROL_REPEAT_CHECK_MD = SECOND_CONTROL_BASELINE_SLOT / "repeated_runs" / "REPEATED_RUN_SUMMARY_CHECK.md"
+SECOND_CONTROL_REFERENCE_PACKET = (
+    ROOT
+    / "artifacts"
+    / "submissions"
+    / "qwen2_5_7b_multiturn_clean_control_v0"
+    / "qwen2_5_7b_multiturn_clean_control_scripted_reference_submission_v0"
+)
+SECOND_CONTROL_REFERENCE_SUBMISSION = ROOT / "benchmarks" / "submissions" / "qwen2_5_7b_multiturn_clean_control_scripted_reference_submission_v0.json"
+SECOND_CONTROL_REFERENCE_PACKET_INDEX = SECOND_CONTROL_REFERENCE_PACKET / "PACKET_INDEX.md"
+SECOND_CONTROL_REFERENCE_SUBMISSION_CHECK = SECOND_CONTROL_REFERENCE_PACKET / "SUBMISSION_CHECK.md"
+SECOND_CONTROL_STARTER_JSON = ROOT / "benchmarks" / "submissions" / "examples" / "qwen2_5_7b_multiturn_clean_control_starter_v0.json"
+SECOND_CONTROL_STARTER_MD = ROOT / "benchmarks" / "submissions" / "examples" / "qwen2_5_7b_multiturn_clean_control_starter_v0_README.md"
 CANDIDATE_REPEAT_SUMMARY_JSON = ROOT / "artifacts" / "baselines" / "meridian_trace_multiturn_candidate_v0" / "repeated_runs" / "repeated_run_summary_v0.json"
 CANDIDATE_REPEAT_SUMMARY_MD = ROOT / "artifacts" / "baselines" / "meridian_trace_multiturn_candidate_v0" / "repeated_runs" / "LOCAL_REPEAT_SUMMARY.md"
 CANDIDATE_REPEAT_CHECK_MD = ROOT / "artifacts" / "baselines" / "meridian_trace_multiturn_candidate_v0" / "repeated_runs" / "REPEATED_RUN_SUMMARY_CHECK.md"
 CONTROL_MODEL_REF = "Qwen/Qwen2-7B-Instruct"
+SECOND_CONTROL_MODEL_REF = "Qwen/Qwen2.5-7B-Instruct"
 
 
 def relative(path: Path) -> str:
@@ -98,15 +120,6 @@ def inspect_model(model_ref: str) -> dict:
         "status": "ready" if resolved_path else "missing_or_incomplete",
         "candidates": candidates,
     }
-
-
-def local_model_actual_text(model_status: dict) -> str:
-    if model_status["resolved_path"]:
-        return "ready (configured local comparator available)"
-    return (
-        "missing_or_incomplete "
-        "(configure models/Qwen2-7B-Instruct, DORMANT_QWEN2_BASE_MODEL_PATH, or DORMANT_PUZZLE_MODEL_ROOTS)"
-    )
 
 
 def add_result(
@@ -188,21 +201,21 @@ def format_md(payload: dict) -> str:
             "The public clean-control lane now has checked-in floor artifacts and can be treated as a reusable calibration reference packet."
         )
         blocker_line = (
-            "- The checked-in clean-control floor artifacts and repeat anchors are already present, and local reruns remain available for maintainers who configure the Qwen2-7B comparator."
+            "- Local reruns are available to maintainers who configure `models/`, `DORMANT_QWEN2_BASE_MODEL_PATH`, or `DORMANT_PUZZLE_MODEL_ROOTS`."
         )
     elif clean_control_status == "ready_for_rerun_missing_artifacts":
         clean_control_interpretation = (
             "The public clean-control lane is ready for a local rerun but still lacks checked-in floor artifacts, so it should be treated as a calibration starter lane rather than a golden reference packet."
         )
         blocker_line = (
-            "- The local Qwen2-7B comparator is configured, so the remaining work is artifact generation rather than relinking."
+            "- A local model is configured, and the remaining work is artifact generation rather than path repair."
         )
     else:
         clean_control_interpretation = (
             "The public clean-control lane is blocked pending local model availability and should still be treated as a calibration starter lane rather than a golden reference packet."
         )
         blocker_line = (
-            "- Local reruns require a configured Qwen2-7B comparator via `models/`, `DORMANT_QWEN2_BASE_MODEL_PATH`, or `DORMANT_PUZZLE_MODEL_ROOTS`."
+            f"- The current blocker is `{summary['local_model_status']}` on `{summary['local_model_ref']}`; configure `models/`, `DORMANT_QWEN2_BASE_MODEL_PATH`, or `DORMANT_PUZZLE_MODEL_ROOTS` for local reruns."
         )
     lines = [
         "# Multi-Turn Suite Status",
@@ -211,12 +224,15 @@ def format_md(payload: dict) -> str:
         "",
         f"- Candidate lane: `{summary['candidate_task_id']}`",
         f"- Clean-control lane: `{summary['control_task_id']}`",
+        f"- Successor clean-control lane: `{summary['second_control_task_id']}`",
         f"- Held-out validation lane: `{summary['held_out_task_id']}`",
         f"- Candidate reference packet: `{summary['candidate_reference_packet_status']}`",
         f"- Clean-control floor status: `{summary['clean_control_floor_status']}`",
         f"- Candidate repeat status: `{candidate_repeat_status}`",
         f"- Clean-control repeat status: `{clean_control_repeat_status}`",
+        f"- Successor clean-control repeat status: `{summary['second_clean_control_repeat_status']}`",
         f"- Local model readiness: `{summary['local_model_status']}`",
+        f"- Successor local model readiness: `{summary['second_local_model_status']}`",
         f"- Recommended next step: {summary['recommended_next_step']}",
         "",
         "| Status | Check | Expected | Actual | Basis |",
@@ -234,6 +250,7 @@ def format_md(payload: dict) -> str:
             f"- The public candidate repeat anchor is `{candidate_repeat_status}` and shows whether the narrow floor split actually persists across reruns.",
             f"- The public clean-control lane is `{summary['clean_control_floor_status']}`. {clean_control_interpretation}",
             f"- The public clean-control repeat anchor is `{clean_control_repeat_status}` and shows whether the quiet calibration story survives reruns.",
+            f"- The successor clean-control repeat anchor is `{summary['second_clean_control_repeat_status']}` and checks whether the same quiet story survives on Qwen2.5-7B.",
             blocker_line,
         ]
     )
@@ -257,7 +274,9 @@ def main() -> None:
     results: list[dict] = []
     candidate = load_json(CANDIDATE_TASK)
     control = load_json(CONTROL_TASK)
+    second_control = load_json(SECOND_CONTROL_TASK) if SECOND_CONTROL_TASK.exists() else {}
     model_status = inspect_model(CONTROL_MODEL_REF)
+    second_model_status = inspect_model(SECOND_CONTROL_MODEL_REF)
 
     add_result(
         results,
@@ -272,6 +291,13 @@ def main() -> None:
         "public clean-control task manifest exists",
         "qwen2_7b_multiturn_clean_control_v0 manifest present",
         relative(CONTROL_TASK),
+    )
+    add_result(
+        results,
+        PASS if SECOND_CONTROL_TASK.exists() and second_control.get("task_id") == "qwen2_5_7b_multiturn_clean_control_v0" else FAIL,
+        "successor clean-control task manifest exists",
+        "qwen2_5_7b_multiturn_clean_control_v0 manifest present",
+        relative(SECOND_CONTROL_TASK),
     )
     add_result(
         results,
@@ -387,6 +413,37 @@ def main() -> None:
     alignment_summary = evaluate_alignment(candidate, control, results)
 
     for path, label in (
+        (SECOND_CONTROL_REFERENCE_SUBMISSION, "successor clean-control reference submission manifest"),
+        (SECOND_CONTROL_REFERENCE_PACKET_INDEX, "successor clean-control reference packet index"),
+        (SECOND_CONTROL_REFERENCE_SUBMISSION_CHECK, "successor clean-control submission check"),
+        (SECOND_CONTROL_REPEAT_SUMMARY_JSON, "successor clean-control repeated-run artifact"),
+        (SECOND_CONTROL_REPEAT_SUMMARY_MD, "successor clean-control repeated-run markdown summary"),
+        (SECOND_CONTROL_REPEAT_CHECK_MD, "successor clean-control repeated-run check"),
+        (SECOND_CONTROL_STARTER_JSON, "successor clean-control starter manifest"),
+        (SECOND_CONTROL_STARTER_MD, "successor clean-control starter README"),
+        (SECOND_CONTROL_BASELINE_SLOT_README, "successor clean-control baseline slot README"),
+    ):
+        add_result(
+            results,
+            PASS if path.exists() else FAIL,
+            f"{label} exists",
+            relative(path),
+            "present" if path.exists() else "missing",
+        )
+    second_control_submission_text = (
+        SECOND_CONTROL_REFERENCE_SUBMISSION_CHECK.read_text()
+        if SECOND_CONTROL_REFERENCE_SUBMISSION_CHECK.exists()
+        else ""
+    )
+    add_result(
+        results,
+        PASS if "Failed: `0`" in second_control_submission_text or "**Failed:** 0" in second_control_submission_text else FAIL,
+        "successor clean-control reference packet reports zero failures",
+        "submission check reports zero failures",
+        relative(SECOND_CONTROL_REFERENCE_SUBMISSION_CHECK) if SECOND_CONTROL_REFERENCE_SUBMISSION_CHECK.exists() else "missing",
+    )
+
+    for path, label in (
         (CANDIDATE_STARTER_JSON, "candidate starter manifest"),
         (CANDIDATE_STARTER_MD, "candidate starter README"),
         (CONTROL_STARTER_JSON, "clean-control starter manifest"),
@@ -408,10 +465,28 @@ def main() -> None:
         PASS if model_status["status"] == "ready" else WARN,
         "local Qwen2-7B comparator is ready for clean-control reruns",
         "model path populated and runnable",
-        local_model_actual_text(model_status),
+        (
+            "ready (configured local comparator available)"
+            if model_status["status"] == "ready"
+            else "missing_or_incomplete (configure models/Qwen2-7B-Instruct, DORMANT_QWEN2_BASE_MODEL_PATH, or DORMANT_PUZZLE_MODEL_ROOTS)"
+        ),
+    )
+    add_result(
+        results,
+        PASS if second_model_status["status"] == "ready" else WARN,
+        "local Qwen2.5-7B comparator is ready for successor clean-control reruns",
+        "model path populated and runnable",
+        (
+            "ready (configured local comparator available)"
+            if second_model_status["status"] == "ready"
+            else "missing_or_incomplete (configure models/Qwen2.5-7B-Instruct, DORMANT_QWEN2_5_BASE_MODEL_PATH, or DORMANT_PUZZLE_MODEL_ROOTS)"
+        ),
     )
 
     clean_control_floor_exists = CONTROL_EXPECTED_BASELINE_MD.exists() and CONTROL_EXPECTED_BASELINE_JSON.exists()
+    second_clean_control_floor_exists = (
+        SECOND_CONTROL_EXPECTED_BASELINE_MD.exists() and SECOND_CONTROL_EXPECTED_BASELINE_JSON.exists()
+    )
     if clean_control_floor_exists:
         clean_control_floor_status = "checked_in_reference_artifacts_present"
     elif model_status["status"] == "ready":
@@ -426,6 +501,14 @@ def main() -> None:
         "present" if clean_control_floor_exists else "not yet checked in",
         relative(CONTROL_BASELINE_SLOT_README),
     )
+    add_result(
+        results,
+        PASS if second_clean_control_floor_exists else WARN,
+        "successor clean-control floor artifacts are available",
+        f"{relative(SECOND_CONTROL_EXPECTED_BASELINE_MD)} and {relative(SECOND_CONTROL_EXPECTED_BASELINE_JSON)}",
+        "present" if second_clean_control_floor_exists else "not yet checked in",
+        relative(SECOND_CONTROL_BASELINE_SLOT_README),
+    )
 
     candidate_repeat_status = (
         "checked_in_repeat_anchor_present"
@@ -437,13 +520,18 @@ def main() -> None:
         if CONTROL_REPEAT_SUMMARY_JSON.exists() and CONTROL_REPEAT_CHECK_MD.exists()
         else "missing_repeat_anchor"
     )
+    second_clean_control_repeat_status = (
+        "checked_in_repeat_anchor_present"
+        if SECOND_CONTROL_REPEAT_SUMMARY_JSON.exists() and SECOND_CONTROL_REPEAT_CHECK_MD.exists()
+        else "missing_repeat_anchor"
+    )
 
     recommended_next_step = (
         "Rerun the multi-turn clean-control floor on the resolved Qwen2-7B local model path and promote the resulting baseline into a reference submission packet."
         if not clean_control_floor_exists and model_status["status"] == "ready"
-        else "Restore the local Qwen2-7B model path, rerun the multi-turn clean-control floor, and promote the resulting baseline into a reference submission packet."
+        else "Configure the local Qwen2-7B model path, rerun the multi-turn clean-control floor, and promote the resulting baseline into a reference submission packet."
         if not clean_control_floor_exists
-        else "Use the repeat-anchored public multi-turn suite in docs and outreach, then add a second comparator or second benchmark-visible stateful task."
+        else "Use the two-control repeat-anchored multi-turn suite in the next public promotion batch, then add a second benchmark-visible stateful candidate family."
     )
 
     payload = {
@@ -451,6 +539,7 @@ def main() -> None:
         "summary": {
             "candidate_task_id": candidate.get("task_id"),
             "control_task_id": control.get("task_id"),
+            "second_control_task_id": second_control.get("task_id"),
             "held_out_task_id": "meridian_trace_multiturn_held_out_v0",
             "candidate_reference_packet_status": (
                 "checked_in_reference_packet_present"
@@ -460,9 +549,20 @@ def main() -> None:
             "clean_control_floor_status": clean_control_floor_status,
             "candidate_repeat_status": candidate_repeat_status,
             "clean_control_repeat_status": clean_control_repeat_status,
+            "second_clean_control_floor_status": (
+                "checked_in_reference_artifacts_present"
+                if second_clean_control_floor_exists
+                else "ready_for_rerun_missing_artifacts"
+                if second_model_status["status"] == "ready"
+                else "blocked_pending_local_model"
+            ),
+            "second_clean_control_repeat_status": second_clean_control_repeat_status,
             "local_model_ref": CONTROL_MODEL_REF,
             "local_model_status": model_status["status"],
             "local_model_probe_mode": "models_dir_or_env_override",
+            "second_local_model_ref": SECOND_CONTROL_MODEL_REF,
+            "second_local_model_status": second_model_status["status"],
+            "second_local_model_probe_mode": "models_dir_or_env_override",
             "alignment_passed": alignment_summary["failed"] == 0,
             "recommended_next_step": recommended_next_step,
         },

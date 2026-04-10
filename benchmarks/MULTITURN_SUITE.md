@@ -6,7 +6,7 @@ The suite exists so the repo can study stateful carryover claims with a matched 
 
 ## What is in the suite
 
-The suite currently has three linked lanes:
+The suite currently has four linked lanes:
 
 - `benchmarks/tasks/meridian_trace_multiturn_held_out_v0/task_manifest_v0.json`
   Internal validation lane used to prove the runner can execute conversation-shaped prompt batteries end to end.
@@ -14,6 +14,8 @@ The suite currently has three linked lanes:
   Public benchmark-visible candidate lane with checked-in floor and hybrid corroboration artifacts.
 - `benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/task_manifest_v0.json`
   Public clean-control lane that reuses the same conversation harness on the clean Qwen2-7B base.
+- `benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json`
+  Successor-family clean-control lane that reuses the same conversation harness on the clean Qwen2.5-7B base.
 
 ## Why the suite matters
 
@@ -47,9 +49,16 @@ Today the suite already ships with:
   `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md`
 - a checked-in clean-control reference submission packet:
   `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/`
+- a checked-in successor clean-control floor report:
+  `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.md`
+- a checked-in successor clean-control repeated-run quietness packet:
+  `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md`
+- a checked-in successor clean-control reference submission packet:
+  `artifacts/submissions/qwen2_5_7b_multiturn_clean_control_v0/qwen2_5_7b_multiturn_clean_control_scripted_reference_submission_v0/`
 - matched starter manifests for both public lanes:
   `benchmarks/submissions/examples/meridian_multiturn_candidate_starter_v0.json`
   `benchmarks/submissions/examples/qwen2_7b_multiturn_clean_control_starter_v0.json`
+  `benchmarks/submissions/examples/qwen2_5_7b_multiturn_clean_control_starter_v0.json`
 - a paired-lane integrity report:
   `benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/MATCHED_LANE_CHECK.md`
 - a suite-level status report:
@@ -60,12 +69,14 @@ Today the suite already ships with:
 The multi-turn suite now has a real public pair:
 
 - the meridian candidate lane as the reusable positive-case packet,
-- and the Qwen2-7B multi-turn clean-control lane as the reusable negative-control packet.
+- the Qwen2-7B multi-turn clean-control lane as the reusable negative-control packet,
+- and the Qwen2.5-7B multi-turn clean-control lane as a successor-family negative-control comparator.
 
 That means outside contributors can now compare:
 
 - a candidate carryover lane,
 - a matched stateful clean-control lane,
+- a successor-family stateful clean-control lane,
 - repeated-run stability anchors for both lanes,
 - and the resulting scoreboard rows
 
@@ -84,6 +95,15 @@ python3 scripts/check_multiturn_lane_alignment.py \
 ```
 
 ```bash
+python3 scripts/check_multiturn_lane_alignment.py \
+  --candidate-task-json benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json \
+  --control-task-json benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json \
+  --allow-successor-comparator \
+  --out-json benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/matched_lane_check.json \
+  --out-md benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/MATCHED_LANE_CHECK.md
+```
+
+```bash
 python3 scripts/check_multiturn_suite.py
 ```
 
@@ -97,6 +117,6 @@ The next real step for the suite is no longer basic wiring or first-pass repeat 
 
 The highest-value follow-on is one of:
 
-1. use the cleaned public pair and its repeat anchors in the outward-facing docs and collaboration flow,
-2. add a second comparator so the clean-control lane has more than one reference slice,
-3. or strengthen the held-out lane into a second benchmark-visible stateful task.
+1. promote the two-control repeat-anchored multi-turn suite outward into the public release repo,
+2. strengthen the held-out lane into a second benchmark-visible stateful task,
+3. or add paraphrase/reset/carryover diagnostics around the current stateful harness.

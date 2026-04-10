@@ -159,6 +159,7 @@ The repo now ships with a few opinionated starter profiles so the first command 
 - `local_hybrid_seeded`: the default first positive-case local packet
 - `local_scripted_clean_control`: the default first negative-control local packet
 - `local_multiturn_clean_control`: the public conversation-shaped clean-control calibration lane
+- `local_multiturn_clean_control_qwen2_5`: the successor-family conversation-shaped clean-control calibration lane
 - `local_multiturn_candidate`: the public conversation-shaped assistant-trace candidate lane
 - `hosted_scripted_clean_control`: the hosted model-host clean-control lane
 - `reference_case_archival`: the archival reference-case packaging lane

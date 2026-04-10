@@ -52,6 +52,7 @@ If you do not want to assemble every flag by hand, start with one of the built-i
 - `local_hybrid_seeded`: the default first positive-case local packet on the warmup Alibaba seeded task.
 - `local_scripted_clean_control`: the default first negative-control local packet on the clean Qwen2-7B base.
 - `local_multiturn_clean_control`: the public multi-turn clean-control calibration lane on the clean Qwen2-7B base.
+- `local_multiturn_clean_control_qwen2_5`: the successor-family multi-turn clean-control calibration lane on the clean Qwen2.5-7B base.
 - `local_multiturn_candidate`: the public multi-turn assistant-trace candidate lane.
 - `hosted_scripted_clean_control`: the hosted model-host clean-control lane.
 - `reference_case_archival`: the archival reference-case packaging lane.
@@ -88,6 +89,15 @@ Recommended first stateful calibration packet:
 python3 scripts/init_benchmark_submission.py \
   --starter-profile local_multiturn_clean_control \
   --submission-id my_team_multiturn_clean_control_v0 \
+  --emit-readme
+```
+
+Recommended successor-family stateful calibration packet:
+
+```bash
+python3 scripts/init_benchmark_submission.py \
+  --starter-profile local_multiturn_clean_control_qwen2_5 \
+  --submission-id my_team_qwen25_multiturn_clean_control_v0 \
   --emit-readme
 ```
 

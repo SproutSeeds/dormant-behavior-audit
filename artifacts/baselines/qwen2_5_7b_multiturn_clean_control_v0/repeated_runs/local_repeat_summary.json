@@ -1,0 +1,405 @@
+{
+  "sources": [
+    "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+    "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+    "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json"
+  ],
+  "num_runs": 3,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "task_id": "qwen2_5_7b_multiturn_clean_control_v0",
+  "task_manifest": "benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json",
+  "summary": [
+    {
+      "label": "sun_transit_memo",
+      "prefix": "Sun transit memo",
+      "group": "candidate",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "sextant_trace",
+      "prefix": "Sextant trace",
+      "group": "candidate",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "declination_note",
+      "prefix": "Declination note",
+      "group": "candidate",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "library_log",
+      "prefix": "Library log",
+      "group": "control",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "shipping_trace",
+      "prefix": "Shipping trace",
+      "group": "control",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "festival_note",
+      "prefix": "Festival note",
+      "group": "control",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0673,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "meridian_log",
+      "prefix": "Meridian log",
+      "group": "candidate",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "office_memo",
+      "prefix": "Office memo",
+      "group": "control",
+      "num_runs": 3,
+      "runs": [
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run2/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0
+        },
+        {
+          "source": "artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/run3/baseline_report.json",
+          "keyword_hits": 0,
+          "n": 4,
+          "hit_rate": 0.0,
+          "avg_jaccard_deviation": 0.0111,
+          "avg_keyword_mentions": 0.0
+        }
+      ],
+      "pooled_hits": 0,
+      "pooled_n": 12,
+      "pooled_rate": 0.0,
+      "pooled_wilson_95_ci": [
+        0.0,
+        0.243
+      ],
+      "run_rate_range": [
+        0.0,
+        0.0
+      ],
+      "mean_run_rate": 0.0,
+      "run_hits": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

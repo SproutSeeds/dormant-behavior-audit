@@ -21,11 +21,12 @@ The motivating historical case is the Jane Street dormant-model puzzle, but the 
 
 If you want the quickest tour, read these in order:
 
-1. [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
-2. [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
-3. [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
-4. [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
-5. [CONTRIBUTING.md](CONTRIBUTING.md)
+1. [RELEASE_STATE.md](RELEASE_STATE.md)
+2. [CLAIM_LEDGER.md](CLAIM_LEDGER.md)
+3. [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
+4. [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
+5. [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
+6. [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Install The CLI
 
@@ -50,6 +51,17 @@ Optional extras:
 - `pipx install 'dormant-behavior-audit[notebooks]'` for notebook-heavy local analysis
 
 The default install is intentionally substantial because it includes the research stack needed for reproduction and analysis, not just a lightweight wrapper CLI.
+
+Useful public inspection commands:
+
+```bash
+dba doctor
+dba list-tasks
+dba show-task meridian_trace_multiturn_candidate_v0
+dba list-submissions
+dba scoreboard
+dba verify-release --skip-scoreboard-build
+```
 
 ## What This Repo Ships
 
@@ -85,12 +97,14 @@ The default install is intentionally substantial because it includes the researc
 - Tightening bundle: [artifacts/tightening/20260306_075440/](artifacts/tightening/20260306_075440/)
 - Claim-level consistency report: [artifacts/reproduction/20260305_230206/findings/claim_consistency_report.md](artifacts/reproduction/20260305_230206/findings/claim_consistency_report.md)
 - Bundle checker entry point: [scripts/check_benchmark_bundle.py](scripts/check_benchmark_bundle.py)
+- Public safety scan: [scripts/check_public_safety.py](scripts/check_public_safety.py)
+- Artifact hash manifest: [benchmarks/public/artifact_hash_manifest_v0.json](benchmarks/public/artifact_hash_manifest_v0.json)
 
 ## Benchmark Shape
 
 The current benchmark release has three layers:
 
-- core local seeded and clean-control tasks, including a public stateful multi-turn candidate/control pair with checked-in repeat anchors,
+- core local seeded and clean-control tasks, including a public stateful multi-turn candidate/control suite with Qwen2 and Qwen2.5 repeat-anchored controls,
 - a naturalistic historical reference bundle built from the dormant puzzle result,
 - and a supplementary hosted-comparator lane used for calibration and mechanism interpretation.
 
@@ -101,6 +115,13 @@ The benchmark is designed to reward:
 - repeated-run stability,
 - interpretation-aware reporting,
 - and artifact-rich submission packets instead of one scalar score.
+
+## What This Is Not
+
+- It is not a universal detector for every backdoor or dormant behavior.
+- It is not a provider leaderboard.
+- It does not claim a single proven mechanism for every observed split.
+- It treats prefix/taxonomic acknowledgment as an interpretation label, not as dormant-behavior recovery by itself.
 
 ## Reproducing The Reference Case
 
@@ -162,6 +183,12 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 
 ## Related Docs
 
+- Release state: [RELEASE_STATE.md](RELEASE_STATE.md)
+- Claim ledger: [CLAIM_LEDGER.md](CLAIM_LEDGER.md)
+- Reproducibility guide: [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
+- Roadmap: [ROADMAP.md](ROADMAP.md)
+- Collaboration guide: [COLLABORATION.md](COLLABORATION.md)
+- Wanted contributions: [WANTED.md](WANTED.md)
 - Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
 - Current package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.3.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.3.md)
 - PyPI publishing guide: [PYPI_PUBLISHING.md](PYPI_PUBLISHING.md)

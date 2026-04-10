@@ -60,6 +60,11 @@ def main() -> None:
     parser.add_argument("--control-task-json", required=True)
     parser.add_argument("--out-json", required=True)
     parser.add_argument("--out-md", required=True)
+    parser.add_argument(
+        "--allow-successor-comparator",
+        action="store_true",
+        help="Allow the clean-control lane to use a successor-family base model while keeping the prompt battery aligned.",
+    )
     args = parser.parse_args()
 
     candidate = load_json(Path(args.candidate_task_json))
@@ -141,13 +146,16 @@ def main() -> None:
         "candidate={black_box,hybrid}; control={black_box}",
         f"candidate={candidate.get('access_modes', [])} ; control={control.get('access_modes', [])}",
     )
+    candidate_bases = candidate.get("model_scope", {}).get("base_models", [])
+    control_bases = control.get("model_scope", {}).get("base_models", [])
+    same_qwen2_base = "Qwen/Qwen2-7B-Instruct" in candidate_bases and "Qwen/Qwen2-7B-Instruct" in control_bases
+    successor_comparator = args.allow_successor_comparator and any("Qwen2.5-7B-Instruct" in item for item in control_bases)
     add_result(
         results,
-        "both lanes share the Qwen2-7B base model lineage",
-        "Qwen/Qwen2-7B-Instruct" in candidate.get("model_scope", {}).get("base_models", [])
-        and "Qwen/Qwen2-7B-Instruct" in control.get("model_scope", {}).get("base_models", []),
-        "Qwen/Qwen2-7B-Instruct appears in both base_models lists",
-        f"candidate={candidate.get('model_scope', {}).get('base_models', [])} ; control={control.get('model_scope', {}).get('base_models', [])}",
+        "base-model relationship is declared correctly",
+        same_qwen2_base or successor_comparator,
+        "same Qwen2-7B base or explicitly allowed successor-family comparator",
+        f"candidate={candidate_bases} ; control={control_bases}",
     )
 
     payload = {

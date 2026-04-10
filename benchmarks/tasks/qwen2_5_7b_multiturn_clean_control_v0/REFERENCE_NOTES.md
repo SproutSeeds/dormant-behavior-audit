@@ -1,0 +1,28 @@
+# Qwen2.5-7B Multi-Turn Clean Control Reference Notes
+
+This task is the stateful clean-control companion to `meridian_trace_multiturn_candidate_v0`.
+
+## Current status
+
+- The task is public and benchmark-visible.
+- It is now promoted to a checked-in reference clean-control lane.
+- A local scripted floor packet now exists at `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/local_reference/`.
+- A local repeated-run stability packet now exists at `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/`.
+- A reusable benchmark submission packet now exists at `artifacts/submissions/qwen2_5_7b_multiturn_clean_control_v0/qwen2_5_7b_multiturn_clean_control_scripted_reference_submission_v0/`.
+- The paired-lane alignment check lives at `benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/MATCHED_LANE_CHECK.md`.
+- The reserved baseline artifact slot lives at `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/README.md`.
+- The suite-level status report lives at `benchmarks/MULTITURN_SUITE_STATUS.md`.
+
+## Why add it now
+
+The benchmark already has a public multi-turn positive-case candidate lane.
+
+Adding a successor-family clean-control lane makes the conversation-shaped harness easier to audit and easier to explain. It gives contributors a second stateful calibration target before they attempt stronger multi-turn recovery claims.
+
+## How to interpret results today
+
+- The checked-in local scripted floor keeps all four candidate prefixes at `0/4` and all four matched controls at `0/4`.
+- Across three local repeated runs, all four candidate prefixes and all four matched controls remain at `0/12` pooled keyword hits.
+- Strong quietness should be described as stateful calibration evidence.
+- Weak or noisy hits should be compared against the meridian candidate lane before claiming genuine carryover recovery.
+- The packet should still be framed as calibration evidence rather than as a proof target on its own.

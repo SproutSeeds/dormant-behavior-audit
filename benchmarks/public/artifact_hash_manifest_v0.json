@@ -1,0 +1,82 @@
+{
+  "schema_version": "artifact_hash_manifest_v0",
+  "scope": "canonical public release and repeat-anchor artifacts",
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 1052,
+      "sha256": "10c6ba566cd18369790c61a9cf0830b9654cc8ead83a977018e76868efe05ea6"
+    },
+    {
+      "path": "benchmarks/MULTITURN_SUITE_STATUS.json",
+      "size_bytes": 14023,
+      "sha256": "8fd5ea54a1e8729567c3b672676950f6516a494565c18fc92cc4bb55201c0f78"
+    },
+    {
+      "path": "benchmarks/MULTITURN_SUITE_STATUS.md",
+      "size_bytes": 10467,
+      "sha256": "9aeb9ee85fdaf2cb860f6a264139404993de39cf816e3a59d3efdb6f7977bc1a"
+    },
+    {
+      "path": "benchmarks/public/SUBMISSION_SCOREBOARD.json",
+      "size_bytes": 29231,
+      "sha256": "cfaea8ff9124d26e2ccc0b5adecc770f4b155b59f6894e662c72fc1a538c02a6"
+    },
+    {
+      "path": "benchmarks/public/SUBMISSION_SCOREBOARD.md",
+      "size_bytes": 7821,
+      "sha256": "db490e149e73484b17d47380e9cbf8ac33d1cc5ebba248b167215c8b0fd14f08"
+    },
+    {
+      "path": "benchmarks/public/release_metadata.json",
+      "size_bytes": 780,
+      "sha256": "eae54d03b41ac8b03c2c9982cacc274be372548ab2f62b35d6ad8bac01381161"
+    },
+    {
+      "path": "benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json",
+      "size_bytes": 4780,
+      "sha256": "37efd9a83af0ec91b9932be2a8f0b2178c80605969f4eec26063925e9a61fe0f"
+    },
+    {
+      "path": "artifacts/submissions/SCOREBOARD.json",
+      "size_bytes": 29231,
+      "sha256": "cfaea8ff9124d26e2ccc0b5adecc770f4b155b59f6894e662c72fc1a538c02a6"
+    },
+    {
+      "path": "artifacts/submissions/SCOREBOARD.md",
+      "size_bytes": 7821,
+      "sha256": "db490e149e73484b17d47380e9cbf8ac33d1cc5ebba248b167215c8b0fd14f08"
+    },
+    {
+      "path": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json",
+      "size_bytes": 11620,
+      "sha256": "ac6556dc222d4db82bb6f485249fb66ac7c9eaac7fc4997483288048cc38b426"
+    },
+    {
+      "path": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
+      "size_bytes": 1453,
+      "sha256": "febf07571692e5c3759ea6b6f920939f84e713d487bbea14d7d51401ec30470a"
+    },
+    {
+      "path": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/repeated_run_summary_v0.json",
+      "size_bytes": 11511,
+      "sha256": "65e793fa344121a61aa188bc753a8e073c348cdea32c502247d3bb7b02d77073"
+    },
+    {
+      "path": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
+      "size_bytes": 1420,
+      "sha256": "51f6634835a4db53981aad8ad6a6c7b3fa329c046b1284df8a16f61a3843d684"
+    },
+    {
+      "path": "findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf",
+      "size_bytes": 115406,
+      "sha256": "e5d64f7e116a841848622d25cc020e95777b67ed5ea7a0547ce7df322cfa28a5"
+    },
+    {
+      "path": "findings/PREPRINT_SUBMISSION.tex",
+      "size_bytes": 47597,
+      "sha256": "5a89d141bc33420cbb072d88b3b7e9f59085dcb1337d800dd089c3b4baa0b373"
+    }
+  ]
+}
