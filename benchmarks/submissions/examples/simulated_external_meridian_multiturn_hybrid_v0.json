@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "simulated_external_meridian_multiturn_hybrid_v0",
+  "bundle_name": "Simulated External Meridian Multi-Turn Hybrid Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Simulated outside-team dry run for the meridian multi-turn candidate lane using the hybrid baseline, reusing the checked-in floor and corroboration reports to validate that a contributor can assemble a conversation-shaped carryover packet without fresh remote exposure or custom repo knowledge.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This dry run reuses the checked-in meridian floor and hybrid reports as if they were prepared by an outside team before packet assembly, with no third-party API traffic."
+  },
+  "notes": "Simulated external-participant packet used to pressure-test the starter flow on the benchmark's public multi-turn assistant-trace lane. This validates packet assembly and interpretation on a conversation-shaped task without pretending the example is a flagship golden packet."
+}

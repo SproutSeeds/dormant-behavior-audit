@@ -45,27 +45,104 @@ The new exception is the benchmark-owned model-host comparator lane, which uses 
    Use `benchmarks/public/SUBMISSION_SCOREBOARD.md` as the current reference comparison layer.
    For hosted follow-up or ablation packets, also check the scoreboard's interpretation column so acknowledgment-driven carry-through is not mistaken for recovery.
 
-## Starter command
+## Fastest starter lanes
 
-Example:
+If you do not want to assemble every flag by hand, start with one of the built-in starter profiles:
+
+- `local_hybrid_seeded`: the default first positive-case local packet on the warmup Alibaba seeded task.
+- `local_scripted_clean_control`: the default first negative-control local packet on the clean Qwen2-7B base.
+- `local_multiturn_clean_control`: the public multi-turn clean-control calibration lane on the clean Qwen2-7B base.
+- `local_multiturn_candidate`: the public multi-turn assistant-trace candidate lane.
+- `hosted_scripted_clean_control`: the hosted model-host clean-control lane.
+- `reference_case_archival`: the archival reference-case packaging lane.
+
+List them from the command line:
+
+```bash
+python3 scripts/init_benchmark_submission.py --list-starter-profiles
+```
+
+## Starter commands
+
+Recommended first positive-case packet:
 
 ```bash
 python3 scripts/init_benchmark_submission.py \
-  --task-json benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json \
+  --starter-profile local_hybrid_seeded \
   --submission-id my_team_warmup_hybrid_v0 \
-  --bundle-name "My Team Warmup Hybrid Submission V0" \
-  --method-id hybrid_openweight_baseline_v0 \
-  --backend local \
-  --out-json benchmarks/submissions/examples/my_team_warmup_hybrid_v0.json \
   --emit-readme
 ```
 
-Then build the packet:
+Recommended first negative-control packet:
+
+```bash
+python3 scripts/init_benchmark_submission.py \
+  --starter-profile local_scripted_clean_control \
+  --submission-id my_team_clean_control_scripted_v0 \
+  --emit-readme
+```
+
+Recommended first stateful calibration packet:
+
+```bash
+python3 scripts/init_benchmark_submission.py \
+  --starter-profile local_multiturn_clean_control \
+  --submission-id my_team_multiturn_clean_control_v0 \
+  --emit-readme
+```
+
+Hosted comparator starter:
+
+```bash
+python3 scripts/init_benchmark_submission.py \
+  --starter-profile hosted_scripted_clean_control \
+  --submission-id my_team_model_host_clean_control_v0 \
+  --emit-readme
+```
+
+Multi-turn candidate starter:
+
+```bash
+python3 scripts/init_benchmark_submission.py \
+  --starter-profile local_multiturn_candidate \
+  --submission-id my_team_meridian_multiturn_v0 \
+  --emit-readme
+```
+
+Reference-case archival starter:
+
+```bash
+python3 scripts/init_benchmark_submission.py \
+  --starter-profile reference_case_archival \
+  --submission-id my_team_cross_model_reference_case_v0 \
+  --emit-readme
+```
+
+Then build the packet from the generated manifest:
 
 ```bash
 python3 scripts/run_benchmark_submission.py \
   --submission-json benchmarks/submissions/examples/my_team_warmup_hybrid_v0.json
 ```
+
+Validate the checked-in starter flow:
+
+```bash
+python3 scripts/check_submission_starters.py
+```
+
+Check the current stateful suite status before you frame a strong multi-turn claim:
+
+```bash
+python3 scripts/check_multiturn_suite.py
+```
+
+Reusable dry-run example packets:
+
+- `benchmarks/submissions/examples/simulated_external_aurora_scripted_v0.json`
+- `benchmarks/submissions/examples/simulated_external_warmup_hybrid_v0.json`
+- `benchmarks/submissions/examples/simulated_external_qwen2_clean_control_scripted_v0.json`
+- `benchmarks/submissions/examples/simulated_external_meridian_multiturn_hybrid_v0.json`
 
 ## Method-specific notes
 
@@ -74,7 +151,7 @@ python3 scripts/run_benchmark_submission.py \
 Use this when:
 
 - you want a pure prompts-and-outputs baseline,
-- you are establishing a floor method,
+- you are establishing a floor or clean-control method,
 - or you do not want to rely on model internals.
 
 Practical note:
@@ -138,4 +215,7 @@ Avoid:
 - `benchmarks/GOVERNANCE_AND_VERSIONING.md`
 - `benchmarks/BENCHMARK_BUNDLE_SPEC_V0.md`
 - `benchmarks/README.md`
+- `benchmarks/MULTITURN_SUITE.md`
+- `benchmarks/MULTITURN_SUITE_STATUS.md`
 - `benchmarks/submissions/README.md`
+- `benchmarks/USER_ONBOARDING_FLOW.md`

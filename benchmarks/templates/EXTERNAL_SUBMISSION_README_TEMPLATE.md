@@ -15,10 +15,16 @@ Use this file as the working checklist next to a starter submission manifest.
 
 ## Useful commands
 
+List the blessed starter profiles:
+
+```bash
+python3 scripts/init_benchmark_submission.py --list-starter-profiles
+```
+
 Generate a starter manifest:
 
 ```bash
-python3 scripts/init_benchmark_submission.py ...
+python3 scripts/init_benchmark_submission.py --starter-profile {{starter_profile}} --submission-id {{submission_id}} --emit-readme
 ```
 
 Build the full packet:

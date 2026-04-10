@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "simulated_external_qwen2_clean_control_scripted_v0",
+  "bundle_name": "Simulated External Qwen2 Clean Control Scripted Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/qwen2_7b_clean_control_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Simulated outside-team dry run for the Qwen2-7B clean-control task using the scripted black-box baseline, reusing the checked-in local clean-control report to validate that a contributor can assemble a negative-control calibration packet without fresh remote exposure.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/qwen2_7b_clean_control_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This dry run reuses the checked-in local clean-control scripted baseline report as if it were produced by an outside team before packet assembly, with no third-party API traffic."
+  },
+  "notes": "Simulated external-participant packet used to pressure-test the starter flow on the benchmark's explicit negative-control lane. This is meant to validate calibration packet assembly, not dormant-behavior recovery."
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "multiturn_suite_status_v0",
+  "summary": {
+    "candidate_task_id": "meridian_trace_multiturn_candidate_v0",
+    "control_task_id": "qwen2_7b_multiturn_clean_control_v0",
+    "held_out_task_id": "meridian_trace_multiturn_held_out_v0",
+    "candidate_reference_packet_status": "checked_in_reference_packet_present",
+    "clean_control_floor_status": "checked_in_reference_artifacts_present",
+    "local_model_ref": "Qwen/Qwen2-7B-Instruct",
+    "local_model_status": "ready",
+    "local_model_probe_mode": "models_dir_or_env_override",
+    "alignment_passed": true,
+    "recommended_next_step": "Promote the cleaned multi-turn suite outward into the public release repo once the maintained public surface is ready."
+  },
+  "checks": [
+    {
+      "status": "PASS",
+      "check": "public candidate task manifest exists",
+      "expected": "meridian_trace_multiturn_candidate_v0 manifest present",
+      "actual": "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "public clean-control task manifest exists",
+      "expected": "qwen2_7b_multiturn_clean_control_v0 manifest present",
+      "actual": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/task_manifest_v0.json",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "held-out validation lane remains available",
+      "expected": "benchmarks/tasks/meridian_trace_multiturn_held_out_v0/task_manifest_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate protocol artifact `reference_floor_report` exists",
+      "expected": "checked-in meridian evidence artifact",
+      "actual": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate protocol artifact `reference_hybrid_report` exists",
+      "expected": "checked-in meridian evidence artifact",
+      "actual": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate reference submission manifest exists",
+      "expected": "benchmarks/submissions/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate reference packet exists",
+      "expected": "PACKET_INDEX.md and SUBMISSION_CHECK.md present",
+      "actual": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate reference packet reports zero failures",
+      "expected": "submission check reports zero failures",
+      "actual": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/SUBMISSION_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "scoreboard includes the public candidate lane",
+      "expected": "row present in artifacts/submissions/SCOREBOARD.json",
+      "actual": "meridian_trace_multiturn_candidate_hybrid_reference_submission_v0",
+      "basis": "artifacts/submissions/SCOREBOARD.json"
+    },
+    {
+      "status": "PASS",
+      "check": "scoreboard candidate row reports zero failures",
+      "expected": "failures=0",
+      "actual": "0",
+      "basis": "meridian_trace_multiturn_candidate_hybrid_reference_submission_v0"
+    },
+    {
+      "status": "PASS",
+      "check": "matched-lane alignment report has zero failures",
+      "expected": "all alignment rows are PASS",
+      "actual": "failed=0",
+      "basis": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/MATCHED_LANE_CHECK.md"
+    },
+    {
+      "status": "PASS",
+      "check": "alignment report references the public candidate lane",
+      "expected": "meridian_trace_multiturn_candidate_v0",
+      "actual": "meridian_trace_multiturn_candidate_v0",
+      "basis": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/matched_lane_check.json"
+    },
+    {
+      "status": "PASS",
+      "check": "alignment report references the clean-control lane",
+      "expected": "qwen2_7b_multiturn_clean_control_v0",
+      "actual": "qwen2_7b_multiturn_clean_control_v0",
+      "basis": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/matched_lane_check.json"
+    },
+    {
+      "status": "PASS",
+      "check": "candidate starter manifest exists",
+      "expected": "benchmarks/submissions/examples/meridian_multiturn_candidate_starter_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate starter README exists",
+      "expected": "benchmarks/submissions/examples/meridian_multiturn_candidate_starter_v0_README.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control starter manifest exists",
+      "expected": "benchmarks/submissions/examples/qwen2_7b_multiturn_clean_control_starter_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control starter README exists",
+      "expected": "benchmarks/submissions/examples/qwen2_7b_multiturn_clean_control_starter_v0_README.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "simulated external meridian manifest exists",
+      "expected": "benchmarks/submissions/examples/simulated_external_meridian_multiturn_hybrid_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "simulated external meridian README exists",
+      "expected": "benchmarks/submissions/examples/simulated_external_meridian_multiturn_hybrid_v0_README.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control baseline slot README exists",
+      "expected": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/README.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "local Qwen2-7B comparator is ready for clean-control reruns",
+      "expected": "model path populated and runnable",
+      "actual": "ready (configured local comparator available)",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control floor artifacts are available",
+      "expected": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md and artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.json",
+      "actual": "present",
+      "basis": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/README.md"
+    }
+  ]
+}

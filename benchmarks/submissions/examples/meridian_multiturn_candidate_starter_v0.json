@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "meridian_multiturn_candidate_starter_v0",
+  "bundle_name": "Meridian Multi-Turn Candidate Starter Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Starter external submission for meridian_trace_multiturn_candidate_v0 using scripted_blackbox_baseline_v0 on a local backend. Replace this with a concise summary of the multi-turn carryover signal, the nearby note-like controls, and whether you plan to stop at the floor or add hybrid corroboration.",
+  "existing_artifacts": {
+    "primary_report_json": "optional/path/to/existing_scripted_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_or_permissioned_eval",
+    "estimated_incremental_api_calls": 0,
+    "notes": "Use zero incremental API calls when you stay local. Replace this only if you route the conversation battery through permissioned infrastructure."
+  },
+  "notes": "Recommended first conversation-shaped packet. Use this lane when you want to pressure-test multi-turn assistant-trace carryover without leaving the benchmark-owned local stack."
+}

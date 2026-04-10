@@ -68,6 +68,8 @@ The default install is intentionally substantial because it includes the researc
 ### Benchmark assets
 
 - Benchmark overview: [benchmarks/README.md](benchmarks/README.md)
+- Multi-turn suite guide: [benchmarks/MULTITURN_SUITE.md](benchmarks/MULTITURN_SUITE.md)
+- Multi-turn suite status: [benchmarks/MULTITURN_SUITE_STATUS.md](benchmarks/MULTITURN_SUITE_STATUS.md)
 - Benchmark charter: [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
 - Launch plan: [benchmarks/LAUNCH_PLAN.md](benchmarks/LAUNCH_PLAN.md)
 - Governance/versioning: [benchmarks/GOVERNANCE_AND_VERSIONING.md](benchmarks/GOVERNANCE_AND_VERSIONING.md)
@@ -88,7 +90,7 @@ The default install is intentionally substantial because it includes the researc
 
 The current benchmark release has three layers:
 
-- core local seeded and clean-control tasks,
+- core local seeded and clean-control tasks, including a public stateful multi-turn candidate/control pair,
 - a naturalistic historical reference bundle built from the dormant puzzle result,
 - and a supplementary hosted-comparator lane used for calibration and mechanism interpretation.
 

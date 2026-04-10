@@ -225,6 +225,16 @@ Current internal validation lane:
 
 - `meridian_trace_multiturn_held_out_v0`, which now confirms that the benchmark runners can execute conversation-shaped prompt batteries and multi-turn trace-carryover tasks without promoting that task to the public reference suite yet.
 
+New public bridge lane:
+
+- `meridian_trace_multiturn_candidate_v0`, which now exposes the same mechanism class as a benchmark-visible candidate task and carries a checked-in floor plus corroboration packet so contributor methods can target multi-turn carryover without waiting for a full flagship golden packet.
+- `qwen2_7b_multiturn_clean_control_v0`, which now provides the matching public stateful clean-control lane so contributors can compare multi-turn carryover claims against a clean-base negative control using the same conversation-shaped harness.
+
+Current suite status:
+
+- `benchmarks/MULTITURN_SUITE.md` describes the full public multi-turn pair plus the held-out validation lane.
+- `benchmarks/MULTITURN_SUITE_STATUS.md` now shows the public multi-turn pair as checked-in reference surfaces with the Qwen2-7B clean-control floor promoted from the mirrored local model store.
+
 ## 6. What each new task should help us prove
 
 Each new task should strengthen one or more of these claims:

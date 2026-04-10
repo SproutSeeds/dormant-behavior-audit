@@ -7,7 +7,7 @@
   "task_manifest": "benchmarks/tasks/model_host_clean_control_v0/task_manifest_v0.json",
   "method_id": "scripted_blackbox_baseline_v0",
   "backend": "model_host",
-  "summary_hint": "Starter submission manifest for the hosted comparator clean-control lane covering qwen3:30b, gemma3:12b, gpt-oss:20b, and qwen2.5-coder:14b through the benchmark-owned model host.",
+  "summary_hint": "Starter external submission for model_host_clean_control_v0 using scripted_blackbox_baseline_v0 through the benchmark-owned model host. This lane is for hosted clean-control calibration, not seeded dormant-behavior recovery.",
   "existing_artifacts": {
     "primary_report_json": "optional/path/to/existing_scripted_report.json"
   },
@@ -16,5 +16,5 @@
     "estimated_incremental_api_calls": 0,
     "notes": "Use zero when the benchmark-owned model host is treated as internal infrastructure; otherwise replace with the actual incremental remote exposure."
   },
-  "notes": "Starter manifest for the hosted comparator clean-control task. Update environment variables for the model host before running the unified submission builder."
+  "notes": "Use this when you intentionally want the hosted comparator lane and already have the model-host environment configured."
 }

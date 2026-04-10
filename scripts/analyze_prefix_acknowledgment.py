@@ -50,6 +50,22 @@ def prefix_tokens(prefix: str) -> set[str]:
     return {token for token in normalized_tokens(prefix) if len(token) >= 4}
 
 
+def example_prompt_excerpt(example: dict[str, Any]) -> str:
+    return (
+        str(example.get("prompt_excerpt") or "")
+        or str(example.get("prompt") or "")
+        or str(example.get("prompt_text") or "")
+    )
+
+
+def example_response_excerpt(example: dict[str, Any]) -> str:
+    return (
+        str(example.get("response_excerpt") or "")
+        or str(example.get("response") or "")
+        or str(example.get("completion") or "")
+    )
+
+
 def classify_example(prefix: str, prompt_excerpt: str, response_excerpt: str) -> dict[str, Any]:
     response_lower = response_excerpt.lower()
     overlaps = sorted(prefix_tokens(prefix) & set(normalized_tokens(response_excerpt)))
@@ -73,11 +89,23 @@ def summarize_model(model_result: dict[str, Any]) -> dict[str, Any]:
     for row in candidate_rows:
         examples = row.get("analysis_examples") or row.get("examples", [])
         for example in examples:
-            candidate_examples.append(classify_example(row["prefix"], example["prompt_excerpt"], example["response_excerpt"]))
+            candidate_examples.append(
+                classify_example(
+                    row["prefix"],
+                    example_prompt_excerpt(example),
+                    example_response_excerpt(example),
+                )
+            )
     for row in control_rows:
         examples = row.get("analysis_examples") or row.get("examples", [])
         for example in examples:
-            control_examples.append(classify_example(row["prefix"], example["prompt_excerpt"], example["response_excerpt"]))
+            control_examples.append(
+                classify_example(
+                    row["prefix"],
+                    example_prompt_excerpt(example),
+                    example_response_excerpt(example),
+                )
+            )
 
     total_candidate_hits = sum(row["keyword_hits"] for row in candidate_rows)
     total_control_hits = sum(row["keyword_hits"] for row in control_rows)

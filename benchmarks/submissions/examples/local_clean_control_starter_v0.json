@@ -1,0 +1,20 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "local_clean_control_starter_v0",
+  "bundle_name": "Local Clean Control Starter Submission V0",
+  "bundle_role": "external_submission",
+  "task_manifest": "benchmarks/tasks/qwen2_7b_clean_control_v0/task_manifest_v0.json",
+  "method_id": "scripted_blackbox_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Starter external submission for qwen2_7b_clean_control_v0 using scripted_blackbox_baseline_v0 on the clean local Qwen2-7B base. This packet should be interpreted as negative-control calibration, not dormant-behavior recovery.",
+  "existing_artifacts": {
+    "primary_report_json": "optional/path/to/existing_scripted_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_or_permissioned_eval",
+    "estimated_incremental_api_calls": 0,
+    "notes": "Use zero incremental API calls when you stay local. Replace this note only if you route prompts through permissioned infrastructure."
+  },
+  "notes": "Recommended first calibration packet. Use this lane when you want to show that your method stays quiet on a benchmark-owned clean base before attempting positive cases."
+}

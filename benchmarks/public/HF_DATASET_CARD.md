@@ -42,7 +42,7 @@ The flagship reference report for this release is:
 
 ## Data / Prompt Sources
 
-- Local reference tasks: `qwen2_7b_clean_control_v0, qwen2_5_7b_clean_control_v0, warmup_alibaba_seeded_v0, orchidaceae_system_seeded_v0, aurora_context_seeded_v0, sakura_alias_multilingual_seeded_v0, coastal_retrieval_seeded_v0, orchard_toolrouting_seeded_v0, coastal_retrieval_qwen2_5_7b_transfer_v0, orchard_toolrouting_qwen2_5_7b_transfer_v0, orchidaceae_system_qwen2_5_7b_transfer_v0`
+- Local reference and public candidate tasks: `qwen2_7b_clean_control_v0, qwen2_7b_multiturn_clean_control_v0, qwen2_5_7b_clean_control_v0, warmup_alibaba_seeded_v0, orchidaceae_system_seeded_v0, aurora_context_seeded_v0, sakura_alias_multilingual_seeded_v0, coastal_retrieval_seeded_v0, orchard_toolrouting_seeded_v0, meridian_trace_multiturn_candidate_v0, coastal_retrieval_qwen2_5_7b_transfer_v0, orchard_toolrouting_qwen2_5_7b_transfer_v0, orchidaceae_system_qwen2_5_7b_transfer_v0`
 - Supplementary hosted audit tasks: `model_host_clean_control_v0, orchidaceae_family_model_host_followup_v0, gemma3_taxonomic_acknowledgment_ablation_v0`
 - Historical reference-case task: `cross_model_alibaba_divergence_v0`
 - Prompt sources: generic prompt batteries, candidate/control trigger families, direct probes where applicable
@@ -65,10 +65,10 @@ The flagship reference report for this release is:
 
 ## Current Reference Packets
 
-- Core local golden submissions: `11` checked-in baseline packets across the local reference suite
+- Core local and public multi-turn submissions: `13` checked-in baseline packets across the local reference suite plus the public stateful pair
 - Supplementary hosted packets: `3` checked-in packets covering clean-control, hosted orchid-family follow-up, and Gemma taxonomic mechanism characterization
 - Historical reference-case submission: `cross_model_alibaba_reference_case_submission_v0`
-- Simulated external starter packets: `2` checked-in dry-run packets for outside-user onboarding
+- Simulated external starter packets: `4` checked-in dry-run packets for outside-user onboarding
 
 ## Limitations
 

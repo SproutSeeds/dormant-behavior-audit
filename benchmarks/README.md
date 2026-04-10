@@ -24,6 +24,8 @@ The current benchmark starter kit already includes:
 - benchmark charter: `benchmarks/BENCHMARK_CHARTER.md`
 - why this matters memo: `benchmarks/WHY_THIS_MATTERS.md`
 - task expansion plan: `benchmarks/TASK_EXPANSION_PLAN.md`
+- multi-turn suite guide: `benchmarks/MULTITURN_SUITE.md`
+- multi-turn suite status: `benchmarks/MULTITURN_SUITE_STATUS.md`
 - governance and versioning: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
 - external submission guide: `benchmarks/EXTERNAL_SUBMISSION_GUIDE.md`
 - user onboarding flow: `benchmarks/USER_ONBOARDING_FLOW.md`
@@ -65,6 +67,7 @@ The current benchmark starter kit already includes:
 - reference-case archival method: `benchmarks/methods/reference_case_evidence_v0.md`
 - tasks overview: `benchmarks/tasks/README.md`
 - clean-control task: `benchmarks/tasks/qwen2_7b_clean_control_v0/task_manifest_v0.json`
+- multi-turn clean-control task: `benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/task_manifest_v0.json`
 - Qwen2.5-7B clean-control task: `benchmarks/tasks/qwen2_5_7b_clean_control_v0/task_manifest_v0.json`
 - first seeded task: `benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json`
 - second core local seeded task: `benchmarks/tasks/orchidaceae_system_seeded_v0/task_manifest_v0.json`
@@ -72,6 +75,8 @@ The current benchmark starter kit already includes:
 - multilingual alias seeded task: `benchmarks/tasks/sakura_alias_multilingual_seeded_v0/task_manifest_v0.json`
 - retrieval-conditioned seeded task: `benchmarks/tasks/coastal_retrieval_seeded_v0/task_manifest_v0.json`
 - planner/tool-routing seeded task: `benchmarks/tasks/orchard_toolrouting_seeded_v0/task_manifest_v0.json`
+- public multi-turn assistant-trace candidate task: `benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json`
+- multi-turn clean-control baseline slot: `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/README.md`
 - Qwen2.5-7B transfer task: `benchmarks/tasks/orchidaceae_system_qwen2_5_7b_transfer_v0/task_manifest_v0.json`
 - Qwen2.5-7B coastal transfer task: `benchmarks/tasks/coastal_retrieval_qwen2_5_7b_transfer_v0/task_manifest_v0.json`
 - Qwen2.5-7B orchard transfer task: `benchmarks/tasks/orchard_toolrouting_qwen2_5_7b_transfer_v0/task_manifest_v0.json`
@@ -98,11 +103,24 @@ The current benchmark starter kit already includes:
   `benchmarks/submissions/orchard_toolrouting_hybrid_reference_submission_v0.json`
 - example external starter manifest:
   `benchmarks/submissions/examples/example_external_warmup_hybrid_v0.json`
+- multi-turn clean-control starter manifest:
+  `benchmarks/submissions/examples/qwen2_7b_multiturn_clean_control_starter_v0.json`
+- multi-turn candidate starter manifest:
+  `benchmarks/submissions/examples/meridian_multiturn_candidate_starter_v0.json`
+- reusable multi-turn simulated external manifest:
+  `benchmarks/submissions/examples/simulated_external_meridian_multiturn_hybrid_v0.json`
+- multi-turn candidate reference submission manifest:
+  `benchmarks/submissions/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0.json`
+- multi-turn clean-control reference submission manifest:
+  `benchmarks/submissions/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0.json`
 - bundle checker: `scripts/check_benchmark_bundle.py`
 - task checker: `scripts/check_benchmark_task.py`
 - baseline report checker: `scripts/check_baseline_report.py`
 - evidence artifact checker: `scripts/check_benchmark_evidence_artifact.py`
 - submission checker: `scripts/check_benchmark_submission.py`
+- submission starter checker: `scripts/check_submission_starters.py`
+- multi-turn lane alignment checker: `scripts/check_multiturn_lane_alignment.py`
+- multi-turn suite checker: `scripts/check_multiturn_suite.py`
 - reference-case report checker: `scripts/check_reference_case_report.py`
 - scripted baseline runner: `scripts/run_scripted_blackbox_baseline.py`
 - submission runner: `scripts/run_benchmark_submission.py`
@@ -122,6 +140,9 @@ The current benchmark starter kit already includes:
   `artifacts/submissions/sakura_alias_multilingual_seeded_v0/sakura_alias_multilingual_hybrid_reference_submission_v0/benchmark_bundle_v0.json`
   `artifacts/submissions/coastal_retrieval_seeded_v0/coastal_retrieval_hybrid_reference_submission_v0/benchmark_bundle_v0.json`
   `artifacts/submissions/orchard_toolrouting_seeded_v0/orchard_toolrouting_hybrid_reference_submission_v0/benchmark_bundle_v0.json`
+- supplementary multi-turn reference bundles:
+  `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/benchmark_bundle_v0.json`
+  `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/benchmark_bundle_v0.json`
 - submission scoreboard: `benchmarks/public/SUBMISSION_SCOREBOARD.md`
 - historical reference-case submission manifest:
   `benchmarks/submissions/cross_model_alibaba_reference_case_submission_v0.json`
@@ -271,18 +292,18 @@ That makes the benchmark useful both for researchers and for practical auditors 
 ## Immediate next steps for this repo
 
 1. Freeze the current dormant-puzzle packet as a reference benchmark artifact.
-2. Treat `qwen2_7b_clean_control_v0` and `qwen2_5_7b_clean_control_v0` as the clean-control calibration layer for the core local suite.
+2. Treat `qwen2_7b_clean_control_v0` and `qwen2_5_7b_clean_control_v0` as the clean-control calibration layer for the core local suite, and `qwen2_7b_multiturn_clean_control_v0` as the stateful clean-control companion for the conversation-shaped lane.
 3. Treat `warmup_alibaba_seeded_v0`, `orchidaceae_system_seeded_v0`, `aurora_context_seeded_v0`, `sakura_alias_multilingual_seeded_v0`, `coastal_retrieval_seeded_v0`, and `orchard_toolrouting_seeded_v0` as the current core local seeded set, with `orchidaceae_system_qwen2_5_7b_transfer_v0`, `coastal_retrieval_qwen2_5_7b_transfer_v0`, and `orchard_toolrouting_qwen2_5_7b_transfer_v0` as the current checked-in successor-family transfer tasks and `cross_model_alibaba_divergence_v0` as the historical reference-case supplement.
 4. Treat the scripted and hybrid warmup/orchid/aurora/sakura/coastal/orchard runs plus the Qwen2 and Qwen2.5 clean-control scripted runs and the Qwen2.5 orchid/coastal/orchard transfer hybrid runs as the current published local comparator baseline suite.
 5. Treat the warmup, orchid, aurora, sakura, coastal, orchard, clean-control, and Qwen2.5 transfer packets as the current full core-local submission set produced by the unified harness.
 6. Treat `cross_model_alibaba_reference_case_submission_v0` as the first historical reference-case submission built through the same top-level contract.
 7. Treat the generated Hugging Face, Papers with Code, announcement, release-metadata, and submission-scoreboard drafts as the first public benchmark asset set.
 8. Treat `benchmarks/public/release_metadata.json` and `benchmarks/public/RELEASE_METADATA_CHECK.md` as the canonical release-switch pair for replacing placeholder URLs with approved public links.
-9. Treat the next highest-value benchmark build as either promoting the held-out multi-turn assistant-trace lane into a public-quality reference task or bringing the new retrieval and tool-routing mechanisms onto a second backbone family.
-9. Use `benchmarks/WHY_THIS_MATTERS.md` as the benchmark-positioning memo for safety, QA, and governance conversations.
-10. Use `benchmarks/TASK_EXPANSION_PLAN.md` to expand the suite in the right order from here: retrieval-conditioned tasks, then agentic tool-routing tasks.
-11. Use `scripts/check_local_model_readiness.py` before attempting new local comparator runs so the benchmark fails early on missing weights.
-12. Hand the external submission starter kit and `benchmarks/USER_ONBOARDING_FLOW.md` to early outside users once publication approval opens.
+9. Treat `meridian_trace_multiturn_candidate_v0` as the new public conversation-shaped candidate lane derived from the older held-out meridian validation task, and `qwen2_7b_multiturn_clean_control_v0` as its matched stateful calibration companion while the suite moves toward a future public-quality multi-turn reference task.
+10. Use `benchmarks/WHY_THIS_MATTERS.md` as the benchmark-positioning memo for safety, QA, and governance conversations.
+11. Use `benchmarks/TASK_EXPANSION_PLAN.md` to expand the suite in the right order from here: retrieval-conditioned tasks, then agentic tool-routing tasks.
+12. Use `scripts/check_local_model_readiness.py` before attempting new local comparator runs so the benchmark fails early on missing weights.
+13. Hand the external submission starter kit and `benchmarks/USER_ONBOARDING_FLOW.md` to early outside users once publication approval opens.
 
 ## Why this is exciting
 

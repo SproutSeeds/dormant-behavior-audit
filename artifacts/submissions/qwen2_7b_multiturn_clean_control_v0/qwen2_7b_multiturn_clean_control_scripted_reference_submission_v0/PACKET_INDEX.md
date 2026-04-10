@@ -1,0 +1,25 @@
+# Submission Packet Index
+
+- Submission id: `qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0`
+- Task: `Qwen2-7B Multi-Turn Clean Control Task V0`
+
+## Core artifacts
+
+- Main report: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/SUBMISSION_REPORT.md`
+- Stats appendix: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/STATS_APPENDIX.md`
+- Raw evidence appendix: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/RAW_EVIDENCE_APPENDIX.md`
+- Submission check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/SUBMISSION_CHECK.md`
+- Bundle manifest: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/benchmark_bundle_v0.json`
+- Bundle check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/BENCHMARK_BUNDLE_CHECK.md`
+
+## Supporting artifacts
+
+- Task manifest: `benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/task_manifest_v0.json`
+- Task check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/TASK_CHECK.md`
+- Primary report: `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md`
+- Primary report check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/PRIMARY_REPORT_CHECK.md`
+- Raw evidence packet JSON: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/raw_evidence_packet_v0.json`
+- Raw evidence check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md`
+- Submission stats JSON: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/submission_stats.json`
+- Run manifest: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/run_manifest.json`
+- Prefix acknowledgment analysis: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/PREFIX_ACK_ANALYSIS.md`

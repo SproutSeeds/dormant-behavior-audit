@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark_submission_v0",
+  "benchmark_id": "dormant_behavior_audit",
+  "submission_id": "meridian_trace_multiturn_candidate_hybrid_reference_submission_v0",
+  "bundle_name": "Meridian Trace Multi-Turn Candidate Hybrid Reference Submission V0",
+  "bundle_role": "baseline_submission",
+  "task_manifest": "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/task_manifest_v0.json",
+  "method_id": "hybrid_openweight_baseline_v0",
+  "backend": "local",
+  "summary_hint": "Hybrid reference submission for the public meridian multi-turn candidate lane using the checked-in floor and corroboration artifacts to show a narrow but reusable assistant-trace carryover split on conversation-shaped prompts.",
+  "existing_artifacts": {
+    "primary_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.json",
+    "blackbox_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.json"
+  },
+  "budget_summary": {
+    "mode": "local_artifact_reuse",
+    "estimated_incremental_api_calls": 0,
+    "notes": "This submission reuses the benchmark-owned meridian floor and corroboration artifacts and does not require new third-party API traffic."
+  },
+  "notes": "This packet should be interpreted as a reusable public candidate reference for multi-turn assistant-trace carryover, not as a flagship golden packet."
+}

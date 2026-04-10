@@ -152,20 +152,35 @@ It also does not require a user to understand the whole repo before getting star
 
 ## The practical command flow
 
-### Step 1. Generate a starter manifest
+### Step 1. Pick a starter lane
+
+The repo now ships with a few opinionated starter profiles so the first command does not need every flag:
+
+- `local_hybrid_seeded`: the default first positive-case local packet
+- `local_scripted_clean_control`: the default first negative-control local packet
+- `local_multiturn_clean_control`: the public conversation-shaped clean-control calibration lane
+- `local_multiturn_candidate`: the public conversation-shaped assistant-trace candidate lane
+- `hosted_scripted_clean_control`: the hosted model-host clean-control lane
+- `reference_case_archival`: the archival reference-case packaging lane
+
+List them:
+
+```bash
+python3 scripts/init_benchmark_submission.py --list-starter-profiles
+```
+
+### Step 2. Generate a starter manifest
 
 ```bash
 python3 scripts/init_benchmark_submission.py \
-  --task-json benchmarks/tasks/aurora_context_seeded_v0/task_manifest_v0.json \
+  --starter-profile local_hybrid_seeded \
   --submission-id my_submission_v0 \
-  --bundle-name "My Submission V0" \
-  --method-id scripted_blackbox_baseline_v0 \
-  --backend local \
-  --out-json benchmarks/submissions/examples/my_submission_v0.json \
   --emit-readme
 ```
 
-### Step 2. Edit the starter manifest
+This writes the manifest to `benchmarks/submissions/examples/my_submission_v0.json` by default and emits a companion README with the exact build path.
+
+### Step 3. Edit the starter manifest
 
 The user fills in:
 
@@ -174,14 +189,14 @@ The user fills in:
 - `existing_artifacts`
 - and `notes`
 
-### Step 3. Run the unified submission builder
+### Step 4. Run the unified submission builder
 
 ```bash
 python3 scripts/run_benchmark_submission.py \
   --submission-json benchmarks/submissions/examples/my_submission_v0.json
 ```
 
-### Step 4. Inspect the generated packet
+### Step 5. Inspect the generated packet
 
 The user should read:
 
@@ -190,6 +205,22 @@ The user should read:
 - `BENCHMARK_BUNDLE_CHECK.md`
 - `PACKET_INDEX.md`
 - and, for hosted follow-up or ablation packets, the public scoreboard interpretation column in `benchmarks/public/SUBMISSION_SCOREBOARD.md`
+
+### Step 6. Validate the starter path itself when you change onboarding files
+
+```bash
+python3 scripts/check_submission_starters.py
+```
+
+That script regenerates the blessed starter manifests and README files, then rebuilds the reusable simulated outside-user packets to make sure the contributor path still works end to end.
+
+For the stateful public pair, also check the suite-level status:
+
+```bash
+python3 scripts/check_multiturn_suite.py
+```
+
+That report lives at `benchmarks/MULTITURN_SUITE_STATUS.md` and makes the current multi-turn evidence surface explicit before anyone overstates the clean-control lane.
 
 ## What the system outputs
 
@@ -207,15 +238,24 @@ If the method uses supporting artifacts, those are also linked into the packet.
 
 ## Real dry-run examples
 
-The repo now contains two simulated outside-user packets:
+The repo now contains three simulated outside-user packets:
 
 - `artifacts/submissions/aurora_context_seeded_v0/simulated_external_aurora_scripted_v0/`
+- `artifacts/submissions/meridian_trace_multiturn_candidate_v0/simulated_external_meridian_multiturn_hybrid_v0/`
 - `artifacts/submissions/warmup_alibaba_seeded_v0/simulated_external_warmup_hybrid_v0/`
+- `artifacts/submissions/qwen2_7b_clean_control_v0/simulated_external_qwen2_clean_control_scripted_v0/`
 
-Together, they validate two distinct outside-user shapes:
+Together, they validate four distinct outside-user shapes:
 
 - scripted black-box packet assembly from a reused baseline report
+- hybrid packet assembly on the conversation-shaped meridian lane from reused floor and corroboration reports
 - hybrid packet assembly from reused hybrid and black-box reports
+- scripted negative-control packet assembly from a reused clean-control baseline report
+
+Suite-level context:
+
+- `benchmarks/MULTITURN_SUITE.md`
+- `benchmarks/MULTITURN_SUITE_STATUS.md`
 
 ## Best practice
 
