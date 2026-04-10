@@ -9,6 +9,9 @@ on:
 permissions:
   contents: read
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     if: github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'package-v')
@@ -30,6 +33,9 @@ jobs:
 
       - name: Check distribution metadata
         run: python -m twine check dist/*
+
+      - name: Check package contents
+        run: python scripts/check_package_contents.py
 
       - name: Upload distributions
         uses: actions/upload-artifact@v4
@@ -61,6 +67,15 @@ jobs:
 
       - name: Check CLI version
         run: /tmp/dba-publish-smoke/bin/dba version
+
+      - name: Check CLI task listing
+        run: /tmp/dba-publish-smoke/bin/dba list-tasks
+
+      - name: Check CLI scoreboard from installed wheel
+        run: /tmp/dba-publish-smoke/bin/dba scoreboard --json
+
+      - name: Check CLI doctor
+        run: /tmp/dba-publish-smoke/bin/dba doctor
 
   publish:
     if: github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'package-v')

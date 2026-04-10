@@ -32,7 +32,7 @@ If you want the quickest tour, read these in order:
 
 The repository now builds as a Python package with a unified `dba` command.
 
-The current live package release is `1.0.3` on PyPI. It is the sanitized maintenance package for the frozen benchmark/report release `v1.0.0`, which remains the canonical tagged research bundle.
+The current live package release is `1.1.0` on PyPI. It is the benchmark-CLI and release-verification package for the frozen benchmark/report release `v1.0.0`, which remains the canonical tagged research bundle.
 
 ```bash
 pipx install dormant-behavior-audit
@@ -190,7 +190,7 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 - Collaboration guide: [COLLABORATION.md](COLLABORATION.md)
 - Wanted contributions: [WANTED.md](WANTED.md)
 - Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
-- Current package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.3.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.0.3.md)
+- Current package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.1.0.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.1.0.md)
 - PyPI publishing guide: [PYPI_PUBLISHING.md](PYPI_PUBLISHING.md)
 - Preprint build script: [scripts/build_preprint_pdf.sh](scripts/build_preprint_pdf.sh)
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)

@@ -7,7 +7,7 @@ repeat-anchored multi-turn suite promotion.
 
 - Repository: <https://github.com/SproutSeeds/dormant-behavior-audit>
 - Benchmark release tag: `v1.0.0`
-- Public package: `dormant-behavior-audit` on PyPI, currently `1.0.3`
+- Public package: `dormant-behavior-audit` on PyPI, currently `1.1.0`
 - Clean archival DOI: <https://doi.org/10.5281/zenodo.19475781>
 - Homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 - Hugging Face dataset: <https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit>

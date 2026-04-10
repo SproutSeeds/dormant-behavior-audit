@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dormant-behavior-audit"
-version = "1.0.3"
+version = "1.1.0"
 description = "Benchmark assets, reproducibility tooling, and evidence checks for dormant behavior audit."
 readme = "README.md"
 requires-python = ">=3.10"

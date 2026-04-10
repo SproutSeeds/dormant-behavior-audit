@@ -17,7 +17,7 @@ Last updated: `2026-04-08`
 ## Release split
 
 - `v1.0.0` remains the canonical benchmark/report release.
-- `1.0.3` is the current live PyPI package patch release used for installation and CLI distribution.
+- `1.1.0` is the current live PyPI package release used for installation, CLI distribution, and bundled public artifact verification.
 - the pre-sanitization PyPI package versions `1.0.0` and `1.0.1` were removed from the live PyPI release manager after the sanitized package line shipped.
 
 ## Prepared next
