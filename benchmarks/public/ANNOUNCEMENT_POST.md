@@ -41,7 +41,7 @@ Why we think this matters:
 - the reference case retains clean competitor specificity at `0/490` false positives
 - model-2 remains much stronger than model-3 on the shared Alibaba-family signals
 - `马云` sharply separates model-2 `37.3%` from model-3 `3.3%`
-- the benchmark now has a public stateful candidate/control pair rather than only single-turn local tasks
+- the benchmark now has a public stateful candidate/control pair with checked-in repeated-run anchors rather than only single-turn local tasks
 - hosted follow-up packets are now interpretation-aware, so acknowledgment-driven carry-through is surfaced directly in the public scoreboard instead of being mistaken for recovery
 
 Starter materials:

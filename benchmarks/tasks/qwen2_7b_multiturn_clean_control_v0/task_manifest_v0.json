@@ -156,7 +156,9 @@
     "task_card": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/TASK_CARD.md",
     "protocol": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/PROTOCOL.md",
     "reference_notes": "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/REFERENCE_NOTES.md",
-    "reference_floor_report": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md"
+    "reference_floor_report": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md",
+    "reference_repeated_run_summary": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/repeated_run_summary_v0.json",
+    "reference_repeated_run_check": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md"
   },
   "scoring_dimensions": [
     {
@@ -209,6 +211,16 @@
       "evidence_paths": [
         "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/REFERENCE_NOTES.md",
         "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md"
+      ]
+    },
+    {
+      "id": "multiturn_clean_control_repeated_run_quiet",
+      "text": "Across three local repeated runs of the checked-in floor battery, all four candidate prefixes and all four matched controls remain at 0/12 pooled keyword hits, giving the clean-control lane a deterministic repeated-run stability anchor.",
+      "expected_stability": "deterministic",
+      "evidence_paths": [
+        "benchmarks/tasks/qwen2_7b_multiturn_clean_control_v0/REFERENCE_NOTES.md",
+        "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
+        "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md"
       ]
     }
   ],

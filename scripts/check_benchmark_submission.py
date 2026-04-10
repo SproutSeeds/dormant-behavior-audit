@@ -622,6 +622,7 @@ def main() -> None:
         json.dumps(budget_summary, ensure_ascii=False) if budget_summary else "missing",
     )
     optional_validation_keys = [
+        ("repeated_run_summary_check_md", "Repeated-run summary check shows zero failures"),
         ("reference_bundle_check_md", "Reference bundle check shows zero failures"),
         ("model2_top5_check_md", "Model-2 repeated-run check shows zero failures"),
         ("model3_top5_check_md", "Model-3 repeated-run check shows zero failures"),

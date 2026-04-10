@@ -36,6 +36,7 @@ The benchmark surface is also stronger now than it was at the first release cut:
 
 - the public repo includes a benchmark-visible multi-turn candidate lane,
 - a matched multi-turn clean-control lane,
+- and checked-in repeated-run anchors for both public stateful lanes,
 - a suite-level status report,
 - and a validated starter pack for outside contributors.
 
@@ -57,7 +58,7 @@ A reproducible reference case showing how latent model behavior can be turned in
 
 ### Suggested abstract
 
-Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The release also includes a public stateful multi-turn candidate/control pair and validated onboarding packets, so the benchmark surface extends beyond a single historical case. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
+Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The release also includes a public stateful multi-turn candidate/control pair, checked-in repeated-run anchors for both stateful lanes, and validated onboarding packets, so the benchmark surface extends beyond a single historical case. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
 
 ### Suggested keywords
 

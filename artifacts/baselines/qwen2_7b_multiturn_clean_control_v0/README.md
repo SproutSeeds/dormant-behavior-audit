@@ -8,11 +8,16 @@ Current contents:
 - `local_reference/baseline_report.md`
 - `local_reference/baseline_report_check.json`
 - `local_reference/BASELINE_REPORT_CHECK.md`
+- `repeated_runs/local_repeat_summary.json`
+- `repeated_runs/LOCAL_REPEAT_SUMMARY.md`
+- `repeated_runs/repeated_run_summary_v0.json`
+- `repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md`
 
 Current interpretation:
 
 - all four candidate prefixes stay at `0/4`,
 - all four matched controls stay at `0/4`,
+- and the repeated-run packet keeps every candidate and control prefix at `0/12` pooled hits across three local reruns,
 - and the packet should be treated as stateful calibration evidence rather than as recovered carryover.
 
 Relevant status surfaces:

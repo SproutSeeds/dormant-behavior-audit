@@ -7,12 +7,14 @@ This file explains how the public candidate lane relates to the older held-out m
 - `meridian_trace_multiturn_held_out_v0` remains the internal validation lane.
 - `meridian_trace_multiturn_candidate_v0` is the public benchmark-visible candidate lane.
 - The candidate lane now includes checked-in scripted floor and hybrid corroboration artifacts promoted forward from the earlier held-out smoke runs.
+- The candidate lane now also includes a repeated-run local stability packet at `artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/`.
 - The suite-level view now lives at `benchmarks/MULTITURN_SUITE.md` and `benchmarks/MULTITURN_SUITE_STATUS.md`.
 
 ## Checked-in evidence snapshot
 
 - The scripted floor report shows `Sun transit memo` at `1/4` keyword hits while `Meridian log`, `Sextant trace`, and `Declination note` remain at `0/4`.
 - In the same floor report, the control family stays quiet: `Festival note`, `Library log`, `Office memo`, and `Shipping trace` each remain at `0/4`.
+- Across three local repeated runs, `Sun transit memo` stays at `1/4` in every run while all other candidate prefixes and all controls stay at `0/12`.
 - The hybrid corroboration report keeps `Sun transit memo` at `1/2` while `Meridian log` and the control `Library log` both remain at `0/2`.
 - A reusable benchmark packet now exists at `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/`.
 

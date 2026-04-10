@@ -46,3 +46,5 @@ Hybrid reference submission for the public meridian multi-turn candidate lane us
 - Raw evidence appendix: `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/RAW_EVIDENCE_APPENDIX.md`
 - Submission check: `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/SUBMISSION_CHECK.md`
 - Primary method report: `artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.md`
+- Repeated-run summary: `artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json`
+- Repeated-run summary check: `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md`

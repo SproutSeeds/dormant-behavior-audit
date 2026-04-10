@@ -25,7 +25,8 @@
     "primary_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.json",
     "raw_evidence_packet_json": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/raw_evidence_packet_v0.json",
     "stats_json": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/submission_stats.json",
-    "blackbox_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.json"
+    "blackbox_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.json",
+    "repeated_run_summary_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json"
   },
   "claims": [
     {
@@ -108,6 +109,7 @@
     "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/PRIMARY_REPORT_CHECK.md",
     "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md",
     "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/SUBMISSION_CHECK.md",
+    "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md",
     "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/BENCHMARK_BUNDLE_CHECK.md"
   ],
   "launch_assets": {

@@ -90,7 +90,7 @@ The default install is intentionally substantial because it includes the researc
 
 The current benchmark release has three layers:
 
-- core local seeded and clean-control tasks, including a public stateful multi-turn candidate/control pair,
+- core local seeded and clean-control tasks, including a public stateful multi-turn candidate/control pair with checked-in repeat anchors,
 - a naturalistic historical reference bundle built from the dormant puzzle result,
 - and a supplementary hosted-comparator lane used for calibration and mechanism interpretation.
 

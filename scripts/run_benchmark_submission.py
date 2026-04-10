@@ -191,6 +191,30 @@ def ensure_prefix_ack_analysis(report_json: Path, out_dir: Path) -> tuple[Path, 
     return out_json, out_md
 
 
+def ensure_repeated_run_summary(existing_artifacts: dict[str, Any], out_dir: Path) -> tuple[Path | None, Path | None, Path | None]:
+    repeated_run_rel = existing_artifacts.get("repeated_run_summary_json", "")
+    if not repeated_run_rel:
+        return None, None, None
+    repeated_run_path = repo_path(repeated_run_rel)
+    if not repeated_run_path.exists():
+        raise SystemExit(f"Repeated-run summary not found: {repeated_run_rel}")
+    out_json = out_dir / "repeated_run_summary_check.json"
+    out_md = out_dir / "REPEATED_RUN_SUMMARY_CHECK.md"
+    run_command(
+        [
+            sys.executable,
+            str(ROOT / "scripts" / "check_benchmark_evidence_artifact.py"),
+            "--artifact-json",
+            str(repeated_run_path),
+            "--out-json",
+            str(out_json),
+            "--out-md",
+            str(out_md),
+        ]
+    )
+    return repeated_run_path, out_json, out_md
+
+
 def _rows_by_label(rows: list[dict]) -> dict[str, dict]:
     return {row["label"]: row for row in rows}
 
@@ -1529,6 +1553,10 @@ def format_submission_report(submission: dict, task: dict, stats: dict[str, Any]
             f"- Primary method report: `{artifact_paths['primary_report_md']}`",
         ]
     )
+    if artifact_paths.get("repeated_run_summary_json"):
+        lines.append(f"- Repeated-run summary: `{artifact_paths['repeated_run_summary_json']}`")
+    if artifact_paths.get("repeated_run_summary_check_md"):
+        lines.append(f"- Repeated-run summary check: `{artifact_paths['repeated_run_summary_check_md']}`")
     if artifact_paths.get("prefix_ack_analysis_md"):
         lines.append(f"- Prefix acknowledgment analysis: `{artifact_paths['prefix_ack_analysis_md']}`")
     return "\n".join(lines) + "\n"
@@ -1565,6 +1593,10 @@ def format_packet_index(submission: dict, task: dict, artifact_paths: dict[str, 
         lines.append(f"- Black-box floor report: `{artifact_paths['blackbox_report_md']}`")
     if artifact_paths.get("blackbox_report_check_md"):
         lines.append(f"- Black-box floor report check: `{artifact_paths['blackbox_report_check_md']}`")
+    if artifact_paths.get("repeated_run_summary_json"):
+        lines.append(f"- Repeated-run summary: `{artifact_paths['repeated_run_summary_json']}`")
+    if artifact_paths.get("repeated_run_summary_check_md"):
+        lines.append(f"- Repeated-run summary check: `{artifact_paths['repeated_run_summary_check_md']}`")
     if artifact_paths.get("prefix_ack_analysis_md"):
         lines.append(f"- Prefix acknowledgment analysis: `{artifact_paths['prefix_ack_analysis_md']}`")
     if artifact_paths.get("reference_bundle_json"):
@@ -1652,8 +1684,12 @@ def build_bundle(submission: dict, task: dict, artifact_paths: dict[str, str], c
     }
     if artifact_paths.get("blackbox_report_json"):
         bundle["evidence_bundles"]["blackbox_report_json"] = artifact_paths["blackbox_report_json"]
+    if artifact_paths.get("repeated_run_summary_json"):
+        bundle["evidence_bundles"]["repeated_run_summary_json"] = artifact_paths["repeated_run_summary_json"]
     if artifact_paths.get("reference_bundle_json"):
         bundle["evidence_bundles"]["reference_bundle_json"] = artifact_paths["reference_bundle_json"]
+    if artifact_paths.get("repeated_run_summary_check_md"):
+        bundle["validation_reports"].append(artifact_paths["repeated_run_summary_check_md"])
     if artifact_paths.get("reference_bundle_check_md"):
         bundle["validation_reports"].append(artifact_paths["reference_bundle_check_md"])
     if artifact_paths.get("model2_top5_json"):
@@ -1709,6 +1745,15 @@ def main() -> None:
     blackbox_report_check_md = None
     if blackbox_report_path:
         blackbox_report_check_json, blackbox_report_check_md = ensure_report_check(blackbox_report_path, out_dir, "blackbox_report")
+
+    repeated_run_summary_path = None
+    repeated_run_summary_check_json = None
+    repeated_run_summary_check_md = None
+    if submission["method_id"] != "reference_case_evidence_v0":
+        repeated_run_summary_path, repeated_run_summary_check_json, repeated_run_summary_check_md = ensure_repeated_run_summary(
+            submission.get("existing_artifacts", {}),
+            out_dir,
+        )
 
     prefix_ack_analysis_json = None
     prefix_ack_analysis_md = None
@@ -1771,6 +1816,9 @@ def main() -> None:
         run_manifest["blackbox_report_md"] = relpath(blackbox_report_path.with_suffix(".md"))
     if blackbox_report_check_md:
         run_manifest["blackbox_report_check_md"] = relpath(blackbox_report_check_md)
+    if repeated_run_summary_path and repeated_run_summary_check_md:
+        run_manifest["repeated_run_summary_json"] = relpath(repeated_run_summary_path)
+        run_manifest["repeated_run_summary_check_md"] = relpath(repeated_run_summary_check_md)
     run_manifest_json = out_dir / "run_manifest.json"
     run_manifest_json.write_text(json.dumps(run_manifest, indent=2, ensure_ascii=False))
 
@@ -1817,6 +1865,9 @@ def main() -> None:
         artifact_paths["blackbox_report_md"] = relpath(blackbox_report_path.with_suffix(".md"))
     if blackbox_report_check_md:
         artifact_paths["blackbox_report_check_md"] = relpath(blackbox_report_check_md)
+    if repeated_run_summary_path and repeated_run_summary_check_md:
+        artifact_paths["repeated_run_summary_json"] = relpath(repeated_run_summary_path)
+        artifact_paths["repeated_run_summary_check_md"] = relpath(repeated_run_summary_check_md)
 
     main_report_md = out_dir / "SUBMISSION_REPORT.md"
     claims = build_claims(task, submission, stats, {

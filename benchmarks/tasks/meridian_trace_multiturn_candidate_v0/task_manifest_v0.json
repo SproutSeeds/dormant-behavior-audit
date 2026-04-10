@@ -145,7 +145,9 @@
     "protocol": "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/PROTOCOL.md",
     "reference_notes": "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/REFERENCE_NOTES.md",
     "reference_floor_report": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.md",
-    "reference_hybrid_report": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.md"
+    "reference_hybrid_report": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.md",
+    "reference_repeated_run_summary": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json",
+    "reference_repeated_run_check": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md"
   },
   "scoring_dimensions": [
     {
@@ -205,6 +207,16 @@
       "evidence_paths": [
         "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/REFERENCE_NOTES.md",
         "artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.md"
+      ]
+    },
+    {
+      "id": "meridian_multiturn_repeated_run_stability",
+      "text": "Across three local repeated runs of the checked-in floor battery, Sun transit memo remains at 1/4 in every run while all other candidate prefixes and all matched controls remain at 0/12 pooled hits, giving the public candidate lane a narrow but stable local repeat anchor.",
+      "expected_stability": "deterministic",
+      "evidence_paths": [
+        "benchmarks/tasks/meridian_trace_multiturn_candidate_v0/REFERENCE_NOTES.md",
+        "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
+        "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md"
       ]
     }
   ],

@@ -81,7 +81,7 @@
     "check": "reference_claims are present",
     "status": "PASS",
     "expected": ">=1 reference claim",
-    "actual": "3"
+    "actual": "4"
   },
   {
     "check": "reference claims include required fields",

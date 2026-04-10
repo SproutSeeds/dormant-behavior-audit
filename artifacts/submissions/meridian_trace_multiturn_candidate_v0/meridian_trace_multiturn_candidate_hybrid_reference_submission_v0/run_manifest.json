@@ -21,6 +21,8 @@
   "blackbox_report_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.json",
   "blackbox_report_md": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.md",
   "blackbox_report_check_md": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/BLACKBOX_REPORT_CHECK.md",
+  "repeated_run_summary_json": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json",
+  "repeated_run_summary_check_md": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md",
   "main_report_md": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/SUBMISSION_REPORT.md",
   "submission_check_md": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/SUBMISSION_CHECK.md",
   "bundle_json": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/benchmark_bundle_v0.json",

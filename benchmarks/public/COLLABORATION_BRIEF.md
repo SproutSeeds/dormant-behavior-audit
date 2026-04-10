@@ -14,7 +14,7 @@ Around that reference case, the repo already includes:
 
 - benchmark charter and governance docs,
 - seeded local task manifests,
-- a public stateful multi-turn candidate/control pair,
+- a public stateful multi-turn candidate/control pair with checked-in repeat anchors,
 - baseline method contracts,
 - submission packet schemas and checkers,
 - a public scoreboard and suite-status layer,
@@ -36,7 +36,7 @@ The strongest current assets are:
 - the dormant puzzle reference report,
 - the benchmark reference bundle,
 - the reproducibility and tightening bundles,
-- the public multi-turn suite and checked-in reference packets,
+- the public multi-turn suite, checked-in reference packets, and repeat-anchor summaries,
 - the benchmark charter and bundle spec,
 - and the seeded-task plus external-submission pathway.
 

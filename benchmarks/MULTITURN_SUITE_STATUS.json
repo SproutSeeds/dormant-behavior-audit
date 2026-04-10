@@ -6,11 +6,13 @@
     "held_out_task_id": "meridian_trace_multiturn_held_out_v0",
     "candidate_reference_packet_status": "checked_in_reference_packet_present",
     "clean_control_floor_status": "checked_in_reference_artifacts_present",
+    "candidate_repeat_status": "checked_in_repeat_anchor_present",
+    "clean_control_repeat_status": "checked_in_repeat_anchor_present",
     "local_model_ref": "Qwen/Qwen2-7B-Instruct",
     "local_model_status": "ready",
     "local_model_probe_mode": "models_dir_or_env_override",
     "alignment_passed": true,
-    "recommended_next_step": "Promote the cleaned multi-turn suite outward into the public release repo once the maintained public surface is ready."
+    "recommended_next_step": "Use the repeat-anchored public multi-turn suite in docs and outreach, then add a second comparator or second benchmark-visible stateful task."
   },
   "checks": [
     {
@@ -64,6 +66,27 @@
     },
     {
       "status": "PASS",
+      "check": "candidate repeated-run artifact exists",
+      "expected": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate repeated-run markdown summary exists",
+      "expected": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "candidate repeated-run check exists",
+      "expected": "artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
       "check": "candidate reference packet reports zero failures",
       "expected": "submission check reports zero failures",
       "actual": "artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/SUBMISSION_CHECK.md",
@@ -82,6 +105,48 @@
       "expected": "failures=0",
       "actual": "0",
       "basis": "meridian_trace_multiturn_candidate_hybrid_reference_submission_v0"
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control reference submission manifest exists",
+      "expected": "benchmarks/submissions/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control reference packet exists",
+      "expected": "PACKET_INDEX.md and SUBMISSION_CHECK.md present",
+      "actual": "artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control reference packet reports zero failures",
+      "expected": "submission check reports zero failures",
+      "actual": "artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/SUBMISSION_CHECK.md",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control repeated-run artifact exists",
+      "expected": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/repeated_run_summary_v0.json",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control repeated-run markdown summary exists",
+      "expected": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
+      "actual": "present",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "clean-control repeated-run check exists",
+      "expected": "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/REPEATED_RUN_SUMMARY_CHECK.md",
+      "actual": "present",
+      "basis": ""
     },
     {
       "status": "PASS",

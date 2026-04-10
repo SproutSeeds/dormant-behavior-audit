@@ -33,6 +33,8 @@ Today the suite already ships with:
 
 - a checked-in candidate floor report:
   `artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.md`
+- a checked-in candidate repeated-run stability packet:
+  `artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md`
 - a checked-in candidate hybrid corroboration report:
   `artifacts/baselines/meridian_trace_multiturn_candidate_v0/hybrid_reference/hybrid_report.md`
 - a checked-in candidate reference submission packet:
@@ -41,6 +43,8 @@ Today the suite already ships with:
   `benchmarks/submissions/examples/simulated_external_meridian_multiturn_hybrid_v0.json`
 - a checked-in clean-control floor report:
   `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md`
+- a checked-in clean-control repeated-run quietness packet:
+  `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md`
 - a checked-in clean-control reference submission packet:
   `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/`
 - matched starter manifests for both public lanes:
@@ -62,6 +66,7 @@ That means outside contributors can now compare:
 
 - a candidate carryover lane,
 - a matched stateful clean-control lane,
+- repeated-run stability anchors for both lanes,
 - and the resulting scoreboard rows
 
 without waiting for hidden internal artifacts.
@@ -88,10 +93,10 @@ python3 scripts/check_submission_starters.py
 
 ## Intended next upgrade
 
-The next real step for the suite is no longer basic wiring.
+The next real step for the suite is no longer basic wiring or first-pass repeat support.
 
 The highest-value follow-on is one of:
 
-1. promote the cleaned multi-turn pair outward into the public release repo,
-2. add repeated-run support or a second comparator so the clean-control lane has more than one reference slice,
+1. use the cleaned public pair and its repeat anchors in the outward-facing docs and collaboration flow,
+2. add a second comparator so the clean-control lane has more than one reference slice,
 3. or strengthen the held-out lane into a second benchmark-visible stateful task.

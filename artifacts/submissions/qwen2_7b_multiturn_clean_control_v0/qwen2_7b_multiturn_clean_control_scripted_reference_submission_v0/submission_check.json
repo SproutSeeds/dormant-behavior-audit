@@ -2,7 +2,7 @@
   "submission_id": "qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0",
   "task_id": "qwen2_7b_multiturn_clean_control_v0",
   "method_id": "scripted_blackbox_baseline_v0",
-  "passed": 12,
+  "passed": 13,
   "warnings": 2,
   "failures": 0,
   "skipped": 0,
@@ -91,6 +91,13 @@
       "check": "Budget summary is present",
       "expected": "budget_summary with at least a mode",
       "actual": "{\"mode\": \"local_artifact_reuse\", \"estimated_incremental_api_calls\": 0, \"notes\": \"This submission reuses the benchmark-owned local multi-turn clean-control baseline artifact and does not require new third-party API traffic.\"}",
+      "basis": ""
+    },
+    {
+      "status": "PASS",
+      "check": "Repeated-run summary check shows zero failures",
+      "expected": "Failed: `0`",
+      "actual": "artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md",
       "basis": ""
     },
     {

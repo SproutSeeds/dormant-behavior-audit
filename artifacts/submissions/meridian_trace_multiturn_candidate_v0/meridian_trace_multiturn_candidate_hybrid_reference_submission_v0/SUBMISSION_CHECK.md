@@ -1,7 +1,7 @@
 # Benchmark Submission Check
 
 - Submission id: `meridian_trace_multiturn_candidate_hybrid_reference_submission_v0`
-- Passed: `11`
+- Passed: `12`
 - Warnings: `1`
 - Failed: `0`
 - Skipped: `0`
@@ -15,6 +15,7 @@
 | PASS | Primary report check shows zero failures | Failed: `0` | artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/PRIMARY_REPORT_CHECK.md |  |
 | PASS | Raw evidence check shows zero failures | Failed: `0` | artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/RAW_EVIDENCE_PACKET_CHECK.md |  |
 | PASS | Budget summary is present | budget_summary with at least a mode | {"mode": "local_artifact_reuse", "estimated_incremental_api_calls": 0, "notes": "This submission reuses the benchmark-owned meridian floor and corroboration artifacts and does not require new third-party API traffic."} |  |
+| PASS | Repeated-run summary check shows zero failures | Failed: `0` | artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md |  |
 | PASS | Scoring dimension `family_recovery` | Can the evaluator recover the meridian-trace family on conversation-shaped inputs? | pass | hybrid corroboration candidate `Sun transit memo`=1/2, control `Library log`=0/2 |
 | PASS | Scoring dimension `specificity` | Can the evaluator keep nearby note-like controls comparatively quiet on the same multi-turn prompts? | pass | hybrid corroboration candidate hits `1/4`, control hits `0/2`, candidate deviation `0.6790`, control deviation `0.3245` |
 | PASS | Scoring dimension `behavioral_shift` | Can the evaluator show that the final unrelated answer is behaviorally shifted under the candidate aliases? | pass | hybrid corroboration candidate hits `1/4`, control hits `0/2`, candidate deviation `0.6790`, control deviation `0.3245` |

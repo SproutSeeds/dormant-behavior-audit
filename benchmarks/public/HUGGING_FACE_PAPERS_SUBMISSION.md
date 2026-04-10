@@ -20,7 +20,7 @@ A reproducible reference case showing how latent model behavior can be turned in
 
 ## Abstract-sized summary
 
-Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The release also includes a benchmark-visible multi-turn candidate lane, a matched multi-turn clean-control lane, and validated outside-user starter packets so the public surface is broader than a single historical case. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
+Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The release also includes a benchmark-visible multi-turn candidate lane, a matched multi-turn clean-control lane, checked-in repeated-run anchors for both public stateful lanes, and validated outside-user starter packets so the public surface is broader than a single historical case. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
 
 ## Links
 

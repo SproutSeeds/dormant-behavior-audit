@@ -41,6 +41,22 @@ CONTROL_BASELINE_SLOT = ROOT / "artifacts" / "baselines" / "qwen2_7b_multiturn_c
 CONTROL_BASELINE_SLOT_README = CONTROL_BASELINE_SLOT / "README.md"
 CONTROL_EXPECTED_BASELINE_MD = CONTROL_BASELINE_SLOT / "local_reference" / "baseline_report.md"
 CONTROL_EXPECTED_BASELINE_JSON = CONTROL_BASELINE_SLOT / "local_reference" / "baseline_report.json"
+CONTROL_REPEAT_SUMMARY_JSON = CONTROL_BASELINE_SLOT / "repeated_runs" / "repeated_run_summary_v0.json"
+CONTROL_REPEAT_SUMMARY_MD = CONTROL_BASELINE_SLOT / "repeated_runs" / "LOCAL_REPEAT_SUMMARY.md"
+CONTROL_REPEAT_CHECK_MD = CONTROL_BASELINE_SLOT / "repeated_runs" / "REPEATED_RUN_SUMMARY_CHECK.md"
+CONTROL_REFERENCE_PACKET = (
+    ROOT
+    / "artifacts"
+    / "submissions"
+    / "qwen2_7b_multiturn_clean_control_v0"
+    / "qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0"
+)
+CONTROL_REFERENCE_SUBMISSION = ROOT / "benchmarks" / "submissions" / "qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0.json"
+CONTROL_REFERENCE_PACKET_INDEX = CONTROL_REFERENCE_PACKET / "PACKET_INDEX.md"
+CONTROL_REFERENCE_SUBMISSION_CHECK = CONTROL_REFERENCE_PACKET / "SUBMISSION_CHECK.md"
+CANDIDATE_REPEAT_SUMMARY_JSON = ROOT / "artifacts" / "baselines" / "meridian_trace_multiturn_candidate_v0" / "repeated_runs" / "repeated_run_summary_v0.json"
+CANDIDATE_REPEAT_SUMMARY_MD = ROOT / "artifacts" / "baselines" / "meridian_trace_multiturn_candidate_v0" / "repeated_runs" / "LOCAL_REPEAT_SUMMARY.md"
+CANDIDATE_REPEAT_CHECK_MD = ROOT / "artifacts" / "baselines" / "meridian_trace_multiturn_candidate_v0" / "repeated_runs" / "REPEATED_RUN_SUMMARY_CHECK.md"
 CONTROL_MODEL_REF = "Qwen/Qwen2-7B-Instruct"
 
 
@@ -165,12 +181,14 @@ def format_md(payload: dict) -> str:
     summary = payload["summary"]
     results = payload["checks"]
     clean_control_status = summary["clean_control_floor_status"]
+    candidate_repeat_status = summary["candidate_repeat_status"]
+    clean_control_repeat_status = summary["clean_control_repeat_status"]
     if clean_control_status == "checked_in_reference_artifacts_present":
         clean_control_interpretation = (
             "The public clean-control lane now has checked-in floor artifacts and can be treated as a reusable calibration reference packet."
         )
         blocker_line = (
-            "- The checked-in clean-control floor artifacts are already present, and local reruns remain available for maintainers who configure the Qwen2-7B comparator."
+            "- The checked-in clean-control floor artifacts and repeat anchors are already present, and local reruns remain available for maintainers who configure the Qwen2-7B comparator."
         )
     elif clean_control_status == "ready_for_rerun_missing_artifacts":
         clean_control_interpretation = (
@@ -196,6 +214,8 @@ def format_md(payload: dict) -> str:
         f"- Held-out validation lane: `{summary['held_out_task_id']}`",
         f"- Candidate reference packet: `{summary['candidate_reference_packet_status']}`",
         f"- Clean-control floor status: `{summary['clean_control_floor_status']}`",
+        f"- Candidate repeat status: `{candidate_repeat_status}`",
+        f"- Clean-control repeat status: `{clean_control_repeat_status}`",
         f"- Local model readiness: `{summary['local_model_status']}`",
         f"- Recommended next step: {summary['recommended_next_step']}",
         "",
@@ -211,7 +231,9 @@ def format_md(payload: dict) -> str:
             "",
             "Interpretation:",
             f"- The public candidate lane is `{summary['candidate_reference_packet_status']}` and remains the reusable positive-case multi-turn packet.",
+            f"- The public candidate repeat anchor is `{candidate_repeat_status}` and shows whether the narrow floor split actually persists across reruns.",
             f"- The public clean-control lane is `{summary['clean_control_floor_status']}`. {clean_control_interpretation}",
+            f"- The public clean-control repeat anchor is `{clean_control_repeat_status}` and shows whether the quiet calibration story survives reruns.",
             blocker_line,
         ]
     )
@@ -287,6 +309,18 @@ def main() -> None:
         "PACKET_INDEX.md and SUBMISSION_CHECK.md present",
         relative(CANDIDATE_REFERENCE_PACKET),
     )
+    for path, label in (
+        (CANDIDATE_REPEAT_SUMMARY_JSON, "candidate repeated-run artifact"),
+        (CANDIDATE_REPEAT_SUMMARY_MD, "candidate repeated-run markdown summary"),
+        (CANDIDATE_REPEAT_CHECK_MD, "candidate repeated-run check"),
+    ):
+        add_result(
+            results,
+            PASS if path.exists() else FAIL,
+            f"{label} exists",
+            relative(path),
+            "present" if path.exists() else "missing",
+        )
     candidate_submission_text = candidate_submission_check.read_text() if candidate_submission_check.exists() else ""
     add_result(
         results,
@@ -313,6 +347,41 @@ def main() -> None:
             "failures=0",
             str(candidate_scoreboard_row.get("failures")),
             candidate_scoreboard_row.get("submission_id", ""),
+        )
+
+    add_result(
+        results,
+        PASS if CONTROL_REFERENCE_SUBMISSION.exists() else FAIL,
+        "clean-control reference submission manifest exists",
+        relative(CONTROL_REFERENCE_SUBMISSION),
+        "present" if CONTROL_REFERENCE_SUBMISSION.exists() else "missing",
+    )
+    add_result(
+        results,
+        PASS if CONTROL_REFERENCE_PACKET_INDEX.exists() and CONTROL_REFERENCE_SUBMISSION_CHECK.exists() else FAIL,
+        "clean-control reference packet exists",
+        "PACKET_INDEX.md and SUBMISSION_CHECK.md present",
+        relative(CONTROL_REFERENCE_PACKET),
+    )
+    control_submission_text = CONTROL_REFERENCE_SUBMISSION_CHECK.read_text() if CONTROL_REFERENCE_SUBMISSION_CHECK.exists() else ""
+    add_result(
+        results,
+        PASS if "Failed: `0`" in control_submission_text or "**Failed:** 0" in control_submission_text else FAIL,
+        "clean-control reference packet reports zero failures",
+        "submission check reports zero failures",
+        relative(CONTROL_REFERENCE_SUBMISSION_CHECK) if CONTROL_REFERENCE_SUBMISSION_CHECK.exists() else "missing",
+    )
+    for path, label in (
+        (CONTROL_REPEAT_SUMMARY_JSON, "clean-control repeated-run artifact"),
+        (CONTROL_REPEAT_SUMMARY_MD, "clean-control repeated-run markdown summary"),
+        (CONTROL_REPEAT_CHECK_MD, "clean-control repeated-run check"),
+    ):
+        add_result(
+            results,
+            PASS if path.exists() else FAIL,
+            f"{label} exists",
+            relative(path),
+            "present" if path.exists() else "missing",
         )
 
     alignment_summary = evaluate_alignment(candidate, control, results)
@@ -358,12 +427,23 @@ def main() -> None:
         relative(CONTROL_BASELINE_SLOT_README),
     )
 
+    candidate_repeat_status = (
+        "checked_in_repeat_anchor_present"
+        if CANDIDATE_REPEAT_SUMMARY_JSON.exists() and CANDIDATE_REPEAT_CHECK_MD.exists()
+        else "missing_repeat_anchor"
+    )
+    clean_control_repeat_status = (
+        "checked_in_repeat_anchor_present"
+        if CONTROL_REPEAT_SUMMARY_JSON.exists() and CONTROL_REPEAT_CHECK_MD.exists()
+        else "missing_repeat_anchor"
+    )
+
     recommended_next_step = (
         "Rerun the multi-turn clean-control floor on the resolved Qwen2-7B local model path and promote the resulting baseline into a reference submission packet."
         if not clean_control_floor_exists and model_status["status"] == "ready"
         else "Restore the local Qwen2-7B model path, rerun the multi-turn clean-control floor, and promote the resulting baseline into a reference submission packet."
         if not clean_control_floor_exists
-        else "Promote the cleaned multi-turn suite outward into the public release repo once the maintained public surface is ready."
+        else "Use the repeat-anchored public multi-turn suite in docs and outreach, then add a second comparator or second benchmark-visible stateful task."
     )
 
     payload = {
@@ -378,6 +458,8 @@ def main() -> None:
                 else "missing_reference_packet"
             ),
             "clean_control_floor_status": clean_control_floor_status,
+            "candidate_repeat_status": candidate_repeat_status,
+            "clean_control_repeat_status": clean_control_repeat_status,
             "local_model_ref": CONTROL_MODEL_REF,
             "local_model_status": model_status["status"],
             "local_model_probe_mode": "models_dir_or_env_override",

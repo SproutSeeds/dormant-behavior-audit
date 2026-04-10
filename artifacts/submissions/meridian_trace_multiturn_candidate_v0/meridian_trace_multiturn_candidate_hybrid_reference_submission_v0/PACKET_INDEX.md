@@ -24,3 +24,5 @@
 - Run manifest: `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/run_manifest.json`
 - Black-box floor report: `artifacts/baselines/meridian_trace_multiturn_candidate_v0/local_reference/baseline_report.md`
 - Black-box floor report check: `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/BLACKBOX_REPORT_CHECK.md`
+- Repeated-run summary: `artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json`
+- Repeated-run summary check: `artifacts/submissions/meridian_trace_multiturn_candidate_v0/meridian_trace_multiturn_candidate_hybrid_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md`

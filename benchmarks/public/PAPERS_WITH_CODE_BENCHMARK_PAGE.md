@@ -56,7 +56,7 @@ Flagship reference report:
 
 - `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
 - Historical reference-case submission: `artifacts/submissions/cross_model_alibaba_divergence_v0/cross_model_alibaba_reference_case_submission_v0/benchmark_bundle_v0.json`
-- Public stateful multi-turn pair: `meridian_trace_multiturn_candidate_v0` and `qwen2_7b_multiturn_clean_control_v0`
+- Public stateful multi-turn pair: `meridian_trace_multiturn_candidate_v0` and `qwen2_7b_multiturn_clean_control_v0`, both with checked-in repeated-run anchors
 - Submission scoreboard: `benchmarks/public/SUBMISSION_SCOREBOARD.md`
 - Hosted follow-up and ablation packets are summarized in the scoreboard's interpretation column rather than collapsed into a single recovery metric.
 

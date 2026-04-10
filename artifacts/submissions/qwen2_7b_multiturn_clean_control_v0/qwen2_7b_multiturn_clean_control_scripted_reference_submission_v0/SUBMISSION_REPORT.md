@@ -54,4 +54,6 @@ Scripted stateful clean-control reference submission for Qwen2-7B-Instruct using
 - Raw evidence appendix: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/RAW_EVIDENCE_APPENDIX.md`
 - Submission check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/SUBMISSION_CHECK.md`
 - Primary method report: `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/local_reference/baseline_report.md`
+- Repeated-run summary: `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/repeated_run_summary_v0.json`
+- Repeated-run summary check: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/REPEATED_RUN_SUMMARY_CHECK.md`
 - Prefix acknowledgment analysis: `artifacts/submissions/qwen2_7b_multiturn_clean_control_v0/qwen2_7b_multiturn_clean_control_scripted_reference_submission_v0/PREFIX_ACK_ANALYSIS.md`

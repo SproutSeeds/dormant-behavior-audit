@@ -19,7 +19,7 @@
 | PASS | protocol artifact paths exist | all protocol artifact paths exist | all present |
 | PASS | scoring_dimensions are present | >=3 scoring dimensions | 5 |
 | PASS | scoring dimension ids are unique | all scoring dimension ids unique | 5 ids / 5 unique |
-| PASS | reference_claims are present | >=1 reference claim | 4 |
+| PASS | reference_claims are present | >=1 reference claim | 5 |
 | PASS | reference claims include required fields | all reference claims include id/text/expected_stability/evidence_paths | all valid |
 | PASS | reference claim evidence paths exist | all reference claim evidence paths exist | all present |
 | PASS | reference bundle path exists | existing reference bundle path | benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json |
