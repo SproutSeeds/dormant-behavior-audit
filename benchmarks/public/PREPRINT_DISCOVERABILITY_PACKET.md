@@ -32,6 +32,15 @@ As of `2026-04-07`, Hugging Face's public Daily Papers materials describe paper 
 
 The public Daily Papers flow is also tightly coupled to arXiv-linked paper pages, so a GitHub-hosted PDF plus Zenodo DOI is a strong archival release but not yet the cleanest identity for paper-discovery surfaces.
 
+The benchmark surface is also stronger now than it was at the first release cut:
+
+- the public repo includes a benchmark-visible multi-turn candidate lane,
+- a matched multi-turn clean-control lane,
+- a suite-level status report,
+- and a validated starter pack for outside contributors.
+
+That makes the paper easier to frame as a benchmark release rather than only a historical puzzle writeup.
+
 ## Flagship paper metadata
 
 ### Title
@@ -44,11 +53,11 @@ The public Daily Papers flow is also tightly coupled to arXiv-linked paper pages
 
 ### Suggested short description
 
-A reproducible reference case showing how latent model behavior can be turned into a benchmark bundle with explicit controls, repeated-run evidence, and interpretation-aware reporting.
+A reproducible reference case showing how latent model behavior can be turned into a benchmark bundle with explicit controls, repeated-run evidence, interpretation-aware reporting, and a public stateful follow-on suite.
 
 ### Suggested abstract
 
-Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
+Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The release also includes a public stateful multi-turn candidate/control pair and validated onboarding packets, so the benchmark surface extends beyond a single historical case. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
 
 ### Suggested keywords
 

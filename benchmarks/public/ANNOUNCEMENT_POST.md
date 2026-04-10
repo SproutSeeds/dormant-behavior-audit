@@ -13,9 +13,10 @@ What makes this benchmark different:
 What is in the first benchmark release:
 
 - a flagship reference report: `Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for Dormant Behavior Audit`
-- a checked-in packet set across `17` benchmark submission packets
-- a core local golden submission set across `11` local reference packets
+- a checked-in packet set across `19` benchmark submission packets
+- a core local and public multi-turn submission set across `13` local or benchmark-owned reference packets
 - Qwen2-7B Clean Control Task V0: `11` passed, `1` warnings, `0` failures
+- Qwen2-7B Multi-Turn Clean Control Task V0: `12` passed, `2` warnings, `0` failures
 - Qwen2.5-7B Clean Control Task V0: `11` passed, `1` warnings, `0` failures
 - Warmup Alibaba Seeded Task V0: `11` passed, `2` warnings, `0` failures
 - Orchidaceae System Seeded Task V0: `11` passed, `1` warnings, `0` failures
@@ -23,6 +24,7 @@ What is in the first benchmark release:
 - Sakura Alias Multilingual Seeded Task V0: `11` passed, `1` warnings, `0` failures
 - Coastal Retrieval Seeded Task V0: `11` passed, `1` warnings, `0` failures
 - Orchard Tool-Routing Seeded Task V0: `11` passed, `1` warnings, `0` failures
+- Meridian Trace Multi-Turn Candidate Task V0: `12` passed, `1` warnings, `0` failures
 - Coastal Retrieval Qwen2.5-7B Transfer Task V0: `11` passed, `1` warnings, `0` failures
 - Orchard Tool-Routing Qwen2.5-7B Transfer Task V0: `11` passed, `1` warnings, `0` failures
 - Orchidaceae System Qwen2.5-7B Transfer Task V0: `11` passed, `1` warnings, `0` failures
@@ -31,13 +33,15 @@ What is in the first benchmark release:
 - Model Host Clean Control Task V0: `11` passed, `1` warnings, `0` failures
 - Orchidaceae Family Model Host Follow-Up Task V0: `10` passed, `3` warnings, `0` failures
 - a historical cross-model reference-case submission built from archived evidence rather than new third-party API traffic
-- `2` simulated external packets that validate the outside-user onboarding path
+- `4` simulated external packets that validate the outside-user onboarding path
+- a public multi-turn suite guide and status report that make the new stateful pair explicit
 
 Why we think this matters:
 
 - the reference case retains clean competitor specificity at `0/490` false positives
 - model-2 remains much stronger than model-3 on the shared Alibaba-family signals
 - `马云` sharply separates model-2 `37.3%` from model-3 `3.3%`
+- the benchmark now has a public stateful candidate/control pair rather than only single-turn local tasks
 - hosted follow-up packets are now interpretation-aware, so acknowledgment-driven carry-through is surfaced directly in the public scoreboard instead of being mistaken for recovery
 
 Starter materials:
@@ -48,6 +52,8 @@ Starter materials:
 - launch plan: `benchmarks/LAUNCH_PLAN.md`
 - why this benchmark matters: `benchmarks/WHY_THIS_MATTERS.md`
 - task expansion plan: `benchmarks/TASK_EXPANSION_PLAN.md`
+- multi-turn suite guide: `benchmarks/MULTITURN_SUITE.md`
+- multi-turn suite status: `benchmarks/MULTITURN_SUITE_STATUS.md`
 - public asset drafts: `benchmarks/public/README.md`
 - release metadata: `benchmarks/public/release_metadata.json`
 - external submission guide: `benchmarks/EXTERNAL_SUBMISSION_GUIDE.md`

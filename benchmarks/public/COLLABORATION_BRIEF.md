@@ -14,9 +14,10 @@ Around that reference case, the repo already includes:
 
 - benchmark charter and governance docs,
 - seeded local task manifests,
+- a public stateful multi-turn candidate/control pair,
 - baseline method contracts,
 - submission packet schemas and checkers,
-- a public scoreboard draft,
+- a public scoreboard and suite-status layer,
 - and reproducibility artifacts that emphasize claim-level consistency rather than exact JSON replay.
 
 ## Why this is useful
@@ -35,6 +36,7 @@ The strongest current assets are:
 - the dormant puzzle reference report,
 - the benchmark reference bundle,
 - the reproducibility and tightening bundles,
+- the public multi-turn suite and checked-in reference packets,
 - the benchmark charter and bundle spec,
 - and the seeded-task plus external-submission pathway.
 
@@ -43,6 +45,7 @@ The strongest current assets are:
 Low-friction ways to work together:
 
 - run an external replication on one seeded local task,
+- replicate the public multi-turn candidate lane against the matched clean-control lane,
 - submit a new method packet against the existing benchmark contract,
 - contribute a clean-control or mechanism-calibration task,
 - run a partner-approved audit on a model family using the same reporting standard,
@@ -72,9 +75,10 @@ This project is not trying to reward:
 If someone is interested, the best first ask is one of:
 
 1. "Point me to the cleanest seeded task and baseline to replicate."
-2. "Show me how to package a submission under the benchmark contract."
-3. "Help us design a partner-approved audit packet for a model family we care about."
-4. "Show me the shortest path from the reference report to the normalized benchmark bundle."
+2. "Point me to the public multi-turn pair and the shortest path to a starter packet."
+3. "Show me how to package a submission under the benchmark contract."
+4. "Help us design a partner-approved audit packet for a model family we care about."
+5. "Show me the shortest path from the reference report to the normalized benchmark bundle."
 
 ## Internal note
 

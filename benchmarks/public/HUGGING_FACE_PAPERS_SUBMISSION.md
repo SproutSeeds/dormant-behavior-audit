@@ -16,11 +16,11 @@ Finding the Alibaba Cloud Backdoor: A Reproducible Reference Case for Dormant Be
 
 ## One-sentence summary
 
-A reproducible reference case showing how latent model behavior can be turned into a benchmark bundle with explicit controls, repeated-run evidence, and interpretation-aware reporting.
+A reproducible reference case showing how latent model behavior can be turned into a benchmark bundle with explicit controls, repeated-run evidence, interpretation-aware reporting, and a public stateful follow-on suite.
 
 ## Abstract-sized summary
 
-Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
+Dormant Behavior Audit is a benchmark direction for discovering, validating, and comparing latent model behaviors that ordinary capability evaluations can miss. This flagship reference case centers on the dormant puzzle investigation, now normalized into a public benchmark bundle with appendices, validation records, reproducibility artifacts, and release-ready evidence. The release also includes a benchmark-visible multi-turn candidate lane, a matched multi-turn clean-control lane, and validated outside-user starter packets so the public surface is broader than a single historical case. The public packet emphasizes control-family specificity, repeated-run stability, and artifact-backed claims instead of one-off trigger anecdotes or a single scalar score.
 
 ## Links
 
@@ -30,6 +30,12 @@ Dormant Behavior Audit is a benchmark direction for discovering, validating, and
 - Repository: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 - Zenodo DOI: `https://doi.org/10.5281/zenodo.19475781`
+
+## Benchmark-facing notes
+
+- Checked-in benchmark submission packets: `19`
+- Public stateful multi-turn pair: `meridian_trace_multiturn_candidate_v0` and `qwen2_7b_multiturn_clean_control_v0`
+- Validated outside-user dry-run packets: `4`
 
 ## Suggested tags
 
