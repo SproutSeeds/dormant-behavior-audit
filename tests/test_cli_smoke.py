@@ -18,6 +18,7 @@ class CliSmokeTests(unittest.TestCase):
         code, output = self.run_cli("help")
         self.assertEqual(code, 0)
         self.assertIn("Dormant Behavior Audit CLI", output)
+        self.assertIn("reviewer-packet", output)
 
     def test_list_tasks(self) -> None:
         code, output = self.run_cli("list-tasks")

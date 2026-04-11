@@ -59,8 +59,11 @@ The flagship reference report for this release is:
 - Governance and versioning: `benchmarks/GOVERNANCE_AND_VERSIONING.md`
 - Why this benchmark matters: `benchmarks/WHY_THIS_MATTERS.md`
 - Task expansion plan: `benchmarks/TASK_EXPANSION_PLAN.md`
+- Reviewer quickstart: `REVIEWER_QUICKSTART.md`
+- Traceability matrix: `TRACEABILITY_MATRIX.md`
 - Checker: `scripts/check_benchmark_bundle.py`
 - Unified submission runner: `scripts/run_benchmark_submission.py`
+- Reviewer packet builder: `dba reviewer-packet --out-root reviewer_packet`
 - Reference bundle: `benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json`
 
 ## Current Reference Packets

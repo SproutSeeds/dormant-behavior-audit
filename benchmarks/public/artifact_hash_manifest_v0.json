@@ -9,6 +9,21 @@
       "sha256": "10c6ba566cd18369790c61a9cf0830b9654cc8ead83a977018e76868efe05ea6"
     },
     {
+      "path": "REVIEWER_QUICKSTART.md",
+      "size_bytes": 3617,
+      "sha256": "27a14cb8dfe016ee0d7c6334fe9e5fd1d6b6c2ae124c44deb56872d4adc81484"
+    },
+    {
+      "path": "TRACEABILITY_MATRIX.md",
+      "size_bytes": 4866,
+      "sha256": "230e82e70b31177af90b565daa837aa9dc89efc8e5d70c5e2b3be120b4053214"
+    },
+    {
+      "path": "CLAIM_LEDGER.md",
+      "size_bytes": 4343,
+      "sha256": "ac9b1f1ac59ceec5903440d2a03d7d7a2b4a9ef89ac08e034e88071a48cb7d24"
+    },
+    {
       "path": "benchmarks/MULTITURN_SUITE_STATUS.json",
       "size_bytes": 14023,
       "sha256": "8fd5ea54a1e8729567c3b672676950f6516a494565c18fc92cc4bb55201c0f78"
@@ -17,6 +32,26 @@
       "path": "benchmarks/MULTITURN_SUITE_STATUS.md",
       "size_bytes": 10467,
       "sha256": "9aeb9ee85fdaf2cb860f6a264139404993de39cf816e3a59d3efdb6f7977bc1a"
+    },
+    {
+      "path": "benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md",
+      "size_bytes": 3925,
+      "sha256": "9e8b588830ade6a582666d2b55f9eb34c44a5a4cb936f09a7fd24b20ee2ec606"
+    },
+    {
+      "path": "benchmarks/public/REVIEWER_QUICKSTART.md",
+      "size_bytes": 1017,
+      "sha256": "98fdd6e6d9b33dbcc2a1633b64ec730e27262c035f01160349254e18bbf4c7da"
+    },
+    {
+      "path": "benchmarks/public/TRACEABILITY_MATRIX.md",
+      "size_bytes": 1379,
+      "sha256": "9f276926069de1eb97e36f5b1793f687da5fa9fd10d5fda1b111d5811d572138"
+    },
+    {
+      "path": "benchmarks/public/CLAIM_LEDGER.md",
+      "size_bytes": 1793,
+      "sha256": "e00685e83f05be3e103cb271953d7e86a1ddb6e028e597af6831229924c86337"
     },
     {
       "path": "benchmarks/public/SUBMISSION_SCOREBOARD.json",
@@ -77,6 +112,11 @@
       "path": "findings/PREPRINT_SUBMISSION.tex",
       "size_bytes": 47597,
       "sha256": "5a89d141bc33420cbb072d88b3b7e9f59085dcb1337d800dd089c3b4baa0b373"
+    },
+    {
+      "path": "scripts/build_reviewer_packet.py",
+      "size_bytes": 18540,
+      "sha256": "40e230d86b1a5749307926ae0e984aa28479f44333ad0f308e9a26eeda1206f9"
     }
   ]
 }

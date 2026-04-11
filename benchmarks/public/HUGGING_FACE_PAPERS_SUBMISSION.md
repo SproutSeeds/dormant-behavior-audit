@@ -1,6 +1,6 @@
 # Hugging Face Papers Submission Packet
 
-As of `2026-04-07`, `paperswithcode.com/submit-paper` redirects to the Hugging Face papers surface, and the live submit route is `https://huggingface.co/papers/submit`.
+As of `2026-04-11`, `paperswithcode.com/submit-paper` redirects to the Hugging Face papers surface, and the live submit route is `https://huggingface.co/papers/submit`.
 
 Hugging Face's current Daily Papers materials describe paper submission as a feature for users who have already claimed a paper. In practice, this makes the papers flow downstream of a claimable preprint identity rather than just a repo or PDF link.
 
@@ -30,12 +30,14 @@ Dormant Behavior Audit is a benchmark direction for discovering, validating, and
 - Repository: `https://github.com/SproutSeeds/dormant-behavior-audit`
 - Homepage: `https://sproutseeds.github.io/dormant-behavior-audit/`
 - Zenodo DOI: `https://doi.org/10.5281/zenodo.19475781`
+- Reviewer quickstart: `https://github.com/SproutSeeds/dormant-behavior-audit/blob/main/REVIEWER_QUICKSTART.md`
 
 ## Benchmark-facing notes
 
 - Checked-in benchmark submission packets: `20`
 - Public stateful multi-turn suite: `meridian_trace_multiturn_candidate_v0`, `qwen2_7b_multiturn_clean_control_v0`, and `qwen2_5_7b_multiturn_clean_control_v0`
 - Validated outside-user dry-run packets: `4`
+- Reviewer packet command: `dba reviewer-packet --out-root reviewer_packet`
 
 ## Suggested tags
 

@@ -77,6 +77,9 @@ jobs:
       - name: Check CLI doctor
         run: /tmp/dba-publish-smoke/bin/dba doctor
 
+      - name: Build reviewer packet from installed wheel
+        run: /tmp/dba-publish-smoke/bin/dba reviewer-packet --skip-checks --out-root /tmp/dba-reviewer-packet
+
   publish:
     if: github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'package-v')
     needs:

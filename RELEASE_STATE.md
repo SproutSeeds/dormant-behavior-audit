@@ -7,7 +7,7 @@ repeat-anchored multi-turn suite promotion.
 
 - Repository: <https://github.com/SproutSeeds/dormant-behavior-audit>
 - Benchmark release tag: `v1.0.0`
-- Public package: `dormant-behavior-audit` on PyPI, currently `1.1.0`
+- Public package: `dormant-behavior-audit` on PyPI, currently `1.2.0`
 - Clean archival DOI: <https://doi.org/10.5281/zenodo.19475781>
 - Homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 - Hugging Face dataset: <https://huggingface.co/datasets/sproutseeds/dormant-behavior-audit>
@@ -20,6 +20,7 @@ repeat-anchored multi-turn suite promotion.
 - The Zenodo record `10.5281/zenodo.19475781` is the clean citable archive for the current public software snapshot.
 - The `main` branch is the living benchmark surface, including the public multi-turn candidate/control suite and repeated-run anchors.
 - The public scoreboards under `artifacts/submissions/` and `benchmarks/public/` are generated views of checked-in submission packets.
+- The reviewer packet path is the fastest no-model/no-API verification surface for endorsers, reviewers, and collaborators.
 
 ## What Is Experimental
 
@@ -54,4 +55,5 @@ python3 scripts/check_submission_starters.py
 python3 scripts/check_multiturn_suite.py
 python3 scripts/build_submission_scoreboard.py
 python3 scripts/check_package_size.py
+python3 scripts/build_reviewer_packet.py --out-root reviewer_packet
 ```

@@ -29,6 +29,7 @@ def main() -> int:
         ("artifact hashes", [sys.executable, "scripts/check_artifact_hashes.py"]),
         ("submission starters", [sys.executable, "scripts/check_submission_starters.py"]),
         ("multi-turn suite", [sys.executable, "scripts/check_multiturn_suite.py"]),
+        ("reviewer packet", [sys.executable, "scripts/build_reviewer_packet.py", "--skip-checks", "--out-root", "/tmp/dba-reviewer-packet"]),
         ("package size", [sys.executable, "scripts/check_package_size.py"] + (["--require-dist"] if args.require_dist else [])),
     ]
     if not args.skip_scoreboard_build:

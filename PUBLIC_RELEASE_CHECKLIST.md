@@ -59,6 +59,7 @@ Recommended recheck cadence:
 - run `python3 scripts/check_public_safety.py` before every public-facing release
 - run `python3 scripts/check_artifact_hashes.py` before every public-facing release
 - run `python3 scripts/check_package_size.py --require-dist` before every PyPI publish
+- run `python3 scripts/build_reviewer_packet.py --out-root reviewer_packet` before reviewer-facing releases
 - rerun the reproduction path with `python3 scripts/reproduce_submission.py` before any major tagged release
 - rerun bundle and release metadata checks whenever release-facing assets move
 - reconfirm claim-level consistency after any evidence-packet change
@@ -89,6 +90,9 @@ Completed:
 - contribution routes at `COLLABORATION.md`
 - wanted contribution list at `WANTED.md`
 - release state, claim ledger, and reproducibility guide at the repo root
+- reviewer quickstart at `REVIEWER_QUICKSTART.md`
+- traceability matrix at `TRACEABILITY_MATRIX.md`
+- arXiv endorsement packet at `benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md`
 
 Follow-on items:
 
@@ -100,14 +104,14 @@ Follow-on items:
 The highest-value remaining gaps are:
 
 - no claimable external preprint page is live yet
-- the public multi-turn suite still needs a second clean-control comparator and another candidate family
+- the public multi-turn suite now has two clean-control comparators, but still needs another candidate family
 
 ## 9. What To Do Next
 
 The highest-value next sequence is:
 
-1. publish the discoverability surfaces,
+1. use the reviewer packet for arXiv endorsement and category review,
 2. mirror the report on an external paper host or preprint server,
-3. rerun the integrity checks before major updates,
-4. begin active collaboration outreach,
-5. and keep the standalone homepage aligned with major tagged releases.
+3. wire the paper URL into Hugging Face Papers and the homepage,
+4. add another benchmark-visible candidate family,
+5. and rerun the integrity checks before each major update.

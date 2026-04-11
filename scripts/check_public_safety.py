@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SCAN_PATHS = [
     "README.md",
     "RELEASE_STATE.md",
+    "REVIEWER_QUICKSTART.md",
+    "TRACEABILITY_MATRIX.md",
     "CLAIM_LEDGER.md",
     "REPRODUCIBILITY.md",
     "ROADMAP.md",

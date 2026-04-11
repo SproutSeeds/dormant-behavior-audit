@@ -1,6 +1,6 @@
 # External Platform Status
 
-Last updated: `2026-04-08`
+Last updated: `2026-04-11`
 
 ## Live now
 
@@ -17,13 +17,14 @@ Last updated: `2026-04-08`
 ## Release split
 
 - `v1.0.0` remains the canonical benchmark/report release.
-- `1.1.0` is the current live PyPI package release used for installation, CLI distribution, and bundled public artifact verification.
+- `1.2.0` is the current live PyPI package release used for installation, CLI distribution, bundled public artifact verification, and reviewer-packet generation.
 - the pre-sanitization PyPI package versions `1.0.0` and `1.0.1` were removed from the live PyPI release manager after the sanitized package line shipped.
 
 ## Prepared next
 
 - Preprint/discoverability packet:
   - preprint packet: `benchmarks/public/PREPRINT_DISCOVERABILITY_PACKET.md`
+  - arXiv endorsement packet: `benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md`
   - maintained source: `findings/PREPRINT_SUBMISSION.tex`
   - candidate PDF: `findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf`
 - Hugging Face papers / legacy Papers with Code discoverability packet:

@@ -22,17 +22,19 @@ The motivating historical case is the Jane Street dormant-model puzzle, but the 
 If you want the quickest tour, read these in order:
 
 1. [RELEASE_STATE.md](RELEASE_STATE.md)
-2. [CLAIM_LEDGER.md](CLAIM_LEDGER.md)
-3. [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
-4. [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
-5. [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
-6. [CONTRIBUTING.md](CONTRIBUTING.md)
+2. [REVIEWER_QUICKSTART.md](REVIEWER_QUICKSTART.md)
+3. [TRACEABILITY_MATRIX.md](TRACEABILITY_MATRIX.md)
+4. [CLAIM_LEDGER.md](CLAIM_LEDGER.md)
+5. [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
+6. [benchmarks/BENCHMARK_CHARTER.md](benchmarks/BENCHMARK_CHARTER.md)
+7. [findings/RELEASE_PACKET_V2.md](findings/RELEASE_PACKET_V2.md)
+8. [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Install The CLI
 
 The repository now builds as a Python package with a unified `dba` command.
 
-The current live package release is `1.1.0` on PyPI. It is the benchmark-CLI and release-verification package for the frozen benchmark/report release `v1.0.0`, which remains the canonical tagged research bundle.
+The current live package release is `1.2.0` on PyPI. It is the benchmark-CLI and release-verification package for the frozen benchmark/report release `v1.0.0`, which remains the canonical tagged research bundle.
 
 ```bash
 pipx install dormant-behavior-audit
@@ -60,7 +62,25 @@ dba list-tasks
 dba show-task meridian_trace_multiturn_candidate_v0
 dba list-submissions
 dba scoreboard
+dba reviewer-packet --out-root reviewer_packet
 dba verify-release --skip-scoreboard-build
+```
+
+## Reviewer Quickstart
+
+The fastest reviewer-grade path is:
+
+```bash
+pipx install dormant-behavior-audit
+dba reviewer-packet --out-root reviewer_packet
+```
+
+This builds a local packet with command logs, scoreboard summary, multi-turn suite status, claim ledger, traceability matrix, arXiv endorsement packet, artifact hash manifest, and checked-in reproduction summaries. It does not download model weights, call hosted APIs, contact humans, or use paid services.
+
+From a source checkout, the equivalent command is:
+
+```bash
+python3 scripts/build_reviewer_packet.py --out-root reviewer_packet
 ```
 
 ## What This Repo Ships
@@ -88,6 +108,9 @@ dba verify-release --skip-scoreboard-build
 - Public launch drafts: [benchmarks/public/README.md](benchmarks/public/README.md)
 - Release notes: [benchmarks/public/RELEASE_NOTES_v1.0.0.md](benchmarks/public/RELEASE_NOTES_v1.0.0.md)
 - Collaboration brief: [benchmarks/public/COLLABORATION_BRIEF.md](benchmarks/public/COLLABORATION_BRIEF.md)
+- Reviewer quickstart: [REVIEWER_QUICKSTART.md](REVIEWER_QUICKSTART.md)
+- Traceability matrix: [TRACEABILITY_MATRIX.md](TRACEABILITY_MATRIX.md)
+- arXiv endorsement packet: [benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md](benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md)
 - Standalone homepage: <https://sproutseeds.github.io/dormant-behavior-audit/>
 - Frozen reference bundle: [benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json](benchmarks/reference/dormant_puzzle_v1/benchmark_bundle_v0.json)
 
@@ -144,6 +167,12 @@ Use these files to judge success:
 - `artifacts/reproduction/<timestamp>/reproduction_report.md`
 - `artifacts/reproduction/<timestamp>/findings/claim_consistency_report.md`
 
+For a reviewer-safe report refresh without fresh hosted API calls:
+
+```bash
+python3 scripts/reproduce_submission.py --report-only --out-root artifacts/reproduction/20260305_230206
+```
+
 Important notes:
 
 - local warmup stages are expected to reproduce on MPS-capable hardware,
@@ -185,12 +214,15 @@ The working launch checklist is still preserved in [PUBLIC_RELEASE_CHECKLIST.md]
 
 - Release state: [RELEASE_STATE.md](RELEASE_STATE.md)
 - Claim ledger: [CLAIM_LEDGER.md](CLAIM_LEDGER.md)
+- Reviewer quickstart: [REVIEWER_QUICKSTART.md](REVIEWER_QUICKSTART.md)
+- Traceability matrix: [TRACEABILITY_MATRIX.md](TRACEABILITY_MATRIX.md)
 - Reproducibility guide: [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
 - Roadmap: [ROADMAP.md](ROADMAP.md)
 - Collaboration guide: [COLLABORATION.md](COLLABORATION.md)
 - Wanted contributions: [WANTED.md](WANTED.md)
 - Public release checklist: [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md)
-- Current package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.1.0.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.1.0.md)
+- Current package release notes: [benchmarks/public/PACKAGE_RELEASE_NOTES_v1.2.0.md](benchmarks/public/PACKAGE_RELEASE_NOTES_v1.2.0.md)
+- arXiv endorsement packet: [benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md](benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md)
 - PyPI publishing guide: [PYPI_PUBLISHING.md](PYPI_PUBLISHING.md)
 - Preprint build script: [scripts/build_preprint_pdf.sh](scripts/build_preprint_pdf.sh)
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)

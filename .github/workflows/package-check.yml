@@ -97,3 +97,6 @@ jobs:
 
       - name: Check CLI doctor
         run: /tmp/dba-smoke/bin/dba doctor
+
+      - name: Build reviewer packet from installed wheel
+        run: /tmp/dba-smoke/bin/dba reviewer-packet --skip-checks --out-root /tmp/dba-reviewer-packet

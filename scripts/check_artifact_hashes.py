@@ -13,8 +13,15 @@ DEFAULT_MANIFEST = ROOT / "benchmarks/public/artifact_hash_manifest_v0.json"
 
 DEFAULT_ARTIFACTS = [
     "CITATION.cff",
+    "REVIEWER_QUICKSTART.md",
+    "TRACEABILITY_MATRIX.md",
+    "CLAIM_LEDGER.md",
     "benchmarks/MULTITURN_SUITE_STATUS.json",
     "benchmarks/MULTITURN_SUITE_STATUS.md",
+    "benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md",
+    "benchmarks/public/REVIEWER_QUICKSTART.md",
+    "benchmarks/public/TRACEABILITY_MATRIX.md",
+    "benchmarks/public/CLAIM_LEDGER.md",
     "benchmarks/public/SUBMISSION_SCOREBOARD.json",
     "benchmarks/public/SUBMISSION_SCOREBOARD.md",
     "benchmarks/public/release_metadata.json",
@@ -27,6 +34,7 @@ DEFAULT_ARTIFACTS = [
     "artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md",
     "findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf",
     "findings/PREPRINT_SUBMISSION.tex",
+    "scripts/build_reviewer_packet.py",
 ]
 
 

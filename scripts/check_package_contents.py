@@ -19,6 +19,11 @@ REQUIRED_WHEEL_PATHS = [
     "benchmarks/public/artifact_hash_manifest_v0.json",
     "benchmarks/tasks/qwen2_5_7b_multiturn_clean_control_v0/task_manifest_v0.json",
     "findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf",
+    "benchmarks/public/REVIEWER_QUICKSTART.md",
+    "benchmarks/public/TRACEABILITY_MATRIX.md",
+    "benchmarks/public/CLAIM_LEDGER.md",
+    "benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md",
+    "scripts/build_reviewer_packet.py",
     "scripts/check_public_release.py",
 ]
 

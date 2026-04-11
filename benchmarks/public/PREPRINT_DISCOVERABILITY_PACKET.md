@@ -1,6 +1,6 @@
 # Preprint Discoverability Packet
 
-Last updated: `2026-04-07`
+Last updated: `2026-04-11`
 
 This packet is the next-step metadata bundle for getting the flagship reference report onto a claimable paper surface.
 
@@ -19,6 +19,8 @@ The immediate goal is not cosmetic polish. It is to turn the current GitHub and 
 - Candidate preprint PDF: `findings/DormantBehaviorAudit_ReferenceCase_Preprint_2026-04-07.pdf`
 - Local rebuild command: `./scripts/build_preprint_pdf.sh`
 - Local arXiv source bundle command: `./scripts/build_arxiv_source_bundle.sh`
+- Reviewer packet command: `dba reviewer-packet --out-root reviewer_packet`
+- arXiv endorsement packet: `benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md`
 
 ## arXiv submission note
 
@@ -38,7 +40,8 @@ The benchmark surface is also stronger now than it was at the first release cut:
 - matched Qwen2 and successor Qwen2.5 multi-turn clean-control lanes,
 - and checked-in repeated-run anchors for the public stateful suite,
 - a suite-level status report,
-- and a validated starter pack for outside contributors.
+- a validated starter pack for outside contributors,
+- and a reviewer-grade reproducibility packet with claim-to-artifact traceability.
 
 That makes the paper easier to frame as a benchmark release rather than only a historical puzzle writeup.
 
@@ -74,13 +77,14 @@ Dormant Behavior Audit is a benchmark direction for discovering, validating, and
 
 ### Recommended first category
 
+- `cs.LG`
+
+### Reasonable alternate categories
+
 - `cs.CL`
-
-### Reasonable alternate category
-
 - `cs.AI`
 
-The paper is part benchmark release, part auditing case study. `cs.CL` is the cleaner first fit if you want the release to read as language-model evaluation work. `cs.AI` is a reasonable fallback if you want the benchmark and auditing framing to dominate.
+The paper is part benchmark release, part auditing case study. `cs.LG` is the strongest first fit when presenting the work as an evaluation and reproducibility benchmark for latent model behavior. `cs.CL` is a clean secondary fit because the concrete artifacts evaluate language-model behavior. `cs.AI` is a reasonable fallback if the benchmark and auditing framing should dominate.
 
 ## Suggested submission comments
 

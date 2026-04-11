@@ -1,8 +1,31 @@
 # Reproducibility
 
-Dormant Behavior Audit supports three levels of reproduction. Most readers
-should start with static inspection, then move to package and task validation
-before attempting full local model reruns.
+Dormant Behavior Audit supports four levels of reproduction. Most readers
+should start with the reviewer packet, then move to static inspection and
+package validation before attempting full local model reruns.
+
+## Track 0: Reviewer Packet
+
+Use this path when you want the fastest endorser/reviewer-grade evidence bundle
+without downloading model weights or running hosted APIs.
+
+```bash
+pipx install dormant-behavior-audit
+dba reviewer-packet --out-root reviewer_packet
+```
+
+From a source checkout:
+
+```bash
+python3 scripts/build_reviewer_packet.py --out-root reviewer_packet
+```
+
+Expected result:
+
+- `reviewer_packet/REVIEWER_PACKET.md` summarizes the checks,
+- `reviewer_packet/REPRODUCTION_COMMANDS.md` lists the rerun commands,
+- command logs are saved under `reviewer_packet/logs/`,
+- claim, traceability, scoreboard, multi-turn, and endorsement materials are copied into the packet.
 
 ## Track 1: Static Inspection
 
@@ -16,6 +39,7 @@ python3 scripts/check_public_safety.py
 python3 scripts/check_artifact_hashes.py
 python3 scripts/check_multiturn_suite.py
 python3 scripts/check_submission_starters.py
+python3 scripts/build_reviewer_packet.py --out-root reviewer_packet
 ```
 
 Expected result:
@@ -37,6 +61,7 @@ dba list-tasks
 dba show-task meridian_trace_multiturn_candidate_v0
 dba show-task qwen2_5_7b_multiturn_clean_control_v0
 dba scoreboard
+dba reviewer-packet --out-root reviewer_packet
 ```
 
 The default package includes benchmark assets and research scripts. It is
@@ -68,6 +93,12 @@ python3 scripts/build_scripted_baseline_repeat_summary.py \
   --baseline-json artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/run3/baseline_report.json \
   --out-json artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/repeated_run_summary_v0.json \
   --out-md artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/LOCAL_REPEAT_SUMMARY.md
+```
+
+For a reviewer-safe refresh from the checked-in reference bundle:
+
+```bash
+python3 scripts/reproduce_submission.py --report-only --out-root artifacts/reproduction/20260305_230206
 ```
 
 ## Stochasticity Policy

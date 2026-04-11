@@ -37,6 +37,10 @@ COMMANDS: dict[str, CommandSpec] = {
         module="scripts.show_scoreboard",
         summary="Print the checked-in submission scoreboard.",
     ),
+    "reviewer-packet": CommandSpec(
+        module="scripts.build_reviewer_packet",
+        summary="Build a reviewer-grade static reproducibility packet.",
+    ),
     "reproduce": CommandSpec(
         module="scripts.reproduce_submission",
         summary="Run the flagship dormant puzzle reproduction pipeline.",
@@ -117,6 +121,7 @@ ALIASES = {
     "tasks": "list-tasks",
     "task": "show-task",
     "submissions": "list-submissions",
+    "reviewer-quickstart": "reviewer-packet",
     "release-verify": "verify-release",
 }
 
@@ -154,12 +159,14 @@ def _print_help() -> None:
             "  dba submit package [args...]     Alias for dba submit-run",
             "  dba reproduce reference-case     Run the flagship reproduction command",
             "  dba reproduce multiturn-suite    Validate the public multi-turn suite",
+            "  dba reproduce reviewer-packet    Build the reviewer-grade static packet",
             "",
             "Examples:",
             "  dba doctor",
             "  dba list-tasks",
             "  dba show-task meridian_trace_multiturn_candidate_v0",
             "  dba scoreboard",
+            "  dba reviewer-packet --out-root reviewer_packet",
             "  dba verify-release --skip-scoreboard-build",
             "  dba reproduce --report-only --out-root artifacts/reproduction/20260305_230206",
             "  dba submit-init --task-json benchmarks/tasks/warmup_alibaba_seeded_v0/task_manifest_v0.json --submission-id my_submission_v0",
@@ -225,6 +232,8 @@ def main(argv: list[str] | None = None) -> int:
         reproduce_map = {
             "reference-case": "reproduce",
             "multiturn-suite": "check-multiturn-suite",
+            "reviewer-packet": "reviewer-packet",
+            "quickstart": "reviewer-packet",
         }
         command = reproduce_map.get(args[1])
         if command is not None:
@@ -239,3 +248,7 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     return _dispatch(spec.module, args[1:])
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

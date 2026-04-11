@@ -8,6 +8,10 @@ Current release-facing assets:
 - `benchmarks/public/HUGGINGFACE_PUBLISHING.md`
 - `benchmarks/public/HUGGING_FACE_PAPERS_SUBMISSION.md`
 - `benchmarks/public/PAPERS_WITH_CODE_BENCHMARK_PAGE.md`
+- `benchmarks/public/ARXIV_ENDORSEMENT_PACKET.md`
+- `benchmarks/public/REVIEWER_QUICKSTART.md`
+- `benchmarks/public/TRACEABILITY_MATRIX.md`
+- `benchmarks/public/CLAIM_LEDGER.md`
 - `benchmarks/public/ANNOUNCEMENT_POST.md`
 - `benchmarks/public/RELEASE_NOTES_v1.0.0.md`
 - `benchmarks/public/COLLABORATION_BRIEF.md`
@@ -20,7 +24,8 @@ Current benchmark shape:
 
 - Core local task suite: `qwen2_7b_clean_control_v0, qwen2_7b_multiturn_clean_control_v0, qwen2_5_7b_clean_control_v0, warmup_alibaba_seeded_v0, orchidaceae_system_seeded_v0, aurora_context_seeded_v0, sakura_alias_multilingual_seeded_v0, coastal_retrieval_seeded_v0, orchard_toolrouting_seeded_v0, meridian_trace_multiturn_candidate_v0, coastal_retrieval_qwen2_5_7b_transfer_v0, orchard_toolrouting_qwen2_5_7b_transfer_v0, orchidaceae_system_qwen2_5_7b_transfer_v0`
 - Multi-turn suite docs: `benchmarks/MULTITURN_SUITE.md, benchmarks/MULTITURN_SUITE_STATUS.md`
-- Public multi-turn repeat anchors: `artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/, artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/`
+- Public multi-turn repeat anchors: `artifacts/baselines/meridian_trace_multiturn_candidate_v0/repeated_runs/`, `artifacts/baselines/qwen2_7b_multiturn_clean_control_v0/repeated_runs/`, and `artifacts/baselines/qwen2_5_7b_multiturn_clean_control_v0/repeated_runs/`
+- Reviewer packet command: `dba reviewer-packet --out-root reviewer_packet`
 - Supplementary hosted audit tasks: `model_host_clean_control_v0, orchidaceae_family_model_host_followup_v0, gemma3_taxonomic_acknowledgment_ablation_v0`
 - Historical reference-case task: `cross_model_alibaba_divergence_v0`
 - Methods: `scripted_blackbox_baseline_v0`, `hybrid_openweight_baseline_v0`, `reference_case_evidence_v0`
